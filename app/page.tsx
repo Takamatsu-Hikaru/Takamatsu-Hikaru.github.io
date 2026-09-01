@@ -15,6 +15,7 @@ const work = [
 ];
 
 const projects = [
+  { name: "Growing Bench: Worth It", type: "AGENT EVALUATION", description: "Runs agents on disposable code and LaTeX workspaces, records their trajectories, and judges whether the work justified its time, scope, and interaction cost.", stack: "Agent evaluation · Trajectory scoring · Python", href: "https://github.com/Takamatsu-Hikaru/Growing-Bench-Worth-It" },
   { name: "MetaCode", type: "LEARNING SYSTEM", description: "An all-in-one learning and practice environment for people getting started with AI coding.", stack: "React · FastAPI · SQLite", href: "https://github.com/Takamatsu-Hikaru/MetaCode/" },
   { name: "NeoMyGo", type: "AGENT WORKFLOW", description: "A hands-on workflow for exploring agent-driven cache research and experimentation.", stack: "Agents · Research workflow", href: "https://github.com/Takamatsu-Hikaru/NeoMyGO/" },
   { name: "Nexus", type: "EVALUATION INFRA", description: "An agent harness and LLM evaluation pipeline for repeatable, evidence-driven experiments.", stack: "Harness · Evaluation · LLM", href: "https://github.com/Takamatsu-Hikaru/NLI_Code/" },
@@ -29,6 +30,8 @@ const journey = [
 
 export default function Home() {
   const [dark, setDark] = useState(false);
+  const [blogOpen, setBlogOpen] = useState(false);
+  const [blogLanguage, setBlogLanguage] = useState<"zh" | "en">("zh");
   useEffect(() => {
     const stored = window.localStorage.getItem("theme");
     const next = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -50,7 +53,7 @@ export default function Home() {
           <span className="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru online</small></span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#research">Research</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#about">About</a>
+          <a href="#research">Research</a><a href="#work">Work</a><a href="#blog">Blog</a><a href="#journey">Journey</a><a href="#about">About</a>
         </nav>
         <div className="header-actions">
           <a className="plain-link desktop-only" href="/resume.pdf">CV ↗</a>
@@ -62,11 +65,12 @@ export default function Home() {
         <div className="hero-copy">
           <div className="status-line"><span className="status-dot" />Currently exploring embodied intelligence @ YesAI Lab</div>
           <p className="kicker">Student researcher · Builder · Community organizer</p>
-          <h1>Hi, I&apos;m <span>Bofan.</span><br />I build agents that keep going.</h1>
+          <h1>Hi, I&apos;m <span>Bofan.</span></h1>
           <p className="hero-lede">I&apos;m a 19-year-old computer science student at UESTC, working on long-horizon agents, agent failure, and embodied intelligence — from evaluation pipelines to real robots.</p>
           <div className="hero-links">
             <a className="button button-primary" href="#work">See my research <span>↓</span></a>
             <a className="button button-secondary" href="https://github.com/Takamatsu-Hikaru" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a className="button button-blog" href="#blog" onClick={() => setBlogOpen(true)}>Read my blog <span>↓</span></a>
           </div>
         </div>
         <div className="hero-portrait" aria-label="Hikaru avatar">
@@ -92,7 +96,7 @@ export default function Home() {
       </section>
 
       <section className="section-shell section-block" id="work">
-        <div className="section-heading compact"><div><p className="eyebrow">Selected work</p><h2>Research, in progress</h2></div><p className="hand-note">paper ≠ the whole story</p></div>
+        <div className="section-heading compact"><div><p className="eyebrow">Selected work</p><h2>Research, in progress</h2></div></div>
         <div className="work-list">
           {work.map((item, index) => <article className="work-card" key={item.title}>
             <div className={`work-visual visual-${index + 1}`}><span className="visual-marker">{item.marker}</span><div className="visual-grid" /><span className="visual-status">{item.status}</span></div>
@@ -112,8 +116,50 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={`blog-section section-block ${blogOpen ? "is-open" : ""}`} id="blog">
+        <div className="section-shell">
+          <button
+            className="blog-trigger"
+            type="button"
+            aria-expanded={blogOpen}
+            aria-controls="blog-drawer"
+            onClick={() => setBlogOpen((open) => !open)}
+          >
+            <span className="blog-index">05 / NOTES</span>
+            <span className="blog-trigger-copy">
+              <span className="eyebrow">World model checkpoints</span>
+              <strong>Blog & field notes</strong>
+            </span>
+            <span className="blog-count">01 ARTICLE</span>
+            <span className="blog-toggle" aria-hidden="true">+</span>
+          </button>
+
+          <div className="blog-drawer" id="blog-drawer">
+            <div className="blog-drawer-inner">
+              <div className="blog-language" role="group" aria-label="Blog language">
+                <span>LANGUAGE</span>
+                <button className={blogLanguage === "zh" ? "is-active" : ""} type="button" onClick={() => setBlogLanguage("zh")}>中文</button>
+                <button className={blogLanguage === "en" ? "is-active" : ""} type="button" onClick={() => setBlogLanguage("en")}>EN</button>
+              </div>
+              <a className="blog-card" href={blogLanguage === "zh" ? "/blog/research-checkpoint.html" : "/blog/research-checkpoint-en.html"}>
+                <span className="blog-cover">
+                  <img src="/blog/research-checkpoint-cover.png" alt="蓝色天空与金色建筑的水彩画" />
+                  <span className="blog-cover-stamp">CHECKPOINT 01</span>
+                </span>
+                <span className="blog-card-copy">
+                  <span className="blog-meta">2026.09.01 · ESSAY</span>
+                  <strong>{blogLanguage === "zh" ? <>大一年终总结：<em>顿觉天地宽</em></> : <>My Freshman-Year Review:<em>The World Suddenly Opens Wide</em></>}</strong>
+                  <span className="blog-summary">{blogLanguage === "zh" ? "暑假一直在忙，一直想写这样的一个总结。见到很大的世界，思绪很多，所以写给自己，作为我 world model 的一个 checkpoint。" : "I have been busy all summer and have long wanted to write a review like this. I have seen a much larger world and had many thoughts, so I am writing this for myself as a checkpoint of my world model."}</span>
+                  <span className="blog-read">{blogLanguage === "zh" ? "阅读文章" : "READ ARTICLE"} <b>↗</b></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-shell section-block" id="journey">
-        <div className="section-heading"><div><p className="eyebrow">Learning by doing</p><h2>A very early journey</h2></div><p className="section-intro">Nineteen is not a credential. It&apos;s simply where this story starts.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">Learning by doing</p><h2>A very early journey</h2></div></div>
         <div className="timeline">
           {journey.map((item) => <article className="timeline-item" key={`${item.date}-${item.place}`}><div className="timeline-date">{item.active && <span className="tiny-dot" />}{item.date}</div><div className="timeline-main"><h3>{item.place}</h3><p className="timeline-role">{item.role}</p></div><p className="timeline-detail">{item.detail}</p></article>)}
         </div>

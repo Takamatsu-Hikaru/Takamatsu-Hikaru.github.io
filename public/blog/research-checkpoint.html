@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>大一年终总结 顿觉天地宽 · Hikaru</title>
+  <style>
+    :root {
+      --paper: #f5f1e8;
+      --paper-2: #ece6da;
+      --ink: #171713;
+      --muted: #68665f;
+      --blue: #315ee8;
+      --orange: #ff6946;
+      --violet: #8d6ade;
+      --green: #4bb477;
+      --card: #fbf8f1;
+      --line: #1c1c18;
+    }
+    html[data-theme="dark"] {
+      --paper: #141414;
+      --paper-2: #1d1d1b;
+      --ink: #f3efe7;
+      --muted: #aaa69d;
+      --card: #1a1a18;
+      --line: #eee9df;
+      --blue: #7294ff;
+      --orange: #ff896f;
+      --violet: #b69af5;
+      --green: #67d495;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(color-mix(in srgb, var(--ink) 8%, transparent) .7px, transparent .7px),
+        var(--paper);
+      background-size: 18px 18px;
+      font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; font: inherit; }
+    ::selection { color: #fff; background: var(--blue); }
+    .progress { position: fixed; z-index: 90; inset: 0 auto auto 0; width: 0; height: 3px; background: var(--orange); }
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      height: 76px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 32px;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent);
+      background: color-mix(in srgb, var(--paper) 89%, transparent);
+      backdrop-filter: blur(14px);
+    }
+    .wordmark { display: flex; width: fit-content; align-items: center; gap: 11px; }
+    .wordmark-mark {
+      width: 39px; height: 39px; display: grid; place-items: center;
+      border-radius: 50%; background: var(--ink); color: var(--paper);
+      font-size: 12px; font-weight: 900; letter-spacing: -.04em;
+    }
+    .wordmark-copy { display: flex; flex-direction: column; line-height: 1.05; }
+    .wordmark-copy strong { font-size: 14px; letter-spacing: -.02em; }
+    .wordmark-copy small { margin-top: 5px; color: var(--muted); font: 9px/1 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .12em; }
+    nav { display: flex; gap: 32px; font: 600 12px/1 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .05em; }
+    nav a { position: relative; }
+    nav a::after { content: ""; position: absolute; right: 100%; bottom: -5px; left: 0; height: 2px; background: var(--blue); transition: right .2s ease; }
+    nav a:hover::after { right: 0; }
+    .theme-toggle { justify-self: end; width: 36px; height: 36px; border: 1px solid var(--ink); border-radius: 50%; background: transparent; cursor: pointer; transition: transform .25s ease, background .2s ease; }
+    .theme-toggle:hover { transform: rotate(24deg); background: var(--ink); color: var(--paper); }
+    .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 54px 0 82px;
+      border-bottom: 1px solid var(--ink);
+    }
+    .hero-cover {
+      width: min(700px, 76%);
+      margin: 0 0 58px auto;
+      border: 1px solid var(--ink);
+      background: var(--card);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+    .hero-cover img { display: block; width: 100%; height: auto; }
+    h1 {
+      max-width: 1000px;
+      margin: 0 0 32px;
+      font-weight: 780;
+      line-height: 1.02;
+      letter-spacing: -.075em;
+      text-wrap: balance;
+    }
+    h1 span { display: block; }
+    h1 .title-first { font-size: clamp(58px, 8.2vw, 108px); }
+    h1 .title-second { margin-top: .12em; color: var(--blue); font-size: clamp(42px, 5.8vw, 76px); letter-spacing: -.06em; }
+    .byline { color: var(--ink); font: 700 16px/1.4 ui-monospace, monospace; letter-spacing: .025em; }
+    .lead { max-width: 740px; margin: 36px 0 0; color: var(--muted); font-size: clamp(18px, 2vw, 22px); line-height: 1.85; letter-spacing: .01em; }
+    .article-layout { display: grid; grid-template-columns: 132px minmax(0, 720px); justify-content: center; gap: 54px; padding: 100px 0 132px; }
+    .rail { position: sticky; top: 118px; height: fit-content; padding-top: 8px; border-top: 4px solid var(--blue); }
+    .rail-number { display: block; margin-top: 13px; color: color-mix(in srgb, var(--ink) 20%, transparent); font: 900 74px/.85 Arial, sans-serif; letter-spacing: -.08em; }
+    .rail p { margin: 18px 0 0; color: var(--muted); font: 800 9px/1.55 ui-monospace, monospace; letter-spacing: .07em; }
+    article {
+      min-width: 0;
+      color: color-mix(in srgb, var(--ink) 94%, transparent);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: .01em;
+      text-autospace: normal;
+      text-wrap: pretty;
+      overflow-wrap: anywhere;
+    }
+    article p { margin: 0 0 1.38em; }
+    article h2 {
+      position: relative;
+      margin: 4.4em 0 1.3em;
+      padding: 0 0 .52em 23px;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+      font-size: clamp(27px, 3.2vw, 38px);
+      font-weight: 780;
+      line-height: 1.35;
+      letter-spacing: -.04em;
+    }
+    article h2:first-child { margin-top: 0; }
+    article h2::before { content: ""; position: absolute; top: .34em; left: 0; width: 9px; height: 9px; background: var(--blue); box-shadow: 5px 5px 0 var(--orange); }
+    article h3 {
+      position: relative;
+      width: fit-content;
+      min-width: 150px;
+      margin: 2.5em 0 .8em;
+      padding: 0 0 .48em 18px;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -.015em;
+    }
+    article h3::before {
+      content: "";
+      position: absolute;
+      top: .42em;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      background: var(--blue);
+      box-shadow: 4px 4px 0 var(--orange);
+    }
+    .mantra { margin: 3em 0 !important; padding: 20px 0 20px 25px; border-left: 5px solid var(--orange); color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 700; line-height: 1.65; }
+    .mantra span { display: block; }
+    .age-marker { color: var(--ink); font-weight: 900; }
+    .quote-label { margin: -.15em 0 .75em; color: var(--muted); font: 850 18px/1.5 ui-monospace, monospace; letter-spacing: .025em; }
+    blockquote { position: relative; margin: 0 -48px 3em; padding: 35px 42px 35px 58px; border: 1px solid var(--ink); background: var(--card); box-shadow: 7px 7px 0 var(--ink); font-family: "Songti SC", STSong, "Noto Serif CJK SC", serif; font-size: clamp(20px, 2.5vw, 27px); line-height: 1.75; }
+    blockquote::before { content: "“"; position: absolute; top: -20px; left: 16px; color: var(--orange); font: 700 72px/1 Georgia, serif; }
+    blockquote p { margin: 0; }
+    .end { display: flex; justify-content: space-between; margin-bottom: 110px; padding: 18px 0; border-block: 1px solid var(--ink); font: 800 10px/1 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .end a { color: var(--blue); }
+    footer { min-height: 78px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; padding: 20px 32px; border-top: 1px solid var(--ink); font: 700 9px/1.4 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .05em; }
+    footer span:nth-child(2) { color: var(--muted); text-align: center; }
+    footer a { justify-self: end; }
+    @media (max-width: 900px) {
+      .site-header { grid-template-columns: 1fr auto; padding: 0 20px; }
+      nav { display: none; }
+      .article-layout { grid-template-columns: minmax(0, 720px); }
+      .rail { display: none; }
+      blockquote { margin-inline: 0; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 30px, 1180px); }
+      .hero { padding: 34px 0 58px; }
+      .hero-cover { width: calc(100% - 6px); margin-bottom: 50px; box-shadow: 5px 5px 0 var(--ink); }
+      h1 .title-first { font-size: clamp(46px, 13vw, 64px); }
+      h1 .title-second { font-size: clamp(35px, 10.5vw, 49px); }
+      .byline { font-size: 15px; }
+      .lead { font-size: 17px; line-height: 1.9; }
+      .article-layout { padding: 65px 0 92px; }
+      article { font-size: 17px; line-height: 1.95; letter-spacing: 0; }
+      article p { margin-bottom: 1.45em; }
+      article h2 { margin-top: 3.4em; font-size: 27px; }
+      blockquote { margin: 1.5em 0 2.8em; padding: 30px 24px 28px 38px; font-size: 20px; }
+      .mantra { font-size: 21px; }
+      footer { grid-template-columns: 1fr; text-align: center; }
+      footer a { justify-self: center; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Back to Bofan Zhu home">
+      <span class="wordmark-mark">BZ</span>
+      <span class="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru / Blog</small></span>
+    </a>
+    <nav aria-label="Article navigation"><a href="/">Home</a><a href="#article">Article</a><a href="#end">End</a></nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">◐</button>
+  </header>
+
+  <main class="shell" id="top">
+    <section class="hero">
+      <figure class="hero-cover"><img src="./research-checkpoint-cover.png" alt="蓝色天空与金色建筑的水彩画"></figure>
+      <h1><span class="title-first">大一年终总结：</span><span class="title-second">顿觉天地宽</span></h1>
+      <div class="byline">2026/9/1 Hikaru</div>
+      <p class="lead">暑假一直在忙，一直想写这样的一个总结，见到很大的世界，思绪很多，所以写给自己，作为我 world model 的一个 checkpoint。</p>
+    </section>
+
+    <div class="article-layout" id="article">
+      <aside class="rail" aria-label="Article information"><span class="rail-number">01</span><p>WORLD MODEL<br>CHECKPOINT</p></aside>
+      <article><h2>Timeline</h2>
+<h3>9 月—11 月</h3>
+<p>刚入学，在做各种探索和学习，开始学习 C 和 py。学生工作、社团、机器人队、嵌入式，都去参与了一下，还顺带考砸了期中。这个过程，我开始接触到大学的基本组成，也认识了一些现在的同行者。</p>
+<h3>12 月—1 月</h3>
+<p>开始接触 DL、MNIST、YOLO，从 Kaggle 上乱七八糟的找 project、读论文，能从中感到 passion 和 excitement，开始感觉到：这就是我想做的事情。也认识了指导的学长，也和 Jarvis 见了一面，初次窥见 research 的世界。</p>
+<h3>2 月</h3>
+<p>从上学期的探索、paper reading 开始，又把李沐详细的过了一次，然后开始深读经典论文、研究作者，第一次尝试复现一个时序实验。在这个过程中，开始了解到领域的流动变化，motivation 与 limitation，problem to solve。</p>
+<h3>3 月</h3>
+<p>agent 学习：ReAct、generative、Voyager，都很感兴趣，做下去了；小 demo 搭建。出于兴趣学习 CSAPP、电脑通信、网络网页知识，不精。</p>
+<h3>4 月</h3>
+<p>AutoResearch、AutoCache 搭建，学习 diffusion 与 diffusion cache。</p>
+<h3>5 月</h3>
+<p>决定投稿 workshop，完成 workshop 写作，决定 polish 为 EMNLP，EMNLP 投稿。这一个月是第一次把自己扔进一个 research cycle：LaTeX、作图、实验、写文章、讲故事，一切都是第一次。很累，很有压力，但是成长也很大。</p>
+<h3>6 月</h3>
+<p>学习 RL、world models，Lumina 社区入门；准备简历，帮一个 startup 项目，突击期末考试，考期末考试。</p>
+<h3>7 月</h3>
+<p>考期末，参加 ICML 和进行 rebuttal，前往上海准备第一次 intern，并去 Evolvent AI after party。然后就是学学学学：每天 10 点—晚 11 点，一周干 6 天；又认识了好多朋友。</p>
+<h3>8 月至今</h3>
+<p>推一个 ICLR 工作，学具身，学数学，学 CS336，过架构、代码、dataflow。下学期预计清华组 intern 加跟初创实习，然后留学校带下一届 AI 社。</p>
+<p>时隔一年，打算总结一下我的所思、所见、所想。过去一年，我能感受到自己的世界越变越大。</p>
+<p><strong class="age-marker">前十八年</strong>，我的世界只有高考考多少分；<strong class="age-marker">十九岁的上半年</strong>，世界还只是我要怎么考高分、怎么保研，是不是要学好一门技术、进一个组。我还在和我的几个学长讨论我的专业能做什么，打点什么比赛，学生工作做不做之类的事情。</p>
+<p><strong class="age-marker">十九岁的下半年</strong>，开学进了拔尖班，在对我影响很大的几个学长的指导下，我加入了组，做了自己的 research，单刷了自己的一作，参与了公司的创业，明确了自己的研究主线，去韩国参会，参加 afterparty，和学长交流，请教了 senior 的 researcher、高校和大厂的研究员，聊过创业者、VC 和创投，了解了他们的所思所想，也学习他们的 insight，也接过了 AI 社社长，初次窥见世界之大和思考自己到底在哪里。</p>
+<p>这半年，经历的第一次越来越多：第一次单刷、第一次带 team、第一次实习、第一次请教、第一次参会、第一次讲 paper。看到的世界越来越大，眼界也在变广；认识了 senior 的学长学姐、PhD、创业者、研究员，请教了他们有关 research、人生哲学、创业的 topic，也就开始不自觉地以这样的标准要求和约束自己。</p>
+<p>去思考什么是好的 taste，我怎么把实验做得 solid，把文章写的漂亮，思考什么是重要的研究：你的研究是 LLM 强化的，还是真的有价值？你是 parasite AI 吗？你是活在 AI hack 的 echo 吗？我能做的就是保证自己的一个 motivation 和方法是自己的。</p>
+<p>也认识到此时此刻，我是怎么样一个水平。顿觉天地宽，但渺沧海之一粟。虽然过去一年也值得认可，但是和真正的 senior 比起来，我没有什么特殊之处，只是一个 junior ＆ not impressive 的 researcher。不过也确实不希望这预示着我 will be a nobody researcher，也真心希望自己在这个世界有自己的一席之地和 contribution，做自己觉得有意义的事情，在最好的地方，做最好的事情，找到有梯度的地方，来训练自己的参数。</p>
+<p>在这些经历中，我自己也在渐渐改变，更多的认识自己。我做过的实验、学习过的公式、请教过的人、读过的 paper、推通的公式、拆明白的架构，潜移默化的塑造了我对这个世界、这个领域的认知和理解。</p>
+<p>无论 agentic 还是 embodied，我的 world model 都在不断 scale up。自由的发展、成长，把 research 做成积分，不要追求某个 fix 的 KPI，最后总会殊途同归、水到渠成。在 research 的过程中，更理解世界，更理解模型，也更理解自己的所思所想。希望 idea 能 work，希望能参与更大、更好的事业，不虚度的时间，热爱自己所做的事情，在这个世界做一些事情。</p>
+<p>所以之后还是正常的请教、深入学习、保持好奇、保持求知、多思考、多发问、多深挖，做自己的工作，分享自己的见解，请教更多人，参与更好的工作，去好的地方，做好的事情。本自具足，具备一个稳定的内核。</p>
+<p>无论潮起还是潮落，认识到天地之宽，也认识到自己之渺小，希望可以坚定地前进，跑通自己的 recursive self-improvement。</p>
+<p class="mantra"><span>总之总之，</span><span>keep passion / keep going / work hard / be self-motivated / have agency。</span><span>如果几月回首，一笑而过，那我应该也就成为了更好的自己。</span></p>
+<h2>非常可惜，你几乎无法真正摆脱课内 metric</h2>
+<p>在一切开始之前，很可惜的是，笔者也不能真正的摆脱课内和保研流程，也深知这套体系会带来怎样的通货膨胀和伤害。这件事情是结构性的。我希望的只是，你能如同生存手册所写，用最低的精力换取最高的分数，熟悉规则、使用规则，走一些寻常之外的道路，在真正考试和 pre 拿出实力。让优绩主义这套叙事尽可能少的参与你的人生。</p>
+<h2>我请教过的人们</h2>
+<p>有我的引路人，建立 research 和 business 的世界观，与人交往，认知，行动力。有重要的指导者，对 agentic 的深入理解，好的 paper writing 和 rebuttal 技巧；也有学长教我什么是好的工作、贡献、重要、影响力，提醒我不要沉浸在年龄叙事，把精力放在重要的事情，探索你是谁的命题，research 的重要性的判断，业界。</p>
+<p>有创业者，和他谈社会化、水到渠成的发展。</p>
+<p>有 Kimi 的学长和我分享成长的 path：被人看到，sell yourself，多分享，同时有对应的实力；pretrain 是一门学问，focus on 真正值得研究的问题。同一级的好朋友也教了我 just do it，think outside the box，求知欲。以及 Selen、卡比在 research 和 technical 上给我的指点，都让我受益匪浅。</p>
+<h2>Be motivated：你的人生是 TTT，不是 Always pretrain</h2>
+<p>这世界上 trajectory 很多，需要自己来走。你的人生道路不是被学校规定好的 roadmap 所禁锢，不存在固定标准范本和“你应该做什么”、标准和线性的发展：大一卷绩点，大二卷比赛，大三卷科研，大四找 offer，研究生做科研，博士生发文章，长大了工作或者创业，养个孩子，他再去 cycle。这不是。</p>
+<p>大学不是 fix 的通关游戏。抛开客观限制，只要你是能主动 reach 的，不存在我要准备好、现在还不够，不存在所谓学风谈、不公平谈、你做 research 你厉害谈；不存在先绩点才准科研，不存在先小组才准大组，不存在我有梦校，但是我要提升自己才敢最后一战决生死。</p>
+<p>你想做、想探索，所以直接去做，让准备、成长并行发生。要有主动踏出第一步的魄力，找到引路人，去展示自己，让自己被看到、被 link，work hard，keep going。去最好的地方，做最想做的事情，找到你的回应。不要等着在这个 fix 的 env 完成你的 pretrain，跑通自己的 test-time learning 和 recursive self-improvement。重要的是你是谁，你想做什么，你要怎么做成，没有人能替你决定。</p>
+<p class="quote-label">引用我的引路人的话</p>
+<blockquote><p>“所以，我跟你说没有什么规矩，没有什么定式和天经地义，没有什么按部就班循规蹈矩，⼀切，都是海阔凭⻥跃，天⾼任⻦⻜，没有的路，我硬⾛出来。我跟你说打法，是设计，是艺术。抬头看看⽉亮，亮也没⽤，没⽤也亮。”</p></blockquote>
+<h2>年龄叙事、时间成本、有梯度的地方</h2>
+<p>大学高中化、优绩主义，以及社会焦虑，催生了一种天才叙事。我们并不否认，他们的成长有自己的勤奋、高精力与行动力，这让他们能够遇见机会、抓住机会，也有缘分所在。但各种宣传试图最大化 peer pressure，让人们觉得你大一就要怎么样，二十岁就要怎么样，把人们捧向愚者之峰，告诉你天上天下唯我独尊；你大一没有进组，大二没有国奖和实习，已经落后。</p>
+<p>我们可以正视提前起步的时间优势，佩服他们的 motivation 和行动力，但是不应菲薄自己或沾沾自喜。引用一下 Saining 老师的访谈：“不要在乎每一个时刻你的成败，不要计较每一个 point estimate 上的得失，research 是一个积分，所有的评价汇在一起，它决定了你是不是一个好的 researcher。”重要的是你最后做了什么，留下了什么新知识、新贡献、重要的问题。</p>
+<p>你很难不焦虑。东亚是被优绩主义和比较烙印的一代，你的视野不断扩大，会放大你的 pressure。你发现这个世界还有这样的 trajectory：同龄人有 Seed，有 Galbot，有国奖，有文章，有优绩主义；你又在可以 maximize 你的焦虑的平台，让你觉得你不 impressive。</p>
+<p>只要你不断扩大视野，就永远会遇到代码更强、数学更强、research 更强、会创业、会管人、reputation 更大的人。Again，把目光放在积分，请教他们，和他们站在一起。这件事只有慢慢想通和祛魅。希望我们都能有一个稳定的内核，找到属于自己的坐标系，就把自己扔到梯度最大的地方去，不断成长，慢慢找到自己的地方。</p>
+<h2>research 没有那么简单</h2>
+<p>之前的 EMNLP 收到了做 research 以来首次 reject，其实意料之中，所以淡淡的，没有什么特别大的情绪波动，尤其是 PC 给的还是这么个神人 comments。</p>
+<p>能感觉到的是惋惜。抛开自己第一次写作就撞上大运 reviewer 和 AC 的因素，主要问题还是五月推进工作和写作经验不足，实验设计、数据、writing 都太稚嫩，行动力和 solidness 都成问题。当然，毕竟过去三个月了，再审判当时的不足显得不太公平，但是确实是一个好的教训，认识到了这些东西做的不好的代价是什么。</p>
+<p>当然很难不 keep thinking：如果早一天，如果怎么怎么样，也许就有机会怎么怎么样。但是发生的就已经发生了。沉痛反思吧，research 是 execution 的能力，需要你全流程 handle 和管理起来，切忌被 AI hack，把文章做得 solid 起来。</p>
+<p>同样，好的工作、好的贡献也是值得思考的。尝试放下学界的傲慢和算法模块至上论，以及在 paper 贬值、抽奖的时代，作为 junior，如果能让 observation 和 motivation 都 make sense，把工作做得 solid，尝试解决重要的问题，带来新的知识，并且讲给大家听；偶尔做 infra、做工程，solid 的占占坑、做做开源，作为立足之地，也不必如此苛责自己。无论成败，熟悉一个 cycle，记住这个 baseline，要求自己做出更好的工作，都能让你成为一个更好的 researcher。</p>
+<h2>你真的学会了么</h2>
+<p>我们相比 Pre-AI 时代的人来说，最大的优势和劣势都是：我们的学习成本非常低。Agent 作为 teacher 和 executor，是可以顺着你的需求和请教、耐心的回答你的角色。看起来，任何困难的知识、理论、代码，比起上四十个小时的网课和对着文档绞尽脑汁，不如让 AI 用顺滑的语言讲给你；实验就给跑个 demo，大家看到 loss 降了，手写数字识别跑通了，皆大欢喜，是一个甜蜜的牢房。</p>
+<p>他让你顿时感觉自己在愚者之峰，天上天下唯我独尊，让你产生我学会了、我理解了、我掌握了的幻觉。</p>
+<p>学习不可以掉信息量。这不代表你要以“如果我不能手撕、不懂八股，我就不 solid、不配做 research”来道德批判自己——这同样可以被 overfit。多想、多问、多交流，dive into，多发表你的想法。</p>
+<p>比如，同样是 TRPO，AI 给你讲这是一个使用 KL 优化训练稳定的 RL 算法，但是他优化目标计算太复杂，所以 PPO 用 clip 优化了这里，然后 GRPO 去掉 critic，多 rollout 几次；和你完整的去探索为什么这样，把 sₜ、sₜ₊₁，policy 如何采样、如何近似，如何约束 J 和 A，再去看到底怎么样，scaling law、稳定性到底体现出怎么样的性质；真的复现，知道到底是怎么 work、怎么崩的，长出自己的 observation。</p>
+<p>你觉得看过 attention，听过 AI 咀嚼过的食物，看过 paper；详细推过数学和架构，真的去读，然后你又知道了超参数、架构、初始化之类的都有奥妙和理论。如此，你才能学的逐渐深入。</p>
+<p>在此之外，你要培养的也不止 research taste。你需要各种能力：带人、组织，你怎么想问题、怎么看事情，都是的，都很重要。我也要多站出去，讲讲东西，为你这个人创造更多 signal，不要让你成为一个可以被 generate 的人。多问 AI，多聊 AI；更要多问人类，多聊人类。</p>
+<h2>笔者也还有尚且没想通的部分</h2>
+<p>我也有自己的爱好，有无用而自由的向往。我希望开个特摄店，希望能和所有人相处很好，找到美学，拥有生活 balance；也很幸运，我遇到了很好的朋友，无论 research 还是 non-research。</p>
+<p>希望和重要的人相处，不会那么被带动情绪。</p>
+<p>希望具备完整的内核，搭建自己的 metric，做更好的工作。</p>
+<p>感觉不能轻易 let go，一个问题研究不出来，一天都不是很爽。</p>
+<p>具备更 solid 的数理和各种 coding 能力。</p>
+<p>还是希望能够作为我的 checkpoint，希望不断的去补充这些不足，回首过往，一笑而过。</p>
+</article>
+    </div>
+
+    <div class="end" id="end"><span>END / 2026.09.01</span><a href="#top">Back to top ↑</a></div>
+  </main>
+
+  <footer><span>© 2026 Bofan Zhu / Hikaru</span><span>Built between papers, robots, and sandbox worlds.</span><a href="#top">Back to top ↑</a></footer>
+  <script>
+    const root = document.documentElement;
+    const button = document.getElementById('theme-toggle');
+    const stored = localStorage.getItem('theme');
+    const initial = stored || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    root.dataset.theme = initial;
+    button.textContent = initial === 'dark' ? '☀' : '◐';
+    button.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      localStorage.setItem('theme', next);
+      button.textContent = next === 'dark' ? '☀' : '◐';
+    });
+    const progress = document.getElementById('progress');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = max > 0 ? ${Math.min(100, scrollY / max * 100)}% : '0%';
+    };
+    addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  </script>
+</body>
+</html>
