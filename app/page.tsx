@@ -28,6 +28,51 @@ const journey = [
   { date: "2025.09 — NOW", place: "University of Electronic Science and Technology of China", role: "B.Sc. Computer Science · Honors College", detail: "Undergraduate student and president of the UESTC AI Society, building a community around learning and making with AI.", active: true },
 ];
 
+const blogPosts = [
+  {
+    slug: "growing-bench",
+    stamp: "BENCH 02",
+    date: "2026.09.02",
+    cover: "/blog/growing-bench-hero.png",
+    alt: "Growing Bench: Worth It cover",
+    zh: {
+      href: "/blog/growing-bench.html",
+      title: "做个专测防御性写作和编程的 Benchmark",
+      subtitle: "Growing Bench: Worth It",
+      summary: "正确还不够。这些工作真的值得做吗？一个测试 Agent 分寸感、并随前沿模型和真实用户经验不断生长的 Living Benchmark。",
+      action: "阅读文章",
+    },
+    en: {
+      href: "/blog/growing-bench-en.html",
+      title: "Growing Bench: Worth It",
+      subtitle: "Correct Isn't Enough",
+      summary: "A living benchmark that tests an agent's sense of proportion and evolves with frontier models and everyday experience.",
+      action: "READ ARTICLE",
+    },
+  },
+  {
+    slug: "freshman-year-review",
+    stamp: "CHECKPOINT 01",
+    date: "2026.09.01",
+    cover: "/blog/research-checkpoint-cover.png",
+    alt: "蓝色天空与金色建筑的水彩画",
+    zh: {
+      href: "/blog/research-checkpoint.html",
+      title: "大一年终总结：",
+      subtitle: "顿觉天地宽",
+      summary: "暑假一直在忙，一直想写这样的一个总结。见到很大的世界，思绪很多，所以写给自己，作为我 world model 的一个 checkpoint。",
+      action: "阅读文章",
+    },
+    en: {
+      href: "/blog/research-checkpoint-en.html",
+      title: "My Freshman-Year Review:",
+      subtitle: "The World Suddenly Opens Wide",
+      summary: "I have been busy all summer and have long wanted to write a review like this. I am writing it for myself as a checkpoint of my world model.",
+      action: "READ ARTICLE",
+    },
+  },
+] as const;
+
 export default function Home() {
   const [dark, setDark] = useState(false);
   const [blogOpen, setBlogOpen] = useState(false);
@@ -130,7 +175,7 @@ export default function Home() {
               <span className="eyebrow">World model checkpoints</span>
               <strong>Blog & field notes</strong>
             </span>
-            <span className="blog-count">01 ARTICLE</span>
+            <span className="blog-count">02 ARTICLES</span>
             <span className="blog-toggle" aria-hidden="true">+</span>
           </button>
 
@@ -141,18 +186,25 @@ export default function Home() {
                 <button className={blogLanguage === "zh" ? "is-active" : ""} type="button" onClick={() => setBlogLanguage("zh")}>中文</button>
                 <button className={blogLanguage === "en" ? "is-active" : ""} type="button" onClick={() => setBlogLanguage("en")}>EN</button>
               </div>
-              <a className="blog-card" href={blogLanguage === "zh" ? "/blog/research-checkpoint.html" : "/blog/research-checkpoint-en.html"}>
-                <span className="blog-cover">
-                  <img src="/blog/research-checkpoint-cover.png" alt="蓝色天空与金色建筑的水彩画" />
-                  <span className="blog-cover-stamp">CHECKPOINT 01</span>
-                </span>
-                <span className="blog-card-copy">
-                  <span className="blog-meta">2026.09.01 · ESSAY</span>
-                  <strong>{blogLanguage === "zh" ? <>大一年终总结：<em>顿觉天地宽</em></> : <>My Freshman-Year Review:<em>The World Suddenly Opens Wide</em></>}</strong>
-                  <span className="blog-summary">{blogLanguage === "zh" ? "暑假一直在忙，一直想写这样的一个总结。见到很大的世界，思绪很多，所以写给自己，作为我 world model 的一个 checkpoint。" : "I have been busy all summer and have long wanted to write a review like this. I have seen a much larger world and had many thoughts, so I am writing this for myself as a checkpoint of my world model."}</span>
-                  <span className="blog-read">{blogLanguage === "zh" ? "阅读文章" : "READ ARTICLE"} <b>↗</b></span>
-                </span>
-              </a>
+              <div className="blog-list">
+                {blogPosts.map((post) => {
+                  const copy = post[blogLanguage];
+                  return (
+                    <a className="blog-card" href={copy.href} key={post.slug}>
+                      <span className="blog-cover">
+                        <img src={post.cover} alt={post.alt} />
+                        <span className="blog-cover-stamp">{post.stamp}</span>
+                      </span>
+                      <span className="blog-card-copy">
+                        <span className="blog-meta">{post.date} · ESSAY</span>
+                        <strong>{copy.title}<em>{copy.subtitle}</em></strong>
+                        <span className="blog-summary">{copy.summary}</span>
+                        <span className="blog-read">{copy.action} <b>↗</b></span>
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

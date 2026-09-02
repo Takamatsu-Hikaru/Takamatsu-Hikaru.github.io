@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Growing Bench: Worth It · Hikaru</title>
+  <style>
+    :root {
+      --paper: #f5f1e8;
+      --paper-2: #ece6da;
+      --ink: #171713;
+      --muted: #68665f;
+      --blue: #315ee8;
+      --orange: #ff6946;
+      --violet: #8d6ade;
+      --green: #4bb477;
+      --card: #fbf8f1;
+      --line: #1c1c18;
+    }
+    html[data-theme="dark"] {
+      --paper: #141414;
+      --paper-2: #1d1d1b;
+      --ink: #f3efe7;
+      --muted: #aaa69d;
+      --card: #1a1a18;
+      --line: #eee9df;
+      --blue: #7294ff;
+      --orange: #ff896f;
+      --violet: #b69af5;
+      --green: #67d495;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(color-mix(in srgb, var(--ink) 8%, transparent) .7px, transparent .7px),
+        var(--paper);
+      background-size: 18px 18px;
+      font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; font: inherit; }
+    ::selection { color: #fff; background: var(--blue); }
+    .progress { position: fixed; z-index: 90; inset: 0 auto auto 0; width: 0; height: 3px; background: var(--orange); }
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      height: 76px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 32px;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent);
+      background: color-mix(in srgb, var(--paper) 89%, transparent);
+      backdrop-filter: blur(14px);
+    }
+    .wordmark { display: flex; width: fit-content; align-items: center; gap: 11px; }
+    .wordmark-mark {
+      width: 39px; height: 39px; display: grid; place-items: center;
+      border-radius: 50%; background: var(--ink); color: var(--paper);
+      font-size: 12px; font-weight: 900; letter-spacing: -.04em;
+    }
+    .wordmark-copy { display: flex; flex-direction: column; line-height: 1.05; }
+    .wordmark-copy strong { font-size: 14px; letter-spacing: -.02em; }
+    .wordmark-copy small { margin-top: 5px; color: var(--muted); font: 9px/1 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .12em; }
+    nav { display: flex; gap: 32px; font: 600 12px/1 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .05em; }
+    nav a { position: relative; }
+    nav a::after { content: ""; position: absolute; right: 100%; bottom: -5px; left: 0; height: 2px; background: var(--blue); transition: right .2s ease; }
+    nav a:hover::after { right: 0; }
+    .theme-toggle { justify-self: end; width: 36px; height: 36px; border: 1px solid var(--ink); border-radius: 50%; background: transparent; cursor: pointer; transition: transform .25s ease, background .2s ease; }
+    .theme-toggle:hover { transform: rotate(24deg); background: var(--ink); color: var(--paper); }
+    .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 54px 0 82px;
+      border-bottom: 1px solid var(--ink);
+    }
+    .hero-cover {
+      width: min(700px, 76%);
+      margin: 0 0 58px auto;
+      border: 1px solid var(--ink);
+      background: var(--card);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+    .hero-cover img { display: block; width: 100%; height: auto; }
+    h1 {
+      max-width: 1000px;
+      margin: 0 0 32px;
+      font-weight: 780;
+      line-height: 1.02;
+      letter-spacing: -.075em;
+      text-wrap: balance;
+    }
+    h1 span { display: block; }
+    h1 .title-first { font-size: clamp(58px, 8.2vw, 108px); }
+    h1 .title-second { margin-top: .12em; color: var(--blue); font-size: clamp(42px, 5.8vw, 76px); letter-spacing: -.06em; }
+    .byline { color: var(--ink); font: 700 16px/1.4 ui-monospace, monospace; letter-spacing: .025em; }
+    .lead { max-width: 740px; margin: 36px 0 0; color: var(--muted); font-size: clamp(18px, 2vw, 22px); line-height: 1.85; letter-spacing: .01em; }
+    .article-layout { display: grid; grid-template-columns: 132px minmax(0, 720px); justify-content: center; gap: 54px; padding: 100px 0 132px; }
+    .rail { position: sticky; top: 118px; height: fit-content; padding-top: 8px; border-top: 4px solid var(--blue); }
+    .rail-number { display: block; margin-top: 13px; color: color-mix(in srgb, var(--ink) 20%, transparent); font: 900 74px/.85 Arial, sans-serif; letter-spacing: -.08em; }
+    .rail p { margin: 18px 0 0; color: var(--muted); font: 800 9px/1.55 ui-monospace, monospace; letter-spacing: .07em; }
+    article {
+      min-width: 0;
+      color: color-mix(in srgb, var(--ink) 94%, transparent);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: .01em;
+      text-autospace: normal;
+      text-wrap: pretty;
+      overflow-wrap: anywhere;
+    }
+    article p { margin: 0 0 1.38em; }
+    article h2 {
+      position: relative;
+      margin: 4.4em 0 1.3em;
+      padding: 0 0 .52em 23px;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+      font-size: clamp(27px, 3.2vw, 38px);
+      font-weight: 780;
+      line-height: 1.35;
+      letter-spacing: -.04em;
+    }
+    article h2:first-child { margin-top: 0; }
+    article h2::before { content: ""; position: absolute; top: .34em; left: 0; width: 9px; height: 9px; background: var(--blue); box-shadow: 5px 5px 0 var(--orange); }
+    article h3 {
+      position: relative;
+      width: fit-content;
+      min-width: 150px;
+      margin: 2.5em 0 .8em;
+      padding: 0 0 .48em 18px;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -.015em;
+    }
+    article h3::before {
+      content: "";
+      position: absolute;
+      top: .42em;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      background: var(--blue);
+      box-shadow: 4px 4px 0 var(--orange);
+    }
+    .mantra { margin: 3em 0 !important; padding: 20px 0 20px 25px; border-left: 5px solid var(--orange); color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 700; line-height: 1.65; }
+    .mantra span { display: block; }
+    .age-marker { color: var(--ink); font-weight: 900; }
+    .quote-label { margin: -.15em 0 .75em; color: var(--muted); font: 850 18px/1.5 ui-monospace, monospace; letter-spacing: .025em; }
+    blockquote { position: relative; margin: 0 -48px 3em; padding: 35px 42px 35px 58px; border: 1px solid var(--ink); background: var(--card); box-shadow: 7px 7px 0 var(--ink); font-family: "Songti SC", STSong, "Noto Serif CJK SC", serif; font-size: clamp(20px, 2.5vw, 27px); line-height: 1.75; }
+    blockquote::before { content: "“"; position: absolute; top: -20px; left: 16px; color: var(--orange); font: 700 72px/1 Georgia, serif; }
+    blockquote p { margin: 0; }
+    .end { display: flex; justify-content: space-between; margin-bottom: 110px; padding: 18px 0; border-block: 1px solid var(--ink); font: 800 10px/1 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .end a { color: var(--blue); }
+    footer { min-height: 78px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; padding: 20px 32px; border-top: 1px solid var(--ink); font: 700 9px/1.4 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .05em; }
+    footer span:nth-child(2) { color: var(--muted); text-align: center; }
+    footer a { justify-self: end; }
+    @media (max-width: 900px) {
+      .site-header { grid-template-columns: 1fr auto; padding: 0 20px; }
+      nav { display: none; }
+      .article-layout { grid-template-columns: minmax(0, 720px); }
+      .rail { display: none; }
+      blockquote { margin-inline: 0; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 30px, 1180px); }
+      .hero { padding: 34px 0 58px; }
+      .hero-cover { width: calc(100% - 6px); margin-bottom: 50px; box-shadow: 5px 5px 0 var(--ink); }
+      h1 .title-first { font-size: clamp(46px, 13vw, 64px); }
+      h1 .title-second { font-size: clamp(35px, 10.5vw, 49px); }
+      .byline { font-size: 15px; }
+      .lead { font-size: 17px; line-height: 1.9; }
+      .article-layout { padding: 65px 0 92px; }
+      article { font-size: 17px; line-height: 1.95; letter-spacing: 0; }
+      article p { margin-bottom: 1.45em; }
+      article h2 { margin-top: 3.4em; font-size: 27px; }
+      blockquote { margin: 1.5em 0 2.8em; padding: 30px 24px 28px 38px; font-size: 20px; }
+      .mantra { font-size: 21px; }
+      footer { grid-template-columns: 1fr; text-align: center; }
+      footer a { justify-self: center; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+      h1 .title-first { max-width: 980px; font-size: clamp(42px, 6vw, 80px); line-height: 1.08; letter-spacing: -.06em; }
+    h1 .title-second { max-width: 940px; font-size: clamp(34px, 4.6vw, 60px); line-height: 1.12; }
+    .article-figure { margin: 3.2em -72px; }
+    .article-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--ink); background: var(--card); box-shadow: 7px 7px 0 var(--ink); }
+    .article-figure figcaption { margin-top: 14px; color: var(--muted); font: 700 12px/1.5 ui-monospace, monospace; letter-spacing: .035em; }
+    .article-link { color: var(--blue); border-bottom: 1px solid currentColor; font-weight: 750; }
+    .article-link:hover { color: var(--orange); }
+    .question { margin: 2.2em 0 .7em; padding-left: 17px; border-left: 4px solid var(--orange); font-size: 22px; }
+    .article-cta { margin: 3em 0; padding: 25px 28px; border: 1px solid var(--ink); background: var(--card); box-shadow: 6px 6px 0 var(--ink); }
+    .article-cta p:last-child { margin-bottom: 0; }
+    @media (max-width: 900px) { .article-figure { margin-inline: 0; } }
+    @media (max-width: 640px) { .article-figure { margin-block: 2.5em; } .question { font-size: 19px; } }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Back to Bofan Zhu home">
+      <span class="wordmark-mark">BZ</span>
+      <span class="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru / Blog</small></span>
+    </a>
+    <nav aria-label="Article navigation"><a href="/">Home</a><a href="#article">Article</a><a href="#end">End</a></nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">◐</button>
+  </header>
+
+  <main class="shell" id="top">
+    <section class="hero">
+      <figure class="hero-cover"><img src="./growing-bench-hero.png" alt="Growing Bench: Worth It"></figure>
+      <h1><span class="title-first">Growing Bench: Worth It</span><span class="title-second">Correct Isn't Enough</span></h1>
+      <div class="byline">2026/9/2 Hikaru</div>
+      <p class="lead">Was the work worth it? A living benchmark for agents' sense of proportion, growing with frontier models and everyday experience.</p>
+    </section>
+
+    <div class="article-layout" id="article">
+      <aside class="rail" aria-label="Article information"><span class="rail-number">02</span><p>WORLD MODEL<br>CHECKPOINT</p></aside>
+      <article lang="en"><h2>Why build this Benchmark?</h2>
+<p>This is my first blog post on LessWrong. I want to share my view on current agent failure and benchmark building, and present Growing Bench: a living benchmark that tests an agent's sense of proportion and evolves with frontier models and everyday experience. You can submit your own frustrating experience or test your own agent and skill.</p>
+<p><a class="article-link" href="https://github.com/Takamatsu-Hikaru/Growing-Bench-Worth-It" target="_blank" rel="noreferrer">GitHub: Growing Bench: Worth It ↗</a></p>
+<p>I bet I am not the only person who has had frustrating experiences with Codex and Claude Code. Defensive agent behavior has become a widely discussed issue among users of frontier models. Ask an agent to push a small coding task and it may introduce endless verification such as SHA256, burn through a day, and make no meaningful progress. Ask for a change and it may find a way to show that it is done even when the result is incomplete—for example, by displaying a detailed log in the front end or defensively narrating the history of a PR when none of that serves the user's goal.</p>
+<p>This is not limited to coding. In review, an agent may ask for enough random seeds, confidence intervals, and additional analysis to fill another paper. In writing, it may add disclaimers and insist on phrases such as “not A but B,” “only post-hoc,” “this may be cherry-picking,” or “we can currently say this but not that,” until a clear point becomes defensive and redundant. We need it to focus on the topic; it focuses on proving how cautious it is.</p>
+<blockquote><p>Taken alone, almost every one of these actions can be defended as rigorous and correct. Users also bear some responsibility. Put the actions back into the work the user was actually trying to complete, however, and one question remains: what are you trying to do?</p></blockquote>
+<p>These patterns—over-engineering, defensive writing, and overly harsh review—point to the same failure. Agents lack a sense of proportion. They do not reliably distinguish important work from merely correct work or from defensive complexity created for its own sake.</p>
+
+<h2>Skills are trying to help. Evaluation has to catch up.</h2>
+<p>Several skills already address parts of this problem, including <a class="article-link" href="https://github.com/Kiterlin/anti-defensive-writing" target="_blank" rel="noreferrer">Anti-Defensive Writing</a>, <a class="article-link" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noreferrer">Ponytail</a>, <a class="article-link" href="https://github.com/aravelo7/codex-agent-skills/tree/main/skills/avoid-overdefensive-programming" target="_blank" rel="noreferrer">Avoid Over-Defensive Programming</a>, and <a class="article-link" href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/main/skills/proportionality-check" target="_blank" rel="noreferrer">proportionality-check</a>.</p>
+<p>The difficulty is evaluating these failure modes and interventions. Feedback and reports are distributed across platforms. In practice, users install a skill and judge whether the problem seems solved or the workflow simply feels better. Bad experiences, user feedback, and benchmark metrics are all valuable, but they are rarely part of one repeatable evaluation.</p>
+
+<h2>A Benchmark must answer three questions</h2>
+<h3 class="question">What should we evaluate?</h3>
+<p>Defensive behavior should not be judged only as right or wrong. It is a problem of taste, sense of proportion, and user feedback. We need to evaluate whether an agent balances correctness, cost, risk, and the user's actual goal.</p>
+<h3 class="question">How should these behaviors be evaluated?</h3>
+<p>Agent evaluation has moved from short QA to long-horizon tasks and more complex environments. Yet many failure modes that users care about appear only in real work and interaction. Looking only at the final answer or whether tests passed misses much of the failure.</p>
+<h3 class="question">Will the Benchmark remain useful?</h3>
+<p>Early models were widely discussed for hallucination and sycophancy; both have become less prominent in practice. A fixed or frozen benchmark has a lifecycle too: its target may disappear or become over-optimized. If a benchmark cannot evolve recursively and continuously with new frontier models, it soon measures yesterday's problems.</p>
+
+<h2>That led us to Growing Bench</h2>
+<figure class="article-figure"><img src="./growing-bench-architecture.jpg" alt="Growing Bench architecture"><figcaption>The Growing Bench evaluation and reporting loop.</figcaption></figure>
+<p>Growing Bench currently focuses on defensive behavior. It ships 50 executable workspace tasks built from real repositories and LaTeX projects across coding, writing, internal review, and external review, with interactive evaluation as well. It supports multiple agent harnesses and skill insertion, so it can compare an agent with and without an intervention.</p>
+
+<h2>01｜Do not stop at QA. Tell me what you did.</h2>
+<p>Most benchmarks ask: “Was the task completed?” “Was the answer correct?” “Did the tests pass?” We want to ask one more question: how was the work done, and was it worth doing?</p>
+<p>Growing Bench puts an agent inside disposable real code repositories and LaTeX projects, records what it actually did, and judges those actions with ROI-oriented reproducible metrics. The same behavior can be necessary in one context and wasteful in another.</p>
+<p>Expensive but necessary work remains necessary. It becomes over-defensive only when it lacks a real risk-based justification. Each action receives one label: necessary, optional, avoidable, missed, or unresolved. The report shows task success, necessary actions, avoidable actions, omissions, token use, elapsed time, touched files, checks, and trajectory completeness. Cost and necessity remain separate axes; an action is not waste simply because it is expensive.</p>
+
+<h2>02｜Make users and interaction part of the Benchmark</h2>
+<p>A model can score highly on fixed tasks and still frustrate users. The real failure often appears in the interaction between user and agent: after the user corrects the direction, did the agent actually update its state? Do the agent's claims match its actions? Does it continue following a stale narrative? How much extra burden does it place on the user?</p>
+<p>These failures need a path into benchmark tasks. Growing Bench lets users turn bad real-world experiences into new, repeatable test cases through a text-to-task pipeline. Users can test their own agents and skills, or observe behavior across multiple turns in interactive mode. Quantitative metrics and user feedback should both be evaluation signals.</p>
+
+<h2>03｜Let the Benchmark keep growing</h2>
+<figure class="article-figure"><img src="./how-growing-bench-grows.jpg" alt="How Growing Bench grows"><figcaption>Real failures become tasks; tasks become evaluations; results and feedback drive the next round.</figcaption></figure>
+<p>When the next generation of models arrives, today's most discussed problems may fade. Alignment and taste problems will remain. Users will encounter new failure modes, new discussions, and new frustrations.</p>
+<p>Instead of freezing one task set, let the benchmark grow with agents and user experience, and record and evaluate each generation more systematically. Users submit failure cases; the text-to-task pipeline turns them into executable tasks; users test their own agents and skills; results and feedback flow back into the benchmark. We hope this growing loop will continuously improve the metrics and tasks so evaluation can keep pace with frontier models.</p>
+
+<h2>Try it, break it, and help it grow</h2>
+<figure class="article-figure"><img src="./growing-bench-report-preview.svg" alt="Growing Bench report preview"><figcaption>A paired evaluation report generated by Growing Bench.</figcaption></figure>
+<div class="article-cta"><p><strong>Try Growing Bench with your own agents, skills, and workflows. Submit new failure cases, or Star the repository, open an Issue, or send a Pull Request to help the benchmark grow.</strong></p><p>This is my first attempt at building an open-source project. Any feedback, criticism, or guidance would mean a great deal to me and help make it better.</p><p><a class="article-link" href="https://github.com/Takamatsu-Hikaru/Growing-Bench-Worth-It" target="_blank" rel="noreferrer">Open Growing Bench on GitHub ↗</a></p></div></article>
+    </div>
+
+    <div class="end" id="end"><span>END / 2026.09.02</span><a href="#top">Back to top ↑</a></div>
+  </main>
+
+  <footer><span>© 2026 Bofan Zhu / Hikaru</span><span>Built between papers, robots, and sandbox worlds.</span><a href="#top">Back to top ↑</a></footer>
+  <script>
+    const root = document.documentElement;
+    const button = document.getElementById('theme-toggle');
+    const stored = localStorage.getItem('theme');
+    const initial = stored || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    root.dataset.theme = initial;
+    button.textContent = initial === 'dark' ? '☀' : '◐';
+    button.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      localStorage.setItem('theme', next);
+      button.textContent = next === 'dark' ? '☀' : '◐';
+    });
+    const progress = document.getElementById('progress');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = max > 0 ? ${Math.min(100, scrollY / max * 100)}% : '0%';
+    };
+    addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  </script>
+</body>
+</html>
