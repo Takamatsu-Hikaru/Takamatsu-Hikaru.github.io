@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Working notes on VLA/WAM, deployment-time adaptation, embodied harnesses, scaling laws, and cross-embodiment action representations.">
+  <title>Notes on Embodied Intelligence · Hikaru</title>
+  <link rel="stylesheet" href="./embodied-notes.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Back to Bofan Zhu home">
+      <span class="wordmark-mark">BZ</span>
+      <span class="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru / Blog</small></span>
+    </a>
+    <nav aria-label="Article navigation"><a href="/">Home</a><a href="#article">Article</a><a href="./embodied-notes.html">中文</a><a href="#end">End</a></nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">◐</button>
+  </header>
+
+  <main class="shell" id="top">
+    <section class="hero">
+      <figure class="hero-cover"><img src="./embodied-notes-cover.png" alt="Overview of π0 cross-embodiment robot data and its training scheme"></figure>
+      <h1><span class="title-first">Notes on Embodied Intelligence</span><span class="title-second">Thoughts in Progress</span></h1>
+      <div class="byline">2026/9/7 Hikaru</div>
+      <p class="lead">Working notes on VLA/WAM, deployment-time adaptation, embodied harnesses, scaling laws, and cross-embodiment action representations.</p>
+    </section>
+
+    <div class="article-layout" id="article">
+      <aside class="rail" aria-label="Article information"><span class="rail-number">03</span><p>EMBODIED AI<br>WORKING NOTES</p></aside>
+      <article>
+        <h2>What kind of embodied model do we need?</h2>
+        <p>The most concise definition of an embodied model today is:</p>
+        <div class="formula">(observation, language prompt, history) → action</div>
+        <p>But the final goal is clearly larger than regressing robot-arm actions from images. We want robots to develop six kinds of capability, much like mature coding agents:</p>
+        <ol>
+          <li><strong>A scaling law:</strong> generalization should improve steadily and predictably as models, data, and compute grow.</li>
+          <li><strong>High-frequency control:</strong> the system should combine high-level semantic understanding with real-time, continuous, precise manipulation.</li>
+          <li><strong>Continual learning and rapid transfer:</strong> it should absorb new tasks from a few demonstrations, much as an agent uses prompts, memory, and skills.</li>
+          <li><strong>Agentic reasoning:</strong> it should plan, supervise execution, locate errors in a trajectory, and correct them proactively.</li>
+          <li><strong>World-modeling ability:</strong> it should understand 3D space, viewpoint, dynamics, and how actions change the world.</li>
+          <li><strong>Autonomous capability growth:</strong> it should explore online, collect experience, form skills, and gradually solve tasks outside its training distribution.</li>
+        </ol>
+        <p>True embodied intelligence should therefore be a closed-loop system that can perceive, predict, act, verify, adapt, and accumulate experience.</p>
+
+        <h2>The current stack for embodied foundation models</h2>
+        <h3>Pre-training</h3>
+        <p>A typical VLA can be summarized as:</p>
+        <div class="formula">VLM backbone + action expert</div>
+        <p>The vision-language model handles semantic and scene understanding, while the action expert predicts action chunks through diffusion, flow matching, or another generative method.</p>
+        <p>The action expert itself learns demonstrations through imitation learning and SFT. It can produce smooth actions and complete tasks, but that does not mean it understands the task, knows the success condition, or can tell when it has made a mistake.</p>
+        <p>WAMs, world-action models, and latent action models try to model state transitions alongside action prediction, for example by learning both:</p>
+        <div class="formula"><span class="stack">P(s<sub>t+1</sub> | s<sub>t</sub>, a<sub>t</sub>)</span><span class="stack">P(a<sub>t</sub> | s<sub>t</sub>, s<sub>t+1</sub>)</span></div>
+        <p>This means learning both “what consequence will this action cause?” and “what action should produce this change?” It makes sense: we should try to learn how the world changes and how its dynamics work.</p>
+        <p>Some recent representative systems include:</p>
+        <ul class="note-list">
+          <li><strong>Atlas:</strong> World Labs released this multimodal autoregressive diffusion world model in 2026. It organizes text, images, camera poses, and depth maps into a 3D spatial context for controllable viewpoint generation, 3D reconstruction, spatiotemporal simulation, and robotic Real-to-Sim.</li>
+          <li><strong>Genie:</strong> Google DeepMind’s Genie series learns controllable latent actions and environment evolution from videos without action labels. Genie 3 can generate a visual world from text that supports sustained real-time interaction and navigation, targeting open-ended environment simulation and agent training.</li>
+          <li><strong>GEN-1.5:</strong> Generalist’s embodied foundation model places a 3–12 second sensor-action demonstration inside an approximately 30-second context as a physical prompt. Without parameter updates, it generates 100 Hz closed-loop actions and demonstrates one-demonstration learning for short-horizon tasks, skill composition, and transfer from simulation demonstrations to real robots.</li>
+          <li><strong>Zero-WAM:</strong> Zero-WAM uses human manipulation video as a visual prompt for a new task. Through causal video-action modeling, it jointly predicts future robot observations and executable actions, allowing one policy to follow video and complete tasks unseen during training without fine-tuning.</li>
+          <li><strong>Fast-WAM:</strong> Fast-WAM learns action-relevant world representations through future-video prediction during training, then skips explicit video generation at deployment and directly outputs actions. It tests whether the main benefit of WAM can be retained through training-time world modeling while substantially reducing control latency.</li>
+        </ul>
+
+        <h3>Post-training and inference</h3>
+        <p>Possible methods for post-training and deployment adaptation include: SFT for learning from demonstrations and corrective trajectories; RL for optimizing success from environment feedback; on-policy distillation, in which a teacher labels the states actually visited by the student; ICL for conditioning behavior on demonstrations in context; TTT for updating a latent, adapter, or local parameters at deployment; continual learning for absorbing experience over time while limiting forgetting; teacher–student distillation for compressing slow reasoning, world prediction, or repeated sampling into a fast policy; and one-shot/few-shot adaptation for transferring across tasks, scenes, or embodiments from very few demonstrations. These methods can form a loop of attempt, verification, update, distillation, and skill consolidation.</p>
+
+        <h2>ICL, TTT, and embodied skill adaptation</h2>
+        <p>Systems such as HOST, Zero-WAM, and WAM-TTT emphasize ICL, TTT, and one-shot learning. The focus is moving from training a fixed policy toward letting a pre-trained foundation model absorb information about the current task, scene, and robot at deployment, reducing the cost of acquiring a new skill. ICL keeps parameters mostly fixed and conditions behavior on demonstrations and interaction history. TTT updates an adapter, latent, memory, normalization state, or local parameters from test-time data. Retrieval finds prior trajectories and atomic skills. System identification estimates dynamics and control characteristics from a small number of interactions. Online fine-tuning continuously changes the policy.</p>
+        <p>Demonstration trajectories, interaction history, and skill libraries are taking on the roles of prompt, context, and skill in embodied systems. A demonstration simultaneously contains:</p>
+        <div class="formula">(task, scene, camera, embodiment, dynamics, action convention, success criterion)</div>
+        <p>One-shot learning can therefore provide a task prompt while also adapting implicitly to the camera, robot morphology, control frequency, and dynamics. A reusable skill should also contain a precondition, closed-loop controller, termination condition, success verifier, and failure recovery. Generated video can provide a visual target or motion prior, but it must still pass through correspondence, motion intent, robot-compatible action, and closed-loop correction before becoming an executable skill. The ideal loop is:</p>
+        <div class="formula">demonstration → ICL attempt → execution and verification → TTT/OPD → skill distillation</div>
+
+        <h2>Why are ICL and TTT rising together?</h2>
+        <p>The optimistic reading is that embodied foundation models have developed composable visual, action, and dynamics priors that can be activated by a small amount of on-site information. The cautious reading is that a large domain gap remains between offline policies and real deployment, so performance depends on local adaptation. Their value cannot be judged from a single one-shot success. We should test transfer across tasks, layouts, and embodiments; confirm that the model uses action consequences rather than visual matching; check whether adaptation damages old capabilities; and see whether failure experience can settle into a stable skill.</p>
+        <p>TTT must also handle catastrophic forgetting and incorrect updates. Options include episodic adapters, embodiment-specific LoRA, latent adaptation, replay, trust regions, update gating, or an episode-level reset. Short-term experience should first enter temporary memory. It should be written into the long-term model or skill library only after a success verifier confirms it, the behavior succeeds repeatedly, and old skills do not regress substantially.</p>
+
+        <h2>Harness and CaP: shortcut and necessary path</h2>
+        <p>VLA/WAM provides continuous perception and action, while a Harness organizes those capabilities into an embodied Agent that can be inspected, composed, and continually updated. Recent systems such as OpenETA, CaP-X, ASPIRE, RoboHarness, and RoboRSI are converging on a shared pattern: an MLLM handles task decomposition, policy routing, visual attribution, and program revision; VLAs, conventional controllers, and code skills execute; and videos, actions, tool calls, logs, and success criteria form a replayable execution trace.</p>
+        <p>RoboRSI offers a relatively mature example of an embodied Harness. It organizes Task, Compound Skill, Atomic Task, and Base Skill in a top-down skill tree, then returns execution results to the responsible node along the call chain. This structure makes failures traceable, skills replaceable, and stable procedures easy to consolidate. It also gives subsequent learning a clear place to attach its data.</p>
+        <p>For me, the more important criterion for embodied RSI is whether its capability boundary keeps expanding under OOD conditions. Compositional generalization means rearranging the same atomic skills for new objects, scenes, and task orders. Through explicit task structure, skill interfaces, and execution history, an MLLM Harness has a clear structural advantage here. Systems such as Zero-WAM further show that a new task can enter the model’s context through human video. RSI must go further and ask whether this temporary success can be diagnosed, verified, and consolidated into a capability that is directly reusable next time.</p>
+        <p>A more direct experiment would give the robot an OOD task while deliberately introducing different kinds of capability gaps: completely remove a required atomic skill; keep the skill but prevent the Planner from composing it correctly; or provide a skill that fails repeatedly on the current embodiment. From observations, the call chain, and physical outcomes, the system should determine whether the missing element is task planning, perception, action data, contact control, dynamics experience, or embodiment adaptation. It should then choose among replanning, retrieving experience, requesting a human demonstration, using ICL, fine-tuning on corrective trajectories, or practicing autonomously under safety constraints.</p>
+        <p>For example, remove the insert skill from a plug-in task and provide only localization, grasping, motion, and basic force control. In another setting, provide an insert skill transferred from a different robot that repeatedly fails on the current embodiment. The key question is whether the model can recognize that its present capability cannot complete contact alignment, then request one demonstration, collect a few corrective trajectories, or learn a new insertion strategy through constrained exploration. It should ultimately consolidate that strategy into an atomic skill reusable across sockets, positions, and objects. Merely becoming better at the same task still falls short of capability growth.</p>
+        <p>Evaluation should focus on new-task coverage, capability-gap attribution, time-to-competence, the cost of human demonstrations, the number of autonomous exploration attempts, regression on old skills, and reuse across settings. These measures can tell us whether the system has truly acquired a new capability.</p>
+        <p>Speed remains a basic constraint for this route. High-frequency actions should be executed by a VLA, controller, or consolidated code, while the MLLM is triggered at task transitions, skill failures, and high-uncertainty states. Beyond per-step inference latency, reports should measure the total wall-clock time from detecting a capability gap to acquiring a stable skill. The efficiency of embodied RSI ultimately appears in a downward trend: when the robot encounters the next OOD task, it should require less human time, fewer real rollouts, and less online inference.</p>
+
+        <h2>How we think about embodied scaling laws</h2>
+        <p>An embodied scaling law probably exists, but its core independent variable should not be the raw number of trajectories. It should be effective interaction experience that is physically aligned, weighted by task relevance, covers new states, and contains closed-loop feedback:</p>
+        <div class="formula">N<sub>effective</sub>(T) = Σ<sub>i</sub> q<sub>i</sub> a<sub>i</sub> r<sub>i</sub>(T) n<sub>i</sub> f<sub>i</sub> I<sub>mixture</sub></div>
+        <p>Here, q<sub>i</sub> represents demonstration and control quality; a<sub>i</sub> represents alignment in action coordinates, control frequency, sensors, and embodiment; r<sub>i</sub>(T) represents relevance to the target task; n<sub>i</sub> measures whether the data covers new states; f<sub>i</sub> measures whether it includes failures, corrections, rewards, and action consequences; and I<sub>mixture</sub> represents conflicts and negative transfer across data sources. Embodied data cannot be treated like language tokens: the same numeric action can carry completely different physical meanings on different robots, coordinate systems, or control frequencies.</p>
+        <p>Diversity is valuable only when the model conditions on it correctly. Diversity in tasks, objects, scenes, geometry, dynamics, and failure recovery can provide the supervision needed for compositional generalization. Differences in operator style, speed, action convention, and embodiment can instead make similar observations map to conflicting action labels when they are not identified explicitly. Modeled diversity expands capability coverage; unconditioned diversity often becomes noise.</p>
+        <p>The criticism that “another ten years of data collected under the current VLA paradigm still would not be enough” therefore has some force. Success-only offline imitation mainly increases sampling density around expert trajectories. It says little about the consequences of wrong actions, recovery after leaving the distribution, where a long-horizon task fails, or which interaction would reduce current uncertainty most effectively.</p>
+        <p>Embodied scaling must proceed along four axes: semantic scaling from VLMs, internet data, and human video; physical scaling from aligned real or simulated interaction; rapid-adaptation scaling from ICL, TTT, and system identification; and experience scaling from on-policy rollout, RL, corrective data, and autonomous exploration. The real inflection point will arrive after capability and data form a loop. Stronger models will identify their own uncertainty and capability gaps more effectively and actively collect high-information experience. That experience will improve the models in turn, allowing data production itself to scale with model capability.</p>
+
+        <h2>The robot world lacks its own tokenizer and ISA</h2>
+        <p>A deep obstacle to cross-embodiment learning is the lack of shared definitions across vendors:</p>
+        <ul class="note-list">
+          <li>joint definitions;</li><li>coordinate systems;</li><li>position/velocity/torque interfaces;</li><li>control frequencies;</li><li>timestamps;</li><li>latency;</li><li>gripper semantics;</li><li>proprioception;</li><li>camera calibration;</li><li>safety control.</li>
+        </ul>
+        <p>Large models are therefore often forced to spend billions of parameters guessing the driver protocols of different vendors.</p>
+        <p>An ideal system would include a Robot Action IR:</p>
+        <div class="formula">VLA/WAM → Robot Action IR → Embodiment Adapter → Vendor Controller</div>
+        <p>This IR should be more than a seven-dimensional action vector. It could contain:</p>
+        <div class="formula">a<sub>t</sub><sup>IR</sup> = (reference frame, pose/force objective, constraints, horizon, termination, uncertainty)</div>
+        <p>Vendors could still use different low-level motors while the model shares an intermediate layer of physical action semantics.</p>
+        <p>This could be the tokenizer, ISA, or USB-C of the embodied world. It cannot eliminate differences in friction, load, latency, and dynamics, but it can separate task learning from driver-protocol adaptation. The remaining differences can then be handled through calibration, system identification, and embodiment adapters.</p>
+
+        <h2>A few insights about current embodied-model narratives</h2>
+        <h3>The gains from diffusion cannot be attributed directly to a “multimodal action distribution”</h3>
+        <p>Diffusion Policy explains the advantage of diffusion as the ability to express a multimodal action distribution, but later work suggests that multimodal modeling may not be the main source of the performance gain. In <em>Much Ado About Noising</em>, Pan et al. control for network architecture, training procedure, and inference compute, and find that ordinary regression policies can approach generative policies. The important factors may instead include iterative supervised computation, regularization from random perturbations, and avoiding the averaged actions produced by direct regression. The two-step regression method MIP can also match flow-based policies. To validate the “multimodality” of diffusion, different samples should correspond to semantically distinct, stable, and successful strategies—such as approaching a grasp from different directions or taking different collision-free paths—rather than trajectory jitter or random variation around one mode.</p>
+        <p class="reference">References: <em>Diffusion Policy</em>; <em>Much Ado About Noising</em>, ICLR 2026.</p>
+        <h3>A module’s contribution must be established against a fully tuned baseline</h3>
+        <p>A complex structure may benefit from extra parameters, auxiliary supervision, training budget, or more extensive tuning rather than from its claimed mechanism. When studying recurrent policies in POMDPs, Luo et al. find that simply assigning a separate, smaller learning rate to the context encoder substantially stabilizes training and outperforms several methods with auxiliary prediction, explicit history features, or specialized memory mechanisms. Similarly, by systematically optimizing architecture, history representation, and hyperparameters, Ni et al. make a simple recurrent model-free baseline match or outperform more complex methods in 18 of 21 environments. A semantic head, future predictor, world-guidance component, or memory module should therefore be compared under matched parameter counts, compute, data, and search budgets. Ablations that remove inference inputs, replace supervision targets, or freeze modules should identify the true causal source of the gain.</p>
+        <p class="reference">References: Luo et al., NeurIPS 2024; Ni et al., ICML 2022.</p>
+        <h3>The value of a world model should be measured through decision-making</h3>
+        <p>Sharp video generation captures only part of visual modeling ability. A robot needs future consistency in object identity, geometry, occlusion, contact state, and action-conditioned change. A blurry prediction may still contain low-frequency geometry and dynamics useful for control. Object drift, penetration, incorrect contact relations, or inconsistency across viewpoints indicate a failure in world-state modeling itself. A more direct evaluation would ask the model to compare the consequences of candidate actions, predict success, collision, and irreversible failure, and test whether world prediction raises OOD success rates, reduces real rollouts, improves recovery, or can be distilled into a better action policy. A world model moves beyond video generation only when its future representation produces a verifiable improvement in action selection.</p>
+        <h3>“The model does not know what it is doing” should become a testable capability</h3>
+        <p>A current VLA/WAM may complete short-horizon manipulation without explicitly representing the task stage, success condition, failure cause, goal reachability, or the capability required next. This contrasts with systems such as SayCan: their low-level actions were limited, but they used language models for task decomposition and affordance ranking. Today’s end-to-end policies are stronger at action, yet task state and semantic judgment are often compressed into a latent representation that is hard to inspect. A language explanation is not a sufficient criterion. Better tests ask whether the system can reject or clarify an impossible instruction; replan when a critical object is missing; locate the failed step after execution drifts; update its plan when the environment is disturbed; and, when an atomic skill is missing, identify the capability gap and choose retrieval, a requested demonstration, safe exploration, or fine-tuning. What matters is intervenable task understanding, counterfactual judgment, and autonomous recovery.</p>
+
+        <h2>The research directions that interest us most</h2>
+        <h3 class="direction">Deployment-time post-training for VLA/WAM</h3>
+        <p>Study how a robot can quickly acquire new capabilities from a small number of demonstrations, failure trajectories, and environment feedback generated at deployment. The system could first attempt the task through ICL, then use TTT, on-policy distillation, local SFT, or RL based on the execution result. Verified experience could be consolidated into an adapter, policy update, or long-term skill. The focus is a complete path from temporary adaptation to continual learning while controlling incorrect updates, distribution drift, and catastrophic forgetting. Experiments should distinguish task reproduction, scene adaptation, embodiment adaptation, and genuinely new capabilities reusable across objects and layouts.</p>
+        <h3 class="direction">Harnesses for embodied foundation models</h3>
+        <p>Build an execution system around a VLA/WAM executor with an MLLM supervisor, memory, planner, skill library, verifier, and recovery mechanism. The MLLM interprets open-world instructions, decomposes tasks, and selects skills. The VLA handles high-frequency closed-loop control. The WAM predicts action consequences. The verifier judges intermediate success and triggers recovery. The value of a Harness is that it turns a long-horizon task into traceable state transitions and allows failures to be located in perception, planning, skill selection, or control. Research should record the full trace, state clearly whether self-improvement changed the prompt, memory, plan, code, skill, adapter, or model weights, and measure whether those changes improve OOD behavior, recovery, and long-horizon capability.</p>
+        <h3 class="direction">Cross-teaching among MLLM, CaP, VLA, and WAM</h3>
+        <p>Different models can form a complementary teacher–student system. MLLM/CaP can provide task decomposition, semantic subgoals, program structure, success judgment, data filtering, and trajectory annotation. A WAM can predict the future consequences of candidate actions and provide counterfactual supervision. A VLA can handle low-latency closed-loop execution. During training, a slow model can label the student’s on-policy states and correct errors on the distribution the student actually visits through OPD, SFT, or preference learning. Planning, video prediction, and repeated sampling can then be compressed into a fast action model. In return, real rollouts can calibrate the MLLM and WAM so that upper-level reasoning remains grounded in the robot’s actual affordances.</p>
+        <h3 class="direction">Embodied Action IR</h3>
+        <p>Study a cross-embodiment intermediate action representation between semantic tasks and native robot control. It could describe end-effector pose changes, contact modes, force intent, keypoint constraints, phase termination, and permitted regions of motion, then use a small embodiment adapter to map these descriptions to the joints, grippers, and control commands of different robots. The main model and high-level skills could then be shared across robots, while a new platform would require only a small amount of calibration, system identification, and action alignment. Evaluation should cover cross-robot zero/few-shot transfer, adapter size, calibration-data cost, control precision, regression on old robots, and whether adding a new embodiment produces positive transfer rather than negative transfer.</p>
+        <h3 class="direction">A hierarchy between high-frequency control and expensive reasoning</h3>
+        <p>Let a fast VLA or reactive policy handle ordinary closed-loop control, and invoke a WAM, MLLM, or CaP only for OOD states, high uncertainty, repeated failure, task transitions, or long-horizon planning. The slow model can generate candidate futures, compare action consequences, replan, and supply corrective trajectories. After verification, distillation or OPD can compress the new strategy back into the fast action model. The system can also use diffusion cache, agent KV cache, latent reuse, and asynchronous prediction to reduce repeated computation. Final evaluation should combine task success, trigger accuracy, control frequency, end-to-end latency, the number of expensive model calls, and the ability of the distilled student to execute independently of its teacher.</p>
+
+        <h2>How to develop real understanding from here</h2>
+        <p>Research can begin with judgments, but in the end we have to run the systems ourselves. Many current benchmarks use short tasks and fixed scenes, where different paradigms may reach similar success rates. Those results make it hard to tell what VLA, WAM, ICL, TTT, and CaP have actually learned. We do not need to rush to dismiss CaP as a shortcut, declare MLLMs too slow, reduce world models to video generation, or say that end-to-end VLAs understand nothing. Reproduce systems step by step, design probes, and test each question directly. That is how real understanding is built.</p>
+      </article>
+    </div>
+
+    <div class="end" id="end"><span>END / 2026.09.07</span><a href="#top">Back to top ↑</a></div>
+  </main>
+  <footer><span>© 2026 Bofan Zhu / Hikaru</span><span>Built between papers, robots, and sandbox worlds.</span><a href="#top">Back to top ↑</a></footer>
+  <script>
+    const root = document.documentElement;
+    const button = document.getElementById("theme-toggle");
+    const stored = localStorage.getItem("theme");
+    const initial = stored || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    root.dataset.theme = initial;
+    button.textContent = initial === "dark" ? "☀" : "◐";
+    button.addEventListener("click", () => {
+      const next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+      button.textContent = next === "dark" ? "☀" : "◐";
+    });
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = max > 0 ? Math.min(100, scrollY / max * 100) + "%" : "0%";
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+  </script>
+</body>
+</html>

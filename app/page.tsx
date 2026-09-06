@@ -30,6 +30,27 @@ const journey = [
 
 const blogPosts = [
   {
+    slug: "embodied-notes",
+    stamp: "NOTES 03",
+    date: "2026.09.07",
+    cover: "/blog/embodied-notes-cover.png",
+    alt: "π0 跨本体机器人数据与训练范式示意图",
+    zh: {
+      href: "/blog/embodied-notes.html",
+      title: "具身智能随想",
+      subtitle: "My Thoughts on Embodied Intelligence",
+      summary: "一些关于 VLA/WAM、部署时适配、具身 Harness、Scaling Law 与跨本体动作表示的阶段性想法。",
+      action: "阅读随想",
+    },
+    en: {
+      href: "/blog/embodied-notes-en.html",
+      title: "Notes on Embodied Intelligence",
+      subtitle: "Thoughts in Progress",
+      summary: "Working notes on VLA/WAM, deployment-time adaptation, embodied harnesses, scaling laws, and cross-embodiment action representations.",
+      action: "READ NOTES",
+    },
+  },
+  {
     slug: "growing-bench",
     stamp: "BENCH 02",
     date: "2026.09.02",
@@ -175,7 +196,7 @@ export default function Home() {
               <span className="eyebrow">World model checkpoints</span>
               <strong>Blog & field notes</strong>
             </span>
-            <span className="blog-count">02 ARTICLES</span>
+            <span className="blog-count">03 ARTICLES</span>
             <span className="blog-toggle" aria-hidden="true">+</span>
           </button>
 

@@ -200,6 +200,7 @@ h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp
 }
 .blog-section.is-open .blog-card { transform: translateY(0); opacity: 1; }
 .blog-section.is-open .blog-card:nth-child(2) { transition-delay: .14s; }
+.blog-section.is-open .blog-card:nth-child(3) { transition-delay: .28s; }
 .blog-card:hover { transform: translate(-4px, -4px); box-shadow: 11px 11px 0 var(--ink); }
 .blog-cover { position: relative; min-height: 290px; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); }
 .blog-cover img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .65s cubic-bezier(.2,.75,.25,1); }
