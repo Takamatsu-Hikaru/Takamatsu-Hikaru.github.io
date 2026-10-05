@@ -1,0 +1,134 @@
+[
+  {
+    "id": "instructgpt",
+    "page": 3,
+    "figure": 2,
+    "cropPoints": [
+      108,
+      64,
+      504,
+      299
+    ]
+  },
+  {
+    "id": "clip",
+    "page": 2,
+    "figure": 1,
+    "cropPoints": [
+      54,
+      64,
+      542,
+      245
+    ]
+  },
+  {
+    "id": "vit",
+    "page": 3,
+    "figure": 1,
+    "cropPoints": [
+      135,
+      75,
+      478,
+      255
+    ]
+  },
+  {
+    "id": "ldm",
+    "page": 4,
+    "figure": 3,
+    "cropPoints": [
+      307,
+      39,
+      548,
+      194
+    ]
+  },
+  {
+    "id": "dit",
+    "page": 3,
+    "figure": 3,
+    "cropPoints": [
+      48,
+      64,
+      548,
+      281
+    ]
+  },
+  {
+    "id": "diffusion-policy",
+    "page": 3,
+    "figure": 3,
+    "cropPoints": [
+      48,
+      20,
+      566,
+      195
+    ]
+  },
+  {
+    "id": "rt2",
+    "page": 2,
+    "figure": 1,
+    "cropPoints": [
+      108,
+      66,
+      504,
+      217
+    ]
+  },
+  {
+    "id": "flashattention",
+    "page": 2,
+    "figure": 1,
+    "cropPoints": [
+      104,
+      68,
+      503,
+      230
+    ]
+  },
+  {
+    "id": "world-models",
+    "page": 2,
+    "figure": 4,
+    "cropPoints": [
+      305,
+      438,
+      546,
+      607
+    ]
+  },
+  {
+    "id": "mpnn",
+    "page": 1,
+    "figure": 1,
+    "cropPoints": [
+      306,
+      174,
+      541,
+      319
+    ]
+  },
+  {
+    "id": "rt2-examples",
+    "page": 4,
+    "figure": 2,
+    "cropPoints": [
+      146,
+      70,
+      464,
+      320
+    ]
+  },
+  {
+    "id": "dit-samples",
+    "page": 1,
+    "figure": 1,
+    "cropPoints": [
+      49,
+      147,
+      547,
+      480
+    ]
+  }
+]

@@ -1,0 +1,230 @@
+[
+  {
+    "id": "instructgpt",
+    "page": 3,
+    "figure": 2,
+    "cropPoints": [
+      108,
+      64,
+      504,
+      299
+    ],
+    "number": 1,
+    "field": "大语言模型",
+    "paper": "InstructGPT",
+    "title": "SFT、奖励模型、PPO 三个阶段",
+    "placement": "正文推荐",
+    "reason": "放在后训练介绍旁边，三列把数据怎么来、模型怎么更新串在一起。",
+    "guidePage": "llm",
+    "url": "https://arxiv.org/abs/2203.02155"
+  },
+  {
+    "id": "clip",
+    "page": 2,
+    "figure": 1,
+    "cropPoints": [
+      54,
+      64,
+      542,
+      245
+    ],
+    "number": 2,
+    "field": "多模态",
+    "paper": "CLIP",
+    "title": "图文对齐与零样本分类",
+    "placement": "正文推荐",
+    "reason": "放在 CLIP 介绍旁边：同一张图同时解释图文配对训练和使用文字标签分类。",
+    "guidePage": "multimodal",
+    "url": "https://proceedings.mlr.press/v139/radford21a.html"
+  },
+  {
+    "id": "vit",
+    "page": 3,
+    "figure": 1,
+    "cropPoints": [
+      135,
+      75,
+      478,
+      255
+    ],
+    "number": 3,
+    "field": "计算机视觉",
+    "paper": "Vision Transformer",
+    "title": "一张图怎样变成 token 序列",
+    "placement": "正文推荐",
+    "reason": "接在卷积与视觉 Transformer 的介绍后，图像切块、位置编码、编码器都有对应位置。",
+    "guidePage": "vision",
+    "url": "https://arxiv.org/abs/2010.11929"
+  },
+  {
+    "id": "rt2",
+    "page": 2,
+    "figure": 1,
+    "cropPoints": [
+      108,
+      66,
+      504,
+      217
+    ],
+    "number": 4,
+    "field": "具身智能",
+    "paper": "RT-2",
+    "title": "视觉、语言怎样接到机器人动作",
+    "placement": "正文推荐",
+    "reason": "放在 VLA 一节：左侧是训练数据，中间是模型，右侧是机器人执行。",
+    "guidePage": "embodied",
+    "url": "https://proceedings.mlr.press/v229/zitkovich23a.html"
+  },
+  {
+    "id": "diffusion-policy",
+    "page": 3,
+    "figure": 3,
+    "cropPoints": [
+      48,
+      20,
+      566,
+      195
+    ],
+    "number": 5,
+    "field": "具身智能",
+    "paper": "Diffusion Policy",
+    "title": "从相机观察到动作序列",
+    "placement": "正文推荐",
+    "reason": "放在 Diffusion Policy 的介绍后。左半边是输入与动作，右半边给出两种网络实现。",
+    "guidePage": "embodied",
+    "url": "https://arxiv.org/abs/2303.04137v4"
+  },
+  {
+    "id": "ldm",
+    "page": 4,
+    "figure": 3,
+    "cropPoints": [
+      307,
+      39,
+      548,
+      194
+    ],
+    "number": 6,
+    "field": "生成模型",
+    "paper": "Latent Diffusion",
+    "title": "压缩表示、去噪与条件控制",
+    "placement": "正文推荐",
+    "reason": "放在潜空间扩散介绍旁边。三种底色区分像素空间、潜空间和条件输入。",
+    "guidePage": "generation",
+    "url": "https://arxiv.org/abs/2112.10752"
+  },
+  {
+    "id": "world-models",
+    "page": 2,
+    "figure": 4,
+    "cropPoints": [
+      305,
+      438,
+      546,
+      607
+    ],
+    "number": 7,
+    "field": "世界模型",
+    "paper": "World Models",
+    "title": "视觉、记忆、控制如何接起来",
+    "placement": "正文推荐",
+    "reason": "接在 World Models 的项目入口后，沿时间轴看 V、M、C 三个模块的连接。",
+    "guidePage": "world-model",
+    "url": "https://arxiv.org/abs/1803.10122"
+  },
+  {
+    "id": "mpnn",
+    "page": 1,
+    "figure": 1,
+    "cropPoints": [
+      306,
+      174,
+      541,
+      319
+    ],
+    "number": 8,
+    "field": "AI 交叉学科",
+    "paper": "Neural Message Passing for Quantum Chemistry",
+    "title": "用分子图预测量子化学性质",
+    "placement": "正文推荐",
+    "reason": "放在分子任务介绍旁边，用一条分支对照昂贵计算与学习得到的性质预测。",
+    "guidePage": "ai4x",
+    "url": "https://proceedings.mlr.press/v70/gilmer17a.html"
+  },
+  {
+    "id": "dit",
+    "page": 3,
+    "figure": 3,
+    "cropPoints": [
+      48,
+      64,
+      548,
+      281
+    ],
+    "number": 9,
+    "field": "生成模型",
+    "paper": "DiT",
+    "title": "扩散 Transformer 的模块结构",
+    "placement": "小卡推荐",
+    "reason": "放进 DiT 小卡。结构完整，但细节多，展开大图更适合看条件怎样进入模块。",
+    "guidePage": "generation",
+    "url": "https://arxiv.org/abs/2212.09748"
+  },
+  {
+    "id": "flashattention",
+    "page": 2,
+    "figure": 1,
+    "cropPoints": [
+      104,
+      68,
+      503,
+      230
+    ],
+    "number": 10,
+    "field": "效率与系统",
+    "paper": "FlashAttention",
+    "title": "GPU 存储层级与分块计算",
+    "placement": "小卡推荐",
+    "reason": "放进 FlashAttention 小卡，配合访存和分块的解释看。图右侧还有论文中的耗时对照。",
+    "guidePage": "systems",
+    "url": "https://arxiv.org/abs/2205.14135"
+  },
+  {
+    "id": "rt2-examples",
+    "page": 4,
+    "figure": 2,
+    "cropPoints": [
+      146,
+      70,
+      464,
+      320
+    ],
+    "number": 11,
+    "field": "具身智能",
+    "paper": "RT-2",
+    "title": "语言指令与机器人任务示例",
+    "placement": "补充选项",
+    "reason": "可以放在具身页开头，用真实任务引出 VLA；正文方法图仍选上面的 RT-2 总览。",
+    "guidePage": "embodied",
+    "url": "https://proceedings.mlr.press/v229/zitkovich23a.html"
+  },
+  {
+    "id": "dit-samples",
+    "page": 1,
+    "figure": 1,
+    "cropPoints": [
+      49,
+      147,
+      547,
+      480
+    ],
+    "number": 12,
+    "field": "生成模型",
+    "paper": "DiT",
+    "title": "论文展示的图像生成结果",
+    "placement": "补充选项",
+    "reason": "可以放在生成页开头，让读者先看到输出样子；方法解释接 LDM 或 DiT 的结构图。",
+    "guidePage": "generation",
+    "url": "https://arxiv.org/abs/2212.09748"
+  }
+]
