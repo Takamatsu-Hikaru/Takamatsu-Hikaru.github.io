@@ -68,8 +68,7 @@
         "环境变化与奖励",
         "记录轨迹",
         "更新策略或价值"
-      ],
-      "caption": "更新后的策略继续与环境交互。图中的奖励来自任务定义，未必完整代表你真正想要的行为。"
+      ]
     },
     "paperIntro": "先读 DQN 的交互与更新过程，再比较 PPO、SAC 如何用数据；第一遍能说清各自学什么、用什么数据就很有收获。"
   },
@@ -141,8 +140,7 @@
         "Transition and reward",
         "Record experience",
         "Update policy or value"
-      ],
-      "caption": "The updated policy interacts again. Task rewards may capture only part of the behavior you actually want."
+      ]
     },
     "paperIntro": "Start with interaction and updates in DQN, then compare how PPO and SAC use data. Explaining what each learns and which data it needs is a useful first reading."
   },

@@ -75,8 +75,7 @@
         "处理输入 · prefill",
         "逐步生成 · decode",
         "返回结果"
-      ],
-      "caption": "这是服务延迟的简化分解。FlashAttention 优化注意力计算，PagedAttention 管理 KV 缓存；它们针对不同层面，可以组合使用。"
+      ]
     },
     "paperIntro": "四篇对应训练状态、算子访存、数值精度和在线缓存。先辨认各自的瓶颈，再读性能图中的负载条件。"
   },
@@ -155,8 +154,7 @@
         "Input processing · prefill",
         "Token generation · decode",
         "Return result"
-      ],
-      "caption": "A simplified latency breakdown. FlashAttention optimizes attention computation; PagedAttention manages the KV cache. They address different layers and can be combined."
+      ]
     },
     "paperIntro": "These papers cover training state, kernel memory traffic, numerical precision, and serving caches. Identify each bottleneck before reading performance plots."
   },

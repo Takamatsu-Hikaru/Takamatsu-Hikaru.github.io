@@ -75,8 +75,7 @@
         "模型选择动作",
         "工具或环境执行",
         "返回观察并继续"
-      ],
-      "caption": "箭头表示控制与信息流，最后的观察回到下一轮上下文。循环本身不更新权重。"
+      ]
     },
     "paperIntro": "先用 ReAct 看懂一条轨迹，再分别看工具训练、跨尝试反馈和任务评测；它们回答的是不同问题。"
   },
@@ -155,8 +154,7 @@
         "Model chooses an action",
         "Tool or environment executes",
         "Observation returns to the loop"
-      ],
-      "caption": "Arrows show control and information flow. Observations enter the next context; the loop itself does not update weights."
+      ]
     },
     "paperIntro": "Start with a ReAct trajectory, then study tool training, feedback across attempts, and evaluation as distinct questions."
   },

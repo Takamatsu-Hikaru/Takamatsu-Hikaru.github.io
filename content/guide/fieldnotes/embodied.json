@@ -68,8 +68,7 @@
         "身体执行",
         "环境发生变化",
         "再次观察"
-      ],
-      "caption": "动作会改变下一次输入，闭环因此重要。语言理解正确、动作预测合理、真实任务完成是三个需要分别检查的环节。"
+      ]
     },
     "paperIntro": "先看三个项目的任务视频，再读方法图；把相同任务的输入、动作输出和训练数据列在一起。"
   },
@@ -141,8 +140,7 @@
         "Execute with the body",
         "Environment changes",
         "Observe again"
-      ],
-      "caption": "Actions change the next input. Language understanding, plausible action prediction, and physical task success must each be checked."
+      ]
     },
     "paperIntro": "Watch the task videos before reading the method diagrams. Compare inputs, action outputs, and training data across the three projects."
   },

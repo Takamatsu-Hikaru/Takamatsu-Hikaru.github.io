@@ -30,8 +30,7 @@
     ],
     "figure": {
       "title": "从像素到任务输出",
-      "nodes": ["图像 / 视频", "提取视觉特征", "任务预测层", "类别 / 框 / 掩码"],
-      "caption": "这是常见的视觉模型读法。类别、框和掩码是不同任务的输出，不是每个模型都会依次完成的三个步骤；实际模型也可能联合预测。"
+      "nodes": ["图像 / 视频", "提取视觉特征", "任务预测层", "类别 / 框 / 掩码"]
     },
     "paperIntro": "先用 AlexNet 和 ResNet 读懂特征学习与训练，再按兴趣选 YOLO 或 ViT；每篇都对照输入、输出和实验看。"
   },
@@ -65,8 +64,7 @@
     ],
     "figure": {
       "title": "From pixels to task outputs",
-      "nodes": ["Image / video", "Visual features", "Prediction head", "Class / box / mask"],
-      "caption": "A common way to read a vision model. Classes, boxes, and masks are alternative task outputs, not three stages every model performs. Some models predict them jointly."
+      "nodes": ["Image / video", "Visual features", "Prediction head", "Class / box / mask"]
     },
     "paperIntro": "Use AlexNet and ResNet to understand feature learning and training, then choose YOLO or ViT. Follow each paper's inputs, outputs, and experiments."
   },

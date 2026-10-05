@@ -68,8 +68,7 @@
         "预测行动后果",
         "训练策略或搜索",
         "回到环境验证"
-      ],
-      "caption": "这是几类方法的共同问题链。Dreamer 在想象中学习策略；MuZero 在决策时使用搜索。"
+      ]
     },
     "paperIntro": "从 World Models 的交互图开始，再把 MuZero 和 Dreamer 放在一起看：它们需要的预测信息和使用预测的时机不同。"
   },
@@ -141,8 +140,7 @@
         "Predict consequences",
         "Learn a policy or search",
         "Test in the environment"
-      ],
-      "caption": "These are shared questions across the methods. Dreamer learns behavior through imagination; MuZero uses search when deciding."
+      ]
     },
     "paperIntro": "Begin with the World Models interaction diagram, then compare MuZero and Dreamer: they need different predictions and use them at different times."
   },

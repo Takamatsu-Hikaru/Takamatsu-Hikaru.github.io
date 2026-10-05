@@ -30,8 +30,7 @@
     ],
     "figure": {
       "title": "一次扩散采样在做什么",
-      "nodes": ["初始随机噪声", "模型预测去噪方向", "采样器更新状态", "重复若干步", "输出样本"],
-      "caption": ""
+      "nodes": ["初始随机噪声", "模型预测去噪方向", "采样器更新状态", "重复若干步", "输出样本"]
     },
     "paperIntro": "先对照 GAN 和 DDPM 理解两种训练思路，再读 LDM 的计算取舍，最后用 DiT 连接 Transformer 与扩散。"
   },
@@ -65,8 +64,7 @@
     ],
     "figure": {
       "title": "Following diffusion sampling",
-      "nodes": ["Initial random noise", "Model prediction", "Sampler update", "Repeat steps", "Output sample"],
-      "caption": ""
+      "nodes": ["Initial random noise", "Model prediction", "Sampler update", "Repeat steps", "Output sample"]
     },
     "paperIntro": "Compare GAN and DDPM training first, examine LDM's compute tradeoff next, and use DiT to connect Transformers with diffusion."
   },

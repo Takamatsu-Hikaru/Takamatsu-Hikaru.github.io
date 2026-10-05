@@ -68,8 +68,7 @@
         "表示和模型",
         "独立评估",
         "计算或实验验证"
-      ],
-      "caption": "一次预测可以帮助筛选与分析；从数据集上的误差降低到新的科学结论，中间还需要与问题相应的证据。"
+      ]
     },
     "paperIntro": "先选最接近自己学科的一篇，沿输入、目标量、数据来源、验证方式读；另外两篇用来对照模型在研究中承担的不同角色。"
   },
@@ -141,8 +140,7 @@
         "Representation and model",
         "Independent evaluation",
         "Computational or experimental test"
-      ],
-      "caption": "Predictions can support screening and analysis. Lower dataset error and a new scientific conclusion require different levels of evidence."
+      ]
     },
     "paperIntro": "Start with the paper closest to your discipline. Trace inputs, targets, data sources, and validation; use the other two to compare the roles models can play."
   },

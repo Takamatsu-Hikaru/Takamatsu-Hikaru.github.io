@@ -29,8 +29,7 @@
     ],
     "figure": {
       "title": "看图回答时，信息怎样进入语言模型",
-      "nodes": ["图像", "视觉编码器", "连接模块", "语言模型 + 问题", "文字回答"],
-      "caption": "这是一类视觉语言模型的常见连接方式。CLIP 的典型用法是分别编码图文并比较相似度，不经过这里的回答生成链。"
+      "nodes": ["图像", "视觉编码器", "连接模块", "语言模型 + 问题", "文字回答"]
     },
     "paperIntro": "先用 CLIP 理解对齐，再对照 BLIP-2 与 LLaVA：中间怎么接、哪些参数训练、用了什么数据。"
   },
@@ -63,8 +62,7 @@
     ],
     "figure": {
       "title": "How visual information reaches a language model",
-      "nodes": ["Image", "Vision encoder", "Connector", "Language model + question", "Text answer"],
-      "caption": "A common vision-language architecture. CLIP typically encodes images and text separately and compares similarities rather than generating answers through this chain."
+      "nodes": ["Image", "Vision encoder", "Connector", "Language model + question", "Text answer"]
     },
     "paperIntro": "Use CLIP to understand alignment, then compare BLIP-2 with LLaVA: the connection, the trained parameters, and the data."
   },
