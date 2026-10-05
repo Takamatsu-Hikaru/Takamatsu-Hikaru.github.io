@@ -42,3 +42,23 @@ Guide entry are included in the full site build.
 Shared guide styles and interactions live in `public/blog/guide/guide.css` and
 `public/blog/guide/guide.js`; page templates live in `scripts/build-guide.mjs`.
 The original AI club knowledgebase remains a separate project.
+
+### Field-guide additions (demo branch)
+
+`feat/guide-fieldnotes` adds bilingual introductions, idea roadmaps, terms, checklists,
+and 35 paper cards across ten directions. Edit `content/guide/fieldnotes/*.json`;
+the builder inserts these additions before each original hands-on path. The existing
+Markdown articles remain intact. `papers.html` collects searchable cards by field.
+
+`ama.html` is an interaction demo with browser-local questions and replies. It has no
+shared database or authentication; production options are recorded in
+`notes/ama-options.md`. Source selection and editorial decisions are in `notes/`.
+
+Build with `npm run build:guide` or `npm run build:pages`. Start a review at
+`public/blog/guide/zh/agent.html`, `generation.html`, `papers.html`, or `ama.html`.
+The English counterparts are in `en/`.
+
+Browser checks: `node scripts/check-fieldnotes.cjs` (requires Playwright and Edge;
+set `PLAYWRIGHT_MODULE_PATH` if Playwright is supplied by a separate local runtime).
+When this worktree shares `node_modules` through a junction, use
+`npm run build:pages -- --webpack`; Turbopack rejects dependency links outside its root.
