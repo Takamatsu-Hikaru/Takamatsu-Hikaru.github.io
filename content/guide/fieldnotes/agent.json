@@ -3,14 +3,14 @@
   "zh": {
     "overview": [
       "Agent 把模型放进一个持续执行的过程：拿到任务，读取当前信息，决定动作，调用工具，再根据结果决定下一步。做完一次搜索就回答、反复修改代码直到测试通过，都可以用这个视角观察；关键是环境反馈是否真的改变了后续行为。",
-      "这类系统的研究对象不只有模型本身，还包括工具接口、记忆、任务拆分、失败恢复和评测。一个演示成功，很难说明它换一道题还能成功。把执行记录留下，区分模型选错了、工具返回错了、还是评价方式错了，往往是进入这个方向的第一步。"
+      "这类系统的研究对象不只有模型本身，还包括工具接口、记忆、任务拆分、失败恢复和评测。把执行记录留下，区分模型选错了、工具返回错了、还是评价方式错了，往往是进入这个方向的第一步。"
     ],
     "solves": [
       "连接检索、计算和代码执行，让模型获得参数之外的信息与能力。",
       "完成需要多步操作的任务，例如定位报错、改代码并验证结果。",
       "利用任务反馈修正后续行动，研究长期任务中的可靠性和成本。"
     ],
-    "stance": "先检查一次任务究竟完成没有，再讨论用了多少个 Agent；执行记录比角色名字更能解释系统为什么成功或失败。",
+    "stance": "",
     "roadmap": [
       {
         "year": "2023",
@@ -48,7 +48,7 @@
     "terms": [
       {
         "term": "工具调用",
-        "text": "模型输出工具名称和参数，外部程序执行后返回结果。声称自己“搜过了”和真的产生调用记录是两回事。"
+        "text": "模型输出工具名称和参数，外部程序执行后返回结果。"
       },
       {
         "term": "执行轨迹 / Trajectory",
@@ -76,21 +76,21 @@
         "工具或环境执行",
         "返回观察并继续"
       ],
-      "caption": "箭头表示控制与信息流，最后的观察回到下一轮上下文。循环本身不更新权重，也不保证任务已经完成。"
+      "caption": "箭头表示控制与信息流，最后的观察回到下一轮上下文。循环本身不更新权重。"
     },
     "paperIntro": "先用 ReAct 看懂一条轨迹，再分别看工具训练、跨尝试反馈和任务评测；它们回答的是不同问题。"
   },
   "en": {
     "overview": [
       "An agent places a model inside an ongoing process: receive a task, inspect available information, choose an action, call a tool, and use the result to decide what happens next. A search followed by an answer and a coding loop ending in passing tests can both be studied this way. The key question is whether observations actually change later behavior.",
-      "Research covers more than the model: tool interfaces, memory, task decomposition, recovery, and evaluation all matter. One successful demonstration says little about the next task. Keep execution traces and distinguish a bad model decision from a tool failure or an incorrect evaluator."
+      "Research covers more than the model: tool interfaces, memory, task decomposition, recovery, and evaluation all matter. Keep execution traces and distinguish a bad model decision from a tool failure or an incorrect evaluator."
     ],
     "solves": [
       "Connect retrieval, calculation, and code execution to information and capabilities outside model parameters.",
       "Complete tasks requiring several operations, such as locating a bug, editing code, and verifying the change.",
       "Use feedback to revise actions and study reliability and cost on longer tasks."
     ],
-    "stance": "Check whether the task was completed before counting agents. Execution traces explain success and failure better than role names.",
+    "stance": "",
     "roadmap": [
       {
         "year": "2023",
@@ -128,7 +128,7 @@
     "terms": [
       {
         "term": "Tool call",
-        "text": "The model emits a tool name and arguments; an external program executes them and returns a result. Claiming to have searched is different from a recorded search call."
+        "text": "The model emits a tool name and arguments; an external program executes them and returns a result."
       },
       {
         "term": "Trajectory",
@@ -156,7 +156,7 @@
         "Tool or environment executes",
         "Observation returns to the loop"
       ],
-      "caption": "Arrows show control and information flow. Observations enter the next context; the loop itself does not update weights or establish task success."
+      "caption": "Arrows show control and information flow. Observations enter the next context; the loop itself does not update weights."
     },
     "paperIntro": "Start with a ReAct trajectory, then study tool training, feedback across attempts, and evaluation as distinct questions."
   },

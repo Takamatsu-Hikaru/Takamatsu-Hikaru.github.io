@@ -174,7 +174,7 @@
         "idea": "按阶段分片优化器状态、梯度和参数，需要时再通信取回，让多张卡分担存储。",
         "why": "它能帮助你读懂训练显存的组成，而不只盯着模型参数量。",
         "read": "先看三阶段各自分片的对象，再比较内存和通信分析。",
-        "limit": "减少冗余存储会改变通信模式；网络带宽与卡数会影响收益，单卡不会凭空获得多卡容量。"
+        "limit": "减少冗余存储会改变通信模式；网络带宽与卡数会影响收益。"
       },
       "en": {
         "tag": "Distributed training",
@@ -182,7 +182,7 @@
         "idea": "Progressively partition optimizer states, gradients, and parameters, communicating required pieces when needed.",
         "why": "It explains training memory beyond parameter count.",
         "read": "Identify what each of the three stages partitions, then compare memory and communication costs.",
-        "limit": "Sharding changes communication. Benefits depend on bandwidth and device count; one device does not gain a cluster's capacity."
+        "limit": "Sharding changes communication. Benefits depend on bandwidth and device count."
       }
     },
     {
@@ -246,7 +246,7 @@
         "idea": "把缓存切成块，用映射表组织不连续的物理存储，并支持必要的缓存共享。",
         "why": "它把操作系统中的分页思路带到模型服务，解释了并发能力从哪里来。",
         "read": "先看缓存碎片问题和块映射，再看固定延迟条件下的吞吐比较。",
-        "limit": "它优化缓存管理，不会自动提高回答质量；更多并发的收益仍要结合延迟目标和请求长度衡量。"
+        "limit": "它优化缓存管理；更多并发的收益仍要结合延迟目标和请求长度衡量。"
       },
       "en": {
         "tag": "vLLM · serving cache",
@@ -254,7 +254,7 @@
         "idea": "Split the cache into blocks, map logical sequences to noncontiguous storage, and support cache sharing.",
         "why": "It connects operating-system paging to the capacity of a model-serving system.",
         "read": "Start with fragmentation and block mapping, then throughput under matched latency conditions.",
-        "limit": "Cache management does not improve answer quality by itself. Concurrency gains must be assessed with latency targets and request lengths."
+        "limit": "It optimizes cache management. Concurrency gains must be assessed with latency targets and request lengths."
       }
     }
   ]

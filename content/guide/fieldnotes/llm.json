@@ -76,7 +76,7 @@
         "下一个 token 的分布",
         "选择 token 并接回输入"
       ],
-      "caption": "这里画的是自回归生成的一次循环。训练会更新权重；提示中的示例只改变当次上下文，二者不能混为一谈。"
+      "caption": "这里画的是自回归生成的一次循环。训练会更新权重；提示中的示例只改变当次上下文。"
     },
     "paperIntro": "按结构、预训练、上下文学习、后训练读这四篇，每篇先抓住它改变的环节。"
   },
@@ -156,7 +156,7 @@
         "Next-token distribution",
         "Select and append a token"
       ],
-      "caption": "One cycle of autoregressive generation. Training changes weights; examples in a prompt change the current context. These are different operations."
+      "caption": "One cycle of autoregressive generation. Training changes weights; examples in a prompt change the current context."
     },
     "paperIntro": "Read these four papers for architecture, pretraining, in-context learning, and post-training. Identify the stage each changes."
   },
@@ -173,7 +173,7 @@
         "idea": "让每个位置通过注意力读取其他位置，再结合前馈网络与位置信息处理序列。",
         "why": "后面的 GPT 等模型会复用其中的结构，先认识输入怎样流动。",
         "read": "先看模型结构和注意力的解释，再对照机器翻译实验。",
-        "limit": "原文是编码器—解码器翻译模型；理解它还不等于理解后来的 GPT 训练流程。"
+        "limit": "原文是编码器—解码器翻译模型。"
       },
       "en": {
         "tag": "Transformer",
@@ -181,7 +181,7 @@
         "idea": "Each position reads other positions through attention, combined with feed-forward layers and positional information.",
         "why": "Later models reuse these components. It is a useful first map of information flow.",
         "read": "Start with the architecture and attention explanation, then the translation experiments.",
-        "limit": "The original is an encoder–decoder translation model, not the later GPT training pipeline."
+        "limit": "The original is an encoder–decoder translation model."
       }
     },
     {
@@ -196,7 +196,7 @@
         "idea": "先训练模型预测文本后续，再用任务数据微调；把不同任务整理成可输入的序列。",
         "why": "它把“先学通用表示，再迁移”的做法讲得很具体。",
         "read": "看 Figure 1 的两阶段训练和右侧任务输入转换。",
-        "limit": "这里仍需要下游任务微调，不能把它描述成今天的零样本聊天模型。"
+        "limit": "这里仍需要下游任务微调。"
       },
       "en": {
         "tag": "GPT · pretraining",
@@ -204,7 +204,7 @@
         "idea": "Pretrain by predicting text, then fine-tune on task data arranged as input sequences.",
         "why": "It makes the transfer from general representations to particular tasks concrete.",
         "read": "Figure 1 shows the training stages and task-specific input transformations.",
-        "limit": "Downstream task fine-tuning is still required; this is not a modern zero-shot chat model."
+        "limit": "Downstream task fine-tuning is still required."
       }
     },
     {

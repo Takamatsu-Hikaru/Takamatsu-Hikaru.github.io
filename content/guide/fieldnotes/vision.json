@@ -10,7 +10,7 @@
       "定位与测量：找出物体的位置、轮廓，统计数量或估计尺寸。",
       "场景理解：结合连续画面或多个视角，估计运动、深度与三维结构。"
     ],
-    "stance": "先把一种任务的输入、标注和评价指标讲明白，再比较网络；分类更准并不直接意味着检测更好。",
+    "stance": "先把一种任务的输入、标注和评价指标讲明白，再比较网络。",
     "roadmap": [
       { "year": "2012", "title": "从手工特征到学习特征", "text": "AlexNet 让卷积网络在大规模图像分类中显示出优势。一起看数据、GPU 训练和模型结构，才能理解这次进展。", "papers": ["alexnet-2012"] },
       { "year": "2016", "title": "网络加深，为什么反而难学", "text": "ResNet 用跨层相加的连接改善深层网络的优化。这里的问题是怎样把网络训好，学到的视觉特征也能服务其他任务。", "papers": ["resnet-2016"] },
@@ -45,7 +45,7 @@
       "Localization and measurement: find positions and outlines, count objects, or estimate size.",
       "Scene understanding: use video or multiple views to estimate motion, depth, and 3D structure."
     ],
-    "stance": "Clarify the input, labels, and evaluation metric before comparing networks; better classification accuracy does not automatically mean better detection.",
+    "stance": "Clarify the input, labels, and evaluation metric before comparing networks.",
     "roadmap": [
       { "year": "2012", "title": "Learning visual features", "text": "AlexNet demonstrated the strength of convolutional networks on large-scale image classification. Data, GPU training, and architecture belong in the same explanation.", "papers": ["alexnet-2012"] },
       { "year": "2016", "title": "Making deeper networks trainable", "text": "ResNet uses additive shortcut connections to improve optimization in deep networks. The resulting features can also support tasks beyond classification.", "papers": ["resnet-2016"] },

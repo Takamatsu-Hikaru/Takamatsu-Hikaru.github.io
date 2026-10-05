@@ -31,7 +31,7 @@
       {
         "year": "2021",
         "title": "围绕具体难题设计系统",
-        "text": "AlphaFold2 将序列、进化信息与几何结构结合来预测蛋白质三维结构。这些例子是不同用法，而非一条方法替代史。",
+        "text": "AlphaFold2 将序列、进化信息与几何结构结合来预测蛋白质三维结构。",
         "papers": [
           "ai4x-alphafold2"
         ]
@@ -104,7 +104,7 @@
       {
         "year": "2021",
         "title": "Build a system around a specific hard problem",
-        "text": "AlphaFold2 combines sequences, evolutionary information, and geometry for structure prediction. These are distinct uses, not successive replacements.",
+        "text": "AlphaFold2 combines sequences, evolutionary information, and geometry for structure prediction.",
         "papers": [
           "ai4x-alphafold2"
         ]
@@ -159,7 +159,7 @@
         "idea": "节点通过消息传递更新表示，再把节点信息汇总为整个分子的预测。",
         "why": "它把图网络的抽象操作落在具体的量子化学预测任务上。",
         "read": "先看 message passing 与 readout，再看目标性质和数据设置。",
-        "limit": "性质预测误差小，不代表模型已解释作用机制或验证了药物有效性。"
+        "limit": ""
       },
       "en": {
         "tag": "MPNN · Molecular graphs",
@@ -167,7 +167,7 @@
         "idea": "Update node representations through messages, then aggregate them for a molecular prediction.",
         "why": "It grounds graph learning in a concrete chemistry task.",
         "read": "Start with message passing, readout, targets, and data.",
-        "limit": "Low property error does not establish a mechanism or validate a drug."
+        "limit": ""
       }
     },
     {
@@ -207,7 +207,7 @@
         "idea": "整合进化相关序列与残基间关系，反复更新表示并生成三维结构。",
         "why": "它展示数据、几何与系统设计围绕一个学科难题怎样配合。",
         "read": "先看整体结构与 CASP14 评价，再看置信度的含义。",
-        "limit": "预测结构不等于测得动态过程、蛋白质功能或药物疗效。"
+        "limit": ""
       },
       "en": {
         "tag": "AlphaFold2 · Protein structure",
@@ -215,7 +215,7 @@
         "idea": "Combine evolutionary sequence information and residue relationships, iteratively refining representations and structure.",
         "why": "It connects data, geometry, and system design around a disciplinary problem.",
         "read": "Start with the architecture, CASP14 evaluation, and confidence estimates.",
-        "limit": "A predicted structure does not establish dynamics, biological function, or drug efficacy."
+        "limit": ""
       }
     }
   ]

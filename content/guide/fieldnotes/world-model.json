@@ -31,7 +31,7 @@
       {
         "year": "2025",
         "title": "在想象轨迹中学习行为",
-        "text": "DreamerV3 的正式论文展示同一套配置如何用于多类任务；重点是世界模型、actor 和 critic 怎样配合，而非给规划换一个名字。",
+        "text": "DreamerV3 的正式论文展示同一套配置如何用于多类任务；重点是世界模型、actor 和 critic 怎样配合。",
         "papers": [
           "wm-dreamerv3"
         ]
@@ -69,7 +69,7 @@
         "训练策略或搜索",
         "回到环境验证"
       ],
-      "caption": "这是几类方法的共同问题链，不是同一套算法。Dreamer 在想象中学习策略；MuZero 在决策时使用搜索。"
+      "caption": "这是几类方法的共同问题链。Dreamer 在想象中学习策略；MuZero 在决策时使用搜索。"
     },
     "paperIntro": "从 World Models 的交互图开始，再把 MuZero 和 Dreamer 放在一起看：它们需要的预测信息和使用预测的时机不同。"
   },
@@ -142,7 +142,7 @@
         "Learn a policy or search",
         "Test in the environment"
       ],
-      "caption": "These are shared questions, not one algorithm. Dreamer learns behavior through imagination; MuZero uses search when deciding."
+      "caption": "These are shared questions across the methods. Dreamer learns behavior through imagination; MuZero uses search when deciding."
     },
     "paperIntro": "Begin with the World Models interaction diagram, then compare MuZero and Dreamer: they need different predictions and use them at different times."
   },
@@ -183,7 +183,7 @@
         "idea": "在内部状态里预测奖励、价值与动作策略，用树搜索比较选择。",
         "why": "它说明有用的模型不必还原所有像素，预测目标可以围绕决策来设计。",
         "read": "先看 planning、acting、training 的流程，再看游戏实验。",
-        "limit": "论文测试的是特定游戏与动作接口，不能据此认定学到了通用物理模拟器。"
+        "limit": "论文测试的是特定游戏与动作接口。"
       },
       "en": {
         "tag": "MuZero · Learning and search",
@@ -191,7 +191,7 @@
         "idea": "Predict reward, value, and policy in internal states, then compare choices with tree search.",
         "why": "Useful models need not reconstruct every pixel.",
         "read": "Follow planning, acting, and training before game results.",
-        "limit": "The tested game settings do not establish a general physical simulator."
+        "limit": "The paper evaluates specific games and action interfaces."
       }
     },
     {

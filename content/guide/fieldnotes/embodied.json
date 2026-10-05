@@ -71,7 +71,7 @@
       ],
       "caption": "动作会改变下一次输入，闭环因此重要。语言理解正确、动作预测合理、真实任务完成是三个需要分别检查的环节。"
     },
-    "paperIntro": "先看三个项目的任务视频，再读方法图；把相同任务的输入、动作输出和训练数据列在一起，比按模型名背路线更容易理解。"
+    "paperIntro": "先看三个项目的任务视频，再读方法图；把相同任务的输入、动作输出和训练数据列在一起。"
   },
   "en": {
     "overview": [
@@ -160,7 +160,7 @@
         "idea": "把图像特征与语言条件送入 Transformer，预测离散化后的机器人动作。",
         "why": "它让数据规模、任务多样性与机器人泛化之间的关系变得具体。",
         "read": "先看输入输出和数据采集，再看新任务、干扰与新环境的评估设置。",
-        "limit": "结果依赖特定机器人与动作接口；换身体并非直接换一个输入名称。"
+        "limit": "结果依赖特定机器人与动作接口。"
       },
       "en": {
         "tag": "RT-1 · Multitask control",
@@ -168,7 +168,7 @@
         "idea": "Condition a Transformer on images and language to predict discretized actions.",
         "why": "It makes data scale and diversity concrete in robotics.",
         "read": "Inspect inputs, outputs, data collection, and generalization evaluations.",
-        "limit": "A particular body and action interface underpin its results; changing robots requires more than renaming inputs."
+        "limit": "Its results depend on a particular robot body and action interface."
       }
     },
     {

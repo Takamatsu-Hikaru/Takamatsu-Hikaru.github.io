@@ -14,10 +14,10 @@
     "roadmap": [
       { "year": "2021", "title": "先让图像和文字能够比较", "text": "CLIP 学习图文配对关系，把两种输入映射到可以比较相似度的表示空间。输出匹配分数即可做检索或候选类别判断。", "papers": ["clip-2021"] },
       { "year": "2023", "title": "把现成视觉模型接到语言模型", "text": "BLIP-2 冻结两侧的大模型，训练一个中间模块提取并转换视觉信息。重点是怎样跨过两种表示之间的差异。", "papers": ["blip2-2023"] },
-      { "year": "2023", "title": "让连接后的模型学会按问题回答", "text": "LLaVA 用视觉指令数据训练图像编码器与语言模型之间的连接及语言回答能力。它与 BLIP-2 的连接设计不同，不能当作同一模型的下一版本。", "papers": ["llava-2023"] }
+      { "year": "2023", "title": "让连接后的模型学会按问题回答", "text": "LLaVA 用视觉指令数据训练图像编码器与语言模型之间的连接及语言回答能力。它与 BLIP-2 的连接设计不同。", "papers": ["llava-2023"] }
     ],
     "terms": [
-      { "term": "模态 / modality", "text": "信息的形式，例如文字、图像、声音。模态不同，数据的结构与信息密度也不同，不是简单换一个文件后缀。" },
+      { "term": "模态 / modality", "text": "信息的形式，例如文字、图像、声音。模态不同，数据的结构与信息密度也不同。" },
       { "term": "编码器 / encoder", "text": "把原始输入转换成数值特征的模型。图像编码器输出的是表示，后面还需要匹配、问答等具体用途。" },
       { "term": "对比学习 / contrastive learning", "text": "在一组例子中提高正确图文对的相似度，相对压低不匹配组合的相似度。学会匹配本身不会自动产生一句回答。" },
       { "term": "连接模块与指令微调", "text": "连接模块把视觉特征变成语言模型能接收的输入；指令微调用问题与回答等示例训练模型怎样响应。两者分别涉及结构和训练数据。" }
@@ -30,7 +30,7 @@
     "figure": {
       "title": "看图回答时，信息怎样进入语言模型",
       "nodes": ["图像", "视觉编码器", "连接模块", "语言模型 + 问题", "文字回答"],
-      "caption": "这是一类视觉语言模型的常见连接方式，不是所有多模态模型的统一结构。CLIP 的典型用法是分别编码图文并比较相似度，不经过这里的回答生成链。"
+      "caption": "这是一类视觉语言模型的常见连接方式。CLIP 的典型用法是分别编码图文并比较相似度，不经过这里的回答生成链。"
     },
     "paperIntro": "先用 CLIP 理解对齐，再对照 BLIP-2 与 LLaVA：中间怎么接、哪些参数训练、用了什么数据。"
   },
@@ -48,10 +48,10 @@
     "roadmap": [
       { "year": "2021", "title": "Making images and text comparable", "text": "CLIP learns image–text pairings and maps both inputs into representations with comparable similarities. Matching scores support retrieval or candidate-label selection.", "papers": ["clip-2021"] },
       { "year": "2023", "title": "Connecting existing vision and language models", "text": "BLIP-2 freezes both large models and trains an intermediate module to extract and translate visual information across their representation gap.", "papers": ["blip2-2023"] },
-      { "year": "2023", "title": "Learning to answer visual instructions", "text": "LLaVA uses visual instruction data to train the connection and language responses. Its connector differs from BLIP-2; it is not the next version of the same model.", "papers": ["llava-2023"] }
+      { "year": "2023", "title": "Learning to answer visual instructions", "text": "LLaVA uses visual instruction data to train the connection and language responses. Its connector differs from BLIP-2.", "papers": ["llava-2023"] }
     ],
     "terms": [
-      { "term": "Modality", "text": "A form of information, such as text, images, or sound. Modalities differ in structure and information density, not just file extensions." },
+      { "term": "Modality", "text": "A form of information, such as text, images, or sound. Modalities differ in structure and information density." },
       { "term": "Encoder", "text": "A model that transforms raw input into numerical features. An image encoder produces representations that still need a task such as matching or question answering." },
       { "term": "Contrastive learning", "text": "Increase similarity for matched image–text pairs relative to mismatched pairs in a group of examples. Learning to match does not by itself generate an answer." },
       { "term": "Connector and instruction tuning", "text": "A connector turns visual features into inputs a language model can receive. Instruction tuning uses examples such as questions and answers to teach responses. One concerns architecture, the other training." }
@@ -64,7 +64,7 @@
     "figure": {
       "title": "How visual information reaches a language model",
       "nodes": ["Image", "Vision encoder", "Connector", "Language model + question", "Text answer"],
-      "caption": "A common vision-language architecture, not a universal multimodal design. CLIP typically encodes images and text separately and compares similarities rather than generating answers through this chain."
+      "caption": "A common vision-language architecture. CLIP typically encodes images and text separately and compares similarities rather than generating answers through this chain."
     },
     "paperIntro": "Use CLIP to understand alignment, then compare BLIP-2 with LLaVA: the connection, the trained parameters, and the data."
   },
@@ -84,8 +84,8 @@
     {
       "id": "llava-2023", "title": "Visual Instruction Tuning", "year": 2023, "venue": "NeurIPS 2023",
       "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/6dcf277ea32ce3288914faf369fe6de0-Abstract-Conference.html", "code": "https://github.com/haotian-liu/LLaVA",
-      "zh": { "tag": "LLaVA · 视觉指令", "question": "怎样让接收图像的模型按自然语言要求回答问题？", "idea": "用投影连接图像编码器与语言模型，再用视觉指令数据训练。原作利用图片的文字描述与框信息，请纯文本 GPT-4 生成部分训练对话。", "why": "它说明架构连接之外，训练数据的组织也能改变模型的交互方式。", "read": "先看指令数据如何构造，再看连接结构和分阶段训练。", "limit": "回答可能出现图片中不存在的细节；原作的评测与模型不能代表所有后续 LLaVA 版本。" },
-      "en": { "tag": "LLaVA · visual instructions", "question": "How can a model answer natural-language instructions about an image?", "idea": "Connect an image encoder to a language model with a projection and train on visual instructions. The original uses captions and box information with text-only GPT-4 to create part of its dialogue data.", "why": "Data organization can change interaction as much as the connection itself.", "read": "Start with instruction-data construction, then the connector and staged training.", "limit": "Answers can invent visual details. The original model and evaluation do not represent every later LLaVA release." }
+      "zh": { "tag": "LLaVA · 视觉指令", "question": "怎样让接收图像的模型按自然语言要求回答问题？", "idea": "用投影连接图像编码器与语言模型，再用视觉指令数据训练。原作利用图片的文字描述与框信息，请纯文本 GPT-4 生成部分训练对话。", "why": "它说明架构连接之外，训练数据的组织也能改变模型的交互方式。", "read": "先看指令数据如何构造，再看连接结构和分阶段训练。", "limit": "回答可能出现图片中不存在的细节。" },
+      "en": { "tag": "LLaVA · visual instructions", "question": "How can a model answer natural-language instructions about an image?", "idea": "Connect an image encoder to a language model with a projection and train on visual instructions. The original uses captions and box information with text-only GPT-4 to create part of its dialogue data.", "why": "Data organization can change interaction as much as the connection itself.", "read": "Start with instruction-data construction, then the connector and staged training.", "limit": "Answers can invent visual details." }
     }
   ]
 }
