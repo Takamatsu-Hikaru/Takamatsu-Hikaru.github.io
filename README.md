@@ -43,12 +43,13 @@ Shared guide styles and interactions live in `public/blog/guide/guide.css` and
 `public/blog/guide/guide.js`; page templates live in `scripts/build-guide.mjs`.
 The original AI club knowledgebase remains a separate project.
 
-### Field-guide additions (demo branch)
+### Field guides and illustrated paper cards
 
-`feat/guide-fieldnotes` adds bilingual introductions, idea roadmaps, terms, checklists,
-and 35 paper cards across ten directions. Edit `content/guide/fieldnotes/*.json`;
-the builder inserts these additions before each original hands-on path. The existing
-Markdown articles remain intact. `papers.html` collects searchable cards by field.
+The guide includes bilingual introductions, idea roadmaps, terms, checklists,
+and 37 illustrated paper cards across ten directions, including pi0 and pi0.5.
+Edit `content/guide/fieldnotes/*.json`; figure sources and dimensions are stored in
+`content/guide/paper-figures.json`. Each article introduces the field, follows its
+learning routes, then presents papers and exercises. `papers.html` collects searchable cards.
 
 `ama.html` is an interaction demo with browser-local questions and replies. It has no
 shared database or authentication; production options are recorded in
@@ -62,3 +63,11 @@ Browser checks: `node scripts/check-fieldnotes.cjs` (requires Playwright and Edg
 set `PLAYWRIGHT_MODULE_PATH` if Playwright is supplied by a separate local runtime).
 When this worktree shares `node_modules` through a junction, use
 `npm run build:pages -- --webpack`; Turbopack rejects dependency links outside its root.
+
+### Sync the AI club edition
+
+Run `node scripts/sync-club-guide.mjs <club-guide-directory>`, then run
+`node build.mjs` and `node check-preview.cjs` in that directory. The sync preserves
+the club homepage, community introduction, and green design while copying the
+shared field data, paper illustrations, and interactions. A snapshot before the
+first sync is saved locally under `work/club-before-fieldnotes-sync`.
