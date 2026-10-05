@@ -4,7 +4,7 @@ When a demo makes you curious, ask what goes in, what should come out, how succe
 
 ## Understanding and generating
 
-- **[NLP and LLMs](llm.md)**: how models learn from text, and how data, training, and computation shape capability.
+- **[Large language models](llm.md)**: how models learn from text, and how data, training, and computation shape capability.
 - **[Computer vision](vision.md)**: recognizing objects, locating them, and understanding scenes and 3D structure.
 - **[Multimodal models](multimodal.md)**: connecting images, language, and other information to answer questions.
 - **[Generative models](generation.md)**: producing images from noise or simple distributions and controlling the process.
@@ -21,7 +21,7 @@ These pages connect. Robots can use vision, generative models, and RL; agents ca
 ## Putting models to use
 
 - **[Efficiency and systems](systems.md)**: understanding slow programs, limited GPU memory, and quality–latency–cost trade-offs.
-- **[AI and other disciplines](ai4x.md)**: understanding molecular, medical, or relational-data problems beyond the model.
+- **[Interdisciplinary AI](ai4x.md)**: understanding molecular, medical, or relational-data problems beyond the model.
 
 Each page offers a starting point, foundations to revisit, and further reading. For individual papers, see [paper entry points](papers.md); for what researchers are thinking about, see [Lookout](lookout.md).
 

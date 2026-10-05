@@ -1,4 +1,4 @@
-# AI and other disciplines
+# Interdisciplinary AI: starting with questions from other fields
 
 What interests you most may already lie outside AI: molecular properties, medical images, materials, transport, or social networks. Start with those questions, then ask where models can help.
 

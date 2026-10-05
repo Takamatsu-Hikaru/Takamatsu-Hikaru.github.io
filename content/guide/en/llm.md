@@ -1,4 +1,4 @@
-# NLP and large language models
+# Large language models: understanding, generation, and reasoning
 
 Behind the chat models you use daily are connected questions: how text becomes model input, what data teaches the model, why different training changes its answers, and how to tell whether it improved.
 
