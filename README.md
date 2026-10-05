@@ -59,9 +59,9 @@ Edit `content/guide/fieldnotes/*.json`; figure sources and dimensions are stored
 `content/guide/paper-figures.json`. Each article introduces the field, follows its
 learning routes, then presents papers and exercises. `papers.html` collects searchable cards.
 
-`ama.html` is an interaction demo with browser-local questions and replies. It has no
-shared database or authentication; production options are recorded in
-`notes/ama-options.md`. Source selection and editorial decisions are in `notes/`.
+`ama.html` displays the shared GitHub Discussions board. Posts and replies use GitHub
+accounts, with posting and editing on GitHub. The discussion-event workflow updates
+the public `ama-data` feed; setup details are in `notes/ama-options.md`.
 
 Build with `npm run build:guide` or `npm run build:pages`. Start a review at
 `public/blog/guide/zh/agent.html`, `generation.html`, `papers.html`, or `ama.html`.
