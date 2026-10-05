@@ -27,7 +27,6 @@ write(path.join(club,'模块/fieldnotes.mjs'),renderer);
 copy(path.join(root,'scripts/ama-page.mjs'),path.join(club,'模块/ama-page.mjs'));
 copy(path.join(root,'public/blog/guide/fieldnotes.css'),path.join(club,'预览/fieldnotes.css'));
 let ama=read(path.join(root,'public/blog/guide/ama.js')).replace('(() => {','window.initGuideAMA = () => {').replace(/\}\)\(\);\s*$/,'};');
-ama=ama.replace("key='hikaru-ama-demo-v1-'","key='uestc-ama-demo-v1-'");
 write(path.join(club,'预览/ama.js'),ama);
 write(path.join(club,'预览/fieldnotes.js'),`(() => {
  let active=null,opener=null;
@@ -81,8 +80,8 @@ if(!template.includes('initGuideFieldnotes')){
 }
 write(path.join(club,'预览/template.html'),template);
 write(path.join(club,'预览/fieldnotes-green.css'),`:root{--blue:var(--accent);--orange:#74845c;--soft:var(--line);--card:var(--white);--paper-2:var(--wash);--serif:var(--display)}
-.paper-card{color:var(--ink);border-color:var(--line-dark);border-top-color:var(--sage);border-radius:6px;box-shadow:0 2px 5px #26382c0a}.paper-card:hover{box-shadow:0 4px 12px #26382c12;transform:translateY(-2px)}.paper-card>strong{font:650 19px/1.5 var(--display);letter-spacing:0}.paper-art{border-color:var(--line);border-radius:3px}.concept-figure{border-color:var(--line-dark);box-shadow:none;border-radius:6px}.field-problems{border-radius:6px}.field-checklist{border-color:var(--line-dark);border-radius:6px}.paper-dialog{border-color:var(--line-dark)}.paper-dialog-head button{border:0;border-radius:4px;background:var(--wash);color:var(--ink)}.paper-dialog h2{font-family:var(--display)}.paper-full-figure{padding:8px}.paper-full-figure>a{border:0}.paper-filters input,.paper-filters select{border-radius:4px}.ama-role button,.ama-toolbar>button,.ama-filters button{border:1px solid var(--line-dark);border-radius:4px;color:var(--ink)}
+.paper-card{color:var(--ink);border-color:var(--line-dark);border-top-color:var(--sage);border-radius:6px;box-shadow:0 2px 5px #26382c0a}.paper-card:hover{box-shadow:0 4px 12px #26382c12;transform:translateY(-2px)}.paper-card>strong{font:650 19px/1.5 var(--display);letter-spacing:0}.paper-art{border-color:var(--line);border-radius:3px}.concept-figure{border-color:var(--line-dark);box-shadow:none;border-radius:6px}.field-problems{border-radius:6px}.field-checklist{border-color:var(--line-dark);border-radius:6px}.paper-dialog{border-color:var(--line-dark)}.paper-dialog-head button{border:0;border-radius:4px;background:var(--wash);color:var(--ink)}.paper-dialog h2{font-family:var(--display)}.paper-full-figure{padding:8px}.paper-full-figure>a{border:0}.paper-filters input,.paper-filters select{border-radius:4px}.ama-filters button{border:1px solid var(--line-dark);border-radius:4px;color:var(--ink)}
 @media(max-width:600px){.paper-card>strong{font-size:19px}.paper-dialog h2{font-size:23px}}
 `);
-write(path.join(club,'编辑说明/领域内容同步.json'),JSON.stringify({date:new Date().toISOString(),fields:10,papers:Object.keys(figures).length,source:'bofan-homepage/content/guide',preserved:['AI 社首页','社团简介','写给刚进大学的你中的社团内容','绿色前端风格'],includes:['双语源数据（AI 社展示中文）','原论文插图','论文小卡','阅读路线衔接','π0 与 π0.5','AMA 交互演示']},null,2));
+write(path.join(club,'编辑说明/领域内容同步.json'),JSON.stringify({date:new Date().toISOString(),fields:10,papers:Object.keys(figures).length,source:'bofan-homepage/content/guide',preserved:['AI 社首页','社团简介','写给刚进大学的你中的社团内容','绿色前端风格'],includes:['双语源数据（AI 社展示中文）','原论文插图','论文小卡','阅读路线衔接','π0 与 π0.5','AMA 讨论区']},null,2));
 console.log('Synced 10 fields and '+Object.keys(figures).length+' illustrated papers into AI club guide.');

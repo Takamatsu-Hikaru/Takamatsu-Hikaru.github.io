@@ -1,19 +1,40 @@
 (() => {
 const root=document.getElementById('ama-app');if(!root)return;
-const zh=document.body.dataset.lang==='zh',key='hikaru-ama-demo-v1-'+(zh?'zh':'en');
-const t=zh?{sample:'示例',student:'演示读者',core:'Core · 演示',waiting:'等 core 回复',answered:'Core 已回复',reply:'回复与追问',send:'保存演示回复',empty:'没有匹配的问题。',saved:'已保存在当前浏览器。',failed:'浏览器未能保存，请先复制你的内容。',placeholder:'补充背景、追问，或写下你的回答……',reset:'清除本机演示提问和回复，恢复示例？',invalid:'请写下有效的标题和内容。'}:{sample:'Example',student:'Demo student',core:'Core · Demo',waiting:'Awaiting core',answered:'Core replied',reply:'Replies & follow-up',send:'Save demo reply',empty:'No matching questions.',saved:'Saved in this browser.',failed:'Could not save in this browser. Copy your text first.',placeholder:'Add context, ask a follow-up, or write an answer…',reset:'Clear demo questions and replies in this browser and restore examples?',invalid:'Please enter a title and question.'};
-const topics=zh?{research:'科研入门',papers:'论文与概念',projects:'动手项目',life:'经历与生活'}:{research:'Starting research',papers:'Papers & concepts',projects:'Projects',life:'Life & experience'};
-const seed=()=>[{id:'react-observation',sample:true,title:zh?'ReAct 里的 observation 到底是什么？':'What exactly is an observation in ReAct?',body:zh?'我看了论文的例子。模型选择搜索之后，是谁把搜索结果加回上下文的？这一步也需要训练吗？':'I read the paper examples. After the model chooses search, who adds the search result to the context? Does that step require training?',topic:'papers',replies:[{role:'core',body:zh?'在这个基本流程里，是运行程序调用工具，再把返回值作为 observation 放回模型下一次输入。ReAct 论文包含用提示构造的轨迹，并不要求每次工具反馈都重新训练。可以先画三列：模型输出、程序执行、下一轮模型输入，再对照一条完整轨迹。':'In the basic loop, the runner calls the tool and puts its output into the next model input as an observation. ReAct includes prompted trajectories; returning a tool result does not mean retraining the model. Try tracing three columns: model output, program execution, and the next model input.'}]},{id:'first-contact',sample:true,title:zh?'跑过一个复现，能联系学长聊研究吗？':'Can I contact a researcher after reproducing one project?',body:zh?'我做完了一个图像分类项目，也保存了几组失败样例。我想了解组里在做什么，但还没有自己的 idea，第一次交流可以准备什么？':'I completed an image classification project and saved some failure cases. I want to learn what a group works on but do not have an idea of my own yet. What could I prepare for a first conversation?',topic:'research',replies:[]}];
-let items=seed(),role='student',status='all';try{const saved=JSON.parse(localStorage.getItem(key));if(Array.isArray(saved)&&saved.every(x=>typeof x.id==='string'&&typeof x.title==='string'&&typeof x.body==='string'&&Array.isArray(x.replies)&&x.replies.every(r=>typeof r.body==='string'&&['core','student'].includes(r.role))))items=saved}catch{}
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const notice=s=>document.getElementById('ama-notice').textContent=s;
-const save=()=>{try{localStorage.setItem(key,JSON.stringify(items));notice(t.saved);return true}catch{notice(t.failed);return false}};
-const render=()=>{const query=document.getElementById('ama-query').value.toLowerCase();const selected=items.filter(x=>{const answered=x.replies.some(r=>r.role==='core');return(status==='all'||(status==='answered'&&answered)||(status==='waiting'&&!answered))&&(x.title+' '+x.body).toLowerCase().includes(query)});document.getElementById('ama-list').innerHTML=selected.map(x=>`<details class="ama-thread" id="thread-${esc(x.id)}"><summary><span class="ama-thread-meta"><span>${esc(topics[x.topic]||x.topic)}${x.sample?' · '+t.sample:''}</span><span class="${x.replies.some(r=>r.role==='core')?'answered':''}">${x.replies.some(r=>r.role==='core')?t.answered:t.waiting}</span></span><strong>${esc(x.title)}</strong><span class="ama-reply-count">${x.replies.length} ${zh?'条回复':'replies'} +</span></summary><div class="ama-thread-body"><p>${esc(x.body)}</p><h3>${t.reply}</h3>${x.replies.map(r=>`<div class="ama-reply ${r.role==='core'?'core-reply':''}"><b>${r.role==='core'?t.core:t.student}</b><p>${esc(r.body)}</p></div>`).join('')}<form data-reply="${esc(x.id)}"><label>${role==='core'?t.core:t.student}<textarea rows="3" maxlength="4000" required name="reply" placeholder="${t.placeholder}"></textarea></label><button type="submit">${t.send} ↗</button></form></div></details>`).join('')||`<p>${t.empty}</p>`;};
-root.querySelectorAll('[data-role]').forEach(b=>b.addEventListener('click',()=>{const openIds=[...root.querySelectorAll('.ama-thread[open]')].map(x=>x.id);role=b.dataset.role;root.querySelectorAll('[data-role]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render();openIds.forEach(id=>{const d=document.getElementById(id);if(d)d.open=true})}));
-root.querySelectorAll('[data-status]').forEach(b=>b.addEventListener('click',()=>{status=b.dataset.status;root.querySelectorAll('[data-status]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render()}));
-document.getElementById('ama-query').addEventListener('input',render);
-const compose=document.getElementById('ama-compose');document.getElementById('ama-compose-toggle').addEventListener('click',()=>{compose.hidden=!compose.hidden;if(!compose.hidden)compose.elements.title.focus()});
-compose.addEventListener('submit',e=>{e.preventDefault();const title=compose.elements.title.value.trim(),body=compose.elements.body.value.trim();if(!title||!body){notice(t.invalid);return}const item={id:'q-'+Date.now().toString(36),title,body,topic:compose.elements.topic.value,replies:[]};items.unshift(item);if(!save()){items.shift();return}compose.reset();compose.hidden=true;status='all';root.querySelectorAll('[data-status]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.status==='all')));document.getElementById('ama-query').value='';render();document.getElementById('thread-'+item.id).open=true;document.getElementById('thread-'+item.id).scrollIntoView({block:'start'})});
-root.addEventListener('submit',e=>{const f=e.target;if(!f.dataset.reply)return;e.preventDefault();const item=items.find(x=>x.id===f.dataset.reply),body=f.elements.reply.value.trim();if(!body)return;item.replies.push({role,body});if(!save()){item.replies.pop();return}render();const d=document.getElementById('thread-'+item.id);if(d)d.open=true});
-document.getElementById('ama-reset').addEventListener('click',()=>{if(confirm(t.reset)){items=seed();save();render()}});render();
+const zh=document.body.dataset.lang==='zh';
+const feed='https://raw.githubusercontent.com/Takamatsu-Hikaru/Takamatsu-Hikaru.github.io/ama-data/ama.json';
+const board='https://github.com/Takamatsu-Hikaru/Takamatsu-Hikaru.github.io/discussions';
+const t=zh?{posts:'篇帖子',empty:'还没有帖子。',noMatch:'没有找到匹配的帖子。',reply:'回复',failed:'帖子加载失败，请重试或进入讨论区。',deleted:'已注销用户',locked:'已锁定',loading:'加载帖子…'}:{posts:'posts',empty:'No posts yet.',noMatch:'No matching posts.',reply:'Reply',failed:'Could not load posts. Retry or open discussions.',deleted:'Deleted user',locked:'Locked',loading:'Loading posts…'};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const text=s=>esc(s).replace(/https?:\/\/[^\s<>]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
+const date=s=>{const d=new Date(s);return Number.isNaN(d.getTime())?'':d.toLocaleDateString(zh?'zh-CN':'en-US',{year:'numeric',month:'short',day:'numeric'})};
+const who=author=>esc(author?.login||t.deleted);
+let items=[],loaded=false,controller;
+const query=root.querySelector('#ama-query'),list=root.querySelector('#ama-list'),count=root.querySelector('#ama-count'),notice=root.querySelector('#ama-notice'),refresh=root.querySelector('#ama-refresh');
+const render=()=>{
+ const open=new Set([...list.querySelectorAll('details[open]')].map(x=>x.id));
+ const q=query.value.trim().toLocaleLowerCase();
+ const selected=items.filter(x=>(x.title+' '+x.body+' '+(x.author?.login||'')).toLocaleLowerCase().includes(q));
+ count.textContent=loaded?`${items.length} ${t.posts}`:t.loading;
+ list.innerHTML=selected.map(x=>{
+  const url=board+'/'+x.number;
+  const reply=r=>`<div class="ama-reply"><div class="ama-reply-meta"><b>${who(r.author)}</b><time datetime="${esc(r.createdAt)}">${date(r.createdAt)}</time></div><p>${text(r.body)}</p>${(r.replies||[]).map(n=>`<div class="ama-nested-reply"><b>${who(n.author)}</b><p>${text(n.body)}</p></div>`).join('')}</div>`;
+  return `<details class="ama-thread" id="thread-${x.number}"${open.has('thread-'+x.number)?' open':''}><summary><span class="ama-count-badge">${x.commentCount}<small>${zh?'回复':'replies'}</small></span><span class="ama-thread-heading"><strong>${esc(x.title)}</strong><span class="ama-thread-meta">${who(x.author)}<span>·</span><time datetime="${esc(x.updatedAt)}">${date(x.updatedAt)}</time>${x.locked?`<span>· ${t.locked}</span>`:''}</span></span></summary><div class="ama-thread-body"><p>${text(x.body)}</p><div class="ama-replies">${x.comments.map(reply).join('')}</div><div class="ama-thread-actions"><a href="${url}" target="_blank" rel="noopener">${zh?'打开帖子':'Open post'}</a>${!x.locked?`<a class="ama-primary" href="${url}#new_comment_field" target="_blank" rel="noopener">${t.reply}</a>`:''}</div></div></details>`;
+ }).join('')||`<div class="ama-empty">${loaded?(q?t.noMatch:t.empty):t.loading}</div>`;
+};
+const load=async()=>{
+ controller?.abort();controller=new AbortController();const current=controller;
+ refresh.disabled=true;notice.textContent='';
+ try{
+  const response=await fetch(feed+'?v='+Math.floor(Date.now()/30000),{signal:current.signal,cache:'no-store'});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const data=await response.json();
+  if(!Array.isArray(data.posts)||!data.posts.every(x=>Number.isInteger(x.number)&&typeof x.title==='string'&&typeof x.body==='string'&&Array.isArray(x.comments)&&Number.isInteger(x.commentCount)))throw Error('Invalid feed');
+  if(!root.isConnected||current!==controller)return;
+  items=data.posts;loaded=true;render();
+ }catch(e){if(e.name!=='AbortError'&&root.isConnected){notice.textContent=t.failed;if(!loaded){count.textContent='';list.innerHTML=''}}}
+ finally{if(root.isConnected&&current===controller)refresh.disabled=false}
+};
+query.addEventListener('input',render);refresh.addEventListener('click',load);
+window.addEventListener('focus',function back(){if(!root.isConnected){window.removeEventListener('focus',back);controller?.abort();return}load()});
+render();load();
 })();

@@ -1,1 +1,1 @@
-# AMA: let's work through the question
+# AMA discussions
