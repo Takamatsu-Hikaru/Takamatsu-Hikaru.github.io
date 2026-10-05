@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>作者博客与研究笔记 · Hikaru</title><meta name="description" content="博客常常把论文省略的过程补回来：为什么尝试一个方案，哪里没达到预期，怎么判断下一步。 想看经历，先读邹嘉轩的《认知复利》或 Chai 的 FAQ；正在做实验，可以看 LoopDiT 和 AutomationBench；正在补机制，可以查苏剑林与 Purshow 的笔记。 返回资料总索引 牛宇威 Yuwei Niu / Purshow 作者主页 · Pursh"><link rel="icon" href="../../../favicon.svg"><link rel="alternate" hreflang="zh-CN" href="../zh/blogs.html"><link rel="alternate" hreflang="en" href="../en/blogs.html"><link rel="stylesheet" href="../guide.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script></head>
+<body data-lang="zh" data-page="blogs">
+<a class="skip" href="#content">跳到正文</a><header class="site-header"><a class="wordmark" href="../../../index.html?lang=zh#guide"><span class="wordmark-mark">BZ</span><span class="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru online</small></span></a><a class="header-guide" href="index.html">我的入门指南</a><div class="header-actions"><a id="language" href="../en/blogs.html" lang="en" aria-label="Read in English">EN</a><button id="theme" class="theme-toggle" aria-label="切换深浅色">◐</button><button id="menu" aria-controls="nav" aria-expanded="false">目录</button></div></header>
+<button class="shade" id="shade" aria-label="关闭" hidden></button><aside id="nav" aria-label="目录"><a class="back-blog" href="../../../index.html?lang=zh#guide">← 返回主页</a><button id="opensearch" aria-label="搜索指南"><span>搜索</span><kbd>Ctrl K</kbd></button><div class="navgroup">先从这里开始</div><a href="index.html">指南首页</a><a href="welcome.html">写给刚进大学的你</a><a href="research.html">How to 入门科研</a><div class="navgroup">开始学习</div><a href="start.html">先跑通一个小东西</a><a href="basics.html">基础：带着问题回来学</a><a href="papers.html">挑一篇论文读</a><div class="navgroup">研究方向</div><a href="directions.html">看看不同方向在研究什么</a><a href="llm.html">NLP 与 LLM</a><a href="agent.html">Agent：让模型去做事</a><a href="vision.html">计算机视觉：让模型读懂图像</a><a href="multimodal.html">多模态：把图像和语言接起来</a><a href="generation.html">生成模型：图像是怎样一步步得到的</a><a href="rl.html">强化学习：行动之后还有后果</a><a href="world-model.html">World Model：先预测，再行动</a><a href="embodied.html">具身智能：从看见到行动</a><a href="systems.html">效率与系统：让模型真的跑得动</a><a href="ai4x.html">AI 与其他学科</a><div class="navgroup">做研究时来查</div><a href="reading.html">找资料和读论文</a><a href="experiments.html">把实验做明白</a><a href="writing.html">写作、画图和汇报</a><a href="contact.html">联系老师、学长与合作</a><a href="ai.html">和 AI 一起做事</a><a href="publishing.html">投稿与发表</a><div class="navgroup">经历与生活</div><a href="experience.html">经历、焚诀与走过的弯路</a><a href="timeline.html">大一年终总结：顿觉天地宽</a><a href="life.html">怎么好好生活</a><div class="navgroup">看看外面</div><a href="lookout.html">Lookout：把眼界往外放一点</a><a href="about.html">关于这份指南</a><div class="navgroup">资料总索引</div><a href="resources.html">资料总索引</a><a href="catalog-foundation.html">课程、教材与基础学习</a><a href="catalog-research.html">科研方法与常用工具</a><a href="catalog-directions.html">各方向课程、论文与项目</a><a href="catalog-channels.html">博客、访谈与信息渠道</a><a href="blogs.html" aria-current="page">作者博客与研究笔记</a><a href="lesswrong.html">LessWrong：从自己的问题读起</a><a href="research-conversations.html">科研经验、问答与 AMA</a><a href="limu.html">李沐：从课程到论文精读</a><a href="labs.html">认识课题组与研究团队</a></aside>
+<div class="reading-layout"><main id="content" tabindex="-1"><div class="article-meta"><span>资料总索引</span><span>HIKARU / 2026-10-05</span></div><article><h1>作者博客与研究笔记</h1>
+<p>博客常常把论文省略的过程补回来：为什么尝试一个方案，哪里没达到预期，怎么判断下一步。</p>
+<p>想看经历，先读邹嘉轩的《认知复利》或 Chai 的 FAQ；正在做实验，可以看 LoopDiT 和 AutomationBench；正在补机制，可以查苏剑林与 Purshow 的笔记。</p>
+<p><a href="resources.html">返回资料总索引</a></p>
+<a id="purshow"></a>
+<h2 id="sec-1">牛宇威 Yuwei Niu / Purshow</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://purshow.github.io/">作者主页</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes">Purshow Notes</a></p>
+<h3 id="sec-2">从 Infra 角度看，为什么去掉 Encoder 更好</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/%E4%BB%8EInfra%E8%A7%92%E5%BA%A6%E7%9C%8B%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8E%BB%E6%8E%89Encoder%E6%9B%B4%E5%A5%BD.md">作者原文</a></p>
+<p>文章从视觉编码器与语言模型的负载、并行配置和调度差异解释 encoder-free 的系统动机，也指出去掉编码器并不会消除变长视觉 token 带来的负载差异。</p>
+<h3 id="sec-3">Purshow Notes：按问题取用的研究笔记</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes">仓库目录</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes/tree/main/WAM">WAM</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes/tree/main/Encoder-Free">Encoder-Free</a></p>
+<p>包含 Attention、MoE、On-Policy Distillation、World Action Models、残差连接、稀疏词表嵌入与 YOCO 等主题，多项提供中英文版本。</p>
+<h3 id="sec-4">两篇观点短文</h3>
+<ul>
+<li><a target="_blank" rel="noopener noreferrer" href="https://x.com/purshow04/status/2081395814610653588">When Vision Is Pushed to the Roadside</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://x.com/purshow04/status/2042451108283761154">The (Possible) Future of Multimodal Understanding: From Describing the World to Entering the World</a></li>
+</ul>
+<a id="chai"></a>
+<h2 id="sec-5">Wenhao Chai</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/">作者主页</a> · <a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs.html">博客目录</a></p>
+<h3 id="sec-6">FAQ for Juniors</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/pages/junior_faq.html">作者原文</a></p>
+<p>更新于 2026-02-25。涉及读博选择、非 CS 背景入门、学校没有合适实验室、如何联系研究者、方向选择和 benchmark 工作的价值。</p>
+<h3 id="sec-7">LoopDiT: Loop Transformers for Diffusion Models</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs/loopdit.html">作者原文</a></p>
+<p>中英双语，2026-09-10。作者比较循环共享 Transformer 与普通模型，在固定参数量和固定计算量的不同条件下检查收益，也比较增加循环与增加去噪步数。</p>
+<h3 id="sec-8">What Happened to AutomationBench?</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs/automationbench-rubric.html">作者原文</a></p>
+<p>中英双语，2026-09-19。作者检查 Agent 工作流评测里的不同计分口径和字符串规则，讨论它们怎样影响任务完成率与模型排名。</p>
+<h3 id="sec-9">Predictable Swarm Scaling</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs/predictable-swarm-scaling.html">作者原文</a></p>
+<p>中英双语，2026-09-27。用任务依赖图和模拟比较单 Agent、标准/递归蜂群等组织方式，区分完成覆盖度与最好结果，讨论分工和成本限制。</p>
+<a id="zou"></a>
+<h2 id="sec-10">邹嘉轩 Jiaxuan Zou</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/">博客目录</a></p>
+<h3 id="sec-11">本科两年，我最深的感悟：认知复利</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/2026/cognitive-compound-interest/">作者原文</a></p>
+<p>中文，2026-07-04。作者以本科经历串起研讨班、公开技术写作、合作交流与实习机会，回顾自己如何随着新信息改变原有规划。</p>
+<h3 id="sec-12">pretrain 和 scaling 作为一种方法论和科学观</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/2026/pretrain-scaling-methodology-scientific-perspective/">作者原文</a></p>
+<p>中文，2026-09-07。文章用预训练与具身等案例，串联通用学习框架、训练/推理计算扩展，以及效率、稳定性和外推预测在研究中的作用。</p>
+<h3 id="sec-13">如何搭建一个科学的 Scaling Ladder</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/2026/how-to-build-scientific-scaling-ladder/">作者原文</a></p>
+<p>中文，2026-09-20。按小规模实验、口径约定、配置搜索、数据与模型规模、拟合及外推验收梳理工作流，讨论 dense、MoE 和数据受限场景。</p>
+<a id="ding"></a>
+<h2 id="sec-14">丁霄汉 Xiaohan Ding</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://dingxiaohan.xyz/">作者主页</a></p>
+<h3 id="sec-15">Writing AI Conference Papers: A Handbook for Beginners</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/hzwer/WritingAIPaper">作者仓库与全文</a></p>
+<p>黄哲威 Zhewei Huang、丁霄汉 Xiaohan Ding 合著，2024。覆盖提炼贡献、搭整体结构、写 introduction 与 related work，以及逻辑、可辩护性、理解成本和信息密度；附常见负面评语及投稿前检查。</p>
+<h3 id="sec-16">Rebuttal 与读博经历</h3>
+<ul>
+<li><a target="_blank" rel="noopener noreferrer" href="https://zhuanlan.zhihu.com/p/602024489">Rebuttal 相关文章</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://hub.baai.ac.cn/view/20773">《前紧后松——清华读博前两年的焦虑与成长》</a>（智源社区转载）</li>
+</ul>
+<a id="han"></a>
+<h2 id="sec-17">韩晓光 Xiaoguang Han</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://sse.cuhk.edu.cn/faculty/hanxiaoguang">校方主页</a>。下面几份材料包括学术讨论实录、导师访谈和科研经验。</p>
+<h3 id="sec-18">GAMES 第一期学术沙龙观点集锦</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://games-cn.org/gamesdiyiqixueshushalongguandianjijin/">主办方实录</a></p>
+<p>2022 年的讨论实录。围绕神经隐式表达与三维研究展开多方讨论，韩晓光的部分涉及理解与重建的关系，全文能看到研究者如何围绕具体问题互相追问。</p>
+<h3 id="sec-19">《好导师在线》第一期</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.bilibili.com/video/BV11Jw5eVE5e/">GAMES-Webinar 官方 B 站视频</a></p>
+<p>嘉宾彭思达、李冠彬，主持韩晓光，发布于 2025-01-16。</p>
+<h3 id="sec-20">《谈形·说 AI》：科研双面镜——学术界 VS 工业界</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.bilibili.com/video/BV14V3d6wE5K/">GAMES-Webinar 官方 B 站视频</a></p>
+<p>嘉宾齐晓娟、何盈庆，主持韩晓光，页面日期为 2026-08-02。</p>
+<p>《什么是好的科研工作》见<a href="research-conversations.html#han">韩晓光原帖与科研问答</a>。更多报告可查 <a target="_blank" rel="noopener noreferrer" href="https://games-cn.org/previouswebinar-ppt/">GAMES 往期报告</a>。</p>
+<a id="su"></a>
+<h2 id="sec-21">苏剑林 Jianlin Su / BoJone：科学空间</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://kexue.fm/">科学空间</a> · <a target="_blank" rel="noopener noreferrer" href="https://kexue.fm/content.html">文章归档</a></p>
+<h3 id="sec-22">Transformer 升级之路：1、Sinusoidal 位置编码追根溯源</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/8231">原文</a>，2021。</p>
+<p>讨论为什么需要位置表示，以及怎样从希望具备的性质出发分析正弦位置编码。适合 LLM 的基础机制与数学应用；需要基本线性代数、Attention 和泰勒展开知识。可以带着“这些 sin/cos 到底从哪里来”读。</p>
+<h3 id="sec-23">Transformer 升级之路：2、博采众长的旋转式位置编码</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/8265">原文</a>，2021。</p>
+<p>作者介绍 RoPE 的构思与 RoFormer，从希望内积体现相对位置这一目标出发构造位置变换。除了学机制，它还是“一个设计怎样从问题和约束里长出来”的第一手研究案例。可以接着上一篇的位置编码讨论读。</p>
+<h3 id="sec-24">生成扩散模型漫谈（一）：DDPM = 拆楼 + 建楼</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://kexue.fm/archives/9119">原文</a>，2022。</p>
+<p>从逐步破坏与重建的类比进入 DDPM，再接加噪和生成过程。可以先用类比理解生成过程，再结合概率基础读推导。</p>
+<h3 id="sec-25">Muon 续集：为什么我们选择尝试 Muon？</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/10739">原文</a>，2025。</p>
+<p>从作者团队的优化器实践解释选择 Muon 的理由，并讨论谱范数、学习率与权重衰减等理论和实验问题。想了解优化器或 scaling，可以先读问题、尝试理由和实验调整，再追公式。</p>
+<h3 id="sec-26">第 1000 篇文章</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/7782">原文</a>，2020。</p>
+<p>作者回顾长期博客写作，并把站点定位为个人做笔记的地方。想开始记录和分享自己的学习时，可以看看这篇写作回顾。</p>
+</article><nav class="neighbors" aria-label="前后文章"><a href="catalog-channels.html"><small>上一篇 ←</small><span>博客、访谈与信息渠道</span></a><a href="lesswrong.html"><small>下一篇 →</small><span>LessWrong：从自己的问题读起</span></a></nav><footer><a href="index.html">指南首页 ↑</a><span>Bofan Zhu / Hikaru</span></footer></main><nav id="toc" aria-label="本页内容"><strong>本页内容</strong><a href="#sec-1">牛宇威 Yuwei Niu / Purshow</a><a href="#sec-5">Wenhao Chai</a><a href="#sec-10">邹嘉轩 Jiaxuan Zou</a><a href="#sec-14">丁霄汉 Xiaohan Ding</a><a href="#sec-17">韩晓光 Xiaoguang Han</a><a href="#sec-21">苏剑林 Jianlin Su / BoJone：科学空间</a></nav></div>
+<button id="mobile-search" aria-label="搜索指南">搜索</button><dialog id="searchdialog" aria-label="搜索指南"><div class="searchhead"><input id="searchinput" type="search" placeholder="搜索文章、问题和资料" aria-label="搜索指南"><button id="closesearch">关闭</button></div><div id="results" aria-live="polite"></div></dialog><script>window.guideUI={"brand":"我的入门指南","blog":"返回主页","search":"搜索","menu":"目录","close":"关闭","onpage":"本页内容","all":"展开全部","collapse":"收起全部","questions":"60 个问题","home":"指南首页","source":"文章源文件","prev":"上一篇","next":"下一篇","placeholder":"搜索文章、问题和资料","hint":"例如：MNIST、联系老师、Scaling Ladder","empty":"没有找到，试试短一点的词。","label":"搜索指南","theme":"切换深浅色","skip":"跳到正文"};</script><script src="../search-data.js"></script><script src="../guide.js"></script></body></html>

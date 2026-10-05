@@ -12,7 +12,10 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "build:pages": "next build"
+    "build:pages": "next build",
+    "build:guide": "node scripts/build-guide.mjs",
+    "prebuild": "npm run build:guide",
+    "prebuild:pages": "npm run build:guide"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",
@@ -31,6 +34,7 @@
     "drizzle-kit": "0.31.10",
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
+    "marked": "^18.0.14",
     "react-server-dom-webpack": "19.2.6",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",

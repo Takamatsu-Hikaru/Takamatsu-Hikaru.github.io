@@ -97,12 +97,25 @@ const blogPosts = [
 export default function Home() {
   const [dark, setDark] = useState(false);
   const [blogOpen, setBlogOpen] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
   const [blogLanguage, setBlogLanguage] = useState<"zh" | "en">("zh");
+  const [guideLanguage, setGuideLanguage] = useState<"zh" | "en">("zh");
   useEffect(() => {
     const stored = window.localStorage.getItem("theme");
     const next = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
     setDark(next);
     document.documentElement.dataset.theme = next ? "dark" : "light";
+    if (new URLSearchParams(window.location.search).get("lang") === "en") {
+      setBlogLanguage("en");
+      setGuideLanguage("en");
+    }
+    const openLinkedBlog = () => {
+      if (window.location.hash === "#blog") setBlogOpen(true);
+      if (window.location.hash === "#guide") setGuideOpen(true);
+    };
+    openLinkedBlog();
+    window.addEventListener("hashchange", openLinkedBlog);
+    return () => window.removeEventListener("hashchange", openLinkedBlog);
   }, []);
   const toggleTheme = () => {
     const next = !dark;
@@ -119,7 +132,7 @@ export default function Home() {
           <span className="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru online</small></span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#research">Research</a><a href="#work">Work</a><a href="#blog">Blog</a><a href="#journey">Journey</a><a href="#about">About</a>
+          <a href="#research">Research</a><a href="#work">Work</a><a href="#blog">Blog</a><a href="#guide" onClick={() => setGuideOpen(true)}>Guide</a><a href="#journey">Journey</a><a href="#about">About</a>
         </nav>
         <div className="header-actions">
           <a className="plain-link desktop-only" href="/resume.pdf">CV ↗</a>
@@ -226,6 +239,37 @@ export default function Home() {
                   );
                 })}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={`blog-section guidance-section section-block ${guideOpen ? "is-open" : ""}`} id="guide">
+        <div className="section-shell">
+          <button className="blog-trigger" type="button" aria-expanded={guideOpen} aria-controls="guide-drawer" onClick={() => setGuideOpen((open) => !open)}>
+            <span className="blog-index">06 / GUIDE</span>
+            <span className="blog-trigger-copy">
+              <span className="eyebrow">我的入门指南</span>
+              <strong>Getting Started Guidance</strong>
+            </span>
+            <span className="blog-count">ZH / EN</span>
+            <span className="blog-toggle" aria-hidden="true">+</span>
+          </button>
+          <div className="blog-drawer" id="guide-drawer" inert={!guideOpen}>
+            <div className="blog-drawer-inner">
+              <div className="blog-language" role="group" aria-label="Guide language">
+                <span>LANGUAGE</span>
+                <button className={guideLanguage === "zh" ? "is-active" : ""} type="button" onClick={() => setGuideLanguage("zh")}>中文</button>
+                <button className={guideLanguage === "en" ? "is-active" : ""} type="button" onClick={() => setGuideLanguage("en")}>EN</button>
+              </div>
+              <a className="guide-entry" href={`/blog/guide/${guideLanguage}/index.html`}>
+                <span className="guide-entry-label">FIELD GUIDE <span>ZH / EN</span></span>
+                <span className="guide-entry-copy">
+                  <strong>{guideLanguage === "zh" ? "我的入门指南" : "My getting-started guide"}</strong>
+                  <span>{guideLanguage === "zh" ? "写给刚进大学、开始接触 AI 和科研的你。这里有我的经历与想法，也有学习路线、动手项目和一路上用到的资料。从联系老师、读论文、做实验，聊到科研之外的生活。" : "For students starting university and finding their way into AI and research. My experiences and thoughts, learning paths, hands-on projects, and resources—from contacting researchers and reading papers to experiments and life beyond research."}</span>
+                </span>
+                <span className="guide-entry-action">{guideLanguage === "zh" ? "进入指南" : "OPEN GUIDE"} ↗</span>
+              </a>
             </div>
           </div>
         </div>

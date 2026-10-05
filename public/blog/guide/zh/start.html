@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>先跑通一个小东西 · Hikaru</title><meta name="description" content="如果还没有选方向，可以先做一个看得见结果的项目：让模型认出手写数字，或者在自己拍的照片里框出人和车。数据、代码和教程都有现成的，从这里动手，再顺着碰到的问题补知识。 下面先放两个视觉入门项目：MNIST 适合走一遍训练和提交，YOLO 适合先看到模型在真实图片上的效果。选一个感兴趣的开始；已经想做 Agent 或机器人，也有后面的入口。 MNIST：在 Kag"><link rel="icon" href="../../../favicon.svg"><link rel="alternate" hreflang="zh-CN" href="../zh/start.html"><link rel="alternate" hreflang="en" href="../en/start.html"><link rel="stylesheet" href="../guide.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script></head>
+<body data-lang="zh" data-page="start">
+<a class="skip" href="#content">跳到正文</a><header class="site-header"><a class="wordmark" href="../../../index.html?lang=zh#guide"><span class="wordmark-mark">BZ</span><span class="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru online</small></span></a><a class="header-guide" href="index.html">我的入门指南</a><div class="header-actions"><a id="language" href="../en/start.html" lang="en" aria-label="Read in English">EN</a><button id="theme" class="theme-toggle" aria-label="切换深浅色">◐</button><button id="menu" aria-controls="nav" aria-expanded="false">目录</button></div></header>
+<button class="shade" id="shade" aria-label="关闭" hidden></button><aside id="nav" aria-label="目录"><a class="back-blog" href="../../../index.html?lang=zh#guide">← 返回主页</a><button id="opensearch" aria-label="搜索指南"><span>搜索</span><kbd>Ctrl K</kbd></button><div class="navgroup">先从这里开始</div><a href="index.html">指南首页</a><a href="welcome.html">写给刚进大学的你</a><a href="research.html">How to 入门科研</a><div class="navgroup">开始学习</div><a href="start.html" aria-current="page">先跑通一个小东西</a><a href="basics.html">基础：带着问题回来学</a><a href="papers.html">挑一篇论文读</a><div class="navgroup">研究方向</div><a href="directions.html">看看不同方向在研究什么</a><a href="llm.html">NLP 与 LLM</a><a href="agent.html">Agent：让模型去做事</a><a href="vision.html">计算机视觉：让模型读懂图像</a><a href="multimodal.html">多模态：把图像和语言接起来</a><a href="generation.html">生成模型：图像是怎样一步步得到的</a><a href="rl.html">强化学习：行动之后还有后果</a><a href="world-model.html">World Model：先预测，再行动</a><a href="embodied.html">具身智能：从看见到行动</a><a href="systems.html">效率与系统：让模型真的跑得动</a><a href="ai4x.html">AI 与其他学科</a><div class="navgroup">做研究时来查</div><a href="reading.html">找资料和读论文</a><a href="experiments.html">把实验做明白</a><a href="writing.html">写作、画图和汇报</a><a href="contact.html">联系老师、学长与合作</a><a href="ai.html">和 AI 一起做事</a><a href="publishing.html">投稿与发表</a><div class="navgroup">经历与生活</div><a href="experience.html">经历、焚诀与走过的弯路</a><a href="timeline.html">大一年终总结：顿觉天地宽</a><a href="life.html">怎么好好生活</a><div class="navgroup">看看外面</div><a href="lookout.html">Lookout：把眼界往外放一点</a><a href="about.html">关于这份指南</a><div class="navgroup">资料总索引</div><a href="resources.html">资料总索引</a><a href="catalog-foundation.html">课程、教材与基础学习</a><a href="catalog-research.html">科研方法与常用工具</a><a href="catalog-directions.html">各方向课程、论文与项目</a><a href="catalog-channels.html">博客、访谈与信息渠道</a><a href="blogs.html">作者博客与研究笔记</a><a href="lesswrong.html">LessWrong：从自己的问题读起</a><a href="research-conversations.html">科研经验、问答与 AMA</a><a href="limu.html">李沐：从课程到论文精读</a><a href="labs.html">认识课题组与研究团队</a></aside>
+<div class="reading-layout"><main id="content" tabindex="-1"><div class="article-meta"><span>开始学习</span><span>HIKARU / 2026-10-05</span></div><article><h1>先跑通一个小东西</h1>
+<p>如果还没有选方向，可以先做一个看得见结果的项目：让模型认出手写数字，或者在自己拍的照片里框出人和车。数据、代码和教程都有现成的，从这里动手，再顺着碰到的问题补知识。</p>
+<p>下面先放两个视觉入门项目：MNIST 适合走一遍训练和提交，YOLO 适合先看到模型在真实图片上的效果。选一个感兴趣的开始；已经想做 Agent 或机器人，也有后面的入口。</p>
+<h2 id="sec-1">MNIST：在 Kaggle 做一次手写数字识别</h2>
+<p>打开 <a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/competitions/digit-recognizer/overview">Kaggle Digit Recognizer</a>。任务很直观：输入一张手写数字图片，判断它是 0 到 9 中的哪一个。这个项目可以把数据、训练、预测和提交串起来。</p>
+<h3 id="sec-2">先看数据，再找一份能读懂的代码</h3>
+<p>先打开比赛的 <a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/competitions/digit-recognizer/data">Data 页面</a>，看看训练数据、测试数据和提交示例。把一行像素还原成图片，对照它的标签；这样再读模型代码时，知道它究竟在处理什么。</p>
+<p>再到 <a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/competitions/digit-recognizer/code">Code 页面</a>，找一份步骤完整、能从头读到尾的入门 notebook。可以搜 MNIST、PyTorch、CNN，优先看有数据展示、训练过程和生成提交文件的版本，复制到自己的 notebook 里运行。</p>
+<p>第一次读代码，先找到数据读取、模型、loss、参数更新和预测这几处。拿不准一段在做什么，可以让 AI 逐段解释，再打印真实数据的 shape 看看。</p>
+<h3 id="sec-3">训练一个模型，完成第一次提交</h3>
+<p>从带标签的训练数据里留出一部分做验证，训练后看它在这部分图片上认对了多少。然后对比赛测试集生成预测，按照提交示例的格式保存文件，完成一次提交。</p>
+<p>到这里，你可以对照着想：模型训练时看到了哪些图片，验证时用了哪些，提交的预测又来自哪里？把这三件事分清，后面做其他项目也会反复用到。</p>
+<h3 id="sec-4">改一点，看看结果怎么变</h3>
+<p>保存第一次跑通的 notebook、验证结果和提交文件，再改一个设置，比如学习率、训练轮数或网络宽度。先猜一下会发生什么，跑完对比。</p>
+<p>把模型认错的图片摆出来看：哪些数字容易混淆，哪些连你也要辨认一下？下一次改动先用自己的验证集比较，榜单留作补充。最后写几句话：改了什么，结果怎样，你怎么解释，还有哪里没弄懂。</p>
+<h3 id="sec-5">遇到概念和代码看不懂时</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.3blue1brown.com/lessons/neural-networks/">3b1b 的神经网络讲解</a>用手写数字解释输入、神经元和输出，适合边做边看。<a target="_blank" rel="noopener noreferrer" href="https://docs.pytorch.org/tutorials/beginner/basics/intro.html">PyTorch Learn the Basics</a>可以用来查数据加载、自动求导、优化和模型保存；其中的 Quickstart 用的是服饰分类数据 FashionMNIST，读懂训练流程后再对照自己的数字识别代码。</p>
+<p>Python 语法读不下去，去<a href="basics.html">基础页</a>补函数、循环、列表和文件读取。张量维度对不上，先补 shape、索引和矩阵乘法。想了解 AI 的更大图景，可以看 <a target="_blank" rel="noopener noreferrer" href="https://thecrashcourse.com/topic/ai/">Crash Course AI</a> 中感兴趣的主题。</p>
+<h2 id="sec-6">YOLO：让模型在自己的图片里框出物体</h2>
+<p>如果你更想马上看到一个有意思的效果，可以从目标检测开始。分类回答“这张图是什么”，检测还要回答“东西在哪里”：一张照片里可能同时有人、自行车和汽车，每个物体都有自己的框和类别。</p>
+<h3 id="sec-7">先用现成模型做一次预测</h3>
+<p>从 <a target="_blank" rel="noopener noreferrer" href="https://docs.ultralytics.com/quickstart">Ultralytics Quickstart</a>进入，先用预训练模型跑通示例，再换成自己拍的图片。想在浏览器里做，可以从官方的 <a target="_blank" rel="noopener noreferrer" href="https://docs.ultralytics.com/integrations/google-colab">Colab 教程</a>进入。</p>
+<p>观察框、类别和置信度：远处的小物体有没有漏掉，遮挡之后还认不认得出来，同一个物体会不会被框两次？拿几张不同场景的图片试试，比只看一张成功截图更容易发现问题。</p>
+<h3 id="sec-8">再走一遍训练和验证</h3>
+<p>跟着 <a target="_blank" rel="noopener noreferrer" href="https://docs.ultralytics.com/modes/train">训练教程</a>，先用 <a target="_blank" rel="noopener noreferrer" href="https://docs.ultralytics.com/datasets/detect/coco8">COCO8 小数据集</a>走通数据加载、训练和验证。它只有 8 张图，适合看清流程；想比较模型效果，下一步换成有足够训练与验证样本的数据集。</p>
+<p>打开一张图片和对应标注，看看类别、框的位置怎样记录，再看数据配置文件怎样指定路径和类别。训练结束后，用保存的权重重新预测，找到结果图片和训练记录。</p>
+<h3 id="sec-9">做一个自己想展示的小 demo</h3>
+<p>可以用一段自己拍的视频，观察模型怎样检测行人或车辆；想识别某种特定物品，就继续找有相应标注的数据，或尝试自己标注。先弄清当前模型认识哪些类别，再决定是否需要重新训练。</p>
+<p>选一个现象继续试：换分辨率后，小物体能不能更容易被发现？调低置信度阈值，多出来的框有多少是误检？把结果图和设置放在一起，你就有具体东西可以拿去<a href="contact.html">请教学长</a>。</p>
+<p>接下来可以读<a href="vision.html">视觉方向</a>，了解分类、检测和分割；开始想认真比较几种方案时，去看<a href="experiments.html">实验页</a>。</p>
+<h2 id="sec-10">已经对 Agent 感兴趣</h2>
+<p>从 <a target="_blank" rel="noopener noreferrer" href="https://github.com/datawhalechina/hello-agents">Hello Agents</a> 的基础内容，或 <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/learn/agents-course/en/unit0/introduction">Hugging Face Agents Course</a> 开始，选一套跟。</p>
+<p>第一个目标可以是让模型调用一个简单工具，并读懂整个过程：收到什么任务、为什么调用、工具返回什么、接下来怎么做、什么时候结束。需要在线模型的练习会涉及账号或 API 费用，选例子前看它的运行条件。</p>
+<p>保存一次成功和一次失败的执行记录。如果同样的问题直接问模型也能答，就比较加上工具之后到底改变了什么。接下来读 <a target="_blank" rel="noopener noreferrer" href="https://react-lm.github.io/">ReAct</a>，再去 <a href="agent.html">Agent 方向页</a>挑一个想继续追的问题。</p>
+<h2 id="sec-11">已经对机器人感兴趣</h2>
+<p>先看 <a target="_blank" rel="noopener noreferrer" href="https://tonyzhaozh.github.io/aloha/">ACT / ALOHA</a> 的项目视频和方法图。拿一个动作来想：机器人看到了什么，示范数据里记录了什么，模型输出的动作又是什么？</p>
+<p>然后在 <a target="_blank" rel="noopener noreferrer" href="https://github.com/huggingface/lerobot">LeRobot</a> 里看一份示范数据和项目结构，把图里的模块对应到文件与数据上。第一步可以停在读数据、理解动作表示；仿真与真实机器人训练放在下一步选。具体入口在<a href="embodied.html">具身方向</a>。</p>
+<h2 id="sec-12">做完之后，怎么继续</h2>
+<p>留住三个东西：可以重开的项目、能讲清的一次改动、下次想问的一个问题。它们会把你带向不同的地方：</p>
+<ul>
+<li>对输入和模型内部好奇，继续<a href="basics.html">学基础与架构</a>。</li>
+<li>对某种任务特别感兴趣，去<a href="directions.html">方向页</a>找代表论文。</li>
+<li>想认真复现一篇文章，把<a href="reading.html">阅读</a>、<a href="experiments.html">实验</a>和<a href="contact.html">交流</a>串起来。</li>
+<li>做下来没那么喜欢，也可以换一个例子。你的这次体验已经提供了信息。</li>
+</ul>
+<h2 id="sec-13">做过之后，继续往哪里学</h2>
+<p>想系统补基础，可以看<a href="limu.html">李沐的课程怎么接</a>；想换一套教材或讲解，查<a href="catalog-foundation.html">基础学习目录</a>。</p>
+</article><nav class="neighbors" aria-label="前后文章"><a href="research.html"><small>上一篇 ←</small><span>How to 入门科研</span></a><a href="basics.html"><small>下一篇 →</small><span>基础：带着问题回来学</span></a></nav><footer><a href="index.html">指南首页 ↑</a><span>Bofan Zhu / Hikaru</span></footer></main><nav id="toc" aria-label="本页内容"><strong>本页内容</strong><a href="#sec-1">MNIST：在 Kaggle 做一次手写数字识别</a><a href="#sec-6">YOLO：让模型在自己的图片里框出物体</a><a href="#sec-10">已经对 Agent 感兴趣</a><a href="#sec-11">已经对机器人感兴趣</a><a href="#sec-12">做完之后，怎么继续</a><a href="#sec-13">做过之后，继续往哪里学</a></nav></div>
+<button id="mobile-search" aria-label="搜索指南">搜索</button><dialog id="searchdialog" aria-label="搜索指南"><div class="searchhead"><input id="searchinput" type="search" placeholder="搜索文章、问题和资料" aria-label="搜索指南"><button id="closesearch">关闭</button></div><div id="results" aria-live="polite"></div></dialog><script>window.guideUI={"brand":"我的入门指南","blog":"返回主页","search":"搜索","menu":"目录","close":"关闭","onpage":"本页内容","all":"展开全部","collapse":"收起全部","questions":"60 个问题","home":"指南首页","source":"文章源文件","prev":"上一篇","next":"下一篇","placeholder":"搜索文章、问题和资料","hint":"例如：MNIST、联系老师、Scaling Ladder","empty":"没有找到，试试短一点的词。","label":"搜索指南","theme":"切换深浅色","skip":"跳到正文"};</script><script src="../search-data.js"></script><script src="../guide.js"></script></body></html>

@@ -152,6 +152,9 @@ h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp
 .project-footer strong { font-size: 21px; }
 
 .blog-section { padding-block: 0; scroll-margin-top: 76px; border-bottom: 1px solid var(--ink); background: var(--paper-2); }
+.guidance-section { background: var(--paper); }
+.guidance-section .blog-trigger { border-top: 0; }
+.guidance-section .guide-entry { margin-bottom: 54px; }
 .blog-trigger {
   width: 100%;
   min-height: 196px;
@@ -185,6 +188,16 @@ h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp
 .blog-language button:hover { transform: translateY(-2px); }
 .blog-language button.is-active { background: var(--ink); color: var(--paper); }
 .blog-list { display: grid; gap: 28px; padding-bottom: 54px; }
+.guide-entry { display: grid; grid-template-columns: 130px minmax(0, 1fr) auto; align-items: center; gap: 32px; padding: 34px 30px; margin: 0 7px 34px 0; background: var(--card); border: 1px solid var(--ink); border-top: 4px solid var(--blue); box-shadow: 6px 6px 0 var(--ink); }
+.guide-entry-label { align-self: start; color: var(--blue); font: 800 12px/1.7 ui-monospace, monospace; letter-spacing: .05em; }
+.guide-entry-label span { display: block; margin-top: 12px; color: var(--muted); }
+.guide-entry-copy { display: flex; flex-direction: column; gap: 15px; }
+.guide-entry-copy strong { font-family: Georgia, "Songti SC", SimSun, serif; font-size: clamp(28px, 3.5vw, 43px); font-weight: 600; line-height: 1.2; letter-spacing: -.025em; }
+.guide-entry-copy > span { max-width: 650px; font-size: 16px; line-height: 1.8; color: var(--muted); }
+.guide-entry-action { font: 800 12px/1.5 ui-monospace, monospace; white-space: nowrap; }
+.guide-entry:hover .guide-entry-action, .guide-entry:hover .guide-entry-copy strong { color: var(--blue); }
+.guide-entry:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+@media (max-width: 800px) { .guide-entry { grid-template-columns: 1fr auto; gap: 20px; padding: 26px 22px; } .guide-entry-label { grid-column: 1 / -1; display: flex; justify-content: space-between; } .guide-entry-label span { margin: 0; } .guide-entry-copy { grid-column: 1 / -1; } .guide-entry-action { grid-column: 1 / -1; } }
 .blog-card {
   display: grid;
   grid-template-columns: minmax(300px, .92fr) 1.08fr;

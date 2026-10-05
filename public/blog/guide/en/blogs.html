@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Author blogs and research notes · Hikaru</title><meta name="description" content="Blogs often restore the process papers omit: why a method was tried, what disappointed, and how the next step was chosen. For experience, start with Zou&#39;s Cog"><link rel="icon" href="../../../favicon.svg"><link rel="alternate" hreflang="zh-CN" href="../zh/blogs.html"><link rel="alternate" hreflang="en" href="../en/blogs.html"><link rel="stylesheet" href="../guide.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script></head>
+<body data-lang="en" data-page="blogs">
+<a class="skip" href="#content">Skip to content</a><header class="site-header"><a class="wordmark" href="../../../index.html?lang=en#guide"><span class="wordmark-mark">BZ</span><span class="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru online</small></span></a><a class="header-guide" href="index.html">My getting-started guide</a><div class="header-actions"><a id="language" href="../zh/blogs.html" lang="zh" aria-label="阅读中文版">中文</a><button id="theme" class="theme-toggle" aria-label="Toggle color theme">◐</button><button id="menu" aria-controls="nav" aria-expanded="false">Contents</button></div></header>
+<button class="shade" id="shade" aria-label="Close" hidden></button><aside id="nav" aria-label="Contents"><a class="back-blog" href="../../../index.html?lang=en#guide">← Back to homepage</a><button id="opensearch" aria-label="Search the guide"><span>Search</span><kbd>Ctrl K</kbd></button><div class="navgroup">Start here</div><a href="index.html">Guide home</a><a href="welcome.html">A letter to new university students</a><a href="research.html">How to get started in research</a><div class="navgroup">Start learning</div><a href="start.html">Start with a small project</a><a href="basics.html">Foundations: return with a question</a><a href="papers.html">Choose a paper to read</a><div class="navgroup">Research directions</div><a href="directions.html">What different research areas are trying to do</a><a href="llm.html">NLP and large language models</a><a href="agent.html">Agents: getting models to do things</a><a href="vision.html">Computer vision: understanding images</a><a href="multimodal.html">Multimodal models: connecting images and language</a><a href="generation.html">Generative models: how an image is made</a><a href="rl.html">Reinforcement learning: actions have consequences</a><a href="world-model.html">World models: predict, then act</a><a href="embodied.html">Embodied AI: from seeing to acting</a><a href="systems.html">Efficiency and systems: making models run</a><a href="ai4x.html">AI and other disciplines</a><div class="navgroup">While doing research</div><a href="reading.html">Finding and reading papers</a><a href="experiments.html">Understand your experiments</a><a href="writing.html">Writing, figures, and talks</a><a href="contact.html">Contacting researchers and collaborating</a><a href="ai.html">Working with AI</a><a href="publishing.html">Submission and publication</a><div class="navgroup">Experience &amp; life</div><a href="experience.html">Experience, practical lessons, and wrong turns</a><a href="timeline.html">My Freshman-Year Review: The World Suddenly Opens Wide</a><a href="life.html">Living well</a><div class="navgroup">Look outside</div><a href="lookout.html">Lookout: widen your view</a><a href="about.html">About this guide</a><div class="navgroup">Resource index</div><a href="resources.html">Resource index</a><a href="catalog-foundation.html">Courses, textbooks, and foundations</a><a href="catalog-research.html">Research methods and everyday tools</a><a href="catalog-directions.html">Courses, papers, and projects by direction</a><a href="catalog-channels.html">Blogs, interviews, and information channels</a><a href="blogs.html" aria-current="page">Author blogs and research notes</a><a href="lesswrong.html">LessWrong: begin with your own question</a><a href="research-conversations.html">Research experience, Q&amp;A, and AMAs</a><a href="limu.html">Mu Li: from courses to close paper reading</a><a href="labs.html">Getting to know research groups</a></aside>
+<div class="reading-layout"><main id="content" tabindex="-1"><div class="article-meta"><span>Resource index</span><span>HIKARU / 2026-10-05</span></div><article><h1>Author blogs and research notes</h1>
+<p>Blogs often restore the process papers omit: why a method was tried, what disappointed, and how the next step was chosen.</p>
+<p>For experience, start with Zou&#39;s Cognitive Compound Interest or Chai&#39;s FAQ. For experiments, read LoopDiT and AutomationBench. For mechanisms, consult Su and Purshow.</p>
+<p><a href="resources.html">Back to the resource index</a></p>
+<a id="purshow"></a>
+<h2 id="sec-1">Yuwei Niu / Purshow</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://purshow.github.io/">Homepage</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes">Purshow Notes</a></p>
+<h3 id="sec-2">Why remove the encoder? An infrastructure perspective</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/%E4%BB%8EInfra%E8%A7%92%E5%BA%A6%E7%9C%8B%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8E%BB%E6%8E%89Encoder%E6%9B%B4%E5%A5%BD.md">Original article</a></p>
+<p>The article explains encoder-free design through differences in workload, parallel configuration, and scheduling between vision encoders and language models. It also notes that removing the encoder does not eliminate workload variation from variable-length visual tokens.</p>
+<h3 id="sec-3">Purshow Notes: consult by question</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes">Repository</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes/tree/main/WAM">WAM</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Purshow/Purshow_Notes/tree/main/Encoder-Free">Encoder-Free</a></p>
+<p>Topics include attention, MoE, on-policy distillation, world-action models, residual connections, sparse vocabulary embeddings, and YOCO. Several have Chinese and English versions.</p>
+<h3 id="sec-4">Two short perspectives</h3>
+<ul>
+<li><a target="_blank" rel="noopener noreferrer" href="https://x.com/purshow04/status/2081395814610653588">When Vision Is Pushed to the Roadside</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://x.com/purshow04/status/2042451108283761154">The (Possible) Future of Multimodal Understanding: From Describing the World to Entering the World</a></li>
+</ul>
+<a id="chai"></a>
+<h2 id="sec-5">Wenhao Chai</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/">Homepage</a> · <a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs.html">Blog index</a></p>
+<h3 id="sec-6">FAQ for Juniors</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/pages/junior_faq.html">Original article</a></p>
+<p>Updated February 25, 2026. Covers PhD choices, entering from outside CS, lacking a suitable local lab, contacting researchers, selecting directions, and the value of benchmark work.</p>
+<h3 id="sec-7">LoopDiT: Loop Transformers for Diffusion Models</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs/loopdit.html">Original article</a></p>
+<p>Chinese and English, September 10, 2026. Compares weight-sharing looped Transformers and ordinary models under fixed parameter and fixed compute conditions, including more loops versus more denoising steps.</p>
+<h3 id="sec-8">What Happened to AutomationBench?</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs/automationbench-rubric.html">Original article</a></p>
+<p>Chinese and English, September 19, 2026. Examines scoring definitions and string-matching rules in agent-workflow evaluation and how they affect completion rates and model rankings.</p>
+<h3 id="sec-9">Predictable Swarm Scaling</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://wenhaochai.com/blogs/predictable-swarm-scaling.html">Original article</a></p>
+<p>Chinese and English, September 27, 2026. Uses task-dependency graphs and simulations to compare single agents and standard or recursive swarms. Distinguishes coverage from best results while discussing division of work and cost limits.</p>
+<a id="zou"></a>
+<h2 id="sec-10">Jiaxuan Zou</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/">Blog index</a></p>
+<h3 id="sec-11">Cognitive Compound Interest: reflections on two undergraduate years</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/2026/cognitive-compound-interest/">Original article</a></p>
+<p>Chinese, July 4, 2026. Connects seminars, public technical writing, collaboration, and internship opportunities through undergraduate experience, including changing plans as new information arrived.</p>
+<h3 id="sec-12">Pretraining and scaling as methodology and scientific perspective</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/2026/pretrain-scaling-methodology-scientific-perspective/">Original article</a></p>
+<p>Chinese, September 7, 2026. Uses pretraining and embodied-AI examples to connect general learning frameworks, training/inference compute scaling, efficiency, stability, and extrapolation in research.</p>
+<h3 id="sec-13">How to build a scientific Scaling Ladder</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://jiaxuanzou0714.github.io/blog/2026/how-to-build-scientific-scaling-ladder/">Original article</a></p>
+<p>Chinese, September 20, 2026. Organizes a workflow around small experiments, consistent definitions, configuration search, data and model scale, fitting, and validation of extrapolations. Discusses dense, MoE, and data-limited settings.</p>
+<a id="ding"></a>
+<h2 id="sec-14">Xiaohan Ding</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://dingxiaohan.xyz/">Homepage</a></p>
+<h3 id="sec-15">Writing AI Conference Papers: A Handbook for Beginners</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/hzwer/WritingAIPaper">Repository and full text</a></p>
+<p>By Zhewei Huang and Xiaohan Ding, 2024. Covers extracting contributions, overall structure, introductions and related work, logic, defensibility, reader effort, and information density. Includes common negative reviews and a pre-submission check.</p>
+<h3 id="sec-16">Rebuttals and doctoral experience</h3>
+<ul>
+<li><a target="_blank" rel="noopener noreferrer" href="https://zhuanlan.zhihu.com/p/602024489">Article on rebuttals</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://hub.baai.ac.cn/view/20773">An Anxious Beginning, a Calmer Later Stage: the First Two PhD Years at Tsinghua</a>, reprinted by BAAI</li>
+</ul>
+<a id="han"></a>
+<h2 id="sec-17">Xiaoguang Han</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://sse.cuhk.edu.cn/faculty/hanxiaoguang">University profile</a>. The materials below include academic discussion, mentoring interviews, and research experience.</p>
+<h3 id="sec-18">Highlights from the first GAMES academic salon</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://games-cn.org/gamesdiyiqixueshushalongguandianjijin/">Organizer&#39;s transcript</a></p>
+<p>A 2022 discussion of neural implicit representations and 3D research. Han&#39;s contribution concerns the relationship between understanding and reconstruction. The full discussion shows researchers questioning one another about concrete problems.</p>
+<h3 id="sec-19">Good Mentors Online, episode one</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.bilibili.com/video/BV11Jw5eVE5e/">Official GAMES-Webinar video on Bilibili</a></p>
+<p>Guests Sida Peng and Guanbin Li, hosted by Xiaoguang Han; published January 16, 2025.</p>
+<h3 id="sec-20">Talking Shape and AI: academia and industry, two sides of research</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.bilibili.com/video/BV14V3d6wE5K/">Official GAMES-Webinar video on Bilibili</a></p>
+<p>Guests Xiaojuan Qi and Yingqing He, hosted by Xiaoguang Han; page dated August 2, 2026.</p>
+<p>For What Makes Good Research, see the <a href="research-conversations.html#han">original post and research conversations</a>. More talks are in the <a target="_blank" rel="noopener noreferrer" href="https://games-cn.org/previouswebinar-ppt/">GAMES archive</a>.</p>
+<a id="su"></a>
+<h2 id="sec-21">Jianlin Su / BoJone: Scientific Spaces</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://kexue.fm/">Scientific Spaces</a> · <a target="_blank" rel="noopener noreferrer" href="https://kexue.fm/content.html">Article archive</a></p>
+<h3 id="sec-22">Upgrading the Transformer, part 1: tracing sinusoidal positional encodings</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/8231">Original</a>, 2021.</p>
+<p>Why do we need positional representations, and how can desired properties guide the analysis of sinusoidal encodings? Useful for LLM mechanisms and applied mathematics; assumes basic linear algebra, attention, and Taylor expansions. Ask where the sine and cosine terms come from.</p>
+<h3 id="sec-23">Upgrading the Transformer, part 2: rotary positional embeddings</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/8265">Original</a>, 2021.</p>
+<p>Introduces RoPE and RoFormer, constructing a positional transformation from the goal of making inner products reflect relative position. It is both a mechanism explanation and a firsthand account of design emerging from a question and constraints. Read after part one.</p>
+<h3 id="sec-24">A discussion of diffusion models, part 1: DDPM as demolition and reconstruction</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://kexue.fm/archives/9119">Original</a>, 2022.</p>
+<p>Starts with a gradual destruction-and-rebuilding analogy, then connects noising and generation. Use the analogy for intuition before following the probability-based derivation.</p>
+<h3 id="sec-25">More on Muon: why did we choose to try it?</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/10739">Original</a>, 2025.</p>
+<p>Explains the team&#39;s choice of Muon through optimizer practice and discusses spectral norms, learning rates, weight decay, and related theory and experiments. Start with the question, motivation, and experimental adjustments before the equations.</p>
+<h3 id="sec-26">The thousandth article</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://spaces.ac.cn/archives/7782">Original</a>, 2020.</p>
+<p>A reflection on long-term blogging and the site as a place for personal notes. Useful when beginning to record and share your own learning.</p>
+</article><nav class="neighbors" aria-label="Adjacent articles"><a href="catalog-channels.html"><small>Previous ←</small><span>Blogs, interviews, and information channels</span></a><a href="lesswrong.html"><small>Next →</small><span>LessWrong: begin with your own question</span></a></nav><footer><a href="index.html">Guide home ↑</a><span>Bofan Zhu / Hikaru</span></footer></main><nav id="toc" aria-label="On this page"><strong>On this page</strong><a href="#sec-1">Yuwei Niu / Purshow</a><a href="#sec-5">Wenhao Chai</a><a href="#sec-10">Jiaxuan Zou</a><a href="#sec-14">Xiaohan Ding</a><a href="#sec-17">Xiaoguang Han</a><a href="#sec-21">Jianlin Su / BoJone: Scientific Spaces</a></nav></div>
+<button id="mobile-search" aria-label="Search the guide">Search</button><dialog id="searchdialog" aria-label="Search the guide"><div class="searchhead"><input id="searchinput" type="search" placeholder="Search articles, questions, and resources" aria-label="Search the guide"><button id="closesearch">Close</button></div><div id="results" aria-live="polite"></div></dialog><script>window.guideUI={"brand":"My getting-started guide","blog":"Back to homepage","search":"Search","menu":"Contents","close":"Close","onpage":"On this page","all":"Expand all","collapse":"Collapse all","questions":"60 questions","home":"Guide home","source":"Article source","prev":"Previous","next":"Next","placeholder":"Search articles, questions, and resources","hint":"Try MNIST, contacting a supervisor, or Scaling Ladder","empty":"No matches. Try a shorter phrase.","label":"Search the guide","theme":"Toggle color theme","skip":"Skip to content"};</script><script src="../search-data.js"></script><script src="../guide.js"></script></body></html>
