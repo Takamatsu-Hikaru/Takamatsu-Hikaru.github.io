@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
 import { loadFields, fieldNotes, paperLibrary } from './fieldnotes.mjs';
 import { amaPage } from './ama-page.mjs';
+import { enrichDirectory } from './guide-directory.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const content=path.join(root,'content/guide'),out=path.join(root,'public/blog/guide');
 const manifest=JSON.parse(fs.readFileSync(path.join(content,'manifest.json'),'utf8'));
@@ -32,7 +33,8 @@ for(const lang of ['zh','en'])for(const p of manifest){
  }
  if(p.id==='papers')html=html.replace(/(<h1>[\s\S]*?<\/h1>)/,m=>m+paperLibrary(fields,lang));
  if(p.id==='ama')html+=amaPage(lang);
- const headings=[...html.matchAll(/<h2 id="((?:sec-|field-|paper-library)[^"]*)">([\s\S]*?)<\/h2>/g)].map(m=>({id:m[1],title:plain(m[2])}));
+ html=enrichDirectory(p.id,lang,html);
+ const headings=[...html.matchAll(/<h2 id="((?!title-)[^"]+)">([\s\S]*?)<\/h2>/g)].map(m=>({id:m[1],title:plain(m[2])}));
  if(p.id==='research'){
   html=html.replace(/<a id="(q\d+)"><\/a>\s*<h3[^>]*>([\s\S]*?)<\/h3>([\s\S]*?)(?=<a id="q\d+"|<h2|$)/g,(_,id,q,a)=>`<details class="qa" id="${id}"><summary>${q}</summary><div class="answer">${a}</div></details>\n`);
   if((html.match(/class="qa"/g)||[]).length!==60)throw Error('Question count '+lang);
@@ -56,12 +58,12 @@ for(const lang of ['zh','en']){
   const nav=pages.map(x=>{let h='';if(x.group!==group){group=x.group;h=`<div class="navgroup">${escape(groupName(group,lang))}</div>`;}return h+`<a href="${filename(x.id)}"${x.id===p.id?' aria-current="page"':''}>${escape(x.id==='home'?t.home:x.title)}</a>`}).join('');
   const neighbors=[pages[index-1],pages[index+1]].map((x,i)=>x?`<a href="${filename(x.id)}"><small>${i?t.next:t.prev} ${i?'→':'←'}</small><span>${escape(x.id==='home'?t.home:x.title)}</span></a>`:'<span></span>').join('');
   const html=`<!doctype html>
-<html lang="${lang==='zh'?'zh-CN':'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>${escape(p.title)} · Hikaru</title><meta name="description" content="${escape(p.plain.slice(p.title.length,190).trim())}"><link rel="icon" href="../../../favicon.svg"><link rel="alternate" hreflang="zh-CN" href="../zh/${filename(p.id)}"><link rel="alternate" hreflang="en" href="../en/${filename(p.id)}"><link rel="stylesheet" href="../guide.css"><link rel="stylesheet" href="../fieldnotes.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script></head>
+<html lang="${lang==='zh'?'zh-CN':'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>${escape(p.title)} · Hikaru</title><meta name="description" content="${escape(p.plain.slice(p.title.length,190).trim())}"><link rel="icon" href="../../../favicon.svg"><link rel="alternate" hreflang="zh-CN" href="../zh/${filename(p.id)}"><link rel="alternate" hreflang="en" href="../en/${filename(p.id)}"><link rel="stylesheet" href="../guide.css"><link rel="stylesheet" href="../fieldnotes.css"><link rel="stylesheet" href="../guide-motion.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script></head>
 <body data-lang="${lang}" data-page="${p.id}"${p.id==='home'?' class="home"':''}>
 <a class="skip" href="#content">${t.skip}</a><header class="site-header"><a class="wordmark" href="../../../index.html?lang=${lang}#guide"><span class="wordmark-mark">BZ</span><span class="wordmark-copy"><strong>Bofan Zhu</strong><small>Hikaru online</small></span></a><a class="header-guide" href="index.html">${t.brand}</a><div class="header-actions"><a id="language" href="../${other}/${filename(p.id)}" lang="${other}" aria-label="${other==='en'?'Read in English':'阅读中文版'}">${other==='en'?'EN':'中文'}</a><button id="theme" class="theme-toggle" aria-label="${t.theme}">◐</button><button id="menu" aria-controls="nav" aria-expanded="false">${t.menu}</button></div></header>
 <button class="shade" id="shade" aria-label="${t.close}" hidden></button><aside id="nav" aria-label="${t.menu}"><a class="back-blog" href="../../../index.html?lang=${lang}#guide">← ${t.blog}</a><button id="opensearch" aria-label="${t.label}"><span>${t.search}</span><kbd>Ctrl K</kbd></button>${nav}</aside>
 <div class="reading-layout"><main id="content" tabindex="-1"><div class="article-meta"><span>${escape(groupName(p.group,lang))}</span><span>HIKARU / ${p.updated||'2026-10-04'}</span></div><article>${p.html}</article><nav class="neighbors" aria-label="${lang==='zh'?'前后文章':'Adjacent articles'}">${neighbors}</nav><footer><a href="index.html">${t.home} ↑</a><span>Bofan Zhu / Hikaru</span></footer></main><nav id="toc" aria-label="${t.onpage}"><strong>${t.onpage}</strong>${p.headings.map(h=>`<a href="#${h.id}">${escape(h.title)}</a>`).join('')}</nav></div>
-<button id="mobile-search" aria-label="${t.label}">${t.search}</button><dialog id="searchdialog" aria-label="${t.label}"><div class="searchhead"><input id="searchinput" type="search" placeholder="${t.placeholder}" aria-label="${t.label}"><button id="closesearch">${t.close}</button></div><div id="results" aria-live="polite"></div></dialog><script>window.guideUI=${JSON.stringify(t)};</script><script src="../search-data.js"></script><script src="../guide.js"></script><script src="../fieldnotes.js"></script><script src="../ama.js"></script></body></html>`;
+<button id="mobile-search" aria-label="${t.label}">${t.search}</button><dialog id="searchdialog" aria-label="${t.label}"><div class="searchhead"><input id="searchinput" type="search" placeholder="${t.placeholder}" aria-label="${t.label}"><button id="closesearch">${t.close}</button></div><div id="results" aria-live="polite"></div></dialog><script>window.guideUI=${JSON.stringify(t)};</script><script src="../search-data.js"></script><script src="../guide.js"></script><script src="../fieldnotes.js"></script><script src="../motion-photo.js"></script><script src="../guide-motion.js"></script><script src="../ama.js"></script></body></html>`;
   fs.writeFileSync(path.join(out,lang,filename(p.id)),html);
  }
 }

@@ -15,3 +15,5 @@
 [Lumina 具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)为具身方向的组织与资料选取提供了参考。
 
 [从首页开始](home.md) · [写给刚进大学的你](welcome.md)
+
+机制演示中的猫图：[Fir0002 / Flagstaffotos](https://commons.wikimedia.org/wiki/File:Cat03.jpg) · [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)

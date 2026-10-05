@@ -9,9 +9,10 @@ if(!process.argv[2]||!fs.existsSync(path.join(club,'预览/template.html')))thro
 const read=p=>fs.readFileSync(p,'utf8');
 const write=(p,s)=>{fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,s)};
 const copy=(from,to)=>{fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to)};
+const copyTree=(from,to)=>{fs.mkdirSync(to,{recursive:true});for(const e of fs.readdirSync(from,{withFileTypes:true})){const a=path.join(from,e.name),b=path.join(to,e.name);if(e.isDirectory())copyTree(a,b);else copy(a,b)}};
 const replace=(s,a,b)=>{if(!s.includes(a))throw Error('Sync target changed: '+a.slice(0,100));return s.replace(a,b)};
 const backup=path.join(root,'work/club-before-fieldnotes-sync');
-if(!fs.existsSync(backup))fs.cpSync(club,backup,{recursive:true});
+if(!fs.existsSync(backup))copyTree(club,backup);
 const source=path.join(root,'content/guide');
 const stateFile=path.join(club,'编辑说明/正文同步状态.json');
 const previous=fs.existsSync(stateFile)?JSON.parse(read(stateFile)):{};
@@ -42,11 +43,15 @@ let renderer=read(path.join(root,'scripts/fieldnotes.mjs'))
  .replace("'../public/blog/guide/figures/'","'../预览/figures/'");
 write(path.join(club,'模块/fieldnotes.mjs'),renderer);
 copy(path.join(root,'scripts/ama-page.mjs'),path.join(club,'模块/ama-page.mjs'));
+for(const file of ['guide-motion.mjs','guide-directory.mjs'])copy(path.join(root,'scripts',file),path.join(club,'模块',file));
+for(const file of ['guide-motion.css','guide-motion.js','motion-photo.js'])copy(path.join(root,'public/blog/guide',file),path.join(club,'预览',file));
+for(const folder of ['brands','motion'])copyTree(path.join(root,'public/blog/guide',folder),path.join(club,'预览',folder));
 copy(path.join(root,'public/blog/guide/fieldnotes.css'),path.join(club,'预览/fieldnotes.css'));
 let ama=read(path.join(root,'public/blog/guide/ama.js')).replace('(() => {','window.initGuideAMA = () => {').replace(/\}\)\(\);\s*$/,'};');
 write(path.join(club,'预览/ama.js'),ama);
 write(path.join(club,'预览/fieldnotes.js'),`(() => {
  let active=null,opener=null;
+ const closePaper=d=>{if(!d.open||d.classList.contains('leaving'))return;if(matchMedia('(prefers-reduced-motion: reduce)').matches){d.close();return}d.classList.add('leaving');setTimeout(()=>{d.close();d.classList.remove('leaving')},180)};
  const base=()=> '#/'+(document.body.dataset.page||'home');
  window.openGuidePaper=id=>{
   const d=document.getElementById(id);if(!d||!d.classList.contains('paper-dialog'))return;
@@ -57,8 +62,9 @@ write(path.join(club,'预览/fieldnotes.js'),`(() => {
  window.initGuideFieldnotes=root=>{
   root.querySelectorAll('[data-paper]').forEach(b=>b.onclick=()=>{location.hash=base()+'/paper-'+b.dataset.paper});
   root.querySelectorAll('.paper-dialog').forEach(d=>{
-   d.querySelector('[data-close-paper]').onclick=()=>d.close();
-   d.onclick=e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}};
+   d.querySelector('[data-close-paper]').onclick=()=>closePaper(d);
+   d.oncancel=e=>{e.preventDefault();closePaper(d)};
+   d.onclick=e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closePaper(d)}};
    d.onclose=()=>{if(active===d)active=null;if(location.hash.endsWith('/'+d.id))history.replaceState(null,'',base());if(opener?.isConnected)opener.focus()};
   });
   root.querySelectorAll('[data-check]').forEach(c=>{const key='guide-check-'+c.dataset.check;try{c.checked=localStorage.getItem(key)==='1'}catch{}c.onchange=()=>{try{localStorage.setItem(key,c.checked?'1':'0')}catch{}}});
@@ -83,6 +89,11 @@ if(!build.includes('loadFields')){
  page.html=page.html.replace(/href="(?!https?:)([^"]+)\\.html(?:#([^"]+))?"/g,(_,id,a)=>'href="#/'+id+(a?'/'+a:'')+'"').replace(/href="#(paper-[^"]+)"/g,(_,id)=>'href="#/'+page.id+'/'+id+'"').replaceAll('../figures/','figures/');
  page.plain=page.html.replace(/<[^>]*>/g,' ').replace(/\\s+/g,' ').trim();`+build.slice(end);
 }
+if(!build.includes('enrichDirectory')){
+ build=build.replace("import {amaPage}","import {enrichDirectory} from './模块/guide-directory.mjs';\nimport {amaPage}");
+ build=build.replace(" if(page.id==='ama')", " page.html=enrichDirectory(page.id,'zh',page.html);\n if(page.id==='ama')");
+ build=build.replace(".replaceAll('../figures/','figures/')", ".replaceAll('../figures/','figures/').replaceAll('../brands/','brands/')");
+}
 write(path.join(club,'build.mjs'),build);
 let template=read(path.join(club,'预览/template.html'));
 if(!template.includes('initGuideFieldnotes')){
@@ -94,6 +105,11 @@ if(!template.includes('initGuideFieldnotes')){
  template=replace(template,' if(anchor){',' if(anchor.startsWith(\'paper-\')){window.openGuidePaper(anchor);return}\n window.closeGuidePaper();\n if(anchor){');
  template=replace(template," if(p.group==='资料总索引'){"," if(p.group==='资料总索引'||p.group==='研究方向'){");
  template=replace(template,"  for(const h of dom.querySelectorAll('h2,h3')){","  for(const d of dom.querySelectorAll('.paper-dialog')){searchIndex.push({id:p.id,title:d.querySelector('h2').textContent,body:d.textContent,anchor:d.id,label:p.title})}\n  for(const h of [...dom.querySelectorAll('h2,h3')].filter(h=>!h.closest('dialog'))){");
+}
+if(!template.includes('guide-motion.js')){
+ template=template.replace('</head>','<link rel="stylesheet" href="guide-motion.css">\n</head>');
+ template=template.replace('<script src="ama.js"></script>','<script src="ama.js"></script>\n<script src="motion-photo.js"></script>\n<script src="guide-motion.js"></script>');
+ template=template.replace('window.initGuideFieldnotes(article);window.initGuideAMA();','window.initGuideFieldnotes(article);window.initGuideAMA();window.initGuideMotion(article);');
 }
 write(path.join(club,'预览/template.html'),template);
 write(path.join(club,'预览/fieldnotes-green.css'),`:root{--blue:var(--accent);--orange:#74845c;--soft:var(--line);--card:var(--white);--paper-2:var(--wash);--serif:var(--display)}

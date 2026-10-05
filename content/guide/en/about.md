@@ -15,3 +15,5 @@ The resource collection builds on the earlier [UESTC AI Society Guide](https://m
 [Lumina's Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) informed the organization and resource selection for embodied AI.
 
 [Start from the guide home](home.md) · [A letter to new students](welcome.md)
+
+Cat image in the mechanism illustrations: [Fir0002 / Flagstaffotos](https://commons.wikimedia.org/wiki/File:Cat03.jpg) · [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)
