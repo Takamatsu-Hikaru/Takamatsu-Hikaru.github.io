@@ -30,6 +30,27 @@ const journey = [
 
 const blogPosts = [
   {
+    slug: "more-papers-now-what",
+    stamp: "ESSAY 04",
+    date: "2026.10.05",
+    cover: "/blog/more-papers-cover.webp",
+    alt: "海面、远处的灯塔与礁石旁的人 / A person by the rocks, the sea, and a distant lighthouse",
+    zh: {
+      href: "/blog/more-papers-now-what.html",
+      title: "投稿越来越多，",
+      subtitle: "然后呢？",
+      summary: "投稿、评审与职业回报怎样形成一个越转越快的循环；当六万篇都认真，研究、判断与生活又该怎么继续。",
+      action: "阅读文章",
+    },
+    en: {
+      href: "/blog/more-papers-now-what-en.html",
+      title: "More Papers.",
+      subtitle: "Now What?",
+      summary: "How submissions, peer review, and career rewards feed an accelerating cycle—and what remains when all sixty thousand papers are earnest, solid work.",
+      action: "READ ARTICLE",
+    },
+  },
+  {
     slug: "embodied-notes",
     stamp: "NOTES 03",
     date: "2026.09.07",
@@ -209,7 +230,7 @@ export default function Home() {
               <span className="eyebrow">World model checkpoints</span>
               <strong>Blog & field notes</strong>
             </span>
-            <span className="blog-count">03 ARTICLES</span>
+            <span className="blog-count">{String(blogPosts.length).padStart(2, "0")} ARTICLES</span>
             <span className="blog-toggle" aria-hidden="true">+</span>
           </button>
 

@@ -1,0 +1,19 @@
+@import url("./embodied-notes.css");
+
+.header-actions { justify-self: end; display: flex; align-items: center; gap: 16px; }
+.language-link { font: 800 12px/1.4 ui-monospace, monospace; border-bottom: 1px solid var(--blue); padding-block: 6px; }
+.language-link:hover { color: var(--blue); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+.hero-cover { width: min(980px, 92%); }
+.hero-cover img { aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 75%; }
+.rail a { display: inline-block; margin-top: 22px; color: var(--blue); font: 800 11px/1.6 ui-monospace, monospace; }
+article h2 { scroll-margin-top: 105px; }
+html[lang="en"] article { line-height: 1.85; letter-spacing: 0; overflow-wrap: break-word; }
+html[lang="en"] h1 { letter-spacing: -.055em; }
+@media (max-width: 640px) {
+  .site-header { padding-inline: 15px; }
+  .header-actions { gap: 12px; }
+  .hero-cover { width: calc(100% - 6px); }
+  html[lang="zh-CN"] h1 .title-first { font-size: clamp(32px, 9.4vw, 60px); }
+  html[lang="en"] h1 .title-first { font-size: clamp(38px, 11vw, 60px); }
+}

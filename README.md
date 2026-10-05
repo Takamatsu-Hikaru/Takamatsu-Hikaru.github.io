@@ -29,6 +29,14 @@ npm run build:pages
 
 The site is automatically deployed to GitHub Pages after changes are pushed to `main`.
 
+## Fourth blog post
+
+The bilingual essay **More Papers. Now What? / 投稿越来越多，然后呢？** lives in
+`content/blog/more-papers-now-what.zh.md` and `content/blog/more-papers-now-what.en.md`.
+Run `npm run build:blog` to regenerate both article pages. The normal build commands
+also run this step. Its cover is `public/blog/more-papers-cover.webp`; the article
+reuses the existing blog design through `public/blog/more-papers.css`.
+
 ## Getting-started guide
 
 Section 06, Getting Started Guidance, links to the personal guide in Chinese and English. Edit articles in
