@@ -16,4 +16,3 @@
 
 [从首页开始](home.md) · [写给刚进大学的你](welcome.md)
 
-机制演示中的猫图：[Fir0002 / Flagstaffotos](https://commons.wikimedia.org/wiki/File:Cat03.jpg) · [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)

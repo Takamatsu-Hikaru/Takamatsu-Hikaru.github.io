@@ -44,7 +44,7 @@ let renderer=read(path.join(root,'scripts/fieldnotes.mjs'))
 write(path.join(club,'模块/fieldnotes.mjs'),renderer);
 copy(path.join(root,'scripts/ama-page.mjs'),path.join(club,'模块/ama-page.mjs'));
 for(const file of ['guide-motion.mjs','guide-directory.mjs'])copy(path.join(root,'scripts',file),path.join(club,'模块',file));
-for(const file of ['guide-motion.css','guide-motion.js','motion-photo.js'])copy(path.join(root,'public/blog/guide',file),path.join(club,'预览',file));
+for(const file of ['guide-motion.css','guide-motion.js'])copy(path.join(root,'public/blog/guide',file),path.join(club,'预览',file));
 for(const folder of ['brands','motion'])copyTree(path.join(root,'public/blog/guide',folder),path.join(club,'预览',folder));
 copy(path.join(root,'public/blog/guide/fieldnotes.css'),path.join(club,'预览/fieldnotes.css'));
 let ama=read(path.join(root,'public/blog/guide/ama.js')).replace('(() => {','window.initGuideAMA = () => {').replace(/\}\)\(\);\s*$/,'};');
@@ -108,9 +108,10 @@ if(!template.includes('initGuideFieldnotes')){
 }
 if(!template.includes('guide-motion.js')){
  template=template.replace('</head>','<link rel="stylesheet" href="guide-motion.css">\n</head>');
- template=template.replace('<script src="ama.js"></script>','<script src="ama.js"></script>\n<script src="motion-photo.js"></script>\n<script src="guide-motion.js"></script>');
+ template=template.replace('<script src="ama.js"></script>','<script src="ama.js"></script>\n<script src="guide-motion.js"></script>');
  template=template.replace('window.initGuideFieldnotes(article);window.initGuideAMA();','window.initGuideFieldnotes(article);window.initGuideAMA();window.initGuideMotion(article);');
 }
+template=template.replace('<script src="motion-photo.js"></script>','').replace(/guide-motion\.js(?:\?v=[^"']*)?(?=")/g,'guide-motion.js?v=20261006c').replace(/guide-motion\.css(?:\?v=[^"']*)?(?=")/g,'guide-motion.css?v=20261006c');
 write(path.join(club,'预览/template.html'),template);
 write(path.join(club,'预览/fieldnotes-green.css'),`:root{--blue:var(--accent);--orange:#74845c;--soft:var(--line);--card:var(--white);--paper-2:var(--wash);--serif:var(--display)}
 .paper-card{color:var(--ink);border-color:var(--line-dark);border-top-color:var(--sage);border-radius:6px;box-shadow:0 2px 5px #26382c0a}.paper-card:hover{box-shadow:0 4px 12px #26382c12;transform:translateY(-2px)}.paper-card>strong{font:650 19px/1.5 var(--display);letter-spacing:0}.paper-art{border-color:var(--line);border-radius:3px}.concept-figure{border-color:var(--line-dark);box-shadow:none;border-radius:6px}.field-problems{border-radius:6px}.field-checklist{border-color:var(--line-dark);border-radius:6px}.paper-dialog{border-color:var(--line-dark)}.paper-dialog-head button{border:0;border-radius:4px;background:var(--wash);color:var(--ink)}.paper-dialog h2{font-family:var(--display)}.paper-full-figure{padding:8px}.paper-full-figure>a{border:0}.paper-filters input,.paper-filters select{border-radius:4px}.ama-filters button{border:1px solid var(--line-dark);border-radius:4px;color:var(--ink)}
