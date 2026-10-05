@@ -66,7 +66,7 @@
     "checklist": [
       "把一句中文和一句代码送进 tokenizer，保存 token 与编号，并解释它们为什么不等于按空格分词。",
       "在同一模型上比较无示例与两个示例的提示，用五道自己能核对答案的题记录变化。",
-      "选一篇下面的论文，用三句话分别写出它的训练输入、训练目标和测试任务。"
+      "选一篇本页的论文，用三句话分别写出它的训练输入、训练目标和测试任务。"
     ],
     "figure": {
       "title": "一段文本怎样变成下一步输出",
@@ -145,7 +145,7 @@
     "checklist": [
       "Tokenize a Chinese sentence and a code snippet, save the pieces and IDs, and explain why tokenization differs from splitting on spaces.",
       "Compare zero-example and two-example prompts on the same model using five questions whose answers you can verify.",
-      "For one paper below, write three sentences naming its training input, training objective, and evaluation task."
+      "For one paper on this page, write three sentences naming its training input, training objective, and evaluation task."
     ],
     "figure": {
       "title": "From text to the next output",

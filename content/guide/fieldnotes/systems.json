@@ -145,7 +145,7 @@
     "checklist": [
       "Fix the model and input/output lengths; measure time and peak memory three times at two batch sizes, recording hardware and precision.",
       "Measure time to the first token separately from subsequent generation speed and explain why they are not interchangeable.",
-      "Choose one optimization below, draw the object it changes, and identify a metric that directly tests its effect."
+      "Choose one of the optimizations on this page, draw the object it changes, and identify a metric that directly tests its effect."
     ],
     "figure": {
       "title": "Where one request spends its time",

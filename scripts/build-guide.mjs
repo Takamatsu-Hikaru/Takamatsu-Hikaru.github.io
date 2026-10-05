@@ -25,7 +25,11 @@ for(const lang of ['zh','en'])for(const p of manifest){
  html=html.replace(/href="(?!https?:)([^"]+)\.md(?:#([^"]+))?"/g,(_,id,anchor)=>`href="${filename(id)}${anchor?'#'+anchor:''}"`);
  html=html.replace(/<a href="(https?:[^"]+)"/g,'<a target="_blank" rel="noopener noreferrer" href="$1"');
  const field=fields.find(f=>f.id===p.id);
- if(field)html=html.replace(/(<h1>[\s\S]*?<\/h1>)/,m=>m+fieldNotes(field,lang));
+ if(field){
+  const parts=html.match(/^(<h1>[\s\S]*?<\/h1>)([\s\S]*?)(<h2[\s\S]*)$/);
+  if(!parts)throw Error('Missing field introduction or learning route '+lang+'/'+p.id);
+  html=parts[1]+fieldNotes(field,lang,parts[2],parts[3]);
+ }
  if(p.id==='papers')html=html.replace(/(<h1>[\s\S]*?<\/h1>)/,m=>m+paperLibrary(fields,lang));
  if(p.id==='ama')html+=amaPage(lang);
  const headings=[...html.matchAll(/<h2 id="((?:sec-|field-|paper-library)[^"]*)">([\s\S]*?)<\/h2>/g)].map(m=>({id:m[1],title:plain(m[2])}));
