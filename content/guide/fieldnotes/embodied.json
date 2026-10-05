@@ -35,6 +35,22 @@
         "papers": [
           "embodied-rt2"
         ]
+      },
+      {
+        "year": "2024",
+        "title": "用视觉语言模型生成连续动作",
+        "text": "π0 将预训练视觉语言模型与 flow matching 动作专家结合，用跨机器人数据学习通用策略，再针对任务微调。",
+        "papers": [
+          "embodied-pi0"
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "把任务带到新的家庭环境",
+        "text": "π0.5 联合训练多种数据与任务，研究机器人在未见过的家庭环境中完成多阶段操作。",
+        "papers": [
+          "embodied-pi05"
+        ]
       }
     ],
     "terms": [
@@ -70,7 +86,7 @@
         "再次观察"
       ]
     },
-    "paperIntro": "先看三个项目的任务视频，再读方法图；把相同任务的输入、动作输出和训练数据列在一起。"
+    "paperIntro": "先看项目的任务视频，再读方法图；把相同任务的输入、动作输出和训练数据列在一起。"
   },
   "en": {
     "overview": [
@@ -107,6 +123,22 @@
         "papers": [
           "embodied-rt2"
         ]
+      },
+      {
+        "year": "2024",
+        "title": "Generate continuous actions with a VLM",
+        "text": "π0 combines a pretrained VLM with a flow-matching action expert, learning from cross-robot data before task-specific fine-tuning.",
+        "papers": [
+          "embodied-pi0"
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "Take tasks into new homes",
+        "text": "π0.5 co-trains on heterogeneous data and tasks to study multi-stage manipulation in previously unseen homes.",
+        "papers": [
+          "embodied-pi05"
+        ]
       }
     ],
     "terms": [
@@ -142,7 +174,7 @@
         "Observe again"
       ]
     },
-    "paperIntro": "Watch the task videos before reading the method diagrams. Compare inputs, action outputs, and training data across the three projects."
+    "paperIntro": "Watch the task videos before reading the method diagrams. Compare inputs, action outputs, and training data across the projects."
   },
   "papers": [
     {
@@ -215,6 +247,54 @@
         "why": "It connects semantic knowledge to existing action capabilities.",
         "read": "Read action encoding, then semantic-generalization tasks.",
         "limit": "Semantic transfer does not automatically create new low-level motor skills; robot demonstrations remain important."
+      }
+    },
+    {
+      "id": "embodied-pi0",
+      "title": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+      "year": 2024,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2410.24164",
+      "code": "https://github.com/Physical-Intelligence/openpi",
+      "zh": {
+        "tag": "π0 · 通用机器人策略",
+        "question": "怎样把视觉语言模型接到连续动作，让同一个策略学习多种机器人的任务？",
+        "idea": "在预训练视觉语言模型上接入动作专家，用 flow matching 生成连续动作序列；先用多种机器人的示范预训练，再用任务数据微调。",
+        "why": "它把视觉语言预训练、动作生成和跨机器人数据放进同一套方案，接上了前面的 RT-2 与 Diffusion Policy。",
+        "read": "从第一页总览图看数据和任务，再读动作专家的结构；对照预训练后直接执行与任务微调后的实验。",
+        "limit": ""
+      },
+      "en": {
+        "tag": "π0 · Generalist robot policy",
+        "question": "How can a vision-language model produce continuous actions across robot tasks and platforms?",
+        "idea": "An action expert uses flow matching to generate continuous action sequences alongside a pretrained VLM. The policy is pretrained on demonstrations from multiple robots, then fine-tuned on task data.",
+        "why": "It brings VLM pretraining, action generation, and cross-robot data together, connecting RT-2 and Diffusion Policy.",
+        "read": "Start with the first-page overview, then the action-expert architecture. Compare direct use after pretraining with task-specific fine-tuning.",
+        "limit": ""
+      }
+    },
+    {
+      "id": "embodied-pi05",
+      "title": "π0.5: a Vision-Language-Action Model with Open-World Generalization",
+      "year": 2025,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2504.16054",
+      "code": "https://github.com/Physical-Intelligence/openpi",
+      "zh": {
+        "tag": "π0.5 · 新环境泛化",
+        "question": "机器人到了训练时没去过的家里，还能完成整理房间这样的长任务吗？",
+        "idea": "在 π0 基础上联合训练机器人动作、子任务预测、物体检测和网络视觉语言数据，把高层子任务与连续动作连接起来。",
+        "why": "它把问题推进到新家庭环境中的多阶段操作，适合看训练数据的组成怎样影响泛化。",
+        "read": "先看第一页的数据来源与部署场景，再看新家庭环境的测试设置，以及不同数据来源的消融实验。",
+        "limit": ""
+      },
+      "en": {
+        "tag": "π0.5 · New-environment generalization",
+        "question": "Can a robot carry out long tasks in homes it did not visit during training?",
+        "idea": "Building on π0, the model co-trains on robot actions, subtask prediction, object detection, and web vision-language data, connecting high-level subtasks to continuous actions.",
+        "why": "It studies multi-stage manipulation in new homes and how the mix of training data affects generalization.",
+        "read": "Start with the first-page data and deployment overview, then inspect the new-home evaluation and data-source ablations.",
+        "limit": ""
       }
     }
   ]

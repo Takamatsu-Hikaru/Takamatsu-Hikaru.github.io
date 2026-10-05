@@ -409,5 +409,35 @@
     "figure": "Figure 1",
     "width": 2166,
     "height": 775
+  },
+  "embodied-pi0": {
+    "file": "embodied-pi0.png",
+    "credit": "Physical Intelligence · Fig. 1",
+    "source": "https://arxiv.org/pdf/2410.24164v4",
+    "page": 1,
+    "figure": 1,
+    "width": 1485,
+    "height": 795,
+    "cropPoints": [
+      57,
+      228,
+      552,
+      493
+    ]
+  },
+  "embodied-pi05": {
+    "file": "embodied-pi05.png",
+    "credit": "Physical Intelligence · Fig. 1",
+    "source": "https://arxiv.org/pdf/2504.16054v1",
+    "page": 1,
+    "figure": 1,
+    "width": 1554,
+    "height": 867,
+    "cropPoints": [
+      47,
+      211,
+      565,
+      500
+    ]
   }
 }
