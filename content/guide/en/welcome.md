@@ -14,7 +14,19 @@ Over these four years, I think few things matter more than getting to know yours
 
 Have the courage to move first. Do what feels meaningful, seek good places and good work, find somewhere with a gradient, and train your own parameters.
 
-These are easy things to say. They probably do not resolve everything you feel right now.
+<a id="choices"></a>
+
+## Where these choices can lead
+
+When you first arrive, graduate admissions, studying abroad, research, competitions, and internships often come up together, as though you need to do them all. It helps to separate them: recommendation-based admission, entrance exams, and overseas applications are routes to further study; research careers, industry work, and starting a company are possible destinations; competitions, projects, research, and internships are experiences you can try along the way.
+
+If you want graduate admission, there is nothing wrong with working hard for the grades and opportunities you need. Also look one step further: **What do you hope to gain from graduate study? Deeper knowledge, a different environment, better job opportunities, or a chance to keep doing research?** Getting clearer about that can help you decide where to spend your time.
+
+If you want to go deeper into a subject, explore its courses and research areas. If you want to know whether a kind of work suits you, look at what people actually do in those jobs, talk to them, and seek projects or internships. To experience research, you can begin with a small project and talk to older students and faculty. A competition gives you a defined task and teammates; research gives you experience formulating questions and testing your ideas.
+
+Even a wish as broad as “I want to go somewhere better” can become more specific: what attracts you there, and whom would you like to work with, on what? Get some experience, then adjust. For me, the excitement of making demos was one reason I kept exploring AI. I discuss why I moved toward research in [this answer](research.md#q3).
+
+Still, knowing your options does not necessarily stop you from worrying when others seem far ahead. I have been there too.
 
 ## I also wondered why everyone else had already started
 

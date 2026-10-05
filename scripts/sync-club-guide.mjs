@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -12,9 +13,25 @@ const replace=(s,a,b)=>{if(!s.includes(a))throw Error('Sync target changed: '+a.
 const backup=path.join(root,'work/club-before-fieldnotes-sync');
 if(!fs.existsSync(backup))fs.cpSync(club,backup,{recursive:true});
 const source=path.join(root,'content/guide');
-for(const file of fs.readdirSync(path.join(source,'zh'))){
- if(!['home.md','about.md','welcome.md'].includes(file))copy(path.join(source,'zh',file),path.join(club,'正文',file));
+const stateFile=path.join(club,'编辑说明/正文同步状态.json');
+const previous=fs.existsSync(stateFile)?JSON.parse(read(stateFile)):{};
+const digest=s=>createHash('sha256').update(s.replace(/\r\n/g,'\n')).digest('hex');
+const shared=fs.readdirSync(path.join(source,'zh')).filter(f=>!['home.md','about.md','welcome.md'].includes(f));
+// Stop before copying if the club has independent edits since the last sync.
+for(const file of shared){
+ const target=path.join(club,'正文',file);
+ if(previous[file]&&fs.existsSync(target)&&digest(read(target))!==previous[file]&&digest(read(target))!==digest(read(path.join(source,'zh',file))))throw Error('AI club has newer local edits; reconcile before sync: '+target);
 }
+const textBackup=path.join(club,'编辑说明','同步前正文-'+new Date().toISOString().replace(/[:.]/g,'-'));
+const synced={};
+for(const file of fs.readdirSync(path.join(source,'zh'))){
+ if(shared.includes(file)){
+  const target=path.join(club,'正文',file),incoming=path.join(source,'zh',file);
+  if(fs.existsSync(target)&&digest(read(target))!==digest(read(incoming)))copy(target,path.join(textBackup,file));
+  copy(incoming,target);synced[file]=digest(read(target));
+ }
+}
+write(stateFile,JSON.stringify(synced,null,2)+'\n');
 for(const file of fs.readdirSync(path.join(source,'fieldnotes')))copy(path.join(source,'fieldnotes',file),path.join(club,'数据/fieldnotes',file));
 copy(path.join(source,'paper-figures.json'),path.join(club,'数据/paper-figures.json'));
 const figures=JSON.parse(read(path.join(source,'paper-figures.json')));

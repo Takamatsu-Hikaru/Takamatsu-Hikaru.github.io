@@ -1,16 +1,18 @@
 # My getting-started guide
 
-When we arrived at university, we asked these questions too: how has everyone already joined a lab when I have never learned C? I have watched courses—what can I actually do next? I want to contact a professor, but what happens after I send the message?
+When you first arrive at university, you may not yet know what you want from the next few years. You hear about graduate admissions, competitions, and joining labs, but may still wonder how these relate to your future—and why you would want to do research.
+
+Or perhaps you already want to begin. We asked these questions too: how has everyone already joined a lab when I have never learned C? I have watched courses—what can I actually do next? I want to contact a professor, but what happens after I send the message?
 
 Here are paths I have taken, resources I have used, and things I only understood later. Start with the two opening essays, then pick something you want to do now.
 
 ## Before you begin
 
 **[A letter to new university students](welcome.md)**  
-University, uncertainty, things you want to do, and life beyond research. A student only a year ahead shares his experience.
+The choices university offers, where you want to go, and life beyond research. A student only a year ahead shares his uncertainty and experience.
 
 **[How to get started in research](research.md)**  
-What research involves, how to begin, find a direction, meet people, and move a project forward. Start with the questions on your mind.
+Why try research, and how does it relate to further study, work, and your interests? Then, how to begin, find a direction, meet people, and move a project forward.
 
 ## Make something work
 

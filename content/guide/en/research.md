@@ -1,8 +1,8 @@
 # How to get started in research
 
-Joining a lab and working at the frontier of research, development, and deployment can sound romantic—and distant. Or perhaps you need research experience for graduate admission, your degree, or a job.
+Joining a lab and working at the frontier of research, development, and deployment can sound romantic—and distant. Or perhaps you are considering graduate study, studying abroad, or work, and want to understand where research experience fits.
 
-Here is where I would start: trying research helps you discover what you think of it, and whether you want to keep doing it. That is valuable in itself.
+If you are still figuring out your options, start with [where these choices can lead](welcome.md#choices). Here, I will discuss what research involves, why it attracts me, and how you can try it.
 
 We asked these questions too. Do I know enough? How do I find a supervisor? How does a paper actually come together? What if it goes badly? With so much AI available, what can I contribute? Read straight through, or start with whatever is on your mind.
 
@@ -32,7 +32,15 @@ The [research workflow pages](experiments.md) give concrete examples. There is o
 
 Yes. Curiosity, a problem you want to solve, graduate admission, work, or simply wanting to try can all be starting points. Your motives may change.
 
-If the experience helps you understand research and whether you want to continue, it has value.
+If your reason is further study or work, make it more specific: which programs or jobs interest you, and what do you hope to learn or do there? Research experience can show how you understand problems, run experiments, analyze results, and work with others. That can help when applying for research-related programs and roles. For development and applied work, projects and internships can also help you understand what the work requires.
+
+If graduate admission is your immediate goal, ask what comes after it. Do you want to continue research, study more deeply, change environments, or improve your job prospects? Those aims affect your choice of field and supervisor, and what is worth trying now.
+
+For me, the excitement of those first computer-vision demos and YOLO projects mattered. I found them fun and wanted to explore further. Later, working on LLMs and agents, encountering frontier research, meeting collaborators, and working through problems together opened up a wider world. Contributing some new knowledge or a useful method to the community is another reason I want to continue.
+
+Research also has value in these concrete experiences: thinking a problem through, testing an idea yourself, learning to judge results, and finding people you want to work with. Through them, you learn whether you enjoy this kind of work and where you want to go next.
+
+Interest can grow through trying things. Start with something that makes you curious, and notice what keeps you engaged. If seeing others join labs mainly makes you anxious, find out what they actually do each day before deciding how much time to invest. Having your own reasons makes it easier to stay interested.
 
 <a id="q4"></a>
 
@@ -48,7 +56,9 @@ Even with AI, research may be harder than you expect. Can you provide valuable h
 
 Yes. Reproducing small computer-vision demos and trying YOLO excited me. I later moved into LLMs and agents, but those early projects already told me that I enjoyed exploring these things.
 
-Pick a small project and notice which parts attract you. You may prefer building applications or working in another area. That is useful information, too.
+Something you had only seen in a video becomes something you can run and modify yourself. That gives you a way to explore further. Notice whether you most enjoy building the application, or whether you keep asking why the model works, why it sometimes fails, and what experiment would help you understand it.
+
+Try a small [MNIST or YOLO project](start.md), then take your results and questions to someone you can talk to. The experience of making it work can help you decide what to explore next.
 
 ## Can I start now?
 

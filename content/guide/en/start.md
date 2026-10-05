@@ -2,6 +2,8 @@
 
 If you have not chosen a direction, begin with a visible result: recognizing a handwritten digit or drawing boxes around people and cars in your own photo. Data, code, and tutorials already exist. Start there and learn through the questions that arise.
 
+Trying a project lets you see what attracts you in practice: building an application, comparing methods, or asking why a model makes mistakes. With that experience, you can decide what to learn next and whom to talk to.
+
 The two vision projects below offer different beginnings. MNIST takes you through training and submission; YOLO lets you see a model on real images first. Choose what interests you. Agent and robotics entries follow.
 
 ## MNIST: recognize handwritten digits on Kaggle
