@@ -16,3 +16,5 @@ The resource collection builds on the earlier [UESTC AI Society Guide](https://m
 
 [Start from the guide home](home.md) · [A letter to new students](welcome.md)
 
+
+[irene](https://github.com/tseirene6) contributed the experience behind [Building your research workflow](irene-workflow.md): paper and note management, research briefs, reading depth, and questions from AI. Related methods throughout the guide are adapted from this account.
