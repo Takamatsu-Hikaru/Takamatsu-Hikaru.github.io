@@ -45,7 +45,7 @@ write(path.join(club,'模块/fieldnotes.mjs'),renderer);
 copy(path.join(root,'scripts/ama-page.mjs'),path.join(club,'模块/ama-page.mjs'));
 for(const file of ['guide-motion.mjs','guide-directory.mjs'])copy(path.join(root,'scripts',file),path.join(club,'模块',file));
 for(const file of ['guide-motion.css','guide-motion.js'])copy(path.join(root,'public/blog/guide',file),path.join(club,'预览',file));
-for(const folder of ['brands','motion'])copyTree(path.join(root,'public/blog/guide',folder),path.join(club,'预览',folder));
+for(const folder of ['brands','motion','ai4x'])copyTree(path.join(root,'public/blog/guide',folder),path.join(club,'预览',folder));
 copy(path.join(root,'public/blog/guide/fieldnotes.css'),path.join(club,'预览/fieldnotes.css'));
 let ama=read(path.join(root,'public/blog/guide/ama.js')).replace('(() => {','window.initGuideAMA = () => {').replace(/\}\)\(\);\s*$/,'};');
 write(path.join(club,'预览/ama.js'),ama);
