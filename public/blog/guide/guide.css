@@ -13,3 +13,6 @@ dialog{border:1px solid var(--ink);padding:0;background:var(--card);color:var(--
 @media(max-width:380px){.site-header{padding:0 14px}.wordmark-copy small{display:none}.header-actions{gap:10px}.reading-layout{padding-left:18px;padding-right:18px}.home article h1{font-size:38px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media print{body{background:white;color:black}.site-header,#nav,#toc,#mobile-search,.qa-tools,.neighbors,footer{display:none}.reading-layout{display:block;margin:0;padding:0}article{font-size:11pt}article h1{font-size:24pt}.qa .answer{display:block}}
+
+/* AI chronicle film */
+.chronicle-video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#f5f1e8;border:1px solid #c8c3b9;border-radius:12px;margin:1.2rem 0}.chronicle-video::cue{background:rgba(245,241,232,.94);color:#171713}
