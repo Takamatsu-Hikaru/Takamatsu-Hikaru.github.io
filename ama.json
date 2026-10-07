@@ -1,3 +1,17 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "number": 2,
+      "title": "Nice proj！",
+      "body": "做的太好了！！！Orz",
+      "createdAt": "2026-10-07T09:46:02Z",
+      "updatedAt": "2026-10-07T09:46:02Z",
+      "author": {
+        "login": "Zeyuxia"
+      },
+      "locked": false,
+      "commentCount": 0,
+      "comments": []
+    }
+  ]
 }
