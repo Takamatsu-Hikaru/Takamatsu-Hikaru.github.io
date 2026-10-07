@@ -1,3 +1,4 @@
+import './build-wiki.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -48,7 +49,7 @@ const report={pagesPerLanguage:manifest.length,questionsPerLanguage:60,resourceE
 for(const lang of ['zh','en']){
  const pages=all[lang];const idsByPage=new Map(pages.map(p=>[filename(p.id),new Set([...p.html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]))]));
  for(const p of pages)for(const m of p.html.matchAll(/href="([^"#:]+\.html)(?:#([^"]+))?"/g)){
-  if(m[1].includes('://'))continue;
+  if(m[1].includes('://')||/^(?:\.\.\/){1,2}wiki\/index\.html$/.test(m[1]))continue;
   if(!idsByPage.has(m[1])||(m[2]&&!idsByPage.get(m[1]).has(m[2])))throw Error(`Broken link ${lang}/${p.id}: ${m[0]}`);
  }
  report.resourceEntries[lang]=pages.filter(p=>p.id.startsWith('catalog-')).reduce((a,p)=>a+(p.html.match(/id="resource-/g)||[]).length,0);
@@ -56,7 +57,7 @@ for(const lang of ['zh','en']){
  fs.mkdirSync(path.join(out,lang),{recursive:true});
  for(const [index,p] of pages.entries()){
   const t=strings[lang],other=lang==='zh'?'en':'zh';let group='';
-  const nav=pages.map(x=>{let h='';if(x.group!==group){group=x.group;h=`<div class="navgroup">${escape(groupName(group,lang))}</div>`;}return h+`<a href="${filename(x.id)}"${x.id===p.id?' aria-current="page"':''}>${escape(x.id==='home'?t.home:x.title)}</a>`}).join('');
+  const nav=pages.map(x=>{let h='';if(x.group!==group){group=x.group;h=`<div class="navgroup">${escape(groupName(group,lang))}</div>`;}return h+`<a href="${filename(x.id)}"${x.id===p.id?' aria-current="page"':''}>${escape(x.id==='home'?t.home:x.title)}</a>`+(x.id==='basics'?`<a href="../wiki/index.html">${lang==='zh'?'术语与会议速查':'Terminology & conferences · 中文'}</a>`:'')}).join('');
   const neighbors=[pages[index-1],pages[index+1]].map((x,i)=>x?`<a href="${filename(x.id)}"><small>${i?t.next:t.prev} ${i?'→':'←'}</small><span>${escape(x.id==='home'?t.home:x.title)}</span></a>`:'<span></span>').join('');
   const html=`<!doctype html>
 <html lang="${lang==='zh'?'zh-CN':'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${p.id==='ai4x'?'<link rel="stylesheet" href="../ai4x/expanded.css">':''}<meta name="color-scheme" content="light dark"><title>${escape(p.title)} · Hikaru</title><meta name="description" content="${escape(p.plain.slice(p.title.length,190).trim())}"><link rel="icon" href="../../../favicon.svg"><link rel="alternate" hreflang="zh-CN" href="../zh/${filename(p.id)}"><link rel="alternate" hreflang="en" href="../en/${filename(p.id)}"><link rel="stylesheet" href="../guide.css"><link rel="stylesheet" href="../fieldnotes.css"><link rel="stylesheet" href="../guide-motion.css?v=20261006d"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script></head>
