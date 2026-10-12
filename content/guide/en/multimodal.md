@@ -12,7 +12,7 @@ Follow image encoding, representation conversion, and language output with [Hugg
 
 Choose an image with clear answers. Ask about objects, counts, positions, and text. Change one detail and see whether the answer changes. Save questions, images, and raw responses.
 
-This helps reveal whether the model uses the image or guesses from language. Turning an observation into research requires control of samples, tasks, and comparisons; see [experiments](experiments.md).
+This helps reveal whether the model uses the image or guesses from language. Turning an observation into research requires control of samples, tasks, and comparisons; see [experiments](research.md#q44).
 
 ## Multimodal papers and applications
 

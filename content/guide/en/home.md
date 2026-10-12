@@ -1,18 +1,20 @@
-# My getting-started guide
+# AI Research Guide
 
-When you first arrive at university, you may not yet know what you want from the next few years. You hear about graduate admissions, competitions, and joining labs, but may still wonder how these relate to your future—and why you would want to do research.
+Welcome to the UESTC AI Club guide. If you are interested in AI but unsure where to start, we have put together a few projects you can try, along with courses, papers, and tools to help along the way.
 
-Or perhaps you already want to begin. We asked these questions too: how has everyone already joined a lab when I have never learned C? I have watched courses—what can I actually do next? I want to contact a professor, but what happens after I send the message?
+Choose a starting point below that fits where you are now. You can come back as questions arise; there is no need to read the guide from beginning to end.
 
-This guide is for students starting university who want to explore AI and research. It brings together our answers to questions about university choices and getting started in research, alongside beginner projects, key papers across research areas, courses, and tools. It also covers contacting faculty, joining a lab for the first time, failed experiments, and the anxiety of comparing yourself with your peers.
+**[A letter to new university students](welcome.md)** · University choices, research, life, and the uncertainty of starting out.
 
-## Before you begin
+## Where to start
 
-**[A letter to new university students](welcome.md)**  
-What choices does university offer, and where do you want to go? I begin with my own uncertainty as a new student, then talk about grades, research, the people I met, and life outside research.
-
-**[How to get started in research](research.md)**  
-What does research involve, and why try it? From choosing a direction and contacting faculty to reading papers, running experiments, and submitting your work, with questions about gaps in your knowledge, falling behind, and failed experiments.
+| Current task | Entry point |
+| --- | --- |
+| Run an AI project for the first time | [MNIST, YOLO, agents, and robotics](start.md) |
+| Understand the research areas | [Research directions](directions.md) |
+| Resolve a programming, math, or model concept | [Foundations](basics.md) |
+| Prepare to join a research project | [Getting started: 60 questions](research.md) |
+| Work on a paper or experiment | [Reading](reading.md) · [Writing and talks](writing.md) |
 
 ## AI, a history
 
@@ -42,24 +44,17 @@ Look up unfamiliar terms, browse research topics, and follow related concepts.
 
 ## Questions that come up during research
 
-[Finding and reading papers](reading.md) · [Understanding experiments](experiments.md) · [Writing, figures, and talks](writing.md)
+[Finding and reading papers](reading.md) · [Writing, figures, and talks](writing.md)
 
-[Contact and collaboration](contact.md) · [Working with AI](ai.md) · [Publication](publishing.md)
+[Contact and collaboration](contact.md) · [Working with AI](ai.md)
 
-How do you read your first paper, interpret experiment results, or write your first message to a professor? Methods and tools are organized around the research process, so you can return when a specific question comes up.
+How do you read your first paper, interpret experiment results, or write your first message to a professor? If you are stuck at one of these steps, open the relevant article for examples and approaches you can try.
 
-## Experience, life, and perspectives
+## Follow research developments
 
-**[Experience, practical lessons, and wrong turns](experience.md)**  
-From my first year to a first rejection, alongside other people's experiences and judgments.
+[Researchers and labs](lookout.md) · [Technical blogs and research perspectives](blogs.md) · [Choose a paper](papers.md)
 
-**[Living well](life.md)**  
-Grades, research, friends, and hobbies all belong in university life. These notes begin with personal experience.
-
-**[Lookout: what are researchers and labs working on?](lookout.md)**  
-Start with work that makes you curious. Meet the people and labs behind it, then follow papers, code, and discussions.
-
-[Choose a paper](papers.md) · [About this guide](about.md)
+[About this guide](about.md)
 
 ## Research communities and knowledge sharing
 
@@ -82,4 +77,4 @@ You can also recommend articles and videos to [BlogrXiv](https://github.com/Open
 
 ## Resource index
 
-The [resource index](resources.md) collects courses, paper lists, author blogs, LessWrong, research teams, and Q&A. If you already have a question, search for Mu Li, RoPE, Scaling Ladder, or contacting a supervisor.
+Looking for a course, a paper list, or a different explanation of something you are learning? Browse the [resource index](resources.md), where we have grouped materials by topic. If you already know what you need, open the search box and enter a course name, a paper keyword, or your question.

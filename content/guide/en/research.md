@@ -1,16 +1,8 @@
-# How to get started in research
+# Getting started in research: 60 questions
 
-Joining a lab and working at the frontier of research, development, and deployment can sound romantic—and distant. Or perhaps you are considering graduate study, studying abroad, or work, and want to understand where research experience fits.
+Want to try research but unsure how to begin? You might be exploring a field, opening a paper someone asked you to read, or trying to explain an unexpected experiment result. We have gathered questions that come up at each of these stages.
 
-Getting started in research may be closer than you think. While reading papers, building projects, or talking with others, we often come across a question that makes us curious, or an idea for improving something. We follow that thread through related work, try things, analyse the results, and write up what we find. A research project gradually takes shape.
-
-As you investigate, you also get to know the wider field. Start with the area that interests you most. Surveys, talks, and courses can give you an overview; classic papers and researchers’ blogs can help you connect its development. What was happening when each work appeared? Why did the authors take that approach? What problem did it solve, and how did it change people’s understanding? Following these changes reveals different research paths and the many subfields within a broad area.
-
-Some questions will especially interest you. Other work will offer methods, data, or a new way to understand your current project. Keep reading and trying things along these threads, and you gradually develop your own judgement: what is worth investigating, what remains unclear, and what you could try next. Research taste, ideas, and an understanding of the field grow through reading, discussion, and experiments.
-
-We asked these questions too. Do I know enough? How do I find a supervisor? How does a paper actually come together? What if it goes badly? With so much AI available, what can I contribute? Read straight through, or start with whatever is on your mind.
-
-Still considering your options? Read [where these choices can lead](welcome.md#choices). To get your hands on something, try a [small project](start.md). For my own experience, read my [freshman-year review](timeline.md).
+The 60 questions below cover preparation, contacting researchers, reading, experiments, and publication. **Open the question closest to what you are working through.** To run an example first, try [MNIST or YOLO](start.md).
 
 ## What research involves
 
@@ -18,189 +10,144 @@ Still considering your options? Read [where these choices can lead](welcome.md#c
 
 ### 1. What is research? How is it different from classes, course projects, or competitions?
 
-Think of three things: finding questions worth asking, proposing explanations or solutions, and giving the resulting knowledge, methods, or products back to the community. Classes and competitions usually give you a fairly clear task. Research also asks you to decide what the question should be and what would count as a reliable answer.
-
-You do not need to surround research with mystique. It is something you can try, then form your own opinion about.
+Research formulates hypotheses or methods for unresolved questions and tests them with **inspectable evidence**. Courses and competitions usually supply tasks, data, or evaluation criteria; research must also establish the question, the gap in prior work, and the conditions of the conclusion.
 
 <a id="q2"></a>
 
 ### 2. What does an AI researcher actually do all day, beyond reading papers and coding?
 
-Read, code, discuss ideas with more experienced students, follow new research, reports, and blogs, plan work, analyze results, write, and present. Sometimes an entire day goes into finding one bug. Sometimes a conversation reveals that the question itself needs to change.
-
-The [research workflow pages](experiments.md) give concrete examples. There is ordinary life outside the work, too.
+Common tasks include literature search, baseline reproduction, experiment design, debugging, analysis, recording configurations, discussion, and writing. An experiment produces **a code version, configuration, logs, metrics, and example analysis**. See [experiments](research.md#q43).
 
 <a id="q3"></a>
 
-### 3. Are curiosity, graduate admission, studying abroad, and getting a job all reasonable motives?
+### 3. What practice does research provide, and how do application requirements differ?
 
-Yes. Curiosity, a problem you want to solve, graduate admission, work, or simply wanting to try can all be starting points. Your motives may change.
-
-If your reason is further study or work, make it more specific: which programs or jobs interest you, and what do you hope to learn or do there? Research experience can show how you understand problems, run experiments, analyze results, and work with others. That can help when applying for research-related programs and roles. For development and applied work, projects and internships can also help you understand what the work requires.
-
-If graduate admission is your immediate goal, ask what comes after it. Do you want to continue research, study more deeply, change environments, or improve your job prospects? Those aims affect your choice of field and supervisor, and what is worth trying now.
-
-For me, the excitement of those first computer-vision demos and YOLO projects mattered. I found them fun and wanted to explore further. Later, working on LLMs and agents, encountering frontier research, meeting collaborators, and working through problems together opened up a wider world. Contributing some new knowledge or a useful method to the community is another reason I want to continue.
-
-Research also has value in these concrete experiences: thinking a problem through, testing an idea yourself, learning to judge results, and finding people you want to work with. Through them, you learn whether you enjoy this kind of work and where you want to go next.
-
-Interest can grow through trying things. Start with something that makes you curious, and notice what keeps you engaged. If seeing others join labs mainly makes you anxious, find out what they actually do each day before deciding how much time to invest. Having your own reasons makes it easier to stay interested.
+A research project provides practice in defining questions, reviewing literature, designing experiments, analyzing results, and technical writing. For applications, **check the program or role requirements** and assemble relevant work samples; requirements for papers, code, and experience vary.
 
 <a id="q4"></a>
 
 ### 4. What makes research hard? What do beginners underestimate?
 
-Building foundations, surveying a field, choosing an idea, making solid progress, and organizing the writing and presentation all involve friction. You need to go through that process yourself to understand it.
+You may find that **the question is still vague, the baseline does not reproduce, or the experiments cannot be compared fairly**. Data or compute may be missing, or a result may not answer the original question. Before starting, discuss available resources, evaluation, when to meet, and what you hope to finish at this stage. After running, look at the discrepancies together.
 
-Even with AI, research may be harder than you expect. Can you provide valuable human intervention and guidance? Can you use an agent to accelerate the work? Can you actually give the community new knowledge and insight? None of this is as simple as imagining it.
 
 <a id="q5"></a>
 
-### 5. How can I find out whether I enjoy research? Can I try before committing?
+### 5. How can a small project cover running, modifying, and recording results?
 
-Yes. Reproducing small computer-vision demos and trying YOLO excited me. I later moved into LLMs and agents, but those early projects already told me that I enjoyed exploring these things.
+Choose an [MNIST or YOLO project](start.md) and complete three checks:
 
-Something you had only seen in a video becomes something you can run and modify yourself. That gives you a way to explore further. Notice whether you most enjoy building the application, or whether you keep asking why the model works, why it sometimes fails, and what experiment would help you understand it.
+1. Run the documented example and save the environment, configuration, and output.
+2. Change one factor and compare results and failure cases.
+3. Record observations, possible explanations, and the next test.
 
-Try a small [MNIST or YOLO project](start.md), then take your results and questions to someone you can talk to. The experience of making it work can help you decide what to explore next.
+These artifacts can support a technical discussion.
 
-## Can I start now?
+
+## Preparation
 
 <a id="q6"></a>
 
-### 6. Can first- and second-year students do research? Does starting early matter?
+### 6. How do I match prerequisites to a task?
 
-One gift of the AI era is that you can work from the top down. You do not have to finish mathematics, programming, LaTeX, machine learning, and deep learning, wait until your third year for an undergraduate project, and only explore research directions in graduate school.
+Start by asking: **what do you want to do next?** To run a demo, learn to set up the environment and understand the inputs and outputs. To reproduce an experiment, also work through the data split, training, and evaluation. When you want to change the method, go deeper into its principles and controlled comparisons. Read the specific project prerequisites too.
 
-There is no fixed template and no one needs to grant you permission to begin. If you want to do it, have strong motivation, and are willing to build the necessary foundations carefully as questions arise, you can start.
-
-Starting early gives you more time to try and adjust, and possibly to accomplish more while young. Keep a sense of proportion: do not sell yourself as a rising star because of your age or become smug about a head start. Starting later does not mean falling behind. Research and learning at the frontier can last a lifetime; an individual success or failure is not the whole story.
-
-If you need a starting point, try a [small project](start.md).
 
 <a id="q7"></a>
 
-### 7. What if my university, grades, English, mathematics, or coding skills are not strong?
+### 7. How do I identify missing prerequisites?
 
-Start with a question you can reach now. English, mathematics, and programming can improve through work. When a gap actually blocks progress, address it seriously.
+“I lack the basics” is broad. Can you run a Python example, read a tensor shape, distinguish training from testing, or identify an abstract’s main claim with a dictionary? **Find the particular step that is blocking you**, then look up the relevant section in [foundations](basics.md). It will also be easier to explain what you need help with.
 
-Your institution and resources affect opportunities. Look for openings through local faculty, senior students, open-source projects, and public discussions. Use your current situation to decide your next move, rather than to declare yourself eligible or ineligible.
 
 <a id="q8"></a>
 
-### 8. Must I finish Python, mathematics, ML, and deep learning before contacting a supervisor?
+### 8. What preparation and materials are needed before contacting a supervisor?
 
-Learning is valuable because it helps you work and understand what you are doing. You do not have to finish all those subjects before contacting someone.
-
-If your foundations are incomplete but you have seriously explored an area, know what people are doing, and have thought through how you will learn what is missing, reach out. Returning to study with a concrete question often deepens understanding.
-
-A specific question needs less preparation than asking to join a project. For a project, explain your understanding, previous attempts, and practical skills. Help the other person see where you could begin and what guidance you need.
+For a paper question, include **the source location, your current interpretation, and the unresolved point**. To join a project, add relevant coursework, code or reproduction notes, available time, and guidance needed. Prerequisites depend on the task and project requirements.
 
 <a id="q9"></a>
 
-### 9. My CV is nearly empty. How do I take the first step without papers, competitions, or projects?
+### 9. What work samples can be prepared without papers or project experience?
 
-Contact senior students or instructors around you. You can also use AI to reproduce a paper or build a small demo. Choose a concrete question, read the relevant work properly, understand what has been done and what remains, and place your own attempt in that context.
+Start with something small you have already tried: **runnable reproduction code, a one-page experiment record**, or an analysis of a paper. Explain what you did, how it runs, and where you are stuck, with source locations for paper references. This gives the recipient a way to understand your attempts; see the [email example](contact.md).
 
-Leave something others can inspect: a blog post, runnable code, or an analysis of a problem. It helps people find you and see that you are taking the work seriously. See [contact and collaboration](contact.md).
 
 <a id="q10"></a>
 
-### 10. I have some interest and a few hours each week. What could I do in the first month?
+### 10. How can a first month of project work be organized?
 
-Choose a small project with visible results: image classification, a simple tool-using agent, or inspecting a robot demonstration dataset. Keep the code, results, and your own questions, then discuss them with someone.
+Choose a [starter project](start.md) and try this sequence: **select the task and data → run a baseline → change one setting and compare → organize code, results, and questions**. There is no need to assign exactly one week to each step; adjust to your time and progress. Keep code or notes from each step so you can pick up where you left off.
 
-Pick an entry from the [hands-on routes](start.md).
 
-## Finding a direction and looking outside
+## Directions and sources
 
 <a id="q11"></a>
 
-### 11. I do not even know which research areas exist. Where should I look?
+### 11. Which resources introduce the research areas?
 
-Xiaohongshu, Zhihu, Bilibili, AI news outlets such as Xinzhiyuan, and GitHub awesome lists can all be entry points. Follow nearby AI discussions and frontier work. Use AI to explain unfamiliar concepts and help locate material.
-
-When a demo or introduction interests you, follow it to the original paper, code, and authors. The [directions overview](directions.md) connects the names; [Lookout](lookout.md) discusses keeping up.
+Start with the tasks, inputs, outputs, and representative papers in [research directions](directions.md). Media and demos can provide leads; **check methods, evaluation conditions, and limitations** against papers, code, and project pages. See [Lookout](lookout.md) for research sources.
 
 <a id="q12"></a>
 
 ### 12. How do LLMs, agents, embodied AI, RL, and world models become more than names I have heard?
 
-Start with what a system is trying to accomplish. How would it enter everyday life? What does it do poorly? If it is not deployed yet, what is blocking it?
+Describe an area through its **task, inputs and outputs, and limitations**: what is the goal, what does the model receive and produce, and where does it fail?
 
-Then return to the paper: what problem does it identify, why does it arise, how does the method address it, and what happened? Let each paper add something concrete to your understanding.
+Compare the paper's question, method, and results with prior work, recording what it adds.
 
 <a id="q13"></a>
 
-### 13. How do I distinguish liking a demo from wanting to do research in that area?
+### 13. How do I check the implementation conditions and limits behind a demo?
 
-Try doing some of the work. Understand how the demo was made, what was difficult, and whether any part makes you want to investigate further.
-
-If it only works under narrow conditions, let it be a demo. Discovering that is also a way to understand the real problem.
+Inspect code, data, and evaluation behind the demo: selected examples, failing inputs, manual intervention, and whether reported metrics match the demonstration. **Record reproducible behavior** and derive a testable question from it.
 
 <a id="q14"></a>
 
-### 14. How should I weigh interest, supervisors, resources, difficulty, popularity, and future prospects?
+### 14. What should I check when comparing research projects?
 
-In the AI era, I would put freedom to develop first. Interest sustains enthusiasm, good supervisors and collaborators make work enjoyable, and resources reduce the friction of turning ideas into experiments.
+If you are comparing projects, put them in a table: what question does each address, what prior work and prerequisites are involved, where will data and compute come from, who will discuss the work with you, and what needs to be ready by when? **Write down what you do not know and ask the project lead.** If data or compute is not yet available, discuss a smaller question you can try with what you have.
 
-Difficulty may mean a high barrier to entry. A hot topic may be solved quickly or lose its hype. You cannot predict the future perfectly, so retain room to adjust and the ability to keep learning.
-
-You are unlikely to get every condition right immediately. Look at the questions, support, and collaborations available now. Many interests only appear after you get involved.
 
 <a id="q15"></a>
 
 ### 15. Why follow other universities, labs, and companies? What should I look for in their work?
 
-A wider view helps you understand a field: its beliefs and schools of thought, current topics, bottlenecks, gaps, and what you might contribute. Staying open makes it harder to get trapped inside a small circle's information.
+Different teams provide baselines, data, implementations, and evaluation settings. Record the question, changes from prior work, conditions of success, and failures. **Compare work around a shared question** rather than only by author or institution. Sources are in [Lookout](lookout.md).
 
-Papers, projects, and talks help build a network of connections between ideas. Notice how approaches evolve, where turning points occur, how a need is addressed, and which questions remain. Find starting points in [Lookout](lookout.md).
 
-## Meeting and contacting researchers
+## Contacting researchers
 
 <a id="q16"></a>
 
-### 16. Can I contact students or professors I do not know, including outside my department or country?
+### 16. What should be checked when contacting researchers across institutions or regions?
 
-Yes. First know why you want to contact them and learn a little about their work. Check whether someone you both know can introduce you. Communities, Xiaohongshu, and cold email are all possible routes.
-
-Do not meet people merely to collect contacts. A conversation that resonates, mutual friends, and shared research questions are valuable. Put what you want to discuss and do first, instead of making networking the entire project.
+Use contact information on university, lab, or author pages and follow any stated contact instructions. Include **a specific paper or project, prior attempts, and the request**. Confirm recruitment, scheduling, and access conditions for cross-institutional or overseas projects.
 
 <a id="q17"></a>
 
-### 17. Where do I find people who work on relevant topics and might mentor undergraduates?
+### 17. How can relevant work and recruitment information be found?
 
-Try social media, research groups, university and lab websites, and authors of papers you enjoy. Personal pages usually list email addresses. Following those pages and Google Scholar profiles also introduces you to collaborators and the wider community.
-
-Undergraduates or junior researchers among the authors and lab members can be a clue. Look for student projects and open calls, or ask directly whether they mentor undergraduates.
-
-Among the senior students I have met, polite and sincere questions often receive help. Whether someone has time to supervise a project or a suitable task is something to discuss specifically.
+Check author pages, lab project pages, and open calls. Verify topics, recent work, participation requirements, and contact channels. Existing undergraduate members do not establish current openings; **ask whether supervision is available**.
 
 <a id="q18"></a>
 
 ### 18. What can I ask for first: a question, a conversation, a lab meeting, or a project?
 
-We often begin with a conversation about each other's plans, availability, and interests. You might ask about a point in a paper or whether there are tasks suitable for undergraduates.
-
-If joining the lab is your aim, say so. Explain your interests, available time, and current abilities so the other person knows what the conversation needs to cover.
+Ask about a specific paper question, project openings, or availability of open talks and short trial tasks. Focus the message on **a clear request**. For a meeting, state the topic, materials, and expected duration.
 
 <a id="q19"></a>
 
-### 19. What should my first message say if I do not have impressive credentials?
+### 19. What should an initial email say about background, prior attempts, and the request?
 
-Say who you are, why you are writing, what research interests you, and what question or task you hope to work on. Attach a CV if you have one; do not invent filler.
-
-Basic practical ability and a clear account of what you have tried are valuable. In our experience, first conversations with senior students are usually ordinary conversations. Interviews or trial tasks can be discussed later.
-
-“I read your work on X, became interested in this question, tried Y, and would like to ask whether there is a task I could join” is already a clear purpose. See the [short email example](contact.md).
+State **your background, the relevant research, completed attempts, and request**. Attach necessary code, notes, or a CV. Distinguish planned work from completed work. The [contact page](contact.md) provides an adaptable email example.
 
 <a id="q20"></a>
 
-### 20. What happens after I send it? What if there is no reply, a rejection, or a question I cannot answer?
+### 20. How should follow-up preparation depend on the reply?
 
-There may be no reply or a polite decline. There may also be a normal reply and a move to WeChat. In collaborations I have encountered, first conversations are often less frightening than expected, and not necessarily difficult examinations. Often the questions are: how would we guide you, how could you help us, and what do you hope to gain?
+A response may propose a discussion, reading or trial task, or indicate no available opportunity; there may also be no response. Follow the stated requirements and consider one follow-up after an appropriate interval. Before a trial, confirm **scope, deadline, feedback, and use of the work**.
 
-Some labs ask you to read, try a task, or attend a formal interview. Follow their process. If there is no reply, send one polite follow-up after a reasonable interval. If declined, learn what you can from the feedback and try other suitable people. One response is not a complete assessment of your ability.
 
 ## Starting a collaboration
 
@@ -208,47 +155,42 @@ Some labs ask you to read, try a task, or attend a formal interview. Follow thei
 
 ### 21. A professor says, “Let's talk.” What should I prepare?
 
-Prepare a brief introduction, one or two things you have made or read, and your questions. The conversation may explore your understanding of the field and how you work; some include foundational questions.
-
-Often both sides are establishing how they could work together: what guidance you need, what you can contribute, and what you want. Discuss the task, supervision, and time commitments clearly.
-
-Be honest about what you do not know. If you know how to investigate it or plan to learn it, explain that too.
+Prepare a short introduction, relevant work samples, and questions. Confirm **the task, responsible contact, supervision, resources, and schedule**. Identify gaps and preparation needed, then record what was agreed after the meeting.
 
 <a id="q22"></a>
 
 ### 22. Someone sends a paper and says, “Have a look.” How much am I expected to do?
 
-Ask whether they want understanding, a presentation, or a reproduction, and when you will discuss it again.
+Confirm the **reading task and discussion date**: understanding the main argument, presenting it, or reproducing experiments.
 
-On a first pass, explain the problem, method, evidence, and what you did not understand. Then consider its place in the field, your understanding of the method, possible analyses or improvements, and what later work did.
+- **First pass:** record the question, method, evidence, and unresolved points.
+- **Further analysis:** locate predecessors and follow-up work, and identify implementation checks or possible modifications.
+- **Cross-field comparison:** note similar questions elsewhere and whether the methods share applicable conditions.
 
-You can also ask whether another field contains a similar insight and how the problems connect. Those connections are part of what reading gives you. See [reading papers](reading.md).
+See [paper reading](reading.md) for the steps.
 
 <a id="q23"></a>
 
 ### 23. Can I observe or try a project before joining? What should I clarify?
 
-Ask about observing meetings, a short trial, or a bounded task. Clarify the work, feedback, time, resources, and expected contribution, then judge the fit.
+Ask whether observation, a short trial, or a staged task is available, and confirm **scope, feedback, time, resources, and expected contributions**.
 
-Discuss formal membership, use of results, and authorship when collaboration starts. That is easier than doing it just before submission.
+Before joining, record agreements about outputs and authorship; update them when tasks or contributions change.
 
 <a id="q24"></a>
 
 ### 24. How do I find out who will supervise me, how often we meet, and what resources are available?
 
-Ask directly: whom will I discuss daily work with, how often will we meet, whom should I ask when stuck, how do data and compute access work, and how much time does this task require?
+Confirm the **day-to-day contact, meeting frequency, and resources**: who handles questions and blockers, how to obtain data and compute, and the expected time for each stage.
 
-Some labs rely mainly on doctoral or master's students for supervision; in others faculty are more involved. Confirm the actual arrangement and explain your coursework and schedule.
+Supervision may involve faculty or graduate researchers. Check the project's arrangements and state available time.
 
 <a id="q25"></a>
 
-### 25. What if supervision is not working? How can I discuss changes, switch groups, or leave?
+### 25. How can supervision and feedback issues be discussed, adjusted, or handed over?
 
-Consider whether you receive necessary feedback, whether expectations are reasonable, and whether you are learning. If something is wrong, first talk to the student directly supervising you and see what can change.
+List specific differences from the agreement in **feedback, scope, resources, or time**, then discuss adjustments with the project contact. If leaving, confirm the end date, completed and unfinished tasks, code and data locations, handoff recipient, and arrangements for outputs and access.
 
-In practice, some informal collaborations also fade by mutual, unspoken understanding: contact and tasks become less frequent, and both sides know the work is not progressing. You can explore other opportunities and, once you know what you want and the timing is right, discuss next steps with your direct mentor. It does not have to become a confrontation.
-
-If others are waiting for your work, explain the progress, code, and handover clearly. Do not leave them waiting indefinitely. Leaving a project need not end the relationship; future conversation and collaboration may still be possible.
 
 ## Learning the foundations
 
@@ -256,53 +198,44 @@ If others are waiting for your work, explain the progress, code, and handover cl
 
 ### 26. Which foundations are shared across AI research, and which depend on the area?
 
-Linear algebra, probability, information theory, and infrastructure are worth building over time. They deepen your understanding of principles, theory, and implementation and inform your own work. Calculus, optimization, programming, and computer fundamentals recur too.
+Shared foundations include **linear algebra, probability and statistics, calculus, optimization, programming, and computing fundamentals**. Information theory and infrastructure are also relevant to particular tasks.
 
-Pretraining hyperparameters, post-training data mixtures, RL scaling, computer vision, and DDPM all have deeper questions behind them. Policy gradients involve probability and expectations; CNNs and Transformers involve linear algebra, tensors, and optimization; training and deploying models requires infrastructure.
+- **Reinforcement learning:** policy gradients involve probability, expectations, and optimization.
+- **CNNs / Transformers:** architectures and implementations involve linear algebra, tensors, and automatic differentiation.
+- **Training and deployment:** data pipelines, memory, parallelism, and runtime environments matter.
 
-You need not recognize every name now. When a concrete question arises, use the [foundations page](basics.md) and gradually connect the ideas to your work.
+For pretraining hyperparameters, post-training data mixtures, RL scaling, or DDPM, consult the relevant [foundation resources](basics.md), then relate them to the code and experiment.
 
 <a id="q27"></a>
 
-### 27. How should I combine courses, books, and projects without preparing forever?
+### 27. How can courses, textbooks, and projects be combined?
 
-Let projects give you questions, and courses and books connect the answers into a larger picture. Record where you got stuck, how you resolved it, and what made you curious.
-
-If you have been preparing for a long time, pick a sufficiently small example today. Once you start, the reason to watch the next lecture often becomes clearer.
+Record concepts needed by the project, study the relevant chapters, then **check understanding against code or experiments**. For a batch-size change, inspect tensor shapes, memory, and optimizer updates. Expand to a full course when broader foundations are needed.
 
 <a id="q28"></a>
 
 ### 28. When should I stop to study a concept systematically, and when is a rough understanding enough?
 
-Ask whether the gap prevents you from understanding the current step or judging the result. If it does, stop and study. If it only blocks a deeper derivation, note it and walk through the overall process first.
-
-When you return, test your understanding against the task. Do not let “learn later” remain forever in a notebook.
+Resolve a gap before proceeding if it affects **implementation correctness or interpretation**. Record derivations not needed for the current task, including when they will be needed, and review them before modifying methods or interpreting results.
 
 <a id="q29"></a>
 
-### 29. What is the difference between watching a course, running code, and really understanding?
+### 29. How do I check understanding after watching a course or running code?
 
-Compared with the pre-AI era, our greatest advantage and disadvantage are the same: learning has become very cheap. An agent can be both teacher and executor, patiently explaining and carrying out what you ask.
+Use three checks:
 
-Why watch forty hours of lectures or struggle with documentation when AI can explain difficult theory and code smoothly? Let it run a demo, watch the loss fall, get digit recognition working, and everybody is happy. This is a comfortable prison: it is easy to feel that you have learned and mastered something before you have understood its depth.
+- **Explain the data flow, loss, and metric**, locating their implementation.
+- Change a setting, predict its effect before running, and compare with observations.
+- Propose explanations for a failure case and design checks that distinguish them.
 
-**Learning must not lose information.** This does not mean morally condemning yourself as unfit for research because you cannot implement everything from memory or answer every interview drill. Those performances can be overfit too. Think, ask, discuss, dig deeper, and express your own ideas.
-
-Take TRPO, PPO, and GRPO. AI can reduce them to smooth summaries: “TRPO uses a KL constraint; PPO uses clipping; GRPO compares a group of samples without a separate critic.” Hearing that is very different from asking why. Dig deeper and you meet sₜ and sₜ₊₁, policy sampling, how the objective J and advantage A are estimated, and how the constraint acts. You also start asking about stability and scaling.
-
-Reproducing the method—seeing how it works and how it breaks—gives you observations of your own. Attention is similar. After an AI explanation and the paper, derive the mathematics, inspect the architecture, and read the implementation. Hyperparameters, initialization, and architectural choices contain much more theory and detail.
-
-When you can explain a real run, predict the effect of a change, and revise your judgment from the result, you are learning more deeply. That experience changes how you approach the next problem.
+Save results and open questions for further study and experiments.
 
 <a id="q30"></a>
 
-### 30. If AI can explain concepts and write code, which skills are still worth building myself?
+### 30. What foundations are needed to verify AI-assisted work?
 
-Many mechanical skills may no longer require dedicated practice. But you need more than research taste: mentoring, organizing, expressing ideas, and how you think and judge all matter. Mathematics, models, computing, and experimental methods affect what you can understand and notice.
+Prioritize foundations needed for verification: tensors and autodiff, probability and statistics, data splits, optimization, runtime environments, and evaluation. For AI-generated implementations, check **key calculations, edge cases, and metric definitions** against documentation, small examples, or original sources.
 
-I need to speak up and explain things more, too—to give people more signals of who I am, rather than becoming someone who could simply be generated. What you have done, how you judge, whether you can explain the work, and how you collaborate help others get to know you.
-
-Ask AI more and talk with it more; also ask humans more and talk with them more. Delegating execution does not automatically give you experience or understanding. When someone asks for your judgment or a detail, you cannot always stop to ask AI before continuing the conversation. Being solid and dependable is fundamental.
 
 ## Finding and reading papers
 
@@ -310,51 +243,50 @@ Ask AI more and talk with it more; also ask humans more and talk with them more.
 
 ### 31. What should I read first: a classic, a survey, a new paper, or something my supervisor assigned?
 
-It depends on what you want from this reading. Do you want a quick overview of a field, or to understand what a paper looks like? Classics introduce important work and how research is presented. Surveys can orient you; let AI help trace the connections, then return to the originals. With an existing task, start with the most relevant or assigned work.
+**Choose material for the reading task.**
 
-For agents, one route runs from the capabilities of LLMs through chain-of-thought and prompt engineering to [ReAct](https://react-lm.github.io/) by Shunyu Yao and colleagues: how do reasoning, action, tools, and environmental feedback combine? Then explore multi-agent systems, multimodal agents, agent RL, how harnesses and skills organize execution, and how loops and self-evolution use feedback. If recursive self-improvement interests you, investigate what improvement each work actually means.
+- **Understand how research is presented:** examine a classic paper's question, method, and evidence.
+- **Map a field:** start with a survey, then follow citations to foundational and recent work. AI can organize leads; check specific claims in the originals.
+- **Advance an existing project:** start with the most relevant or assigned paper.
 
-These routes intersect; they are not successive generations replacing one another. Connect the problems, reasons for the methods, and relationships to earlier work. That is how an overview develops. Continue with [paper entry points](papers.md) and the [agents page](agent.md).
+For agents, one route runs from LLM capabilities, chain-of-thought, and prompting to [ReAct](https://react-lm.github.io/), examining how reasoning, action, tools, and feedback combine. Extend to multi-agent systems, multimodal agents, agent RL, harnesses, skills, and feedback loops as the task requires. For recursive self-improvement, check what each paper improves and how it evaluates that change.
 
-For choosing reading depth, see [how deeply to read a paper](reading.md#reading-depth).
+The routes intersect. Record their questions, motivations, and connections. Continue with [papers](papers.md), [agents](agent.md), and [reading depth](reading.md#reading-depth).
 
 <a id="q32"></a>
 
 ### 32. Where should I start inside a paper? What should I be able to answer afterward?
 
-See [Mu Li's paper readings](https://github.com/mli/paper-reading). Begin with the abstract, introduction, key figures, and conclusion. Establish what was done, why, and how, then check how the experiments support it.
+Start with the **abstract, introduction, key figures, and conclusion**, then check experimental evidence. Record:
 
-This also introduces the task, data, baselines, and metrics.
+1. The question and the data or task.
+2. What the method changes and which baseline it uses.
+3. The results supporting the main claim, including conditions and limitations.
 
-For locating evidence, see [matching claims to figures](reading.md#claims-evidence).
+See [Mu Li's paper readings](https://github.com/mli/paper-reading) and [matching claims to figures](reading.md#claims-evidence).
 
 <a id="q33"></a>
 
 ### 33. What if I cannot understand the English, equations, terminology, or background?
 
-First make the main sentences and concepts understandable. Ask AI about terminology while checking the original. Look for author talks, videos, and other readers' notes.
+First identify **term definitions and the claims in key sentences**. Use dictionaries, AI, author explanations, or notes, then check against the source.
 
-Read equations in layers: what do the quantities represent, and what does the step accomplish? Then inspect the derivation. If an equation is central to what you want to reproduce or change, work through it carefully.
+Read equations in layers: identify symbols, inputs and outputs, and the operation before examining the derivation. If an equation determines the implementation being reproduced or modified, check the derivation, assumptions, and code.
 
 <a id="q34"></a>
 
 ### 34. Does understanding a paper require every derivation, the code, and a reproduction?
 
-Explaining the question, method, and main evidence is already a useful first reading. Reproduction or improvement requires deeper work on data, implementation, derivations, and evaluation.
+Reading requirements depend on **the task**. A first pass can explain the question, method, and main evidence; reproduction or modification also requires data, implementation, derivations, and evaluation details.
 
-Your purpose determines the depth of this pass. Keep important questions to verify later.
-
-To practice explaining a method, try [having AI question you](ai.md#grill-me).
+Record key questions and how to verify them. See the [AI questioning example](ai.md#grill-me) for checking a method explanation.
 
 <a id="q35"></a>
 
 ### 35. How do I keep useful notes and connect papers instead of collecting separate summaries?
 
-Feishu, Notion, Zotero, and Obsidian can all work. Pick a comfortable tool and record your own questions and connections.
+Keep **the question, method, evidence locations, conditions, open questions, and related work** in literature notes. Compare papers under matched tasks and evaluation definitions, retaining sources for each item. The [Zotero and Obsidian workflow](irene-workflow.md#notes) provides setup and comparison prompts.
 
-Organize papers around a shared question: what changed, how comparison conditions differ, and how one conclusion affects another. A few sentences of your own understanding are more useful than merely saving abstracts.
-
-In [Building your research workflow](irene-workflow.md#notes), irene shares how she uses Zotero and Obsidian, then compares and questions the notes with AI.
 
 ## Finding questions and ideas
 
@@ -362,49 +294,45 @@ In [Building your research workflow](irene-workflow.md#notes), irene shares how 
 
 ### 36. Must beginners come up with their own ideas? What can I learn on someone else's project?
 
-You do not need an elegant independent idea before participating. An existing project teaches how work progresses, experiments are checked, papers are organized, and people collaborate.
+An existing project provides practice with **experiments, writing, and collaboration**. Requirements for independent problem formulation vary by task; confirm them with the project contact.
 
-Notice what makes you curious while reading, using systems, and talking. Ideas often grow there.
+Record unexplained observations from reading, running systems, and discussions as starting points for investigation.
 
 <a id="q37"></a>
 
 ### 37. What is the difference between a direction, a research question, an idea, and a method?
 
-A direction is a broad area, such as agents, embodied AI, or world models.
+- **Direction:** a broad area, such as agents, embodied AI, or world models.
+- **Research question:** a specific uncertainty, such as why agents fail on long tasks.
+- **Idea:** a proposed explanation or solution.
+- **Method:** an executable, inspectable way to test that idea.
 
-A research question is a specific uncertainty within it: why do agents fail on long tasks? An idea is your proposed explanation or solution. A method turns that idea into something you can run and examine.
-
-Clarifying the question gives the modules and experiments a shared purpose.
+The question determines what the method and experiments need to address.
 
 <a id="q38"></a>
 
-### 38. Why do others find problems in a paper while I only think, “This is excellent”?
+### 38. How can reading identify questions worth checking or testing?
 
-Experience and familiarity with the field matter. Read the same paper with someone more experienced and compare what you noticed.
+Look for specific questions in **conditions, comparisons, and evidence gaps**:
 
-Investigate or run something that makes you curious. Asking one concrete question and checking it is an easier beginning than forcing yourself to critique the whole paper immediately.
+1. Which data, assumptions, or resources does the conclusion depend on?
+2. Do baselines use matched conditions, and which cases are not compared?
+3. Are there unexplained results or failure examples?
+
+Compare observations in a joint reading, then choose one question for literature search or validation.
 
 <a id="q39"></a>
 
 ### 39. How do I know whether an idea is new, meaningful, and feasible?
 
-Survey related work. Compare settings, motivations, and methodological details; keyword overlap alone cannot establish duplication.
-
-You are part of the community. Your curiosity is a reason to explore. If the work also produces more general knowledge that helps others understand the problem, it is more valuable still.
-
-Feasibility depends on motivation and resources: what data, tools, compute, time, and collaboration would verification require? A small experiment can help establish the conditions.
-
-For searching from a specific question, see [irene's targeted search process](irene-workflow.md#search).
+Search keywords, predecessors, and citation chains, then compare **settings, assumptions, data, methods, and evaluation**. Feasibility depends on data access, implementation, compute, time, and guidance. Use a small experiment to estimate cost and state which explanation it can exclude. See [targeted literature search](irene-workflow.md#search).
 
 <a id="q40"></a>
 
 ### 40. When is a question worth pursuing? Should I stop if someone has tried it or my first attempt fails?
 
-For well-known dead ends, first understand why others struggled. You do not have to force your way through them. If your attempt fails, distinguish an implementation problem from an ineffective idea under the current conditions, then investigate why.
+Distinguish **implementation errors, statistical variation, and lack of effect** under the current conditions. Before another experiment, specify the uncertainty it resolves, resource cost, and stop or revision criteria. If prior work addresses the same question, check for a clear, testable remaining difference.
 
-Failure is information. If further analysis also fails to produce the expected result, that remains an observation under those conditions. Keep the setup, process, and findings; they may themselves be useful discoveries.
-
-Stopping an attempt does not erase what you learned. You can narrow the question, try another explanation, or spend your effort elsewhere.
 
 ## Doing experiments
 
@@ -412,23 +340,23 @@ Stopping an attempt does not erase what you learned. You can narrow the question
 
 ### 41. How do I turn a project into tasks I can do today or this week?
 
-Work backward from the question: what do you want to establish, what evidence would support it, which experiments provide that evidence, and which data and baselines are missing?
+Break work down as **question → evidence → experiment → task**. State what is being tested, then list data, baselines, and evaluation methods.
 
-An early stage often means reading the closest papers, running a reference method, understanding evaluation, and choosing one small question to test. Write daily tasks concretely enough to act on.
+An early stage may cover related work, a baseline run, evaluation checks, and one small test. Give each task inputs, actions, and expected outputs for daily or weekly progress checks.
 
 <a id="q42"></a>
 
 ### 42. Why run baselines and reproduce work? What should I check after the code runs?
 
-You need a reference against which your change can matter. Reproduction also makes data, metrics, and implementation details concrete.
+**A baseline provides the comparison reference.** Reproduction also checks data, metrics, and implementation details.
 
-Compare your setup and results with the paper. Check splits, evaluation, randomness, and leakage. Inspect actual outputs; a single aggregate score can hide errors.
+Compare the paper's settings with the actual configuration. Check splits, evaluation definitions, randomness, and leakage, and inspect example outputs for errors hidden by aggregate scores.
 
 <a id="q43"></a>
 
 ### 43. What should I decide before an experiment so I know what I am testing?
 
-Write the question, expected results, and how different outcomes would change your understanding. Check the process on a small scale before investing in a larger run.
+Write **the question, expected results**, and how different outcomes would change your understanding. Check the process on a small scale before investing in a larger run.
 
 To study one factor, control the others as far as possible. To study interactions, design combinations around that purpose. Keep each change traceable.
 
@@ -436,7 +364,7 @@ To study one factor, control the others as far as possible. To study interaction
 
 ### 44. Does a higher score prove the idea works? How do I check bugs, unfair comparisons, and noise?
 
-First inspect implementation, data splits, and evaluation. Then check fairness, including resources, configuration, and tuning effort.
+First inspect implementation, data splits, and evaluation. Then check fairness, including **resources, configuration, and tuning effort**.
 
 Run more than once and report variation. If the gain is smaller than ordinary variation, the evidence may not support either a confident positive or negative conclusion. Use suitable ablations and sample analysis to test your explanation.
 
@@ -444,117 +372,116 @@ Run more than once and report variation. If the gain is smaller than ordinary va
 
 ### 45. What if experiments fail, reproduction does not work, or progress stalls for weeks?
 
-Narrow the problem. Check data, implementation, environment, and evaluation step by step. Organize what you tried and ask a senior student or the original authors.
+Check **data, implementation, environment, and evaluation** in turn, narrowing the issue to a reproducible case. Organize attempts, conditions, and discrepancies before asking collaborators or original authors.
 
-Some work really is difficult to reproduce. Record conditions and discrepancies, then decide whether to investigate further or change reference methods. Remember to leave enough reproduction detail in your own work later.
+Use the remaining discrepancies to decide whether to investigate further or change reference methods, retaining sufficient reproduction details.
+
 
 ## Communicating and working together
 
 <a id="q46"></a>
 
-### 46. How long should I stay stuck before asking? How do I avoid wasting time trying not to bother anyone?
+### 46. When should a blocker be reported, and what information is needed?
 
-If you have tried for half a day or a day and have no new approach, ask. First search, ask AI, read the error and documentation, and organize the attempts and observations.
-
-A senior student might explain in one sentence what would take you a week. The project may also be waiting during that week, which creates more trouble for others. The time is a reference, not a rule requiring you to wait. Problems affecting collaborators or consuming major resources deserve earlier communication.
+Report the status when diagnosis is stuck, access is missing, or another task is blocked. Include **the goal, minimal reproduction, environment, logs, attempts, and precise question**. Record independent tasks that can proceed while awaiting feedback.
 
 <a id="q47"></a>
 
 ### 47. How do I explain a problem so someone can help?
 
-Cover four things: what you want to do, what you tried, what happened, and where you suspect the problem is. Include necessary environment details, key logs, or results.
+A help request includes the **goal, attempts, observations, and question**, with the environment, key logs, or results.
 
-Reduce it to something another person can understand without reconstructing everything. See the examples in [contact and collaboration](contact.md).
+Use a minimal reproduction to remove unrelated code and logs. See [contact and collaboration](contact.md) for an example.
 
 <a id="q48"></a>
 
 ### 48. What do I report at meetings when I have no positive results?
 
-Explain what you did, what you learned, and what you plan next. Without a positive result, you can still report possibilities ruled out, the current obstacle, and help you need.
+Organize updates around **completed work, results and explanations, blockers, and next steps**.
 
-Bring one or two key results and the underlying records. Clear communication helps collaboration more than disappearing until you have an impressive number.
+Without positive results, report excluded explanations, failure cases, and support needed. Attach key figures and locations of original records for discussion and review.
 
 <a id="q49"></a>
 
 ### 49. What if I do not understand a discussion, or think someone more senior is wrong?
 
-Ask during the discussion or note it for afterward. “I do not understand that term yet; could you explain it using this example?” is a normal question.
+**Locate the disagreement in a specific concept or piece of evidence.** Ask for a contextual example for an unclear term; for a disputed conclusion, identify the difference between prediction and observation.
 
-For a disagreement, explain your interpretation and evidence: “With that explanation I would expect A, but the experiment shows B. Could we look at it together?”
+For example: “This explanation predicts A, but the experiment produced B. Should we check condition C?” Discuss it immediately or continue after organizing the records.
 
 <a id="q50"></a>
 
 ### 50. When should we discuss tasks, contributions, authorship, and schedules? What about disagreements?
 
-Discuss responsibilities, time commitments, goals, and how authorship will reflect contributions at the start. Update the discussion as work and contributions change.
+Discuss **responsibilities, time commitments, goals, and how authorship will reflect contributions** at the start. Update the discussion as work and contributions change.
 
 Talk to the people involved first; a shared supervisor can help if necessary. Keep clear written agreements where possible.
 
-## Learning and researching with AI
+
+## AI-assisted research and verification
 
 <a id="q51"></a>
 
 ### 51. How can AI help with papers, code, experiments, ideas, and writing?
 
-For reading, ask it about concepts, equations, and background, then check the original evidence. For coding, use it to create scripts and investigate errors while understanding core computations and evaluation. For experiments, let it organize records, plot, and help analyze.
+- **Reading:** explain terms, equations, and background, then check the source.
+- **Code:** draft scripts and diagnose errors; verify core calculations and evaluation.
+- **Experiments:** organize records, plots, and analysis while retaining raw output.
+- **Questions:** find related work, alternative explanations, and testable hypotheses.
+- **Writing:** revise structure and sentences, checking evidence for each claim.
 
-Discuss your questions with it, investigate related work, and challenge explanations. For writing, use it to improve structure and sentences while checking that each claim matches your evidence. See [working with AI](ai.md).
+See [working with AI](ai.md) for examples.
 
 <a id="q52"></a>
 
 ### 52. How do I judge an AI explanation, plan, or result that sounds convincing?
 
-Ask for original records. If an experiment succeeded, inspect configuration, logs, outputs, and statistics. If a paper supports a claim, find the relevant passage.
+**Check original material, not only the summary.** Experimental claims require configurations, logs, outputs, and statistics; literature claims require source passages, equations, or figures.
 
-A plausible plan still needs a test that distinguishes whether it is right. Keep unexpected observations open rather than immediately asking AI for another neat explanation.
+For a new proposal, design checks that distinguish explanations. Preserve unexpected observations and unresolved hypotheses before adding experiments.
 
 <a id="q53"></a>
 
-### 53. If AI does the task anyway, what difference does my understanding of methods, metrics, and tricks make?
+### 53. How does understanding methods and metrics help verify AI-assisted work?
 
-You can explain the work, answer why a choice was made, say what the metric measures, anticipate problems, and adapt when conditions change.
-
-That is not trivial. Even when AI executes the task, experience has to remain with you through your understanding of the process and its feedback.
+Understanding the method and metric helps detect **task mismatch, leakage, implementation errors, and unfair comparisons**. Trace one example through the full pipeline and check which conclusions survive a configuration change.
 
 <a id="q54"></a>
 
-### 54. How do I turn AI-assisted work into my own experience and intuition?
+### 54. How do I review an AI-assisted task and retain reusable records?
 
-Look back afterward: what did you expect, what happened, which judgment was wrong, and what would you check first next time? Keep a concrete example and revisit it later.
-
-Writing a first paper with AI can still be painful. If the process teaches you more about experiments, writing, and organizing work, you have a reference point for next time.
+Save **task inputs, key changes, configuration, outputs, and verification results**. Check whether you can locate the key computation, explain the metric, reproduce a result, and explain a failure. Turn unresolved points into checks for the next task.
 
 <a id="q55"></a>
 
 ### 55. Which materials can I give AI? What permissions and research rules matter?
 
-Public papers, open-source code, and your own notes are usually easier to handle. Unpublished lab ideas, data and drafts, other people's code, and private or confidential material require checking permissions, team agreements, and the service's data policies.
+Public papers, open-source code, and your own notes still require checking applicable permissions and the service's data policies. For unpublished ideas, data and drafts, other people's code, and private or confidential material, first confirm **permissions, team agreements, and the service's data policies**.
 
 For reviewing, check that year's venue rules separately. [ICML 2026](https://icml.cc/Conferences/2026/LLM-Policy), for example, distinguishes two reviewing policies: follow the one assigned to you. Permitted assistance does not mean delegating judgment and evaluation to AI.
 
-Check the target venue's writing rules too. Authors remain responsible for the content; AI cannot take on authorship responsibility. Follow the specific rules on disclosure and permitted use. Check every reference, particularly for fabricated citations. Official entry points are on the [publication page](publishing.md).
+Check the target venue's writing rules too. Authors remain responsible for the content; AI cannot take on authorship responsibility. Follow the specific rules on disclosure and permitted use. Check every reference, particularly for fabricated citations. Official entry points are on the [publication page](writing.md).
 
-## Papers, outcomes, and personal progress
+
+## Writing, publication, and project records
 
 <a id="q56"></a>
 
 ### 56. When is work ready to become a paper? What does writing do during research?
 
-Solid work supports its claims and methods with enough appropriate experiments and analysis to form a paper. Writing communicates those ideas, evidence, and methods to readers; presentation is part of that.
+**Claims need matching experiments or analysis.** A paper explains the question, method, evidence, and scope of the conclusion.
 
-You can start before experiments finish. Draft the question, figures, and result notes early to see what is missing. A paragraph that is hard to explain may reflect a sentence problem—or unresolved thinking in the research itself. See [writing and presentation](writing.md).
+Draft the question, method diagram, and result records during experiments. If a paragraph is unclear, check both its wording and whether the necessary explanation or evidence is missing. See [writing](writing.md).
 
 <a id="q57"></a>
 
 ### 57. What makes good research or a good paper? What do novelty, scores, and prestigious venues tell us?
 
-Good research gives the community new insight and knowledge, sometimes changing how people understand a problem.
-
-A new method is one form of contribution; an improved score is a signal. As for prestigious venues, unfortunately I think they are becoming less important in your era as a way to judge the work itself. What matters is the knowledge produced and the problem addressed. For institutional recognition and admission, you still need to understand the rules of your environment.
+Check **the question, differences from prior work, comparison conditions, strength of evidence, limitations, and reproducibility**. New structures or higher scores require experimental explanation. Publication venues provide review and dissemination context but do not replace evidence checks. Verify institutional recognition against the relevant published rules.
 
 <a id="q58"></a>
 
-### 58. What are SCI, CCF A, top conferences, workshops, and preprints?
+### 58. How do SCI, CCF categories, major conferences, workshops, and preprints differ?
 
 **SCI/SCIE** are citation indexes. The phrase “SCI journal” refers to inclusion in an index. Journal quartiles are another evaluation layer; do not conflate them.
 
@@ -564,26 +491,16 @@ A new method is one form of contribution; an improved score is a signal. As for 
 
 A **workshop** is a focused forum for discussion. Archival status, later submission of an extended version, and accepted work types depend on its rules. A suitable workshop can offer conversation and feedback.
 
-A **preprint** shares work before or outside formal publication. arXiv is a common venue. Uploading there does not itself mean peer review; a preprint may later be formally published. Inspect the specific version and publication record. Find official links on the [publication page](publishing.md).
+A **preprint** shares work before or outside formal publication. arXiv is a common venue. Uploading there does not itself mean peer review; a preprint may later be formally published. Inspect the specific version and publication record. Find official links on the [publication page](writing.md).
 
 <a id="q59"></a>
 
-### 59. If my first project produces no paper or gets rejected, how can I recognize progress?
+### 59. How do I archive and review unpublished or rejected work?
 
-Read this list again. Many questions you once had are now things you have experienced. That is progress.
-
-Can you identify what a new paper does and where its problems may lie more quickly? Do you know where to investigate an error? How much of a lab discussion can you follow? Do you have your own views and questions about the area?
-
-Those changes happened to you and do not disappear because you lack a paper for now. My [freshman-year review](timeline.md) includes my first rejection.
+Archive the question, literature comparisons, runnable code, configurations, raw results, and failure analysis. For reviews, separate **implementation issues, evidence gaps, presentation issues, and disagreements over scope**. Identify revisions and required validation. See [publication](writing.md) for submission procedures.
 
 <a id="q60"></a>
 
-### 60. Should I continue, change direction, or pause? How do research, grades, health, friends, and hobbies fit together?
+### 60. How do I adjust and hand over a project when conditions change?
 
-There is no standard answer; ultimately listen to yourself. Without papers or graduate admission, would you still want the answer? Are you tired because things recently went badly, or because you dislike the work? Is the problem the task, collaboration, resources, or the direction itself?
-
-If it is a rough stretch, change the topic or collaboration, or rest and reconsider. If you dislike it, changing direction or stopping is legitimate. It is not a moral failure to leave.
-
-When priorities conflict, health comes first. Physical and emotional problems make everything else difficult. How you arrange grades, friends, hobbies, and research depends on the life you want; someone else cannot rank them for you. Research is one possible part of university. Whatever you choose, let it be a decision you have thought through.
-
-For the rest of life, return to [a letter to new students](welcome.md) and [living well](life.md).
+Look at the situation with your collaborators: **what have you done, what remains unclear, and what can you do with the time and resources now available?** If you need to reduce, pause, or end the project, agree on what remains to be finished, where code and data are stored, and who will follow up. The next person can then continue from the existing records.

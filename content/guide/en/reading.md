@@ -1,16 +1,18 @@
 # Finding and reading papers
 
-<h2 id="reading-overview">Start with how the field developed</h2>
+<h2 id="reading-overview">See how the field developed</h2>
 
-When entering a field, start with a good survey, a talk, or a course to see what people study and the main approaches they take. With that overview, reading classic papers and related blogs makes it easier to understand why a paper appeared and where it belongs in the field.
+When you are new to a field, a survey, talk, or course can show you what people study and the main approaches they use. With that overview, a few foundational papers and related blogs become easier to place: why did this work appear, and where does it fit?
 
-As you read, connect the papers. What did an earlier work leave unresolved? Why did later researchers try a different approach? Did they discover a new phenomenon, gain access to better data, or run into a limitation of the previous method? Some papers develop an existing line of work, others offer a different explanation, and some connect previously separate areas. Following these changes helps you understand both the field’s development and its subfields.
+As you read, try connecting the papers:
 
-Follow authors and research groups, too. When you enjoy a paper, look at the authors’ earlier and later work, homepages, blogs, and talks. Why do they keep returning to this problem? How do their papers connect, and which judgements have changed? Following a researcher’s line of work can reveal a thought process that is harder to see in a single paper.
+- **What did earlier work leave unresolved?** Why did later researchers try a different approach?
+- **What changed?** Was it new data, a new observation, or a limit of the existing method?
+- **How do the works relate?** Do they follow the same route, offer competing explanations, or connect previously separate fields?
 
-As you learn more, you will find threads you want to follow: a subfield that interests you, a paper with a method you need, or something you have not yet understood about the conclusions of several studies. Keep a record of these connections and questions. They give your next literature search a more specific direction.
+When a paper interests you, look at the authors' earlier and later work, blogs, and talks too. Following the same question across papers can reveal reasoning that is hard to see in one article alone. Keep the questions you have not resolved as leads for your next search.
 
-With these threads in mind, decide how deeply to read the paper in front of you. Are you exploring a field, solving a problem in your project, or preparing to reproduce a result? Different purposes call for attention to different details.
+<p class="guide-takeaway">Are you reading to explore a field, solve a project problem, or reproduce a result? Your purpose determines where you need to go deeper.</p>
 
 ## How do you find related work from one paper?
 
@@ -20,7 +22,7 @@ Use [Zotero](https://www.zotero.org/support/quick_start_guide) to save titles, a
 
 <a id="reading-depth"></a>
 
-## How deeply should you read this paper?
+## Choose reading depth for the task
 
 Write down the question you are currently trying to understand. Does the paper answer it directly, connect two previously separate ideas, supply a usable method, or merely share keywords?
 
@@ -32,13 +34,16 @@ Write down the question you are currently trying to understand. Does the paper a
 
 A gap in the evidence may itself justify close reading if the question matters or the gap offers a research opportunity. Conversely, a rigorous paper with little connection to your current question may need only a skim.
 
-This judgment comes from [irene's reading experience](irene-workflow.md#depth). She also considers prerequisites and time, listing the essential sections and figures alongside the questions she wants to answer.
+Choose reading depth based on prerequisites, time, and questions to verify. List the essential sections and figures; see [reading depth and evidence checks](irene-workflow.md#depth).
 
 ## What should you focus on in a first reading?
 
 Start with the abstract, introduction, key figures, and conclusion, then check experiments. Write a few sentences:
 
-Under which conditions does the paper address which problem? What is its main method? What results support it? What do I still not understand?
+- **Problem:** what problem does the paper address, and under which conditions?
+- **Method:** what is the main approach?
+- **Evidence:** what results support the claims?
+- **Open questions:** which parts still need checking?
 
 [Keshav's How to Read a Paper](https://cs.uwaterloo.ca/~brecht/courses/854-Experimental-Performance-Evaluation-2018/readings/common/how-to-read/keshav-paper-reading.pdf) and [Mu Li's paper readings](https://github.com/mli/paper-reading) show two approaches. Apply one to an actual paper instead of only collecting reading advice.
 
@@ -58,14 +63,14 @@ AI can explain a passage or help list questions. Return to the original or an ac
 
 ## What should you keep in a note?
 
-[irene's setup](irene-workflow.md#notes) uses Zotero for papers and attachments, Obsidian for literature notes and her own thinking, and AI to help compare, organize, and question those notes.
+[Paper and note management](irene-workflow.md#notes) uses Zotero for papers and attachments, Obsidian for notes, annotations, and questions, and AI to help compare and organize those notes.
 
 Start with:
 
 - **Source:** title, authors, year, and original link.
 - **Question and method:** the problem and the central approach.
 - **Evidence:** figures, experimental settings, and conclusions.
-- **My questions:** unclear points and explanations to test.
+- **Open questions:** unclear points and explanations to test.
 - **Related work:** connections to papers you have read or projects you are doing.
 
 Separate your annotations from excerpts and keep page references for key figures. When comparing papers or writing, these lead back to the evidence. Import setup, folders, and example requests are in the [full workflow](irene-workflow.md#notes).
@@ -76,17 +81,17 @@ Choose a shared question and record what each paper changes, depends on, and lea
 
 Finish with “After reading these, I want to investigate…” It may lead to another paper, a conversation, or an experiment.
 
-[Choose a paper](papers.md) · [Experiment](experiments.md) · [Discuss your question](contact.md)
+[Choose a paper](papers.md) · [Experiment](research.md#q43) · [Discuss your question](contact.md)
 
 <a id="research-map"></a>
 
 ## Search from the questions that remain
 
-Keep a page for your current questions, the work you have read, experiments you have tried, unresolved points, and directions you want to connect. irene calls this a [research map](irene-workflow.md#depth).
+Keep a page of current questions, related work, completed experiments, unresolved points, and possible connections. See the [map of research questions and sources](irene-workflow.md#depth).
 
 For example, if you care about agents failing on long tasks, organize papers around planning, tool use, memory, and environmental feedback. Which failure does each explain? What do the experiments cover? Which observations remain unexplained?
 
-Specify the research object, mechanism, task, and phenomenon when searching. Follow references and citations to foundational work, direct predecessors, and contemporary studies. Author pages, repositories, and project pages can lead to later versions. See [irene's targeted search process](irene-workflow.md#search).
+Specify the research object, mechanism, task, and phenomenon when searching. Follow references and citations to foundational work, direct predecessors, and contemporary studies. Author pages, repositories, and project pages can lead to later versions. See [Targeted literature search](irene-workflow.md#search).
 
 ## Other entries
 

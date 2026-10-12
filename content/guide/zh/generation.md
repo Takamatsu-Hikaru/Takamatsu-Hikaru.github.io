@@ -1,25 +1,29 @@
-# 生成模型：图像是怎样一步步得到的
+# 生成模型
 
-从一段话得到图像，或者从噪声逐步生成一个样本，背后需要学习数据的规律，也需要一条能实际采样的计算过程。研究可以发生在训练目标、生成路径、控制条件或速度上。
+给定文字描述生成图像、补全被遮住的区域、按要求修改画面，都需要学习数据的分布，并把输入条件带入生成过程。研究涉及怎样训练模型、怎样从模型中采样，以及怎样控制生成的内容。
 
-## 从一次扩散采样开始
+图像是生成建模中的一类数据。相似的方法也用于视频、音频、分子结构和动作序列；这些输出可能有多个合理答案，模型需要表示这种多样性，以及数据内部的空间、时间或结构关系。
 
-从 [Hugging Face Diffusion Course](https://huggingface.co/learn/diffusion-course/unit1/1) 的第一单元进入，观察带噪样本与去噪预测之间的关系。配合一份小例子看每一步的输入输出。
+## 生成目标与模型结构
 
-接着读 [Lilian Weng 的 Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)或 [Yang Song 的 score-based generative modeling](https://yang-song.net/blog/2021/score/)，选一种讲法往下走。
+VAE 通过潜变量描述数据，并用变分推断进行训练；GAN 利用生成器与判别器的对抗学习数据分布。扩散模型学习不同噪声程度下的去噪预测，生成时从随机噪声出发逐步采样。Flow Matching 则学习连接噪声与数据的速度场，通过数值积分得到样本。
 
-## 扩散与 Flow Matching 的数学
+训练目标之外，计算发生在哪里、采用什么网络，也是不同的设计选择。LDM 将扩散过程放在压缩后的潜空间，最后解码回图像；DiT 使用 Transformer 处理潜空间中的图像块。条件信息可以进入这些网络，引导内容、布局或风格。
 
-概率分布、噪声、梯度和微分方程会逐渐出现。用[基础页](basics.md)补当前卡点，再接 [MIT Flow Matching and Diffusion（2025）](https://diffusion.csail.mit.edu/2025/)的讲义与练习。
+## 扩散与 Flow Matching
 
-第一遍先分清训练时模型在学什么、生成时怎么使用它。之后再比较不同方法的目标和采样过程。
+DDPM 的训练样本来自对数据逐步加噪，网络根据带噪样本和时间步预测噪声等目标量。Score-based 方法学习分布的对数密度梯度，将不同噪声水平下的分布与采样过程联系起来。Flow Matching 通过指定概率路径构造速度目标，学习样本沿这条路径怎样变化。
 
-## 采样步数怎样影响速度和结果
+[Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)介绍扩散模型的目标与推导；[Score-based Generative Modeling](https://yang-song.net/blog/2021/score/)从 score 与随机微分方程讨论生成。[MIT Flow Matching and Diffusion（2025）](https://diffusion.csail.mit.edu/2025/)覆盖 ODE/SDE、概率路径、Flow Matching 与 score matching，并有配套代码实验。概率、梯度和微分方程在这里分别参与分布建模、训练与采样，相关内容见[数学基础](basics.md)。
 
-固定模型与输入条件，改变采样步数，记录时间与生成结果怎样变化。如果只挑最好看的图，很难知道改动整体是否有效；把相同条件下的一组结果一起保留下来。
+## 条件控制与采样效率
 
-这些方法也可能用于预测机器人动作，接 [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)和[具身页](embodied.md)。如果关心生成过程怎样用于环境预测和决策，再读 [World Model](world-model.md)。
+文字、已有图像、深度或布局可以作为生成条件。模型既要保持样本质量，也要响应这些要求；局部编辑、细节保留和多个条件之间的配合，都有具体的研究问题。
 
-## 扩散推导与模型比较
+采样器决定怎样用网络预测更新样本，步数、更新公式和随机性共同影响速度与结果。潜空间压缩减少计算，也会改变细节的表达。这些取舍将生成质量与计算效率联系起来。
 
-中文推导可以看[苏剑林的扩散系列入口](blogs.md#su)，比较实验可以看 [LoopDiT](blogs.md#chai)。课程与其他项目集中在[生成模型资料目录](catalog-directions.md#topic-16)。
+[Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)把扩散模型用于动作序列，结合视觉观察预测机器人操作，相关内容见[具身智能](embodied.md)。生成方法还可用于环境预测和交互式模拟，与[世界模型](world-model.md)相连。
+
+## 教程与技术文章
+
+[Hugging Face Diffusion Course](https://huggingface.co/learn/diffusion-course/unit1/1)提供扩散模型的讲解与代码；[科学空间的扩散系列](blogs.md#su)包含中文数学推导，[LoopDiT](blogs.md#chai)讨论相关模型与比较实验。更多课程与项目见[生成模型资料目录](catalog-directions.md#topic-16)。

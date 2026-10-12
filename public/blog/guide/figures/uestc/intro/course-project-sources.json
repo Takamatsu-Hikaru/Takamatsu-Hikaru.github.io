@@ -1,0 +1,36 @@
+[
+  {
+    "file": "cs50p.png",
+    "url": "https://prod-discovery.edx-cdn.org/media/course/image/2cc794d0-316d-42f7-bbfd-25c34e4cd5df-033e46d516c0.small.png",
+    "source": "https://cs50.harvard.edu/python/",
+    "bytes": 57044
+  },
+  {
+    "file": "micrograd.jpg",
+    "url": "https://i.ytimg.com/vi/VMj-3S1tku0/maxresdefault.jpg",
+    "source": "https://karpathy.ai/zero-to-hero.html",
+    "bytes": 169006
+  },
+  {
+    "file": "mit-1806.jpg",
+    "url": "https://i.ytimg.com/vi/J7DzL2_Na80/hqdefault.jpg",
+    "source": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/",
+    "bytes": 14802
+  },
+  {
+    "file": "hf-agents.jpg",
+    "url": "https://huggingface.co/datasets/agents-course/course-images/resolve/main/en/unit0/thumbnail.jpg",
+    "source": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+    "bytes": 895294
+  },
+  {
+    "file": "mnist.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/MNIST_dataset_example.png",
+    "source": "https://en.wikipedia.org/wiki/MNIST_database",
+    "bytes": 81766
+  },
+  {
+    "file": "hongyi-2025.jpg",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

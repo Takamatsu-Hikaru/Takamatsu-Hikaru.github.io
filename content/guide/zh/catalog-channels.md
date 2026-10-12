@@ -1,38 +1,71 @@
 # 博客、访谈与信息渠道
 
-这里可以找作者博客、访谈和研究动态。具体文章另见[作者博客](blogs.md)、[LessWrong 选读](lesswrong.md)；认识团队可以从[课题组入口](labs.md)开始。
+技术博客常有模型实现、工具试用和实验细节；访谈则会聊到研究经历、团队选择与行业变化。这里整理一些持续更新的作者与媒体，以及几篇专题文章。具体技术文章见[技术博客与研究观点](blogs.md)，研究团队见[课题组与研究团队](labs.md)。
 
 [返回资料总索引](resources.md)
 
 <a id="topic-26"></a>
 
-## 具体观点文章、作者博客与信息渠道
+## 技术博客与讨论
 
-- **[Simon Willison’s Weblog](https://simonwillison.net/)**｜英文实践博客，记录新工具的试用、行为检查和结果。可以从具体输入输出了解作者怎样判断工具是否有用。
+- **[Simon Willison’s Weblog](https://simonwillison.net/)**
 
-- **[Sebastian Raschka：作者主页与文章](https://sebastianraschka.com/)**｜英文技术文章与实现。可按 LLM 结构、训练和评估找文章，也能接着 from-scratch 项目往下读。
+    记录 AI 工具试用、开发过程与具体结果的技术博客。
 
-- **[Karpathy：作者主页](https://karpathy.ai/)**｜作者的课程、博客、项目与社交入口。 [X/Twitter 账号](https://twitter.com/karpathy)
+- **[Sebastian Raschka：作者主页与文章](https://sebastianraschka.com/)**
 
-- **[LessWrong](https://www.lesswrong.com/about)**｜研究思考、AI 与理性相关的观点和讨论社区。具体文章见 LessWrong 选读页。
+    语言模型结构、训练、评估与代码实现相关文章。
 
-- **[机器之心](https://www.jiqizhixin.com/)**｜中文科技媒体，报道论文、项目与产业动态，部分专题需要订阅。
+- **[Karpathy：作者主页](https://karpathy.ai/)**
 
-- **[OpenAI News](https://openai.com/news/)**｜OpenAI 的模型、研究和产品发布入口。
+    课程、博客、开源项目与公开分享。 [X/Twitter 账号](https://twitter.com/karpathy)
 
-- **[Anthropic Research](https://www.anthropic.com/research)**｜Anthropic 的研究发布入口，可按具体主题查文章。
+- **[LessWrong](https://www.lesswrong.com/about)**
 
-- **[许华哲：具身智能 2025 回望](https://zhuanlan.zhihu.com/p/1983661736180589668)**｜中文年度观点文章，链接来自 Lumina 指南的年度总结区。
+    关于理性、研究判断与 AI 的文章和讨论。相关选文见 [LessWrong：研究判断与 AI 使用](lesswrong.md)。
 
-- **[林天威：具身 VLA 的 2025——从 Demo 到通用的距离](https://zhuanlan.zhihu.com/p/1989799567177307432)**｜中文具身 VLA 年度观点文章，链接来自 Lumina 指南的年度总结区。
+## 研究发布与媒体
 
-- **[对话英诺王建明：机器人目前面临的核心问题是数据](https://www.leiphone.com/category/ai/SJMi7xhrknuVadzq.html)**｜围绕机器人数据问题的中文访谈，可以了解受访者对产业与研究的观察。
+- **[机器之心](https://www.jiqizhixin.com/)**
 
-- **[Z Potentials](https://zpotentials.substack.com/)**｜AI 团队、创业者与技术访谈，关注研究、产品与创业选择。
+    中文科技媒体，报道论文、开源项目与产业动态。
 
-- **[葬AI](https://funeralai.substack.com/)**｜AI 产品体验与行业评论，表达直接、个人观点鲜明。
+- **[<img class="resource-mark" src="../../../public/blog/guide/brands/openai.png" alt="" loading="lazy"> OpenAI News](https://openai.com/news/)**
 
-- **[张小珺 Jùn｜商业访谈录](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**｜与研究者、创业者长时间对谈，聊技术、经历与重要选择。
+    模型、研究、开源项目与产品发布。
 
-- **[WhyNotTV](https://space.bilibili.com/14145636/)**｜研究者访谈与求学、科研经历分享，具体单集推荐见 [Lookout](lookout.md)。
+- **[<img class="resource-mark" src="../../../public/blog/guide/brands/anthropic.png" alt="" loading="lazy"> Anthropic Research](https://www.anthropic.com/research)**
 
+    模型能力、可解释性与安全等主题的研究文章。
+
+## 具身智能专题
+
+- **[许华哲：具身智能 2025 回望](https://zhuanlan.zhihu.com/p/1983661736180589668)**
+
+    对 2025 年具身智能研究与发展方向的回顾。
+
+- **[林天威：具身 VLA 的 2025——从 Demo 到通用的距离](https://zhuanlan.zhihu.com/p/1989799567177307432)**
+
+    讨论 VLA 从演示走向通用能力的进展与问题。
+
+- **[对话英诺王建明：机器人目前面临的核心问题是数据](https://www.leiphone.com/category/ai/SJMi7xhrknuVadzq.html)**
+
+    围绕机器人数据采集与产业实践展开的访谈。
+
+## 访谈与行业评论
+
+- **[Z Potentials](https://zpotentials.substack.com/)**
+
+    AI 团队、研究者与创业者访谈。
+
+- **[葬AI](https://funeralai.substack.com/)**
+
+    AI 产品体验与行业评论。
+
+- **[张小珺 Jùn｜商业访谈录](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**
+
+    与研究者、创业者的长篇对谈，涉及技术、经历与团队选择。
+
+- **[WhyNotTV](https://space.bilibili.com/14145636/)**
+
+    研究者访谈及求学、科研经历分享。 [Lookout](lookout.md)

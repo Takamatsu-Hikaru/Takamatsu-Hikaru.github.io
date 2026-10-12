@@ -1,35 +1,33 @@
-# 挑一篇论文读
+# 论文选读
 
-下面按问题选了几篇论文，每篇附有阅读切入点。读法可以参考[找资料和读论文](reading.md)。
+入门一个方向、做调研、找 idea，都少不了读论文。这里整理了各个领域的一些经典与代表工作，可以挑感兴趣的读读看。读论文时遇到困难，可以参考[找资料和读论文](reading.md)。
 
-## 第一次认识一篇论文
+<!-- paper-library -->
 
-**[ResNet](https://arxiv.org/abs/1512.03385)**  
-看作者遇到了什么训练问题，结构改动是什么，用哪些比较说明它有效。可以配[李沐精读](https://github.com/mli/paper-reading)，再回到[视觉](vision.md)。
+## 论文讲解
 
-**[Attention Is All You Need](https://arxiv.org/abs/1706.03762)**  
-先沿架构图追输入输出，再看 attention 解决了哪一部分计算。[图解](https://jalammar.github.io/illustrated-transformer/)可以帮你走第一遍。接[基础与架构](basics.md)。
+[李沐论文精读](limu.md)有 ResNet、Transformer、BERT、GPT-3、CLIP 等论文的视频讲解，从研究背景、方法到实验，也会讨论论文的写作。
 
-**[ReAct](https://react-lm.github.io/)**  
-先读一条完整轨迹：模型什么时候行动，看到反馈后发生什么变化。再看论文怎样比较只有推理、只有行动与两者结合。接 [Agent](agent.md)。
+<figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV1pu411o7BE/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-transformer.jpg" alt="李沐：Transformer 论文精读" loading="lazy" width="800" height="450"></a><figcaption><a href="https://www.bilibili.com/video/BV1pu411o7BE/">Transformer 论文精读</a><span class="caption-dot">·</span>跟李沐学 AI<span class="caption-dot">·</span><a href="https://www.zhihu.com/zvideo/1437034536677404672">知乎</a></figcaption></figure>
 
-## 沿着自己的兴趣继续
+<div class="resource-pair"><figure class="resource-figure "><a href="https://www.bilibili.com/video/BV15P4y137jb/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-vit.jpg" alt="李沐：ViT 论文精读" loading="lazy" width="800" height="450"></a><figcaption><a href="https://www.bilibili.com/video/BV15P4y137jb/">ViT 论文精读</a><span class="caption-dot">·</span>跟李沐学 AI<span class="caption-dot">·</span><a href="https://www.zhihu.com/zvideo/1449195245754380288">知乎</a></figcaption></figure><figure class="resource-figure "><a href="https://www.bilibili.com/video/BV1SL4y1s7LQ/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-clip.jpg" alt="李沐：CLIP 论文精读" loading="lazy" width="800" height="450"></a><figcaption><a href="https://www.bilibili.com/video/BV1SL4y1s7LQ/">CLIP 论文精读</a><span class="caption-dot">·</span>跟李沐学 AI<span class="caption-dot">·</span><a href="https://www.zhihu.com/zvideo/1475706654562299904">知乎</a></figcaption></figure></div>
 
-- [BERT](https://arxiv.org/abs/1810.04805)：训练目标怎样影响学到的表示，以及表示怎样用于任务。接 [LLM](llm.md)。
-- [LoRA](https://arxiv.org/abs/2106.09685)：减少需要训练的参数，具体节省了什么，又怎样评价效果。接 [LLM](llm.md)与[系统](systems.md)。
-- [CLIP](https://github.com/openai/CLIP)：图文匹配怎样成为训练任务，训练之后又怎样使用。接[多模态](multimodal.md)。
-- [DDPM](https://arxiv.org/abs/2006.11239)：带噪数据、学习目标与生成过程如何联系。配[生成方向](generation.md)读。
-- [World Models](https://worldmodels.github.io/)：压缩观察、预测动态与选择动作怎样组合。接[世界模型](world-model.md)。
-- [DreamerV3](https://danijar.com/project/dreamerv3/)：学到的模型怎样用于行为学习，评价覆盖什么任务。接 [RL](rl.md)。
-- [ACT / ALOHA](https://tonyzhaozh.github.io/aloha/)：把示范、动作预测与实际机器人任务对应起来。接[具身](embodied.md)。
-- [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)：生成建模怎样用于动作，为什么要这样表示动作。接[生成](generation.md)与[具身](embodied.md)。
+论文的配套讲解还有很多，知乎、技术博客和 B 站上都能找到。比如 Transformer 的[图解文章](https://jalammar.github.io/illustrated-transformer/)和[带注释的代码实现](https://github.com/harvardnlp/annotated-transformer)。
 
-## 已经有问题，再翻长清单
+## 更多论文
 
-[Agent](https://github.com/WooooDyy/LLM-Agent-Paper-List) · [多模态](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models) · [World Models](https://github.com/JiahuaDong/Awesome-World-Models) · [具身指南](https://github.com/TianxingChen/Embodied-AI-Guide) · [AI for Science](https://github.com/ai4s-research/awesome-ai-for-science)
+语言模型的预训练和微调还可以看 [BERT](https://arxiv.org/abs/1810.04805) 和 [LoRA](https://arxiv.org/abs/2106.09685)；机器人模仿学习可以看 [ACT / ALOHA](https://tonyzhaozh.github.io/aloha/)。
 
-想认识新工作，可以看 [Hugging Face Daily Papers](https://huggingface.co/papers)。
+下面这些清单整理了各个方向的论文和相关项目：
 
-## 跟着有经验的人读一次
+- [Agent 论文](https://github.com/WooooDyy/LLM-Agent-Paper-List)
+- [多模态大语言模型](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models)
+- [世界模型](https://github.com/JiahuaDong/Awesome-World-Models)
+- [具身智能](https://github.com/TianxingChen/Embodied-AI-Guide)
+- [AI for Science](https://github.com/ai4s-research/awesome-ai-for-science)
 
-[李沐论文精读](limu.md)适合拿自己的阅读记录对照；需要方向 paper list 和更多项目，查[方向资料目录](catalog-directions.md)。
+[Hugging Face Papers](https://huggingface.co/papers)每天都有社区分享的新论文。
+
+## 相关资料
+
+[研究方向总览](directions.md) · [找资料和读论文](reading.md) · [各方向课程、论文与项目](catalog-directions.md)

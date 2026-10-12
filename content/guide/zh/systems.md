@@ -1,25 +1,27 @@
-# 效率与系统：让模型真的跑得动
+# 效率与系统
 
 同一个模型，为什么换一个 batch size 就快了，显存明明没满却跑不动，吞吐提高了但用户等得更久？模型落到程序和硬件上，这些问题就会出现。
 
+一个模型的公式没有变，运行速度也可能差很多。数据搬运、算子实现、显存分配、请求调度和多卡通信，都会影响硬件能否持续工作。模型规模、上下文长度与精度，又让这些系统问题和模型设计联系起来。
+
 ## 计算、访存与执行开销
 
-从 [Horace He：Making Deep Learning go Brrrr](https://horace.io/brrr_intro.html)认识计算、内存和执行开销。然后选自己的一个小程序，记录输入、硬件、运行方式与耗时，再看具体瓶颈。
+GPU 的计算速度很快，但一次运算还涉及数据在不同层级内存之间的搬运，以及算子的启动和调度。计算密集、访存密集与执行开销占主导的任务，需要不同的优化方式。[Making Deep Learning go Brrrr](https://horace.io/brrr_intro.html)具体讨论这些瓶颈。
 
-想补系统全貌，用 [Machine Learning Systems](https://mlsysbook.ai/) 按问题查；量化、压缩与高效计算可以接 [MIT 6.5940（2024）](https://hanlab.mit.edu/courses/2024-fall-65940)。
+FlashAttention 通过分块计算减少显存读写，量化降低数值表示的存储与计算开销，算子融合减少中间结果和调度。实际收益与张量形状、数据精度和硬件实现有关。[PyTorch Performance Tuning Guide](https://docs.pytorch.org/tutorials/recipes/recipes/tuning_guide.html)介绍常见的性能优化方法。
 
 ## 延迟、吞吐、显存与质量
 
-交互服务可能在意首字延迟和尾延迟，离线批处理可能在意吞吐，部署还会受显存与成本约束。优化前把这些条件写下来，同时保留任务质量的评价。
+交互服务关心首字延迟和尾延迟，离线批处理更关心吞吐，部署还受到显存与成本约束。更大的 batch 可能提高硬件利用率，也可能增加单个请求的等待时间；更长的上下文会增加计算和缓存，降低精度则可能影响模型质量。
 
-可以先测不同输入长度或 batch size 下的表现，再查 [PyTorch Performance Tuning Guide](https://docs.pytorch.org/tutorials/recipes/recipes/tuning_guide.html)中的相关建议。一次改动之后，用相同负载重测。
+系统研究因此需要同时描述负载与优化目标。相同硬件和请求条件下的比较，才能说明一种设计省下了哪部分时间或内存。
 
 ## 分布式训练与推理
 
-[How To Scale Your Model](https://jax-ml.github.io/scaling-book/)可以继续认识分布式计算与硬件约束。等你有一个具体瓶颈，再沿通信、并行、内存与算力往下读。
+训练大模型需要分配参数、梯度、优化器状态和计算；多张卡之间的通信又会带来同步与等待。推理服务还需要管理 KV cache、批处理和请求调度。ZeRO、PagedAttention 等方法分别处理其中的存储与执行问题。
 
-这里也很适合检验自己怎样使用 AI：它可以帮你写测试脚本，但你要能讲清测试测的是什么、优化影响了谁。接[和 AI 一起做事](ai.md)。
+[How To Scale Your Model](https://jax-ml.github.io/scaling-book/)将模型计算、内存、通信与并行方式联系起来；[Machine Learning Systems](https://mlsysbook.ai/)讨论机器学习系统的组成与设计。[MIT 6.5940（2024）](https://hanlab.mit.edu/courses/2024-fall-65940)覆盖模型压缩、量化与高效计算。
 
-## 系统案例、课程与研究团队
+## 系统案例与研究资料
 
-可以对照[Purshow 的系统笔记](blogs.md#purshow)、[效率与系统资料](catalog-directions.md#topic-22)和[MIT HAN Lab 等团队](labs.md)，看看模型设计与部署约束怎样联系。
+[系统与模型架构笔记](blogs.md#purshow)包含具体设计分析，更多课程和项目见[效率与系统资料](catalog-directions.md#topic-22)，相关团队包括 [MIT HAN Lab](labs.md) 等。[AI 工具](ai.md)也可用于代码阅读与性能分析脚本的编写。

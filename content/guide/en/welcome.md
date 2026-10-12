@@ -74,7 +74,26 @@ So keep asking, learning deeply, and staying curious. Go to good places and do g
 
 Through rising and falling tides, recognize both the breadth of the world and your small place in it, and keep moving. If a few months from now you can smile about things that used to hurt and see the distance you have traveled, you are becoming a better version of yourself.
 
-Whether or not our paths remain together, meeting and watching one another grow into independent people is what makes sharing these experiences worthwhile.
+Our AI Club hopes to be a place to grow and a source of support. Whether or not our paths remain together, meeting you and watching you grow into someone who can take things on independently is what makes this worthwhile.
+
+## A few words about the AI Club
+
+The experiences above are my own, but this guide also comes from a group of people willing to help one another. Having talked about support, I would like to introduce that community.
+
+The UESTC AI Club is the largest deep learning student club in southwestern China, with over 2,500 members. Members have published more than 50 student-first-authored papers at leading conferences and journals, and serve as conference reviewers. The club has organized competitions with Baidu and talks with Google and ByteDance, and has also helped student startups develop.
+
+We bring together people who are curious about AI. From computer vision and natural language processing to language models, agents, world models, and embodied AI, members explore the questions that interest them.
+
+We started the club to help students choose future directions and explore AI more deeply. We hope to build a strong peer-support and open-source community at UESTC, with room for people to develop freely. There are no barriers based on discipline or year of study; we hope everyone can find people they enjoy working with.
+
+In the club, you can:
+
+1. Meet other AI enthusiasts, ask questions, and learn together.
+2. Begin learning deep learning, with practical guidance for competitions, development, and research.
+3. Learn about frontier research, industry, and internships. The group shares lab openings and job referrals.
+4. Talk with older students about your plans. Club presidents and core members have research experience and are happy to help you get started and grow.
+
+We hope everyone who joins finds good places to do the work they most want to do. Welcome—we look forward to exploring, creating, and growing with you.
 
 ## Where to go next
 

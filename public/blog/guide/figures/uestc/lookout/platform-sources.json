@@ -1,0 +1,66 @@
+{
+  "neurips": {
+    "source": "https://neurips.cc/",
+    "image": "https://neurips.cc/static/core/img/NeurIPS-logo.svg",
+    "file": "neurips.svg",
+    "bytes": 36247
+  },
+  "icml": {
+    "source": "https://icml.cc/",
+    "image": "https://icml.cc/static/core/img/ICML-logo.svg",
+    "file": "icml.svg",
+    "bytes": 25856
+  },
+  "iclr": {
+    "source": "https://iclr.cc/",
+    "image": "https://iclr.cc/static/core/img/ICLR-logo.svg",
+    "file": "iclr.svg",
+    "bytes": 8653
+  },
+  "xiaohongshu": {
+    "source": "https://www.xiaohongshu.com/",
+    "image": "https://picasso-static.xiaohongshu.com/fe-platform/f43dc4a8baf03678996c62d8db6ebc01a82256ff.png",
+    "file": "xiaohongshu.png",
+    "bytes": 2482
+  },
+  "x": {
+    "source": "https://github.com/simple-icons/simple-icons",
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/x.svg",
+    "file": "x.svg",
+    "license": "CC0-1.0"
+  },
+  "youtube": {
+    "source": "https://www.youtube.com/",
+    "image": "https://www.youtube.com/s/desktop/0a4db377/img/favicon_144x144.png",
+    "file": "youtube.png",
+    "bytes": 5020
+  },
+  "zhihu": {
+    "source": "https://www.zhihu.com/",
+    "image": "https://static.zhihu.com/heifetz/favicon.ico",
+    "file": "zhihu.ico",
+    "bytes": 4286
+  },
+  "bilibili": {
+    "source": "https://www.bilibili.com/",
+    "image": "https://www.bilibili.com/favicon.ico",
+    "file": "bilibili.ico",
+    "bytes": 4286
+  },
+  "google": {
+    "source": "https://research.google/",
+    "image": "https://www.gstatic.com/images/branding/googleg_gradient/1x/googleg_gradient_standard_20dp.png",
+    "file": "google-research.png"
+  },
+  "qbitai": {
+    "source": "https://www.qbitai.com/",
+    "image": "https://www.qbitai.com/wp-content/uploads/imgs/qbitai-logo-1.png",
+    "file": "qbitai-mark.png",
+    "crop": [
+      0,
+      100,
+      300,
+      200
+    ]
+  }
+}

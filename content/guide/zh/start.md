@@ -1,88 +1,92 @@
-# 第一个 AI 项目，从哪里开始？
+# 第一个 AI 项目
 
-如果还没有选方向，可以先做一个看得见结果的项目：让模型认出手写数字，或者在自己拍的照片里框出人和车。数据、代码和教程都有现成的，从这里动手，再顺着碰到的问题补知识。
+如果你想玩玩 AI，看看它能做什么，可以从一个小项目开始。让模型认出手写数字，在自己拍的照片里框出人和车，或者让它调用工具帮你处理事情，都可以试试。
 
-先做一次，是为了看看实际过程里有什么吸引你：喜欢把它做成一个应用，喜欢比较几种方法的效果，还是想追问模型为什么会出错？带着自己的体验，再决定下一步学什么、找谁交流。
+这里整理了四个入门项目，涉及图像识别、目标检测、Agent 和机器人，附有代码、教程和演示。可以挑感兴趣的玩一玩。
 
-下面先放两个视觉入门项目：MNIST 适合走一遍训练和提交，YOLO 适合先看到模型在真实图片上的效果。选一个感兴趣的开始；已经想做 Agent 或机器人，也有后面的入口。
+<a id="project-mnist"></a>
 
-## MNIST：在 Kaggle 做一次手写数字识别
+## MNIST：手写数字识别
 
-打开 [Kaggle Digit Recognizer](https://www.kaggle.com/competitions/digit-recognizer/overview)。任务很直观：输入一张手写数字图片，判断它是 0 到 9 中的哪一个。这个项目可以把数据、训练、预测和提交串起来。
+[MNIST](https://en.wikipedia.org/wiki/MNIST_database) 是经典的图像分类数据集，包含 0–9 的手写数字。[Kaggle Digit Recognizer](https://www.kaggle.com/competitions/digit-recognizer/overview) 比赛使用这些图片训练分类模型，根据预测结果计算成绩。
 
-### 先看数据，再找一份能读懂的代码
+<figure class="resource-figure wide"><a href="https://en.wikipedia.org/wiki/MNIST_database" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/mnist.png" alt="MNIST 手写数字" loading="eager"></a><figcaption><a href="https://en.wikipedia.org/wiki/MNIST_database" target="_blank" rel="noopener">MNIST 手写数字</a> <span class="caption-dot">·</span> <a href="https://www.kaggle.com/competitions/digit-recognizer/overview" target="_blank" rel="noopener">Kaggle</a></figcaption></figure>
 
-先打开比赛的 [Data 页面](https://www.kaggle.com/competitions/digit-recognizer/data)，看看训练数据、测试数据和提交示例。把一行像素还原成图片，对照它的标签；这样再读模型代码时，知道它究竟在处理什么。
+### 数据、代码与训练
 
-再到 [Code 页面](https://www.kaggle.com/competitions/digit-recognizer/code)，找一份步骤完整、能从头读到尾的入门 notebook。可以搜 MNIST、PyTorch、CNN，优先看有数据展示、训练过程和生成提交文件的版本，复制到自己的 notebook 里运行。
+比赛的 [Data 页面](https://www.kaggle.com/competitions/digit-recognizer/data) 提供训练数据、测试数据和提交示例。每张 28×28 的灰度图片被展开为一行像素数据，训练数据附有数字标签。
 
-第一次读代码，先找到数据读取、模型、loss、参数更新和预测这几处。拿不准一段在做什么，可以让 AI 逐段解释，再打印真实数据的 shape 看看。
+[Code 页面](https://www.kaggle.com/competitions/digit-recognizer/code) 有公开的 Notebook，包括使用 PyTorch 和 CNN 的实现，**可以直接在 Kaggle 上运行**。模型训练完成后，将测试集的预测结果保存为提交文件，就能提交到比赛页面。
 
-### 训练一个模型，完成第一次提交
+跑通之后，也可以改改学习率、训练轮数或网络结构，看看准确率有什么变化，或者翻翻模型认错了哪些数字。
 
-从带标签的训练数据里留出一部分做验证，训练后看它在这部分图片上认对了多少。然后对比赛测试集生成预测，按照提交示例的格式保存文件，完成一次提交。
+### 相关资料
 
-到这里，你可以对照着想：模型训练时看到了哪些图片，验证时用了哪些，提交的预测又来自哪里？把这三件事分清，后面做其他项目也会反复用到。
+- [3Blue1Brown 神经网络系列](https://www.3blue1brown.com/lessons/neural-networks/)：用手写数字介绍神经网络、梯度下降和反向传播。
+- [PyTorch Learn the Basics](https://docs.pytorch.org/tutorials/beginner/basics/intro.html)：介绍数据加载、模型定义、自动求导与优化，示例使用 FashionMNIST 服饰分类数据。
 
-### 改一点，看看结果怎么变
+<a id="project-yolo"></a>
 
-保存第一次跑通的 notebook、验证结果和提交文件，再改一个设置，比如学习率、训练轮数或网络宽度。先猜一下会发生什么，跑完对比。
+## YOLO：在自己的照片里检测物体
 
-把模型认错的图片摆出来看：哪些数字容易混淆，哪些连你也要辨认一下？下一次改动先用自己的验证集比较，榜单留作补充。最后写几句话：改了什么，结果怎样，你怎么解释，还有哪里没弄懂。
+YOLO 可以找出图片中的物体，并标出类别和位置。一张街景照片里的人、汽车和自行车，会分别被检测框圈出来。
 
-### 遇到概念和代码看不懂时
+**使用预训练模型，就可以处理自己的图片和视频。**
 
-[3b1b 的神经网络讲解](https://www.3blue1brown.com/lessons/neural-networks/)用手写数字解释输入、神经元和输出，适合边做边看。[PyTorch Learn the Basics](https://docs.pytorch.org/tutorials/beginner/basics/intro.html)可以用来查数据加载、自动求导、优化和模型保存；其中的 Quickstart 用的是服饰分类数据 FashionMNIST，读懂训练流程后再对照自己的数字识别代码。
+<figure class="resource-figure wide"><a href="https://docs.ultralytics.com/tasks/detect/" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/yolo-detection.png" alt="Ultralytics · 目标检测" loading="eager"></a><figcaption><a href="https://docs.ultralytics.com/tasks/detect/" target="_blank" rel="noopener">Ultralytics · 目标检测</a></figcaption></figure>
 
-Python 语法读不下去，去[基础页](basics.md)补函数、循环、列表和文件读取。张量维度对不上，先补 shape、索引和矩阵乘法。想了解 AI 的更大图景，可以看 [Crash Course AI](https://thecrashcourse.com/topic/ai/) 中感兴趣的主题。
+### 运行检测
 
-## YOLO：让模型在自己的图片里框出物体
+[Ultralytics Quickstart](https://docs.ultralytics.com/quickstart) 提供安装、模型加载和预测的代码示例，也有可以在浏览器中运行的 [Google Colab 教程](https://docs.ultralytics.com/integrations/google-colab)。
 
-如果你更想马上看到一个有意思的效果，可以从目标检测开始。分类回答“这张图是什么”，检测还要回答“东西在哪里”：一张照片里可能同时有人、自行车和汽车，每个物体都有自己的框和类别。
+把示例图片换成自己拍的照片，就能看到模型给出的检测框、类别和置信度。视频也可以作为输入，模型会逐帧进行检测。
 
-### 先用现成模型做一次预测
+### 训练自己的模型
 
-从 [Ultralytics Quickstart](https://docs.ultralytics.com/quickstart)进入，先用预训练模型跑通示例，再换成自己拍的图片。想在浏览器里做，可以从官方的 [Colab 教程](https://docs.ultralytics.com/integrations/google-colab)进入。
+如果想检测自己关心的物体，可以使用带标注的数据训练模型。目标检测的标注包括物体类别和边界框。
 
-观察框、类别和置信度：远处的小物体有没有漏掉，遮挡之后还认不认得出来，同一个物体会不会被框两次？拿几张不同场景的图片试试，比只看一张成功截图更容易发现问题。
+[Ultralytics 训练教程](https://docs.ultralytics.com/modes/train) 提供训练与数据配置示例，也附有 [COCO8 示例数据集](https://docs.ultralytics.com/datasets/detect/coco8)。自定义数据可以使用已有的公开数据集，也可以由自己拍摄和标注。
 
-### 再走一遍训练和验证
+分类、检测、分割及相关论文见[计算机视觉](vision.md)。
 
-跟着 [训练教程](https://docs.ultralytics.com/modes/train)，先用 [COCO8 小数据集](https://docs.ultralytics.com/datasets/detect/coco8)走通数据加载、训练和验证。它只有 8 张图，适合看清流程；想比较模型效果，下一步换成有足够训练与验证样本的数据集。
+<a id="project-agent"></a>
 
-打开一张图片和对应标注，看看类别、框的位置怎样记录，再看数据配置文件怎样指定路径和类别。训练结束后，用保存的权重重新预测，找到结果图片和训练记录。
+## Agent：让模型调用工具
 
-### 做一个自己想展示的小 demo
+给语言模型接上**计算器、搜索或文件读取工具**，它就可以在处理任务时调用这些工具，再根据返回结果继续回答。例如，搜索几份资料后整理答案，或者通过运行代码完成计算。
 
-可以用一段自己拍的视频，观察模型怎样检测行人或车辆；想识别某种特定物品，就继续找有相应标注的数据，或尝试自己标注。先弄清当前模型认识哪些类别，再决定是否需要重新训练。
+[Hello Agents](https://github.com/datawhalechina/hello-agents) 提供中文教程和代码项目；[Hugging Face Agents Course](https://huggingface.co/learn/agents-course/en/unit0/introduction) 包含工具调用、Agent 框架和实践教程。
 
-选一个现象继续试：换分辨率后，小物体能不能更容易被发现？调低置信度阈值，多出来的框有多少是误检？把结果图和设置放在一起，你就有具体东西可以拿去[请教学长](contact.md)。
+<figure class="resource-figure medium"><a href="https://huggingface.co/learn/agents-course/en/unit0/introduction" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/hf-agents.jpg" alt="Hugging Face Agents Course" loading="eager"></a><figcaption><a href="https://huggingface.co/learn/agents-course/en/unit0/introduction" target="_blank" rel="noopener">Hugging Face Agents Course</a></figcaption></figure>
 
-接下来可以读[视觉方向](vision.md)，了解分类、检测和分割；开始想认真比较几种方案时，去看[实验页](experiments.md)。
+[ReAct 项目页](https://react-lm.github.io/) 展示了推理、行动与环境反馈交替进行的例子。更多项目和相关工作见 [Agent 方向](agent.md)。
 
-## 已经对 Agent 感兴趣
+<a id="project-robotics"></a>
 
-从 [Hello Agents](https://github.com/datawhalechina/hello-agents) 的基础内容，或 [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/en/unit0/introduction) 开始，选一套跟。
+## 机器人：看看机器人怎样学会操作
 
-第一个目标可以是让模型调用一个简单工具，并读懂整个过程：收到什么任务、为什么调用、工具返回什么、接下来怎么做、什么时候结束。需要在线模型的练习会涉及账号或 API 费用，选例子前看它的运行条件。
+机器人可以通过**人的操作示范**学习动作。[ACT / ALOHA](https://tonyzhaozh.github.io/aloha/) 展示了双臂机器人完成操作任务的过程，也提供示范数据采集、模型训练与动作预测的代码。
 
-保存一次成功和一次失败的执行记录。如果同样的问题直接问模型也能答，就比较加上工具之后到底改变了什么。接下来读 [ReAct](https://react-lm.github.io/)，再去 [Agent 方向页](agent.md)挑一个想继续追的问题。
+<figure class="resource-figure robot"><a href="https://tonyzhaozh.github.io/aloha/" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/aloha.jpg" alt="ACT / ALOHA" loading="eager"></a><figcaption><a href="https://tonyzhaozh.github.io/aloha/" target="_blank" rel="noopener">ACT / ALOHA</a></figcaption></figure>
 
-## 已经对机器人感兴趣
+[LeRobot](https://github.com/huggingface/lerobot) 整理了机器人学习的模型、数据集、训练代码和工具。公开数据中包含相机图像、机器人状态和动作序列，对应着机器人执行任务时的观察与动作。
 
-先看 [ACT / ALOHA](https://tonyzhaozh.github.io/aloha/) 的项目视频和方法图。拿一个动作来想：机器人看到了什么，示范数据里记录了什么，模型输出的动作又是什么？
+模仿学习、VLA、仿真与机器人控制的相关资料见[具身智能](embodied.md)。
 
-然后在 [LeRobot](https://github.com/huggingface/lerobot) 里看一份示范数据和项目结构，把图里的模块对应到文件与数据上。第一步可以停在读数据、理解动作表示；仿真与真实机器人训练放在下一步选。具体入口在[具身方向](embodied.md)。
+## 更多入门项目
 
-## 做完之后，怎么继续
+[Kaggle](https://www.kaggle.com/) 上还有许多公开的数据集、比赛和 Notebook，涵盖图像、文本、表格预测等任务。感兴趣的题目、别人分享的实现，都可以成为下一个小项目的起点。
 
-留住三个东西：可以重开的项目、能讲清的一次改动、下次想问的一个问题。它们会把你带向不同的地方：
+## 还有什么想做的？
 
-- 对输入和模型内部好奇，继续[学基础与架构](basics.md)。
-- 对某种任务特别感兴趣，去[方向页](directions.md)找代表论文。
-- 想认真复现一篇文章，把[阅读](reading.md)、[实验](experiments.md)和[交流](contact.md)串起来。
-- 做下来没那么喜欢，也可以换一个例子。你的这次体验已经提供了信息。
+也许你想做一个整理课程资料的工具，一个自己的网页，或者一个小游戏。
 
-## 做过之后，继续往哪里学
+可以把想法告诉 TRAE、WorkBuddy、Claude Code、ZCode、Codex 等 Coding Agent，和它一起尝试实现。过程中有新的想法，也可以接着修改、慢慢完善。
 
-想系统补基础，可以看[李沐的课程怎么接](limu.md)；想换一套教材或讲解，查[基础学习目录](catalog-foundation.md)。
+<div class="logo-strip"><a class="logo-entry" href="https://www.trae.cn/" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/trae-logo.png" alt="TRAE"><span>TRAE</span></a><a class="logo-entry" href="https://www.workbuddy.cn/" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/workbuddy-logo.svg" alt="WorkBuddy"><span>WorkBuddy</span></a><a class="logo-entry" href="https://claude.com/product/claude-code" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/claude-logo.png" alt="Claude Code"><span>Claude Code</span></a><a class="logo-entry" href="https://zcode.z.ai/" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/zcode-logo.png" alt="ZCode"><span>ZCode</span></a><a class="logo-entry" href="https://openai.com/codex/" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/intro/openai-logo.png" alt="Codex"><span>Codex</span></a></div>
+
+相关工具与使用方法见[AI 工具](ai.md)。
+
+## 相关资料
+
+[学习基础知识](basics.md) · [研究方向总览](directions.md) · [找资料和读论文](reading.md)

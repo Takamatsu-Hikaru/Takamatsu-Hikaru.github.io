@@ -420,4 +420,4 @@ Once you have a question, connect the data, model and validation in a complete r
 
 For time-series foundations, [Forecasting: Principles and Practice](https://otexts.com/fpp3/) covers trends, forecasting and evaluation with examples in R. For Python projects, see [tsai](https://github.com/timeseriesAI/tsai).
 
-[AI for Science resource index](https://github.com/ai4s-research/awesome-ai-for-science) · [AI4X resource directory](catalog-directions.md#topic-23) · [Research questions](research.md) · [Contact and collaboration](contact.md) · [Experiments and records](experiments.md)
+[AI for Science resource index](https://github.com/ai4s-research/awesome-ai-for-science) · [AI4X resource directory](catalog-directions.md#topic-23) · [Research questions](research.md) · [Contact and collaboration](contact.md)

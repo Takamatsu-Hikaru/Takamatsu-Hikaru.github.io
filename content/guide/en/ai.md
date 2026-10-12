@@ -1,6 +1,6 @@
 # Working with AI
 
-AI can participate in many stages of work. Pay attention to which judgments remain with you afterward.
+You can ask AI for help with an unfamiliar equation, an error in reproduction code, or an idea you want to discuss. The examples below start from these situations and ask a follow-up question: **when it says the work is done, how can you check?**
 
 ## Make a task concrete
 
@@ -14,7 +14,7 @@ When you already have reading notes, provide their location and the comparison y
 
 > Read the three paper notes I specify in Papers and compare how they address the same question. Attach the paper and note location to each comparison, preserve my annotations, and list missing information.
 
-[irene's note workflow](irene-workflow.md#notes) connects Zotero, Obsidian, and a local AI tool.
+[Paper note workflow](irene-workflow.md#notes) connects Zotero, Obsidian, and a local AI tool.
 
 ## When it says it is finished, what do you inspect?
 
@@ -22,11 +22,11 @@ What changed in the code? Which configuration ran? What did tests cover? Where a
 
 The same applies to reading. Ask for an explanation, then ask which passage supports it. Open and check any references it supplies.
 
-## Keep an understanding of your own
+## Verify the method and metrics
 
 For model deployment, do you know why a metric was chosen, whether the test workload resembles real use, which trick helped, and what might change under different conditions?
 
-Explain a before-and-after comparison to someone. The point where your explanation breaks is worth investigating. You need not do everything manually, but understanding affects how you use tools in work you intend to pursue long term.
+Compare the outputs before and after a change, record the conditions, and identify evidence for each explanation. Mark unverified assumptions for further checks.
 
 ## AI can be a discussion partner
 
@@ -34,7 +34,7 @@ Ask it for counterexamples, alternative explanations, and missing evidence for a
 
 [Lilian Weng's agent article](https://lilianweng.github.io/posts/2023-06-23-agent/) and [Anthropic's Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) explain how systems organize tasks. To research agents themselves, see the [direction page](agent.md).
 
-Handle unpublished and review material according to the actual team and venue requirements; find rule entry points under [publication](publishing.md). My [freshman-year review](timeline.md) also discusses whether you have really learned something.
+Handle unpublished and review materials according to team and venue requirements; see [publication](writing.md).
 
 <a id="grill-me"></a>
 
@@ -44,8 +44,27 @@ Explain a method in your own words alongside its diagram, then ask AI to follow 
 
 > I will explain this method diagram. Ask one question at a time and wait for my answer. Focus on inputs and outputs, module roles, conditions, and evidence. Identify the step I have not explained clearly and where to look again.
 
-This is how irene uses **Grill Me**. Her [experience article](irene-workflow.md#grill) describes close reading, selective reading, and skimming; she also shares a [paper-reading toolkit](https://github.com/tseirene6/paper-tools-marketplace). When a task works well repeatedly, keep its input requirements, steps, and output format as a prompt or skill to use with new material.
+**Grill Me** checks methods and evidence through follow-up questions. See the [reading workflow](irene-workflow.md#grill) for reading depths and [paper-tools-marketplace](https://github.com/tseirene6/paper-tools-marketplace) for tools. Repeated input requirements, steps, and output formats can be saved as prompts or skills.
 
-## Compare your own AI habits
+<a id="ai-feedback"></a>
 
-[Two essays about AI](lesswrong.md#ai) discuss students' attitudes and how certain interactions can shape judgment. Compare their situations with your own process.
+## Does AI agreement make an idea more reliable?
+
+An AI discussion can quickly turn a research idea into a coherent motivation, method, and story. That can blur the difference between a convincing account and supporting evidence. Here, being led by AI (“AI hack”) means mistaking its agreement or coherent explanation for verification.
+
+Try these steps with the idea you are discussing:
+
+- **Record your initial judgment.** What observation prompted the question? What evidence do you have, and what remains a guess?
+- **Ask for counterexamples.** Ask what would disprove the idea and whether a simpler explanation exists.
+- **Check outside the conversation.** Read the original source, run a small experiment, or ask a colleague to examine the evidence. Agreement from a second model cannot replace those checks.
+
+> Do not package this as a contribution yet. Identify its assumptions, separate existing evidence from unverified judgments, and suggest a small experiment that distinguishes competing explanations. Say when evidence is missing.
+
+[Two observations about AI](lesswrong.md#ai) discuss belief reinforcement in AI interactions and students' use and understanding of AI. Compare them with a real task: which step did the tool help with, and which judgments still need checking?
+
+## Output checks
+
+- References: identify the original source and passage.
+- Code: inspect key calculations, tests, and run records.
+- Experiments: retain configurations, raw outputs, and metric calculations.
+- Conclusions: distinguish verified results from hypotheses.

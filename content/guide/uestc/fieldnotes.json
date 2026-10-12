@@ -1,0 +1,637 @@
+{
+  "llm": {
+    "overview": [],
+    "solves": [
+      "数据与训练：数据配比、训练目标、模型规模与计算分配。",
+      "模型行为：指令、偏好、奖励与推理过程中的搜索。",
+      "结构与效率：上下文表示、网络设计及训练和推理开销。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2017",
+        "title": "结构：让序列里的位置相互交换信息",
+        "text": "Transformer 用注意力组织序列计算，为后来的不同预训练模型提供了重要结构。它原本研究机器翻译。",
+        "papers": [
+          "transformer-2017"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "预训练与任务适配",
+        "text": "GPT 把生成式语言预训练与有标签任务微调接起来。重点是复用学习到的表示。",
+        "papers": [
+          "gpt-2018"
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "提示：把任务示例放进上下文",
+        "text": "GPT-3 系统考察规模和少样本提示：使用阶段可以给示例，而不为每个任务更新参数。",
+        "papers": [
+          "gpt3-2020"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "行为：让输出更贴近人的要求",
+        "text": "InstructGPT 将示范、偏好比较与强化学习结合。模型如何回答，成为单独的训练问题。",
+        "papers": [
+          "instructgpt-2022"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Token / 分词单元",
+        "text": "模型处理的离散片段，可以是一个词、一个字或词的一部分。相同文字在不同 tokenizer 下可能有不同长度。"
+      },
+      {
+        "term": "自回归",
+        "text": "每次根据已有上下文预测后续 token，再把新 token 接回上下文继续生成。训练时可以并行计算多个位置的预测。"
+      },
+      {
+        "term": "预训练与后训练",
+        "text": "预训练建立基础能力；后训练在此基础上调整任务能力或行为。指令微调和偏好学习是常见后训练方法。"
+      },
+      {
+        "term": "上下文学习",
+        "text": "把说明和示例放进输入来改变表现，这次使用不更新模型权重。它不同于用这些示例微调参数。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "reportIntro": "模型的技术报告将架构、数据与训练选择放在同一项工作中讨论，系统卡还包含能力评测与模型行为分析。",
+    "tasksTitle": "研究主题"
+  },
+  "agent": {
+    "overview": [],
+    "solves": [
+      "决策与协作：规划、工具选择、记忆和多 Agent 组织。",
+      "数据与训练：交互轨迹、奖励和策略优化。",
+      "环境与系统：任务定义、工具接口、执行框架与评测。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2023",
+        "title": "ReAct：把思考、行动和观察接成循环",
+        "text": "模型根据当前信息选择动作，工具与环境返回的结果参与后续推理。",
+        "papers": [
+          "react-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Toolformer：学习什么时候调用工具",
+        "text": "生成、执行并筛选候选工具调用，将工具使用纳入语言模型的训练数据。",
+        "papers": [
+          "toolformer-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Reflexion：让下一次尝试利用失败反馈",
+        "text": "将环境反馈整理为文字记忆，供后续尝试使用；改进发生在上下文层面。",
+        "papers": [
+          "reflexion-2023"
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "从 SWE-bench 到 SWE-agent：在真实仓库里完成任务",
+        "text": "SWE-bench 用真实 issue 与测试评价修改；2024 年的 SWE-agent 和 OpenHands 进一步探索文件编辑、命令执行、浏览器和沙箱怎样支撑完整任务。",
+        "papers": [
+          "swebench-2024"
+        ],
+        "links": [
+          {
+            "title": "SWE-agent",
+            "url": "https://arxiv.org/abs/2405.15793"
+          },
+          {
+            "title": "OpenHands",
+            "url": "https://arxiv.org/abs/2407.16741"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "把工具使用放进训练",
+        "label": "Agent RL",
+        "text": "Search-R1 把搜索接入多轮强化学习，Agent Lightning 把执行记录与训练连接起来。模型在任务反馈中学习动作选择，研究也随之深入到轨迹数据、奖励和信用分配。",
+        "papers": [],
+        "links": [
+          {
+            "title": "Search-R1",
+            "url": "https://arxiv.org/abs/2503.09516"
+          },
+          {
+            "title": "Agent Lightning",
+            "url": "https://arxiv.org/abs/2508.03680"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "编程 Agent 进入日常开发",
+        "label": "Coding agents",
+        "text": "Claude Code、Codex 等工具把读仓库、改文件和运行测试接成持续执行的过程。模型能力与执行框架一起改进，上下文组织、工具接口和任务验证成为实际开发中的关键环节。",
+        "papers": [],
+        "links": [
+          {
+            "title": "Codex",
+            "url": "https://openai.com/index/codex-now-generally-available/"
+          },
+          {
+            "title": "Claude Code",
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "title": "持续协作、个人记忆与科研工作流",
+        "label": "Personal & research agents",
+        "text": "Muse、Dots 等个人 Agent 连接云端计算机与日常应用，Hermes 探索跨会话记忆与技能积累，ARIS 将执行与复审接入科研流程。",
+        "papers": [],
+        "links": [
+          {
+            "title": "Muse",
+            "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+          },
+          {
+            "title": "Dots",
+            "url": "https://openai.com/index/introducing-dots/"
+          },
+          {
+            "title": "项目介绍",
+            "url": "#agent-projects"
+          }
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "工具调用",
+        "text": "模型输出工具名称和参数，外部程序执行后返回结果。"
+      },
+      {
+        "term": "执行轨迹 / Trajectory",
+        "text": "一次任务中的观察、动作、工具返回与结果序列。"
+      },
+      {
+        "term": "上下文与记忆",
+        "text": "上下文是模型当次可见的信息；记忆是跨步骤或跨尝试保存的内容，需要被取回才会影响当次决策。"
+      },
+      {
+        "term": "Scaffold / 执行框架",
+        "text": "围绕模型的程序：管理工具、提示、循环、终止条件和反馈。同一模型换一套框架，表现可能不同。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  },
+  "vision": {
+    "overview": [],
+    "solves": [
+      "表示学习：从图像和视频中学习可迁移的特征。",
+      "识别与测量：类别、位置、轮廓和属性的预测。",
+      "空间与时间：深度、三维结构、运动与事件的建模。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2012",
+        "title": "从手工特征到学习特征",
+        "text": "AlexNet 将多层卷积、GPU 训练和大规模图像数据结合，在图像分类中取得显著进展。",
+        "papers": [
+          "alexnet-2012"
+        ]
+      },
+      {
+        "year": "2016",
+        "title": "网络加深，为什么反而难学",
+        "text": "ResNet 用残差连接改善深层网络的优化，训练得到的视觉特征也用于其他任务。",
+        "papers": [
+          "resnet-2016"
+        ]
+      },
+      {
+        "year": "2016",
+        "title": "图像中的识别与定位",
+        "text": "YOLO 直接从整张图预测边界框与类别，将检测组织为统一的预测问题。",
+        "papers": [
+          "yolo-2016"
+        ]
+      },
+      {
+        "year": "2021",
+        "title": "把图像看成一串小块",
+        "text": "ViT 将图像块送入 Transformer，并研究大规模预训练怎样影响效果。卷积与注意力由此成为可以按任务、数据和成本选择的设计。",
+        "papers": [
+          "vit-2021"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "卷积 / CNN",
+        "text": "让一个小滤镜在图像上移动，同一组参数检查不同位置。多层组合后，可以从局部纹理形成更复杂的特征。"
+      },
+      {
+        "term": "特征 / representation",
+        "text": "模型中间层产生的一组数字，用来保留对任务有用的信息。它可以交给分类器，也可以供检测、检索等任务使用。"
+      },
+      {
+        "term": "Patch 与 attention",
+        "text": "Patch 是切下来的图像块；Attention 根据输入内容计算块之间的关系，组织信息的交换。"
+      },
+      {
+        "term": "IoU 与 mAP",
+        "text": "IoU 衡量预测框与真实框的重叠程度；mAP 汇总各类别的检测表现，其数值与采用的重叠阈值和评价协议有关。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  },
+  "multimodal": {
+    "overview": [],
+    "solves": [
+      "跨模态表示：图像、文字、声音与视频之间的对应。",
+      "理解与问答：检索、视觉对话、文档和视频理解。",
+      "模型设计：信息融合、训练数据与计算开销。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2021",
+        "title": "图文对比学习",
+        "text": "CLIP 学习图文配对关系，把两种输入映射到可以比较相似度的表示空间。输出匹配分数即可做检索或候选类别判断。",
+        "papers": [
+          "clip-2021"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "视觉与语言模型的连接",
+        "text": "BLIP-2 冻结图像编码器与语言模型，训练 Q-Former 提取视觉信息，并与语言生成衔接。",
+        "papers": [
+          "blip2-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "视觉指令微调",
+        "text": "LLaVA 将图像特征映射到语言模型，并利用视觉指令数据训练问答能力。",
+        "papers": [
+          "llava-2023"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "模态 / modality",
+        "text": "信息的形式，例如文字、图像、声音。模态不同，数据的结构与信息密度也不同。"
+      },
+      {
+        "term": "编码器 / encoder",
+        "text": "将原始输入转换为特征表示的模型，例如将图像转换为一组视觉特征。"
+      },
+      {
+        "term": "对比学习 / contrastive learning",
+        "text": "提高匹配样本的表示相似度，相对压低不匹配样本的相似度；CLIP 用它学习图文对应关系。"
+      },
+      {
+        "term": "连接模块与指令微调",
+        "text": "连接模块把视觉特征变成语言模型能接收的输入；指令微调用问题与回答等示例训练模型怎样响应。两者分别涉及结构和训练数据。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  },
+  "generation": {
+    "overview": [],
+    "solves": [
+      "生成与编辑：从条件产生样本，或修改已有内容。",
+      "分布与结构：多样性、条件控制，以及空间和时间关系。",
+      "训练与采样：目标设计、生成路径、计算效率与质量。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2014",
+        "title": "让生成与辨别相互推动",
+        "text": "GAN 用判别器的反馈训练生成器。它提供了一条通过对抗目标学习数据分布的路线。",
+        "papers": [
+          "gan-2014"
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "把生成拆成一串去噪步骤",
+        "text": "DDPM 在不同噪声水平训练预测，再从随机噪声逐步采样。它是与 GAN 并行的重要生成路线。",
+        "papers": [
+          "ddpm-2020"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "潜空间中的扩散",
+        "text": "LDM 先压缩图像，在较小的潜表示中做扩散，最后解码回像素；文本等条件可在去噪时参与。",
+        "papers": [
+          "ldm-2022"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "去噪网络也可以用 Transformer",
+        "text": "DiT 研究用 Transformer 处理潜空间中的小块，以及模型计算量与生成质量的关系。",
+        "papers": [
+          "dit-2023"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "噪声 / noise",
+        "text": "这里通常是按给定概率分布抽取的随机扰动。训练时知道加了什么噪声，便能构造有答案的学习任务。"
+      },
+      {
+        "term": "去噪目标 / denoising",
+        "text": "根据带噪输入和当前噪声程度预测噪声、干净样本或相关量。DDPM 的常用形式是预测所加噪声，再据此计算采样更新。"
+      },
+      {
+        "term": "潜空间 / latent space",
+        "text": "编码器把图片压成较小的数字表示，解码器将其还原。计算量会下降，但压缩丢失的细节也会影响最终图像。"
+      },
+      {
+        "term": "采样器 / sampler",
+        "text": "规定怎样利用模型预测，从初始随机状态得到样本。步数、更新公式和随机性共同影响速度与结果。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  },
+  "rl": {
+    "overview": [],
+    "solves": [
+      "策略学习：价值估计、策略优化与探索。",
+      "学习条件：在线交互、离线数据、环境模型与多智能体。",
+      "应用：游戏、机器人控制、语言模型后训练和工具交互。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2015",
+        "title": "估计行动的长期价值",
+        "text": "DQN 用神经网络估计每个离散动作的未来回报，把从像素学习与价值更新接在一起。",
+        "papers": [
+          "rl-dqn"
+        ]
+      },
+      {
+        "year": "2017",
+        "title": "直接改进选动作的策略",
+        "text": "PPO 用新采集的交互数据更新策略，并抑制一次更新中的过大变化。",
+        "papers": [
+          "rl-ppo"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "重复利用经验，同时保留探索",
+        "text": "SAC 结合策略与价值网络，用回放数据学习连续控制，并在目标中加入策略熵。",
+        "papers": [
+          "rl-sac"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "策略 · Policy",
+        "text": "根据观察选择动作的规则，可以输出一个确定动作，也可以输出动作的概率分布。"
+      },
+      {
+        "term": "奖励与回报 · Reward / Return",
+        "text": "奖励是某一步的反馈；回报把后续奖励累积起来，常用折扣降低远期奖励的权重。"
+      },
+      {
+        "term": "价值 · Value",
+        "text": "在某个状态，或先做某个动作之后，按一定策略继续行动能获得多少预期回报。"
+      },
+      {
+        "term": "On-policy / Off-policy",
+        "text": "前者主要用当前策略附近采集的数据更新；后者能学习来自其他策略或旧策略的经验。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  },
+  "world-model": {
+    "overview": [],
+    "solves": [
+      "环境表示：从观察中保留状态、历史与任务信息。",
+      "行为学习：利用模型生成的轨迹训练策略。",
+      "模拟与规划：预测场景变化，比较候选行动的结果。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2018",
+        "title": "把视觉、记忆与控制拆开",
+        "text": "World Models 用压缩表示和变化预测支持小控制器，并展示在模型生成的环境里训练。",
+        "papers": [
+          "wm-world-models"
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "为规划学习需要的信息",
+        "text": "MuZero 学习与奖励、价值和策略有关的内部状态，将学到的模型用于树搜索。",
+        "papers": [
+          "wm-muzero"
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "在想象轨迹中学习行为",
+        "text": "DreamerV3 在世界模型产生的想象轨迹中训练 actor 与 critic，并在不同任务上使用相同的超参数配置。",
+        "papers": [
+          "wm-dreamerv3"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "潜在状态 · Latent state",
+        "text": "模型内部保存的压缩表示。它可能包含画面与历史信息，但每个维度未必有可读含义。"
+      },
+      {
+        "term": "动力学模型 · Dynamics model",
+        "text": "预测给定当前状态与行动，下一步状态会怎样变化的模型。"
+      },
+      {
+        "term": "想象轨迹 · Imagined rollout",
+        "text": "从一个内部状态出发，反复预测行动后果得到的一段轨迹；它的反馈来自模型。"
+      },
+      {
+        "term": "规划与策略 · Planning / Policy",
+        "text": "规划在决策时比较候选行动序列；策略直接按观察或内部状态输出动作，二者可以结合。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  },
+  "embodied": {
+    "overview": [],
+    "solves": [
+      "机器人操作：抓取、放置、装配等与物体交互的任务。",
+      "指令与泛化：视觉、语言、动作的连接及跨场景学习。",
+      "导航与运动：空间定位、移动、平衡与全身控制。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2022",
+        "title": "用多任务示范训练动作模型",
+        "text": "RT-1 把语言指令、相机观察与机器人动作连接起来，研究真实机器人数据的规模与多样性。",
+        "papers": [
+          "embodied-rt1"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "把动作序列作为生成对象",
+        "text": "Diffusion Policy 用去噪过程生成连续动作序列，让多种合理动作的分布有更合适的表达。",
+        "papers": [
+          "embodied-diffusion-policy"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "把视觉语言知识带进控制",
+        "text": "RT-2 将动作编码成 token，与视觉语言任务一起训练，将语义知识用于机器人动作预测。",
+        "papers": [
+          "embodied-rt2"
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "用视觉语言模型生成连续动作",
+        "text": "π0 将预训练视觉语言模型与 flow matching 动作专家结合，用跨机器人数据学习通用策略，再针对任务微调。",
+        "papers": [
+          "embodied-pi0"
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "把任务带到新的家庭环境",
+        "text": "π0.5 联合训练多种数据与任务，研究机器人在未见过的家庭环境中完成多阶段操作。",
+        "papers": [
+          "embodied-pi05"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "模仿学习 · Imitation learning",
+        "text": "从示范中的观察与动作配对学习策略，数据覆盖与动作表示影响训练及部署。"
+      },
+      {
+        "term": "VLA · Vision–Language–Action",
+        "text": "接收视觉与语言条件、输出动作的模型类别；动作可以是离散 token，也可以用连续数值表示。"
+      },
+      {
+        "term": "动作序列 · Action chunk",
+        "text": "一次预测接下来若干步动作，再执行其中一部分并重新观察。长度会影响平滑性与反馈频率。"
+      },
+      {
+        "term": "闭环控制 · Closed loop",
+        "text": "执行后再次观察，根据环境的新状态调整动作；不同系统的反馈速度与接口并不一样。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  },
+  "systems": {
+    "overview": [],
+    "solves": [
+      "训练存储与通信：参数、梯度、优化器状态和多卡并行。",
+      "算子与硬件：计算、访存、精度和执行调度。",
+      "推理服务：响应时间、吞吐、缓存、并发与成本。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2020",
+        "title": "ZeRO：分担训练时重复保存的状态",
+        "text": "从多卡数据并行中的冗余入手，分片存储优化器状态、梯度和参数。",
+        "papers": [
+          "zero-2020"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "FlashAttention：改变计算的搬运方式",
+        "text": "保持精确注意力的数学目标，用分块计算减少 GPU 不同内存层级间的读写。",
+        "papers": [
+          "flashattention-2022"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "SmoothQuant：让低精度计算更可用",
+        "text": "处理难量化的激活异常值，为权重与激活的 INT8 推理创造条件。",
+        "papers": [
+          "smoothquant-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "PagedAttention：管理动态增长的 KV cache",
+        "text": "将缓存按块组织，减少服务中的碎片和重复，容纳更多并发请求。",
+        "papers": [
+          "pagedattention-2023"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "吞吐与延迟",
+        "text": "吞吐是在一段时间内完成多少工作；延迟是一个请求等待多久。增大 batch 可能改善前者，却让排队更久。"
+      },
+      {
+        "term": "Prefill / Decode",
+        "text": "Prefill 处理输入上下文，Decode 逐步生成输出；两阶段的计算与访存特点不同。"
+      },
+      {
+        "term": "KV cache",
+        "text": "保存已处理 token 在各层注意力中的 key 和 value，避免生成时重复计算；它随上下文和并发请求占用显存。"
+      },
+      {
+        "term": "量化",
+        "text": "用较低精度表示权重或激活，减少存储与某些计算成本。能否加速还取决于硬件和实际算子的支持。"
+      }
+    ],
+    "paperIntro": "",
+    "checklist": [],
+    "followup": false,
+    "tasksTitle": "研究主题"
+  }
+}

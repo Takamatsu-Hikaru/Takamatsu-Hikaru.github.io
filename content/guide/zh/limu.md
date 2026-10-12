@@ -1,19 +1,23 @@
-# 李沐：从课程到论文精读
+# 深度学习课程与论文精读
 
-李沐的资料可以接在学习的两个阶段：还在理解训练过程时，用《动手学深度学习》把概念和代码连起来；开始读论文后，看他如何拆摘要、图、方法和实验。
+李沐的《动手学深度学习》把数学、代码和实验放在一起，论文精读系列则逐段讲解具体工作，也谈研究背景、实验设计与文章写法。
 
-## 刚开始学：边看边改一个训练过程
+## 动手学深度学习
 
-[《动手学深度学习》中文教材](https://zh.d2l.ai/)和[官方课程与视频索引](https://courses.d2l.ai/zh-v2/)可以配着用。先读数据操作、线性模型、损失与优化，再到多层感知机。手边留一份代码，看看输入是什么形状、损失从哪里来、参数如何更新。
+[中文教材](https://zh.d2l.ai/)从数据操作、线性模型与优化讲到 CNN、RNN、Attention 和 Transformer。各章有可运行的代码，也有[配套课程与视频](https://courses.d2l.ai/zh-v2/)。
 
-如果还没有动手的对象，接[图像分类起步路线](start.md)。遇到不懂的数学，回[基础页](basics.md)找对应解释。想换一套讲法，课程总表里还有 [fast.ai、3b1b、李宏毅与 CS229](catalog-foundation.md#topic-5)。
+<figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV1if4y147hS/"><img src="../../../public/blog/guide/figures/uestc/intro/limu-d2l.jpg" alt="动手学深度学习 v2" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV1if4y147hS/">动手学深度学习 v2</a></figcaption></figure>
 
-## 第一次读论文：先自己看，再对照精读
+## 论文精读
 
-从[论文精读索引](https://github.com/mli/paper-reading)找“如何读论文”，再选一篇正在学的论文。例如学 Attention 时，可以配[Transformer 逐段精读](https://www.bilibili.com/video/BV1pu411o7BE)。
+[论文精读索引](https://github.com/mli/paper-reading)整理了各期视频与论文。除了模型原理，讲解中也会讨论作者怎样提出问题、安排实验和组织论述。
 
-先写下自己对问题、方法和实验的理解，听完再比较：他停下来追问了哪里，我忽略了哪张图，哪些结论需要实验支持。这样下次独立读文章时，才会留下自己的读法。
+**[如何读论文](https://www.bilibili.com/video/BV1H44y1t75x/)** 谈论文的阅读顺序与深度；Transformer、ViT 和 CLIP 三期则分别讲解注意力架构、视觉 Transformer 与图文对比学习。
 
-## 接下来去哪
+<div class="resource-pair"><figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV1H44y1t75x/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-reading.jpg" alt="如何读论文" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV1H44y1t75x/">如何读论文</a></figcaption></figure><figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV1pu411o7BE"><img src="../../../public/blog/guide/figures/uestc/reading/limu-transformer.jpg" alt="Transformer 论文逐段精读" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV1pu411o7BE">Transformer 论文逐段精读</a></figcaption></figure></div>
 
-[挑一篇论文读](papers.md)里有具体论文入口；[找资料和读论文](reading.md)讲检索与阅读过程。
+<div class="resource-pair"><figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV15P4y137jb/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-vit.jpg" alt="ViT 论文逐段精读" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV15P4y137jb/">ViT 论文逐段精读</a></figcaption></figure><figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV1SL4y1s7LQ/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-clip.jpg" alt="CLIP 论文逐段精读" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV1SL4y1s7LQ/">CLIP 论文逐段精读</a></figcaption></figure></div>
+
+## 相关资料
+
+[学习基础知识](basics.md) · [第一个 AI 项目](start.md) · [机器学习与深度学习课程](catalog-foundation.md#topic-5) · [论文选读](papers.md) · [找资料和读论文](reading.md)

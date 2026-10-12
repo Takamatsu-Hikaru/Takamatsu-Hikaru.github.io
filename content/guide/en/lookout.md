@@ -1,6 +1,6 @@
 # Lookout: what are researchers and labs working on?
 
-Sometimes you do not know what you could do because you have not seen it yet. Looking at other labs, companies, and researchers gives you new reference points and changes your understanding of a direction.
+Curious about what researchers and labs are working on beyond your courses? Start with a demo, article, or interview that interests you, then follow it to the paper and code. The sources below can help you find work to explore next.
 
 ## Meet people through their work
 
@@ -37,14 +37,14 @@ Interviews with AI teams, founders, and technical practitioners. See what differ
 **[葬AI / Funeral AI](https://funeralai.substack.com/)**  
 AI product experiences and industry commentary with a direct, personal voice. Explore how new products work and what people are debating.
 
-Personal blogs show process as well as outcomes. [Jianlin Su](https://kexue.fm/content.html) is useful for mathematics and model questions, [Simon Willison](https://simonwillison.net/) records tool experiments, and [Karpathy](https://karpathy.ai/) shares courses, projects, and essays. See also [experience](experience.md).
+Personal blogs show process as well as outcomes. [Jianlin Su](https://kexue.fm/content.html) is useful for mathematics and model questions, [Simon Willison](https://simonwillison.net/) records tool experiments, and [Karpathy](https://karpathy.ai/) shares courses, projects, and essays. See [technical blogs and research perspectives](blogs.md).
 
 ## Hear researchers explain their work
 
 **[张小珺 Jùn — Business Interviews](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**  
 Long conversations with researchers and founders about technology, their careers, and important choices.
 
-Start with the [Saining Xie episode](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837), covering his education and research career, representation learning, research taste, world models, and starting a company. You can begin with his experiences and research choices, then pick the technical sections that interest you.
+Start with the [Saining Xie episode](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837), covering his education and research career, representation learning, research taste, world models, and starting a company. Use the representation-learning and world-model sections to locate technical discussions.
 
 **[WhyNotTV](https://space.bilibili.com/14145636/)**  
 Researcher interviews and personal accounts of university and research life, covering both the work and the choices along the way.
@@ -54,9 +54,9 @@ Researcher interviews and personal accounts of university and research life, cov
 
 <a id="research-brief"></a>
 
-## Make a research brief for yourself
+## Prepare a research brief
 
-Once you have found relevant sources, a recurring brief can select work related to your questions. [irene's approach](irene-workflow.md#brief) is to read one issue, adjust the selection, and then choose a schedule.
+Once you have found relevant sources, a recurring brief can select work related to your questions. [The research brief workflow](irene-workflow.md#brief) is to read one issue, adjust the selection, and then choose a schedule.
 
 > I am investigating [specific question]. Select about five items from the past week's papers, code releases, technical blogs, and lab announcements. Include dates and original links. For each, explain the work, its relation to my question, and a figure to read, project to try, or question to pursue.
 >
@@ -68,7 +68,7 @@ Keep titles, links, issue dates, and reading status in a list, and provide it fo
 
 Write a few sentences: what problem does this work address, how does it differ from what you knew, and what would you like to explore? Share an article with your question when it seems worth discussing.
 
-If you keep stopping at the same topic, it may be a clue to explore through the [directions pages](directions.md).
+Use the [directions pages](directions.md) to locate representative papers and related work for the question being investigated.
 
 ## Research communities and knowledge sharing
 
@@ -91,4 +91,4 @@ You can also recommend articles and videos to [BlogrXiv](https://github.com/Open
 
 ## Follow material to people and teams
 
-[Research groups](labs.md) offers problem-based entry points; [author blogs](blogs.md) adds process and personal judgment; the [information-channel catalog](catalog-channels.md) retains other sources from the earlier research rounds.
+To find teams working in a field, follow projects in [research groups](labs.md). To read how authors explain their methods and experiments, try [technical blogs](blogs.md). If you prefer interviews or videos, the [information-channel catalog](catalog-channels.md) has more options.

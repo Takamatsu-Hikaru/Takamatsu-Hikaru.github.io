@@ -1,0 +1,186 @@
+{
+  "checkedAt": "2026-10-12",
+  "assets": [
+    {
+      "file": "whynot-wengjiayi.jpg",
+      "title": "翁家翌：OpenAI，GPT，强化学习，Infra，后训练，天授，tuixue，开源，CMU，清华｜WhynotTV Podcast #4",
+      "image": "https://i2.hdslb.com/bfs/archive/54724e4aece32efd308fa76c613597182e54e32e.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1darmBcE4A/",
+      "official": "https://tairanhe.com/podcast_cn",
+      "owner": {
+        "mid": 14145636,
+        "name": "WhynotTV",
+        "face": "https://i0.hdslb.com/bfs/face/6918bc3b2c8d65a709a1402f6248061c1a8793a8.jpg"
+      },
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "whynot-robotics-phd.jpg",
+      "title": "机器人博士前两年总结——任尔东西南北风",
+      "image": "https://i1.hdslb.com/bfs/archive/1442de21543ffa1c083909f5593d0e71f8e5bd5a.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1neM1zKEmE/",
+      "official": "https://tairanhe.com/",
+      "owner": {
+        "mid": 14145636,
+        "name": "WhynotTV",
+        "face": "https://i0.hdslb.com/bfs/face/6918bc3b2c8d65a709a1402f6248061c1a8793a8.jpg"
+      },
+      "dimensions": [
+        1152,
+        648
+      ]
+    },
+    {
+      "file": "xiaojun-xiesaining.jpg",
+      "title": "对谢赛宁的7小时马拉松访谈：世界模型、逃出硅谷、反OpenAI、AMI Labs、两次拒绝Ilya、杨立昆、李飞飞和42",
+      "image": "https://i0.hdslb.com/bfs/archive/1ec2e3dec49479850180fa95053caaa22d645273.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1tew5zVEDf/",
+      "official": "https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837",
+      "owner": {
+        "mid": 280780745,
+        "name": "张小珺商业访谈录",
+        "face": "https://i2.hdslb.com/bfs/face/d8d2df2874ca62e2f53dc690eff38549ce6cb8e1.jpg"
+      },
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "whynot-logo.jpg",
+      "title": "WhynotTV 官方账号头像",
+      "image": "https://i0.hdslb.com/bfs/face/6918bc3b2c8d65a709a1402f6248061c1a8793a8.jpg",
+      "official": "https://space.bilibili.com/14145636",
+      "dimensions": [
+        1800,
+        1792
+      ],
+      "webFile": "whynot-logo-small.webp",
+      "webDimensions": [
+        160,
+        159
+      ]
+    },
+    {
+      "file": "xiaojun-logo.jpg",
+      "title": "张小珺商业访谈录 官方账号头像",
+      "image": "https://i2.hdslb.com/bfs/face/d8d2df2874ca62e2f53dc690eff38549ce6cb8e1.jpg",
+      "official": "https://space.bilibili.com/280780745",
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "webFile": "xiaojun-logo-small.webp",
+      "webDimensions": [
+        160,
+        160
+      ]
+    },
+    {
+      "file": "nvidia.svg",
+      "title": "NVIDIA Eye Mark",
+      "source": "https://www.nvidia.com/en-us/research/",
+      "sourceElement": "#nvidia-logo-eye-mark, original official SVG path",
+      "official": "https://www.nvidia.com/",
+      "research": "https://research.nvidia.com/publications",
+      "blog": "https://developer.nvidia.com/blog"
+    },
+    {
+      "file": "xai-current-mark.png",
+      "title": "Current x.ai website mark",
+      "image": "https://x.ai/favicon.ico",
+      "official": "https://x.ai/",
+      "news": "https://x.ai/news",
+      "note": "2026-10-12 official website and docs currently use SpaceXSI branding; source favicon is the current X mark, not the historical xAI wordmark."
+    },
+    {
+      "file": "jiqizhixin.webp",
+      "source": "https://www.jiqizhixin.com/",
+      "image": "https://www.jiqizhixin.com/favicon.ico",
+      "dimensions": [
+        160,
+        160
+      ],
+      "bytes": 7694
+    },
+    {
+      "file": "aiera.webp",
+      "source": "https://aiera.com.cn/",
+      "image": "https://aiera.com.cn/logo-mark.png",
+      "dimensions": [
+        160,
+        82
+      ],
+      "bytes": 6788
+    },
+    {
+      "file": "simon.webp",
+      "source": "https://simonwillison.net/",
+      "image": "https://github.com/simonw.png?size=160",
+      "dimensions": [
+        160,
+        160
+      ],
+      "bytes": 8160
+    },
+    {
+      "file": "karpathy.webp",
+      "source": "https://karpathy.ai/",
+      "image": "https://karpathy.ai/assets/me_new.jpg",
+      "dimensions": [
+        160,
+        160
+      ],
+      "bytes": 4980
+    },
+    {
+      "file": "funeralai.webp",
+      "source": "https://funeralai.substack.com/",
+      "image": "https://substackcdn.com/image/fetch/$s_!WnhY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1d2f2df3-2579-4e95-b8f0-2e8f3f8bb94b%2Fapple-touch-icon-180x180.png",
+      "dimensions": [
+        160,
+        160
+      ],
+      "bytes": 3570
+    },
+    {
+      "file": "bair.webp",
+      "source": "https://bair.berkeley.edu/blog/archive/",
+      "image": "https://bair.berkeley.edu/blog/assets/BAIR_Logo.png",
+      "dimensions": [
+        160,
+        85
+      ],
+      "bytes": 10910
+    },
+    {
+      "source": "https://zpotentials.substack.com/",
+      "image": "https://substackcdn.com/image/fetch/$s_!ETly!,w_400,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf7a7bda-fb97-4b61-9bfa-3fc4b4b12ae9_3687x3687.png",
+      "file": "zpotentials.png",
+      "bytes": 9506
+    },
+    {
+      "file": "jiqizhixin-official.webp",
+      "image": "https://i2.hdslb.com/bfs/face/cb838ff9e6f57c1d3499621c91df8e013adad4fd.jpg",
+      "source": "https://space.bilibili.com/73414544",
+      "dimensions": [
+        160,
+        160
+      ],
+      "bytes": 2142
+    },
+    {
+      "file": "kexue.webp",
+      "image": "https://github.com/bojone.png?size=160",
+      "source": "https://github.com/bojone",
+      "dimensions": [
+        160,
+        160
+      ],
+      "bytes": 6990
+    }
+  ]
+}

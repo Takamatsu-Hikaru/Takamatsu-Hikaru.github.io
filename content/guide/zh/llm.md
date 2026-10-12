@@ -2,36 +2,26 @@
 
 你每天用的对话模型，背后有一连串问题：文字怎样变成模型能处理的东西，模型从什么数据中学习，为什么换一种训练方式会改变回答，又怎样知道它真的做得更好。
 
-想研究 LLM，可以从这些环节中的一个往下挖。
+大语言模型从文本中学习表示与生成规律，通过指令、示例和上下文处理问答、摘要、代码等任务。数据、模型结构与训练方法共同影响这些能力；到了使用阶段，上下文怎样组织、推理计算怎样分配，也成为研究的一部分。
 
-## 分词、表示与下一 token 预测
+## 分词、表示与模型结构
 
-用 [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1)认识模型、tokenizer 和数据。拿同一句话看分词结果，再看模型输入输出。碰到 embedding、矩阵运算、梯度，回[基础页](basics.md)补对应部分。
+文本经过 tokenizer 转成 token 序列，再映射成向量。[Transformer](https://arxiv.org/abs/1706.03762) 用 Attention 组织不同位置之间的信息，自回归语言模型根据已有上下文预测后续 token。[BERT](https://arxiv.org/abs/1810.04805) 则通过预测被遮住的内容学习双向表示。模型结构与训练目标的不同，带来了不同的语言表示和使用方式。
 
-接下来用 [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch) 的配套代码，沿着文本、token、attention、输出一路读。仓库提供书的配套材料；具体阅读范围从你想弄懂的模块开始。
+[Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) 介绍模型、tokenizer、数据处理与微调；[LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch) 配合代码实现分词、Attention 和语言模型训练。[CS224N](https://web.stanford.edu/class/cs224n/) 围绕自然语言处理讲解语言表示、神经网络与具体任务。相关数学与深度学习内容见[学习基础知识](basics.md)。
 
-## 预训练、后训练与推理效率
+## 预训练与 Scaling
 
-**想知道能力怎样学出来**，看数据、训练目标与优化。等你能解释一段训练代码后，可以进入 [Stanford CS336（2025）](https://cs336.stanford.edu/spring2025/)，先沿课程目录选数据、训练或系统中的一个专题。
+预训练把大量数据转化为模型参数。数据的来源、质量和配比，模型规模、训练目标与计算预算，都影响模型学到什么。Scaling 研究这些因素与模型表现之间的关系，也涉及怎样用较小规模的实验判断更大规模训练的选择。
 
-**想知道模型怎样变得更适合某项任务**，从微调、反馈与评测进入。先固定任务和评价方式，比较基础模型与调整后的模型；涉及奖励与策略更新时，接[强化学习](rl.md)。
+[Stanford CS336（2025）](https://cs336.stanford.edu/spring2025/) 围绕语言模型的实现与训练，覆盖分词、模型、数据处理、Scaling 和训练系统，配有实现作业。[pretrain 和 scaling 作为一种方法论和科学观](https://jiaxuanzou0714.github.io/blog/2026/pretrain-scaling-methodology-scientific-perspective/)讨论训练规模、数据、稳定性与问题选择；[Scaling 相关笔记](blogs.md#zou)还包括实验组织与外推。
 
-**想知道模型为什么又慢又贵**，看[效率与系统](systems.md)。模型规模、上下文、精度、缓存和硬件，会一起影响你能做怎样的实验。
+## 后训练与推理
 
-语言本身的表示、语义和任务也值得学。[CS224N](https://web.stanford.edu/class/cs224n/)能把这些问题和模型方法连起来。
+后训练利用示范、偏好或奖励调整模型的行为。指令微调学习如何响应要求，偏好学习与强化学习进一步利用回答之间的比较或任务反馈。[LoRA](https://arxiv.org/abs/2106.09685) 从参数更新方式入手，减少适配模型时需要训练的参数量；奖励、策略梯度与优化方法则与[强化学习](rl.md)相连。
 
-## Transformer、BERT 与 LoRA
+推理阶段的研究涉及上下文、搜索、验证和计算分配。同一个模型可以产生多个候选、调用外部工具，或根据反馈修改答案；相应的时间和计算成本也会变化。工具交互见 [Agent](agent.md)，图像与语言的结合见[多模态](multimodal.md)。
 
-[Transformer](https://arxiv.org/abs/1706.03762)看结构；[BERT](https://arxiv.org/abs/1810.04805)看预训练目标和表示；[LoRA](https://arxiv.org/abs/2106.09685)看如何减少适配模型需要训练的参数。可以配[李沐论文精读](https://github.com/mli/paper-reading)读其中一篇。
+## 计算与专题资料
 
-再读邹嘉轩的 [pretrain 和 scaling 作为一种方法论和科学观](https://jiaxuanzou0714.github.io/blog/2026/pretrain-scaling-methodology-scientific-perspective/)，看看一位研究者怎样把训练规模、数据、稳定性和问题选择联系起来。
-
-## 观察小模型的分词与输出
-
-选一个你能运行的小模型和一小组文本，记录分词、输入长度、输出与错误。改一种设置，再观察它影响了什么。模型和设备条件按所选教程确认。
-
-如果你关心模型怎样用工具做事情，接着看 [Agent](agent.md)；想让它读图，就去[多模态](multimodal.md)。
-
-## 位置编码、优化器与 Scaling
-
-位置编码和优化器可以查[苏剑林选文](blogs.md#su)；想理解 scaling 怎样做实验、怎样外推，可以看[邹嘉轩的文章](blogs.md#zou)。完整课程与项目在[LLM 资料目录](catalog-directions.md#topic-14)。
+长上下文、缓存、数值精度和硬件决定了训练与推理的开销，相关方法见[效率与系统](systems.md)。位置编码与优化器的推导见[科学空间选文](blogs.md#su)；经典工作的讲解见[李沐论文精读](https://github.com/mli/paper-reading)。更多课程与项目见[LLM 资料目录](catalog-directions.md#topic-14)。

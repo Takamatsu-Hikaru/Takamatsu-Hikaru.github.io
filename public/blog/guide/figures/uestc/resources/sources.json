@@ -1,0 +1,244 @@
+{
+  "obsidian": {
+    "source": "https://obsidian.md/",
+    "image": "https://obsidian.md/favicon.svg",
+    "file": "obsidian.svg",
+    "bytes": 1361
+  },
+  "jupyter": {
+    "source": "https://jupyter.org/",
+    "image": "https://jupyter.org/favicon.svg",
+    "file": "jupyter.svg",
+    "bytes": 2367
+  },
+  "overleaf": {
+    "source": "https://www.overleaf.com/",
+    "image": "https://cdn.overleaf.com/favicon.svg",
+    "file": "overleaf.svg",
+    "bytes": 908
+  },
+  "pytorch": {
+    "source": "https://pytorch.org/",
+    "image": "https://pytorch.org/wp-content/uploads/2024/10/cropped-favicon-180x180.webp",
+    "file": "pytorch.webp",
+    "bytes": 2008
+  },
+  "numpy": {
+    "source": "https://numpy.org/",
+    "image": "https://numpy.org/images/favicon.ico",
+    "file": "numpy.ico",
+    "bytes": 32038
+  },
+  "sklearn": {
+    "source": "https://scikit-learn.org/stable/",
+    "image": "https://scikit-learn.org/stable/_static/favicon.ico",
+    "file": "sklearn.ico",
+    "bytes": 2238
+  },
+  "git": {
+    "source": "https://git-scm.com/",
+    "image": "https://git-scm.com/favicon.ico",
+    "file": "git.ico",
+    "bytes": 6518
+  },
+  "xiaojun": {
+    "source": "https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962",
+    "image": "https://image.xyzcdn.net/Fnuyt9PQDQx0I0wlErG3ZHcW9Gpu.png",
+    "file": "xiaojun.webp",
+    "bytes": 95696
+  },
+  "zpotentials": {
+    "source": "https://zpotentials.substack.com/",
+    "image": "https://substackcdn.com/image/fetch/$s_!ETly!,w_400,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf7a7bda-fb97-4b61-9bfa-3fc4b4b12ae9_3687x3687.png",
+    "file": "zpotentials.png",
+    "bytes": 9506
+  },
+  "huggingface": {
+    "source": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+    "image": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "file": "huggingface.svg",
+    "bytes": 4634
+  },
+  "zotero": {
+    "source": "https://www.zotero.org/",
+    "image": "https://www.zotero.org/favicon.ico",
+    "file": "zotero.ico",
+    "bytes": 6518
+  },
+  "andrew-ml": {
+    "file": "andrew-ml.jpg",
+    "source": "Previously prepared course cover; see course-cover-sources.json"
+  },
+  "hongyi-attention": {
+    "file": "hongyi-attention.jpg",
+    "source": "Previously prepared course cover; see course-cover-sources.json"
+  },
+  "csdiy": {
+    "source": "https://csdiy.wiki/",
+    "image": "https://csdiy.wiki/images/favicon.ico",
+    "file": "csdiy.ico",
+    "bytes": 4286
+  },
+  "missing": {
+    "source": "https://missing.csail.mit.edu/",
+    "image": "https://missing.csail.mit.edu/static/assets/apple-touch-icon.png",
+    "file": "missing.png",
+    "bytes": 7119
+  },
+  "3b1b": {
+    "source": "https://www.3blue1brown.com/",
+    "image": "https://www.3blue1brown.com/icon.svg",
+    "file": "3b1b.svg",
+    "bytes": 8088
+  },
+  "crash": {
+    "source": "https://thecrashcourse.com/topic/computerscience/",
+    "image": "https://thecrashcourse.com/wp-content/uploads/2024/10/cropped-PatreonCCavatar-192x192.png",
+    "file": "crash.png",
+    "bytes": 2576
+  },
+  "seeing": {
+    "source": "https://seeing-theory.brown.edu/",
+    "image": "https://seeing-theory.brown.edu/img/favicon.png",
+    "file": "seeing.png",
+    "bytes": 249
+  },
+  "mml": {
+    "source": "https://mml-book.github.io/",
+    "image": "https://mml-book.github.io/static/images/mml-book-cover.jpg",
+    "file": "mml.jpg",
+    "bytes": 25724
+  },
+  "isl": {
+    "source": "https://www.statlearning.com/",
+    "image": "https://images.squarespace-cdn.com/content/v1/5ff2adbe3fe4fe33db902812/1610596583278-PSG8B1FE126K3XMGZZLU/favicon.ico?format=100w",
+    "file": "isl.png",
+    "bytes": 1649
+  },
+  "isl-cover": {
+    "source": "https://www.statlearning.com/",
+    "image": "https://images.squarespace-cdn.com/content/v1/5ff2adbe3fe4fe33db902812/8b373fbe-d1b4-4351-b803-0d3cd5bba1b0/ISLP_cover.png?format=300w",
+    "file": "isl-cover.png",
+    "bytes": 30214
+  },
+  "d2l": {
+    "source": "https://zh.d2l.ai/",
+    "image": "https://zh.d2l.ai/_static/favicon.png",
+    "file": "d2l.png",
+    "bytes": 4323
+  },
+  "stanford": {
+    "source": "https://karpathy.ai/",
+    "image": "https://karpathy.ai/assets/stanford_logo.png",
+    "file": "stanford.png",
+    "bytes": 46541
+  },
+  "jay": {
+    "source": "https://jalammar.github.io/",
+    "image": "https://avatars0.githubusercontent.com/u/1007956?s=460&v=4",
+    "file": "jay.jpg",
+    "bytes": 24660
+  },
+  "polo": {
+    "source": "https://poloclub.github.io/transformer-explainer/",
+    "image": "https://poloclub.github.io/transformer-explainer/favicon.png",
+    "file": "polo.png",
+    "bytes": 5056
+  },
+  "colah": {
+    "source": "https://colah.github.io/",
+    "image": "https://colah.github.io/favicon.ico",
+    "file": "colah.ico",
+    "bytes": 1406
+  },
+  "aminer": {
+    "source": "https://docs.aminer.cn/user-guide/platform-overview/",
+    "image": "https://docs.aminer.cn/img/favicon.ico",
+    "file": "aminer.ico",
+    "bytes": 1846
+  },
+  "openreview": {
+    "source": "https://openreview.net/",
+    "image": "https://openreview.net/favicon.ico",
+    "file": "openreview.ico",
+    "bytes": 137
+  },
+  "scholaread": {
+    "source": "https://www.scholaread.cn/help",
+    "image": "https://www.scholaread.cn/help/wp-content/uploads/2024/04/cropped-app_icon-192x192.png",
+    "file": "scholaread.png",
+    "bytes": 4113
+  },
+  "acl": {
+    "source": "https://aclanthology.org/",
+    "image": "https://aclanthology.org/aclicon.ico",
+    "file": "acl.ico",
+    "bytes": 4286
+  },
+  "pmlr": {
+    "source": "https://proceedings.mlr.press/",
+    "image": "https://proceedings.mlr.press/assets/images/favicon-pmlr.ico",
+    "file": "pmlr.ico",
+    "bytes": 15086
+  },
+  "markdown": {
+    "source": "https://www.markdownguide.org/",
+    "image": "https://www.markdownguide.org/assets/favicons/safari-pinned-tab.svg",
+    "file": "markdown.svg",
+    "bytes": 1029
+  },
+  "fsdl": {
+    "source": "https://fullstackdeeplearning.com/",
+    "image": "https://fullstackdeeplearning.com/images/favicon.png",
+    "file": "fsdl.png",
+    "bytes": 1317
+  },
+  "vscode": {
+    "source": "https://code.visualstudio.com/",
+    "image": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+    "file": "vscode.png",
+    "bytes": 13468
+  },
+  "scholar": {
+    "source": "https://scholar.google.com/",
+    "image": "https://scholar.google.com/favicon.ico",
+    "file": "scholar.ico",
+    "bytes": 3871
+  },
+  "rainbow": {
+    "source": "https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv",
+    "image": "https://mechatroner.gallerycdn.vsassets.io/extensions/mechatroner/rainbow-csv/3.24.1/1768618250211/Microsoft.VisualStudio.Services.Icons.Default",
+    "file": "rainbow.png",
+    "bytes": 2550
+  },
+  "latex": {
+    "source": "https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop",
+    "image": "https://James-Yu.gallerycdn.vsassets.io/extensions/james-yu/latex-workshop/10.19.0/1789634841326/Microsoft.VisualStudio.Services.Icons.Default",
+    "file": "latex.png",
+    "bytes": 9499
+  },
+  "spell": {
+    "source": "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker",
+    "image": "https://streetsidesoftware.gallerycdn.vsassets.io/extensions/streetsidesoftware/code-spell-checker/4.9.6/1791215870376/Microsoft.VisualStudio.Services.Icons.Default",
+    "file": "spell.png",
+    "bytes": 204037
+  },
+  "statquest": {
+    "source": "https://statquest.org/",
+    "image": "https://statquest.org/images/triple_bam.png",
+    "file": "statquest.png",
+    "bytes": 138951
+  },
+  "astradraw": {
+    "source": "https://github.com/AstraDraw/astradraw",
+    "image": "https://avatars.githubusercontent.com/u/251393098?s=60&v=4",
+    "file": "astradraw.png",
+    "bytes": 3491
+  },
+  "fastai-cover": {
+    "source": "https://www.fast.ai/",
+    "image": "https://www.fast.ai/images/dl22/lesson1.jpg",
+    "file": "fastai-cover.jpg",
+    "bytes": 37611
+  }
+}

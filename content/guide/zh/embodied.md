@@ -2,32 +2,28 @@
 
 让机器人把杯子放到架子上，需要看清杯子与架子的位置，选动作，控制身体，还要应对杯子滑了、角度变了、之前没见过的环境。你在视频里看到几秒钟的动作，背后连着数据、学习、控制和系统。
 
-## ACT 与 Diffusion Policy：动作从哪里来
+机器人操作、导航与运动控制，都需要把感知落实到身体与环境的互动。模型既要处理视觉和语言，也要面对动作的连续性、接触和动力学；换一种机器人或场景，数据与动作接口也会变化。
 
-先看 [ACT / ALOHA](https://tonyzhaozh.github.io/aloha/) 的项目视频和方法图。选一个双臂操作任务，沿着示范数据、相机输入、动作预测去理解它。再看 [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)，比较另一种动作建模方式。
+## 示范数据与动作模型
 
-第一次读到这里，能说清模型看到什么、输出什么、怎样判断任务完成，就可以带着问题继续。
+模仿学习利用人或已有策略的示范训练动作模型。[ACT / ALOHA](https://tonyzhaozh.github.io/aloha/)通过双臂遥操作采集示范，ACT 根据观察预测一段连续动作。[Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)则用扩散模型生成动作序列，将视觉信息与动作分布联系起来。
 
-## 模仿学习、VLA 与控制
+示范怎样覆盖任务，动作采用关节、末端位姿还是其他表示，模型怎样利用连续观察，都会影响操作效果。[LeRobot](https://github.com/huggingface/lerobot)提供机器人数据、模型与训练工具；[Open X-Embodiment](https://robotics-transformer-x.github.io/)汇集不同来源的机器人数据，研究跨任务与跨机器人的学习。
 
-**操作与模仿学习。** 从人给出的示范中学习动作。继续看数据怎样采集、动作怎样表示、训练与部署有什么差别。用 [LeRobot](https://github.com/huggingface/lerobot)看项目结构和数据入口。
+## 视觉、语言与动作
 
-**VLA 与泛化。** 语言、视觉和动作怎样连接？换指令、物体或环境后能否继续工作？配合[多模态](multimodal.md)看模型，用 [Open X-Embodiment](https://robotics-transformer-x.github.io/)看不同来源的机器人数据。
+VLA 将视觉观察、语言指令和动作接到同一个模型中。指令描述目标，视觉提供当前环境，动作预测则需要适配具体机器人。预训练模型中的知识怎样迁移到操作，换指令、物体和环境后怎样泛化，都是这类模型的研究问题。
 
-**强化学习与控制。** 如果动作需要通过反馈改进，就回[强化学习](rl.md)。想理解接触、几何与控制本身，可以查 [MIT Robotic Manipulation](https://manipulation.csail.mit.edu/)；动力学与控制还可进入 [Underactuated Robotics](https://underactuated.mit.edu/)。
+VLA 可以从示范中训练，也可以结合奖励反馈改进策略。模型连接方式与[多模态](multimodal.md)有关，策略优化与[强化学习](rl.md)有关；它们在同一个机器人系统中常常结合使用。
 
-## 从机器人数据到仿真实验
+## 仿真、控制与真实环境
 
-先在数据里找到一段真实任务，看看图像与动作怎样对应，再尝试所选项目的推理或仿真例子。[RoboTwin](https://robotwin-platform.github.io/)是继续了解仿真任务、数据和评价的入口。
+仿真提供可重复的场景与交互，用于数据生成、策略训练与评测。[RoboTwin](https://robotwin-platform.github.io/)包含机器人操作的仿真任务、数据和评价工具。真实操作中的摩擦、接触、延迟和传感器误差，也影响仿真策略向真机迁移。
 
-真实机器人、仿真和只读离线数据需要的条件不同。选中项目后先看设备、显存、系统与数据要求，再决定做到哪一层。
+[MIT Robotic Manipulation](https://manipulation.csail.mit.edu/)讨论机器人操作中的几何、接触、规划与控制；[Underactuated Robotics](https://underactuated.mit.edu/)围绕动力学与控制展开。操作之外，导航研究机器人在空间中的定位与移动，人形机器人还涉及平衡、步态和全身协同。
 
-## 具身路线与细分论文索引
+## 课程、论文与团队
 
-[Lumina 具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)用来查看更完整的版图。已有问题后，再查 [RL-VLA](https://github.com/Denghaoyuan123/Awesome-RL-VLA)、[人形机器人学习](https://github.com/YanjieZe/awesome-humanoid-robot-learning)或[高效 VLA](https://github.com/guanweifan/awesome-efficient-vla)的论文索引。
+[Lumina 具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)整理具身方向的任务、方法与资料；细分主题包括 [RL-VLA](https://github.com/Denghaoyuan123/Awesome-RL-VLA)、[人形机器人学习](https://github.com/YanjieZe/awesome-humanoid-robot-learning)和[高效 VLA](https://github.com/guanweifan/awesome-efficient-vla)。
 
-看一次成功演示之后，也问问失败集中在哪里、起始条件怎样设定。这个问题会把你带回[实验与评估](experiments.md)。
-
-## 具身社区、团队与 Scaling
-
-[Lumina、课程和项目](catalog-directions.md#topic-19)与[具身细分 paper list](catalog-directions.md#topic-20)都保留在目录里。想认识具体做这些事的人，去[课题组入口](labs.md)；数据和 scaling 方面也可读[邹嘉轩的观点](blogs.md#zou)。
+更多[课程与项目](catalog-directions.md#topic-19)、[细分论文索引](catalog-directions.md#topic-20)与[课题组](labs.md)各有整理。数据与 Scaling 的讨论见[相关研究笔记](blogs.md#zou)，实验比较与结果分析见[科研问答](research.md#q44)。

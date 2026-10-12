@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="620" viewBox="0 0 1200 620">
+<title>从一篇论文，看见相关的工作</title>
+<desc>从一篇论文，看见相关的工作</desc>
+<rect x="0" y="0" width="1200" height="620" rx="0" fill="white" stroke="none" stroke-width="0"/>
+<rect x="28" y="18" width="350" height="405" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="28" y="18" width="350" height="42" rx="4" fill="#edf3f8" stroke="none" stroke-width="1.4"/>
+<rect x="28" y="18" width="4" height="42" rx="0" fill="#376e91" stroke="none" stroke-width="1.4"/>
+<text x="45" y="46.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#376e91" text-anchor="start">论文之间的联系</text>
+<rect x="51" y="88" width="112" height="116" rx="4" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<rect x="63" y="102" width="5" height="19" rx="0" fill="#376e91" stroke="none" stroke-width="1.4"/>
+<text x="75" y="117.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#376e91" text-anchor="start">前作 A</text>
+<polyline points="64,136 137.1,136" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="64,146 122.48,146" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="64,156 132.8,156" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="64" y="162" width="86" height="25" rx="2" fill="#eff3f2" stroke="none" stroke-width="1.4"/>
+<polyline points="71,176 85,169 100,180 140,170" fill="none" stroke="#376e91" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="241" y="88" width="112" height="116" rx="4" fill="white" stroke="#82719b" stroke-width="1.6"/>
+<rect x="253" y="102" width="5" height="19" rx="0" fill="#82719b" stroke="none" stroke-width="1.4"/>
+<text x="265" y="117.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#82719b" text-anchor="start">前作 B</text>
+<polyline points="254,136 327.1,136" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="254,146 312.48,146" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="254,156 322.8,156" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="254" y="162" width="86" height="25" rx="2" fill="#eff3f2" stroke="none" stroke-width="1.4"/>
+<polyline points="261,176 275,169 290,180 330,170" fill="none" stroke="#82719b" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="146" y="258" width="112" height="130" rx="4" fill="white" stroke="#397259" stroke-width="1.6"/>
+<rect x="158" y="272" width="5" height="19" rx="0" fill="#397259" stroke="none" stroke-width="1.4"/>
+<text x="170" y="287.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#397259" text-anchor="start">相关论文</text>
+<polyline points="159,306 232.1,306" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="159,316 217.48000000000002,316" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="159,326 227.8,326" fill="none" stroke="#d5ddd8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="159" y="346" width="86" height="25" rx="2" fill="#eff3f2" stroke="none" stroke-width="1.4"/>
+<polyline points="166,360 180,353 195,364 235,354" fill="none" stroke="#397259" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="109,208 109,239 173,239 173,254" fill="none" stroke="#376e91" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M177.0,246.0 L173,254 L169.0,246.0" fill="none" stroke="#376e91" stroke-width="2"/>
+<polyline points="297,208 297,239 233,239 233,254" fill="none" stroke="#82719b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M237.0,246.0 L233,254 L229.0,246.0" fill="none" stroke="#82719b" stroke-width="2"/>
+<text x="202" y="230.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="middle">引用与延伸</text>
+<text x="51" y="411.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="start">参考文献 · 后续引用 · 作者主页</text>
+<polyline points="382,253 414,253" fill="none" stroke="#376e91" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M406.0,249.0 L414,253 L406.0,257.0" fill="none" stroke="#376e91" stroke-width="2"/>
+<rect x="424" y="18" width="748" height="405" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="424" y="18" width="748" height="42" rx="4" fill="#edf4ee" stroke="none" stroke-width="1.4"/>
+<rect x="424" y="18" width="4" height="42" rx="0" fill="#397259" stroke="none" stroke-width="1.4"/>
+<text x="441" y="46.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#397259" text-anchor="start">围绕同一个问题展开</text>
+<rect x="447" y="80" width="702" height="67" rx="4" fill="#f5f7f3" stroke="none" stroke-width="1.4"/>
+<ellipse cx="475.2" cy="106.2" rx="10.2" ry="10.2" fill="none" stroke="#397259" stroke-width="2"/>
+<polyline points="482.85,113.85 492.2,123.19999999999999" fill="none" stroke="#397259" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<text x="511" y="118.36" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#397259" text-anchor="start">研究什么？已有工作做到了哪里？</text>
+<text x="547" y="191.78" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#376e91" text-anchor="middle">方法与实现</text>
+<polyline points="668,177 668,378" fill="none" stroke="#d5ddd8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<text x="787" y="191.78" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#b07848" text-anchor="middle">实验与分析</text>
+<polyline points="908,177 908,378" fill="none" stroke="#d5ddd8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<text x="1027" y="191.78" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#82719b" text-anchor="middle">未解决的问题</text>
+<polyline points="487,234 531,224" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="487,234 531,254" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="487,234 531,284" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="487,274 531,224" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="487,274 531,254" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="487,274 531,284" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="531,224 575,240" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="531,224 575,270" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="531,254 575,240" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="531,254 575,270" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="531,284 575,240" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="531,284 575,270" fill="none" stroke="#376e91" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+<ellipse cx="487.0" cy="234.0" rx="6.0" ry="6.0" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<ellipse cx="487.0" cy="274.0" rx="6.0" ry="6.0" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<ellipse cx="531.0" cy="224.0" rx="6.0" ry="6.0" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<ellipse cx="531.0" cy="254.0" rx="6.0" ry="6.0" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<ellipse cx="531.0" cy="284.0" rx="6.0" ry="6.0" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<ellipse cx="575.0" cy="240.0" rx="6.0" ry="6.0" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<ellipse cx="575.0" cy="270.0" rx="6.0" ry="6.0" fill="white" stroke="#376e91" stroke-width="1.6"/>
+<rect x="551" y="299" width="33.6" height="26.25" rx="3" fill="white" stroke="#376e91" stroke-width="2"/>
+<polyline points="551,305.3 584.6,305.3" fill="none" stroke="#376e91" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="561.5,310.55 557.3,314.75 561.5,318.95" fill="none" stroke="#376e91" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="574.1,310.55 578.3,314.75 574.1,318.95" fill="none" stroke="#376e91" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="569.9,309.5 565.7,320.0" fill="none" stroke="#376e91" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" />
+<text x="547" y="367.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="middle">结构 · 公式 · 代码</text>
+<polyline points="725,222 725,310 866,310" fill="none" stroke="#64706a" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="736.28" y="283.6" width="14.100000000000001" height="26.4" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<rect x="765.89" y="261.6" width="14.100000000000001" height="48.400000000000006" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<rect x="795.5" y="273.04" width="14.100000000000001" height="36.96" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<rect x="826.52" y="244.0" width="14.100000000000001" height="66.0" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<polyline points="734.87,301.2 760.25,276.56 787.04,268.64 816.65,244.0 856.13,235.2" fill="none" stroke="#b07848" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" />
+<text x="866" y="328.04" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" font-weight="400" fill="#64706a" text-anchor="end">示意</text>
+<text x="788" y="367.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="middle">对照 · 消融 · 现象</text>
+<ellipse cx="1020.0" cy="261.0" rx="34.0" ry="34.0" fill="#f4f0f8" stroke="#82719b" stroke-width="1.8"/>
+<text x="1020" y="270.82" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="37" font-weight="700" fill="#82719b" text-anchor="middle">?</text>
+<ellipse cx="966.5" cy="322.5" rx="8.5" ry="8.5" fill="white" stroke="#82719b" stroke-width="1.5"/>
+<polyline points="1020,297 966,314" fill="none" stroke="#82719b" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<ellipse cx="1073.5" cy="320.5" rx="8.5" ry="8.5" fill="white" stroke="#82719b" stroke-width="1.5"/>
+<polyline points="1020,297 1073,312" fill="none" stroke="#82719b" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="1027" y="367.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="middle">新的解释 · 后续工作</text>
+<rect x="28" y="445" width="1144" height="146" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="28" y="445" width="1144" height="42" rx="4" fill="#edf6f4" stroke="none" stroke-width="1.4"/>
+<rect x="28" y="445" width="4" height="42" rx="0" fill="#398e8a" stroke="none" stroke-width="1.4"/>
+<text x="45" y="473.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#398e8a" text-anchor="start">阅读中留下的线索</text>
+<rect x="50" y="507" width="22.5" height="29.7" rx="2" fill="white" stroke="#398e8a" stroke-width="1.8"/>
+<polyline points="54.5,513.3 68.0,513.3" fill="none" stroke="#398e8a" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="54.5,517.8 68.0,517.8" fill="none" stroke="#398e8a" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="54.5,522.3 68.0,522.3" fill="none" stroke="#398e8a" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="54.5" y="528.6" width="5.4" height="4.5" rx="0" fill="#398e8a" stroke="none" stroke-width="1.4"/>
+<polyline points="62.6,532.2 66.2,527.7 68.9,530.4" fill="none" stroke="#398e8a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+<text x="95" y="519.92" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#23312d" text-anchor="start">原文与批注</text>
+<text x="95" y="556.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="start">图表、页码、出处</text>
+<polyline points="337,511.70000000000005 349.6,509 362.2,511.70000000000005 362.2,530.6 349.6,527.9 337,530.6 337,511.70000000000005" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="349.6,509 349.6,527.9" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="339.7,515.3 346.0,513.5" fill="none" stroke="#398e8a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="353.2,513.5 359.5,515.3" fill="none" stroke="#398e8a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="339.7,519.8 346.0,518.0" fill="none" stroke="#398e8a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="353.2,518.0 359.5,519.8" fill="none" stroke="#398e8a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="339.7,524.3 346.0,522.5" fill="none" stroke="#398e8a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="353.2,522.5 359.5,524.3" fill="none" stroke="#398e8a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+<text x="382" y="519.92" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#23312d" text-anchor="start">自己的理解</text>
+<text x="382" y="556.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="start">疑问、判断、联系</text>
+<rect x="624" y="508" width="28.8" height="22.5" rx="3" fill="white" stroke="#398e8a" stroke-width="2"/>
+<polyline points="624,513.4 652.8,513.4" fill="none" stroke="#398e8a" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="633.0,517.9 629.4,521.5 633.0,525.1" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="643.8,517.9 647.4,521.5 643.8,525.1" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="640.2,517.0 636.6,526.0" fill="none" stroke="#398e8a" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" />
+<text x="669" y="519.92" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#23312d" text-anchor="start">项目中的用途</text>
+<text x="669" y="556.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="start">方法、数据、实现</text>
+<ellipse cx="910.75" cy="515.5" rx="3.75" ry="3.75" fill="white" stroke="#398e8a" stroke-width="1.8"/>
+<polyline points="904.75,531.25 904.75,525.25 908.5,522.25 913.0,522.25 916.75,525.25 916.75,531.25" fill="none" stroke="#398e8a" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" />
+<ellipse cx="925.75" cy="508.75" rx="3.75" ry="3.75" fill="white" stroke="#398e8a" stroke-width="1.8"/>
+<polyline points="919.75,524.5 919.75,518.5 923.5,515.5 928.0,515.5 931.75,518.5 931.75,524.5" fill="none" stroke="#398e8a" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" />
+<ellipse cx="940.75" cy="515.5" rx="3.75" ry="3.75" fill="white" stroke="#398e8a" stroke-width="1.8"/>
+<polyline points="934.75,531.25 934.75,525.25 938.5,522.25 943.0,522.25 946.75,525.25 946.75,531.25" fill="none" stroke="#398e8a" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" />
+<text x="952" y="519.92" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#23312d" text-anchor="start">继续讨论</text>
+<text x="952" y="556.48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#64706a" text-anchor="start">同学、老师、合作者</text>
+</svg>

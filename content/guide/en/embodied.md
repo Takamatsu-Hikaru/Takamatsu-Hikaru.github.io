@@ -26,7 +26,7 @@ Real robots, simulation, and reading offline data have different requirements. C
 
 [Lumina's Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) provides a wider map. Once you have a question, consult paper lists on [RL-VLA](https://github.com/Denghaoyuan123/Awesome-RL-VLA), [humanoid robot learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning), or [efficient VLA](https://github.com/guanweifan/awesome-efficient-vla).
 
-After a successful demo, ask where failures concentrate and how initial conditions were set. That leads back to [experiments and evaluation](experiments.md).
+After a successful demo, ask where failures concentrate and how initial conditions were set. That leads back to [experiments and evaluation](research.md#q44).
 
 ## Embodied communities, teams and scaling
 

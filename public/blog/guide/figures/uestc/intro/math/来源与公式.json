@@ -1,0 +1,28 @@
+{
+  "references": [
+    {
+      "topic": "线性代数与 Attention",
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html"
+    },
+    {
+      "topic": "熵与交叉熵",
+      "url": "https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/information-theory.html"
+    },
+    {
+      "topic": "DDPM 前向过程",
+      "url": "https://hojonathanho.github.io/diffusion/"
+    },
+    {
+      "topic": "速度场与 ODE",
+      "url": "https://rectifiedflow.github.io/blog/2024/intro/"
+    }
+  ],
+  "illustrations": "原创数学示意，由给定函数和固定随机种子计算；不是模型实测输出。",
+  "formulas": {
+    "linear": "静态W=[[1,.6],[0,1]];动态旋转矩阵R(theta)",
+    "gradient": "L(theta)=theta^2, eta=.2, theta0=2.4",
+    "entropy": "H=-sum p log2 p; one-hot target class1 crossentropy=-log2 p1",
+    "diffusion": "beta=.12; x_t=sqrt(.88)x_(t-1)+sqrt(.12)epsilon_t",
+    "ode": "dx/dt=1-x;dy/dt=-.7y; exact trajectories x=1+(x0-1)exp(-t),y=y0 exp(-.7t)"
+  }
+}

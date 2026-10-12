@@ -10,9 +10,9 @@
 **[写给刚进大学的你](welcome.md)**  
 把这一年里经历过的迷茫重新讲给刚入学的人听。想做什么、怎么看自己，以及科研之外还有怎样的日常。
 
-关于科研怎么开始，我把一些具体回答放在[科研问答](research.md)里；读到某个问题时，也可以回来对照这段经历。
+关于科研怎么开始，我把一些具体回答放在[科研入门Q&A](research.md)里；读到某个问题时，也可以回来对照这段经历。
 
-**[搭建自己的科研工作流 — irene](irene-workflow.md)**
+**[论文阅读与笔记工作流](irene-workflow.md)**
 
 从 Zotero、Obsidian 的论文与笔记管理，到科研简报、阅读深度和 AI 追问。分享怎样筛选论文、检查证据，并沿自己的问题继续找资料，附原文 PDF、提示词和工具入口。
 
@@ -29,7 +29,7 @@
 
 ## “焚诀”也要看它解决什么
 
-[Writing AI Conference Papers](https://github.com/hzwer/WritingAIPaper)适合卡在文章结构与表达时翻，[Karpathy 的训练经验](https://karpathy.github.io/2019/04/25/recipe/)适合对着实验查问题。这些具体做法也放在[科研工作页](experiments.md)里，方便做事时找到。
+[Writing AI Conference Papers](https://github.com/hzwer/WritingAIPaper)适合卡在文章结构与表达时翻，[Karpathy 的训练经验](https://karpathy.github.io/2019/04/25/recipe/)适合对着实验查问题。这些具体做法也放在[找资料和读论文](reading.md)里，方便做事时找到。
 
 [Beware of Other-Optimizing](https://www.lesswrong.com/posts/6NvbSwuSAooQxxf7f/beware-of-other-optimizing)讨论为什么对一个人有效的建议，到了另一个人身上会失灵。读经验时，把背景和做法一起看，会更容易选出自己能用的部分。
 

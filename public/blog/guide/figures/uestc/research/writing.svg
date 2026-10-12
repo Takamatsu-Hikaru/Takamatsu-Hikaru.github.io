@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="620" viewBox="0 0 1200 620">
+<title>把研究讲清楚</title>
+<desc>把研究讲清楚</desc>
+<rect x="0" y="0" width="1200" height="620" rx="0" fill="white" stroke="none" stroke-width="0"/>
+<rect x="28" y="18" width="1144" height="77" rx="5" fill="#f0f4ef" stroke="none" stroke-width="1.4"/>
+<text x="48" y="59.22" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#397259" text-anchor="start">Abstract</text>
+<text x="315" y="62.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#23312d" text-anchor="start">研究什么</text>
+<text x="625" y="62.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#23312d" text-anchor="start">做了什么</text>
+<text x="949" y="62.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#23312d" text-anchor="start">发现了什么</text>
+<rect x="28" y="118" width="271" height="298" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="28" y="118" width="271" height="42" rx="4" fill="#edf4ee" stroke="none" stroke-width="1.4"/>
+<rect x="28" y="118" width="4" height="42" rx="0" fill="#397259" stroke="none" stroke-width="1.4"/>
+<text x="45" y="146.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#397259" text-anchor="start">Introduction</text>
+<text x="163" y="198.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#23312d" text-anchor="middle">背景与问题</text>
+<rect x="53" y="230" width="221" height="34" rx="3" fill="#edf4ee" stroke="none" stroke-width="1.4"/>
+<text x="163.5" y="253.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#397259" text-anchor="middle">背景与已有进展</text>
+<rect x="74" y="282" width="179" height="34" rx="3" fill="#edf4ee" stroke="none" stroke-width="1.4"/>
+<text x="163.5" y="305.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#397259" text-anchor="middle">仍然存在的问题</text>
+<rect x="94" y="334" width="139" height="34" rx="3" fill="#edf4ee" stroke="none" stroke-width="1.4"/>
+<text x="163.5" y="357.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#397259" text-anchor="middle">本文方案</text>
+<polyline points="163,264 163,282" fill="none" stroke="#397259" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="163,316 163,334" fill="none" stroke="#397259" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="319" y="118" width="271" height="298" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="319" y="118" width="271" height="42" rx="4" fill="#edf3f8" stroke="none" stroke-width="1.4"/>
+<rect x="319" y="118" width="4" height="42" rx="0" fill="#376e91" stroke="none" stroke-width="1.4"/>
+<text x="336" y="146.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#376e91" text-anchor="start">Setup</text>
+<text x="454" y="198.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#23312d" text-anchor="middle">对象与设定</text>
+<rect x="343" y="233" width="223" height="34" rx="3" fill="#edf3f8" stroke="none" stroke-width="1.4"/>
+<text x="454.5" y="256.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#376e91" text-anchor="middle">输入 x   →   输出 y</text>
+<text x="454" y="315.06" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#376e91" text-anchor="middle">任务 · 假设 · 符号</text>
+<polyline points="352,333 555,333" fill="none" stroke="#d5ddd8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<text x="454" y="369.34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#64706a" text-anchor="middle">明确后文讨论的对象</text>
+<rect x="610" y="118" width="271" height="298" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="610" y="118" width="271" height="42" rx="4" fill="#edf6f4" stroke="none" stroke-width="1.4"/>
+<rect x="610" y="118" width="4" height="42" rx="0" fill="#398e8a" stroke="none" stroke-width="1.4"/>
+<text x="627" y="146.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#398e8a" text-anchor="start">Method</text>
+<text x="745" y="198.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#23312d" text-anchor="middle">方法与实现</text>
+<rect x="630" y="237" width="65" height="53" rx="3" fill="white" stroke="#398e8a" stroke-width="1.4"/>
+<text x="662" y="269.34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" fill="#398e8a" text-anchor="middle">输入</text>
+<polyline points="698,263 710,263" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M702.0,259.0 L710,263 L702.0,267.0" fill="none" stroke="#398e8a" stroke-width="2"/>
+<rect x="713" y="237" width="65" height="53" rx="3" fill="white" stroke="#398e8a" stroke-width="1.4"/>
+<text x="745" y="269.34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" fill="#398e8a" text-anchor="middle">模块</text>
+<polyline points="781,263 793,263" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M785.0,259.0 L793,263 L785.0,267.0" fill="none" stroke="#398e8a" stroke-width="2"/>
+<rect x="796" y="237" width="65" height="53" rx="3" fill="white" stroke="#398e8a" stroke-width="1.4"/>
+<text x="828" y="269.34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" fill="#398e8a" text-anchor="middle">输出</text>
+<rect x="718" y="312" width="43.2" height="33.75" rx="3" fill="white" stroke="#398e8a" stroke-width="2"/>
+<polyline points="718,320.1 761.2,320.1" fill="none" stroke="#398e8a" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="731.5,326.85 726.1,332.25 731.5,337.65" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="747.7,326.85 753.1,332.25 747.7,337.65" fill="none" stroke="#398e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<polyline points="742.3,325.5 736.9,339.0" fill="none" stroke="#398e8a" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" />
+<text x="745" y="385.34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#64706a" text-anchor="middle">结构 · 计算 · 实现</text>
+<rect x="901" y="118" width="271" height="298" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="901" y="118" width="271" height="42" rx="4" fill="#faf2e8" stroke="none" stroke-width="1.4"/>
+<rect x="901" y="118" width="4" height="42" rx="0" fill="#b07848" stroke="none" stroke-width="1.4"/>
+<text x="918" y="146.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#b07848" text-anchor="start">Experiments</text>
+<text x="1036" y="198.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#23312d" text-anchor="middle">结果与分析</text>
+<polyline points="951,228 951,319 1121,319" fill="none" stroke="#64706a" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="964.6" y="291.7" width="17.0" height="27.3" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<rect x="1000.3" y="268.95" width="17.0" height="50.050000000000004" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<rect x="1036.0" y="280.78" width="17.0" height="38.22" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<rect x="1073.4" y="250.75" width="17.0" height="68.25" rx="0" fill="#dfe9e7" stroke="none" stroke-width="1.4"/>
+<polyline points="962.9,309.9 993.5,284.42 1025.8,276.23 1061.5,250.75 1109.1,241.64999999999998" fill="none" stroke="#b07848" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" />
+<text x="1121" y="337.04" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" font-weight="400" fill="#64706a" text-anchor="end">示意</text>
+<text x="1036" y="383.34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#64706a" text-anchor="middle">对照结果与进一步分析</text>
+<polyline points="302,140 315,140" fill="none" stroke="#64706a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M307.0,136.0 L315,140 L307.0,144.0" fill="none" stroke="#64706a" stroke-width="2"/>
+<polyline points="593,140 606,140" fill="none" stroke="#64706a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M598.0,136.0 L606,140 L598.0,144.0" fill="none" stroke="#64706a" stroke-width="2"/>
+<polyline points="884,140 897,140" fill="none" stroke="#64706a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M889.0,136.0 L897,140 L889.0,144.0" fill="none" stroke="#64706a" stroke-width="2"/>
+<rect x="28" y="440" width="562" height="151" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="28" y="440" width="562" height="42" rx="4" fill="#edf3f8" stroke="none" stroke-width="1.4"/>
+<rect x="28" y="440" width="4" height="42" rx="0" fill="#376e91" stroke="none" stroke-width="1.4"/>
+<text x="45" y="468.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#376e91" text-anchor="start">配图：把关系画出来</text>
+<rect x="54" y="506" width="31" height="24" rx="2" fill="#dfebf2" stroke="#376e91" stroke-width="1.4"/>
+<rect x="111" y="506" width="31" height="24" rx="2" fill="#dfebf2" stroke="#376e91" stroke-width="1.4"/>
+<rect x="83" y="551" width="31" height="24" rx="2" fill="#dfebf2" stroke="#376e91" stroke-width="1.4"/>
+<polyline points="85,518 111,518 99,551" fill="none" stroke="#376e91" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+<text x="170" y="518.78" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#23312d" text-anchor="start">模型结构 · 流程 · 方法对照</text>
+<text x="170" y="561.06" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#64706a" text-anchor="start">AstraDraw / SVG · 结果图</text>
+<rect x="610" y="440" width="562" height="151" rx="5" fill="white" stroke="#d5ddd8" stroke-width="1.2"/>
+<rect x="610" y="440" width="562" height="42" rx="4" fill="#f3f0f7" stroke="none" stroke-width="1.4"/>
+<rect x="610" y="440" width="4" height="42" rx="0" fill="#82719b" stroke="none" stroke-width="1.4"/>
+<text x="627" y="468.64" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#82719b" text-anchor="start">汇报：围绕听众与交流目的</text>
+<rect x="635" y="503" width="96" height="60" rx="3" fill="white" stroke="#82719b" stroke-width="1.4"/>
+<polyline points="683,563 683,579" fill="none" stroke="#82719b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+<text x="683" y="534.06" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#82719b" text-anchor="middle">问题</text>
+<text x="754" y="518.78" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#23312d" text-anchor="start">背景与例子 · 做法与发现</text>
+<text x="754" y="561.06" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#64706a" text-anchor="start">组会 · 报告 · 讨论</text>
+</svg>

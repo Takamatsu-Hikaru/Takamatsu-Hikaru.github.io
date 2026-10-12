@@ -1,0 +1,37 @@
+{
+  "source": "https://github.com/mli/paper-reading",
+  "covers": [
+    {
+      "title": "Transformer 论文精读",
+      "by": "跟李沐学 AI",
+      "file": "limu-transformer.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1pu411o7BE/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1437034536677404672"
+    },
+    {
+      "title": "ViT 论文精读",
+      "by": "跟李沐学 AI",
+      "file": "limu-vit.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV15P4y137jb/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1449195245754380288"
+    },
+    {
+      "title": "CLIP 论文精读",
+      "by": "跟李沐学 AI",
+      "file": "limu-clip.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1SL4y1s7LQ/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1475706654562299904"
+    },
+    {
+      "title": "如何读论文",
+      "by": "跟李沐学 AI · 论文精读系列",
+      "file": "limu-reading.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1H44y1t75x/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1428973951632969728"
+    }
+  ]
+}
