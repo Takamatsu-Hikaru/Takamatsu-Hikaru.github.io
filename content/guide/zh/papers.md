@@ -1,12 +1,12 @@
 # 论文选读
 
-入门一个方向、做调研、找 idea，都少不了读论文。这里整理了各个领域的一些经典与代表工作，可以挑感兴趣的读读看。读论文时遇到困难，可以参考[找资料和读论文](reading.md)。
+入门一个方向、做调研、找 idea，都少不了读论文。这里整理了各个领域的一些**经典与代表工作**，可以挑感兴趣的读读看。读论文时遇到困难，可以参考[找资料和读论文](reading.md)。
 
 <!-- paper-library -->
 
 ## 论文讲解
 
-[李沐论文精读](limu.md)有 ResNet、Transformer、BERT、GPT-3、CLIP 等论文的视频讲解，从研究背景、方法到实验，也会讨论论文的写作。
+[李沐论文精读](limu.md)有 ResNet、Transformer、BERT、GPT-3、CLIP 等论文的视频讲解，**从研究背景、方法到实验**，也会讨论论文的写作。
 
 <figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV1pu411o7BE/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-transformer.jpg" alt="李沐：Transformer 论文精读" loading="lazy" width="800" height="450"></a><figcaption><a href="https://www.bilibili.com/video/BV1pu411o7BE/">Transformer 论文精读</a><span class="caption-dot">·</span>跟李沐学 AI<span class="caption-dot">·</span><a href="https://www.zhihu.com/zvideo/1437034536677404672">知乎</a></figcaption></figure>
 

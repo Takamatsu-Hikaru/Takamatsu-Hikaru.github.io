@@ -1,6 +1,6 @@
 # AI科研入门指南
 
-各位同学，欢迎来到 UESTC AI 社的入门指南。如果你对 AI 和科研感兴趣，却还不知道从哪里开始入门；或者已经开始参与项目或规划找课题组，却不知道怎么联系老师，对接工作；或者已经加入了自己的课题组，但是仍然对想 idea、推进工作感到迷茫。我们希望这份指南能够帮助到你。
+各位同学，欢迎来到 UESTC AI 社的入门指南。如果你对 **AI 和科研感兴趣**，却还不知道从哪里开始入门；或者已经开始参与项目或规划找课题组，却不知道怎么联系老师，对接工作；或者已经加入了自己的课题组，但是仍然对**想 idea、推进工作**感到迷茫。我们希望这份指南能够帮助到你。
 
 <figure class="resource-figure guide-overview"><a href="../../../public/blog/guide/figures/uestc/home/guide-overview.png?v=2" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/home/guide-overview.webp?v=2" width="1600" height="904" alt="指南全览：开始学习、研究方向、科研实践、看看外面与资料索引；从初次接触、动手学习，到进入课题、形成判断和表达交流。" decoding="async" fetchpriority="high"></a></figure>
 
@@ -42,13 +42,13 @@
 
 ### OpenEnvision
 
-[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注世界模型、多模态、视觉与具身智能，也通过整理博客、访谈和课程，为社区分享研究知识。
+[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注**世界模型、多模态、视觉与具身智能**，也通过整理博客、访谈和课程，为社区分享研究知识。
 
 - [BlogrXiv：AI 研究博客与技术文章](https://openenvision.github.io/BlogrXiv/site/index.html)：汇集研究博客、实验室文章和技术笔记，涉及模型原理、工程经验与科研方法。
 - [ScholarTube：AI 访谈、播客与课程](https://openenvision.github.io/ScholarTube/)：收集研究者长访谈、视频播客、完整课程与学术报告，覆盖 Agent、世界模型、视觉、机器人及科研方法。
 ### Lumina
 
-[Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流，提供了[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)，也定期举办 Lumina Talks、具身观察和社区活动。
+[Lumina](https://lumina-embodied.ai/)关注**具身智能的研究、开源项目与社区交流**，提供了[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)，也定期举办 Lumina Talks、具身观察和社区活动。
 
 ### AgentHub
 
