@@ -19,3 +19,5 @@ The [Lumina Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide
 References retain author names and original links. Use “Edit this page” in the footer to propose corrections or update a link.
 
 [Guide home](home.md) · [Resource index](resources.md)
+
+Contributions are welcome on [GitHub](https://github.com/Takamatsu-Hikaru/AI-Research-Guide): open an issue or submit a PR with corrections and resources. If you find the guide useful, give it a star or share it with others.

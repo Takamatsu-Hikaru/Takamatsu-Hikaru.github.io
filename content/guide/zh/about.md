@@ -14,6 +14,6 @@
 
 课程、论文、项目与技术文章保留原始链接，改编材料注明来源。关于引用、署名或图片使用的问题，可以在[指南仓库](https://github.com/Takamatsu-Hikaru/AI-Research-Guide)提出。
 
-发现内容错误、过期链接，或有希望补充的资料，欢迎通过仓库的 Issues 或 Pull Request 参与修订。
-
 [指南首页](home.md) · [资料总索引](resources.md)
+
+欢迎到 [GitHub 仓库](https://github.com/Takamatsu-Hikaru/AI-Research-Guide)提 Issue、提交 PR，补充资料或修正内容。觉得有用，也欢迎 Star、分享给身边的同学。
