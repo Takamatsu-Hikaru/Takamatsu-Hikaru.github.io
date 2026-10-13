@@ -15,9 +15,9 @@
 <p>其中有些问题会让你特别好奇，有些工作能为眼下的研究提供方法、数据或新的理解。顺着这些线索继续读、继续尝试，你会逐渐形成自己的判断：<strong>什么值得研究，什么还没有讲清楚，下一步可以做什么</strong>。所谓 research taste、idea 和对领域的认知，也是在阅读、讨论和实验中慢慢长出来的。</p>
 <p>遇到一篇感兴趣的文章，也可以看看作者之前和之后的工作、主页、blog 和报告。沿着<strong>同一个问题</strong>读下去，有时能看见单篇论文里不容易察觉的思考过程。</p>
 <h2 id="sec-1">查找论文与相关工作</h2>
-<p><a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/">Google Scholar</a> 可以查论文的后续引用与相关工作；论文中的参考文献则能找到它所依赖的前人工作。作者主页、项目页和代码仓库常有报告、演示与后续更新。检索功能见 <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/intl/en/scholar/help.html">Scholar 官方说明</a>，<a target="_blank" rel="noopener noreferrer" href="https://docs.aminer.cn/user-guide/platform-overview/">AMiner</a> 也提供论文检索与阅读功能。</p>
 <a id="research-map"></a>
-<p>刚接触一个方向时，可能还不知道用什么词搜索。读过几篇综述和论文后，常见的术语、任务名称和方法就会逐渐熟悉，也更容易找到相关工作。更多方法见<a href="irene-workflow.html#search">定向文献检索</a>。</p>
+<p>刚接触一个 topic，可以让 AI 找相关综述和代表性论文，再沿着这些文章的 related work 继续往前找，把几条研究路线捋出来：<strong>大家在解决什么问题，方法之间有什么联系，后来的工作又改进了哪里。</strong> 看到感兴趣的分支，再结合原文继续读，也可以让它顺着这条线补充相关工作。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/">Google Scholar</a> 可以查论文的后续引用与相关工作；论文中的参考文献则能找到它所依赖的前人工作。作者主页、项目页和代码仓库常有报告、演示与后续更新。检索功能见 <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/intl/en/scholar/help.html">Scholar 官方说明</a>，<a target="_blank" rel="noopener noreferrer" href="https://docs.aminer.cn/user-guide/platform-overview/">AMiner</a> 也提供论文检索与阅读功能。 更多方法见<a href="irene-workflow.html#search">定向文献检索</a>。</p>
 <a id="reading-depth"></a>
 <h2 id="sec-2">读到什么程度</h2>
 <p><strong>阅读深度取决于这次想弄明白什么。</strong> 了解一项工作时，先关注问题、主要方法和关键结果；梳理一个方向时，要比较工作之间的联系；准备复现或改进，则需要细看架构、公式、数据和实验设置。</p>
@@ -26,7 +26,9 @@
 <p>从摘要、引言、关键图和结论开始，了解<strong>做了什么、为什么做、怎么做</strong>，再去实验里看结果怎样支持这些判断。方法细节和没弄懂的地方，可以回头再查。</p>
 <a id="claims-evidence"></a>
 <p>比如作者说一个模块带来了提升，就看看消融是否单独改变了这个模块；说能泛化到新场景，就找测试场景与训练数据的关系。比较几篇工作时，除了方法差别，还要看它们使用的<strong>任务、数据和计算资源是否相同</strong>。阅读中的疑问也可以拿来讨论，或<a href="ai.html#grill-me">让 AI 围绕你的理解追问</a>。</p>
-<h2 id="sec-4">复现时要看的细节</h2>
+<a id="paper-code"></a>
+<h2 id="sec-4">论文与代码</h2>
+<p>论文的代码刚打开时，文件很多，具体实现也可能看不懂。可以对照论文里的架构和设计，<strong>跟着数据在程序里走一遍，再看训练和推理分别怎样完成</strong>，代码就会清楚得多。这个过程中，AI 可以结合论文和仓库，带着你找到对应的实现，解释各部分怎样连接、为什么这样写。</p>
 <p>准备复现时，数据处理、训练配置和评测方式往往需要结合代码才能看清。有些实现细节没有写进正文，却会影响结果；<strong>附录、配置文件和 issue</strong> 经常能补上这部分信息。</p>
 <a id="paper-notes"></a>
 <h2 id="sec-5">论文笔记与文献整理</h2>
@@ -35,7 +37,7 @@
 <h2 id="sec-6">论文讲解与相关资料</h2>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/mli/paper-reading">李沐论文精读</a>逐段讲解研究背景、方法与实验，也讨论论文写作。Transformer、ViT、CLIP 等视频见<a href="papers.html#sec-1">论文选读</a>，更多课程与精读视频见<a href="limu.html">深度学习课程与论文精读</a>。</p>
 <p><a href="catalog-research.html">科研方法与常用工具</a> · <a href="research-conversations.html">科研经验与交流</a> · <a href="contact.html">联系老师、学长与合作</a></p>
-</article><aside id="toc" aria-label="本页内容"><strong>本页内容</strong><a href="#reading-overview">了解一个领域</a><a href="#sec-1">查找论文与相关工作</a><a href="#sec-2">读到什么程度</a><a href="#sec-3">论文里的问题、方法与实验</a><a href="#sec-4">复现时要看的细节</a><a href="#sec-5">论文笔记与文献整理</a><a href="#sec-6">论文讲解与相关资料</a></aside></div>
+</article><aside id="toc" aria-label="本页内容"><strong>本页内容</strong><a href="#reading-overview">了解一个领域</a><a href="#sec-1">查找论文与相关工作</a><a href="#sec-2">读到什么程度</a><a href="#sec-3">论文里的问题、方法与实验</a><a href="#sec-4">论文与代码</a><a href="#sec-5">论文笔记与文献整理</a><a href="#sec-6">论文讲解与相关资料</a></aside></div>
 <nav class="neighbors" aria-label="前后文章"><a href="ai4x.html"><small>上一篇 ←</small><span>AI 交叉学科：从其他学科的问题出发</span></a><a href="irene-workflow.html"><small>下一篇 →</small><span>论文阅读与笔记工作流</span></a></nav>
 </main>
 <footer class="app-footer"><span>UESTC AI · AI 科研入门指南</span><span><a href="https://github.com/Takamatsu-Hikaru/AI-Research-Guide/edit/main/content/guide/zh/reading.md" target="_blank" rel="noopener">编辑本页</a><a href="https://github.com/Takamatsu-Hikaru/AI-Research-Guide" target="_blank" rel="noopener">GitHub</a></span></footer>

@@ -14,11 +14,11 @@
 
 ## 查找论文与相关工作
 
-[Google Scholar](https://scholar.google.com/) 可以查论文的后续引用与相关工作；论文中的参考文献则能找到它所依赖的前人工作。作者主页、项目页和代码仓库常有报告、演示与后续更新。检索功能见 [Scholar 官方说明](https://scholar.google.com/intl/en/scholar/help.html)，[AMiner](https://docs.aminer.cn/user-guide/platform-overview/) 也提供论文检索与阅读功能。
-
 <a id="research-map"></a>
 
-刚接触一个方向时，可能还不知道用什么词搜索。读过几篇综述和论文后，常见的术语、任务名称和方法就会逐渐熟悉，也更容易找到相关工作。更多方法见[定向文献检索](irene-workflow.md#search)。
+刚接触一个 topic，可以让 AI 找相关综述和代表性论文，再沿着这些文章的 related work 继续往前找，把几条研究路线捋出来：**大家在解决什么问题，方法之间有什么联系，后来的工作又改进了哪里。** 看到感兴趣的分支，再结合原文继续读，也可以让它顺着这条线补充相关工作。
+
+[Google Scholar](https://scholar.google.com/) 可以查论文的后续引用与相关工作；论文中的参考文献则能找到它所依赖的前人工作。作者主页、项目页和代码仓库常有报告、演示与后续更新。检索功能见 [Scholar 官方说明](https://scholar.google.com/intl/en/scholar/help.html)，[AMiner](https://docs.aminer.cn/user-guide/platform-overview/) 也提供论文检索与阅读功能。 更多方法见[定向文献检索](irene-workflow.md#search)。
 
 <a id="reading-depth"></a>
 
@@ -38,7 +38,11 @@
 
 比如作者说一个模块带来了提升，就看看消融是否单独改变了这个模块；说能泛化到新场景，就找测试场景与训练数据的关系。比较几篇工作时，除了方法差别，还要看它们使用的**任务、数据和计算资源是否相同**。阅读中的疑问也可以拿来讨论，或[让 AI 围绕你的理解追问](ai.md#grill-me)。
 
-## 复现时要看的细节
+<a id="paper-code"></a>
+
+## 论文与代码
+
+论文的代码刚打开时，文件很多，具体实现也可能看不懂。可以对照论文里的架构和设计，**跟着数据在程序里走一遍，再看训练和推理分别怎样完成**，代码就会清楚得多。这个过程中，AI 可以结合论文和仓库，带着你找到对应的实现，解释各部分怎样连接、为什么这样写。
 
 准备复现时，数据处理、训练配置和评测方式往往需要结合代码才能看清。有些实现细节没有写进正文，却会影响结果；**附录、配置文件和 issue** 经常能补上这部分信息。
 

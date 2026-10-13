@@ -6,7 +6,7 @@
 
 ## 编程与实验
 
-TRAE、WorkBuddy、Claude Code、ZCode 和 Codex 都可以参与项目开发。复现论文时，可以结合原文和代码，让它梳理实现、配置环境、修改脚本和排查报错；有了想尝试的改动，也可以在现有项目上继续实现。
+TRAE、WorkBuddy、Claude Code、ZCode 和 Codex 都可以参与项目开发。复现论文时，可以结合原文和代码，让它[梳理实现](reading.md#paper-code)、配置环境、修改脚本和排查报错；有了想尝试的改动，也可以在现有项目上继续实现。
 
 <div class="logo-strip">
 <a class="logo-entry" href="https://www.trae.cn/"><img src="../../../public/blog/guide/figures/uestc/intro/trae-logo.png" alt=""><span>TRAE</span></a>
