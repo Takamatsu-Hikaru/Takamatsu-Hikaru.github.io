@@ -167,7 +167,7 @@ An example sequence starts with Grill Me to clarify questions and Plan to organi
 
 When describing a task, specify the inputs, intended result, format, length or time, material to preserve, and citation needs. The first run can simply collect one paper, import a note, and ask AI to organize it. Repeated steps can then become reusable workflows.
 
-[Finding and reading papers](reading.md) · [Working with AI](ai.md) · [Lookout](lookout.md)
+[Finding and reading papers](reading.md) · [AI tools](ai.md) · [Lookout](lookout.md)
 
 
 ## Source

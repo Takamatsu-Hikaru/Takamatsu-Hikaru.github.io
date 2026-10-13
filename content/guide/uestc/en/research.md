@@ -208,9 +208,9 @@ For pretraining hyperparameters, post-training data mixtures, RL scaling, or DDP
 
 <a id="q27"></a>
 
-### 27. How can courses, textbooks, and projects be combined?
+### 27. How can I combine courses, books, and projects without putting off getting started?
 
-Record concepts needed by the project, study the relevant chapters, then **check understanding against code or experiments**. For a batch-size change, inspect tensor shapes, memory, and optimizer updates. Expand to a full course when broader foundations are needed.
+**You do not need to read every paper in a field before opening the code.** When you find a project that interests you and that you have the resources to run, reading and running it can go together: try the authors' examples, look at the model's output, use the implementation to understand the paper, and try changing something. Concepts whose purpose once seemed unclear become concrete questions, giving you a reason to return to a course or textbook.
 
 <a id="q28"></a>
 
@@ -348,9 +348,9 @@ An early stage may cover related work, a baseline run, evaluation checks, and on
 
 ### 42. Why run baselines and reproduce work? What should I check after the code runs?
 
-**A baseline provides the comparison reference.** Reproduction also checks data, metrics, and implementation details.
+A baseline gives you a reference for understanding the effect of a change. [Reading the code alongside the paper](reading.md#paper-code) also makes the data, metrics, and implementation details more concrete.
 
-Compare the paper's settings with the actual configuration. Check splits, evaluation definitions, randomness, and leakage, and inspect example outputs for errors hidden by aggregate scores.
+After a run, compare the setup and results with the paper. Check data splits, evaluation, randomness, and possible leakage. Look at actual outputs too: some errors will not show up in an aggregate score.
 
 <a id="q43"></a>
 
@@ -430,7 +430,7 @@ Talk to the people involved first; a shared supervisor can help if necessary. Ke
 - **Questions:** find related work, alternative explanations, and testable hypotheses.
 - **Writing:** revise structure and sentences, checking evidence for each claim.
 
-See [working with AI](ai.md) for examples.
+See [AI tools](ai.md) for examples.
 
 <a id="q52"></a>
 

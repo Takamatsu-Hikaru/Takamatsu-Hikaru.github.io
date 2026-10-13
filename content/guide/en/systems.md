@@ -18,7 +18,7 @@ Measure different input lengths or batch sizes, then consult the relevant [PyTor
 
 [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) introduces distributed computation and hardware constraints. With a concrete bottleneck, follow communication, parallelism, memory, and compute.
 
-This also tests your use of AI. It can write benchmark scripts, but you should explain what the test measures and whom the optimization affects. See [working with AI](ai.md).
+This also tests your use of AI. It can write benchmark scripts, but you should explain what the test measures and whom the optimization affects. See [AI tools](ai.md).
 
 ## System case studies, courses and research teams
 

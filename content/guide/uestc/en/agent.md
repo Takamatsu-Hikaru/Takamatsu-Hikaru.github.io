@@ -91,7 +91,7 @@ Real agents combine tools, memory, planning, and feedback. Coding assistants, pe
 <article class="agent-project"><h4><a href="https://www.antgroup.com/en/news-media/press-releases/1765779300000">蚂蚁阿福 / Ant A-Fu ↗</a></h4><p>Ant A-Fu brings together health questions, report interpretation, health records, and access to healthcare services. The application connects longitudinal personal information, specialist knowledge, and services, making information organization and task workflows concrete in a specific domain.</p></article>
 </div>
 
-[Working with AI](ai.md) · [Paper reading and note workflows](irene-workflow.md)
+[AI tools](ai.md) · [Paper reading and note workflows](irene-workflow.md)
 
 ## Evaluate an agent on retrieval tasks
 
@@ -103,7 +103,7 @@ For coding agents, see [SWE-bench](https://www.swebench.com/); AgentBench above 
 
 [Lilian Weng's LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) introduces an early component-based view. The [LLM Agent Paper List](https://github.com/WooooDyy/LLM-Agent-Paper-List) helps once you have a question to follow.
 
-For using agents in your own research, see [working with AI](ai.md). For studying why they fail, see [experiments and evaluation](research.md#q43).
+For using agents in your own research, see [AI tools](ai.md). For studying why they fail, see [experiments and evaluation](research.md#q43).
 
 ## Evaluation analysis and multi-agent organization
 

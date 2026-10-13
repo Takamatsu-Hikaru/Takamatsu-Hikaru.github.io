@@ -44,7 +44,7 @@ Look up unfamiliar terms, browse research topics, and follow related concepts.
 
 [Finding and reading papers](reading.md) · [Writing, figures, and talks](writing.md)
 
-[Contact and collaboration](contact.md) · [Working with AI](ai.md)
+[Contact and collaboration](contact.md) · [AI tools](ai.md)
 
 How do you read your first paper, interpret experiment results, or write your first message to a professor? If you are stuck at one of these steps, open the relevant article for examples and approaches you can try.
 

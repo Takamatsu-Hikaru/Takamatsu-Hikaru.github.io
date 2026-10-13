@@ -18,7 +18,7 @@
 
 刚接触一个 topic，可以让 AI 找相关综述和代表性论文，再沿着这些文章的 related work 继续往前找，把几条研究路线捋出来：**大家在解决什么问题，方法之间有什么联系，后来的工作又改进了哪里。** 看到感兴趣的分支，再结合原文继续读，也可以让它顺着这条线补充相关工作。
 
-[Google Scholar](https://scholar.google.com/) 可以查论文的后续引用与相关工作；论文中的参考文献则能找到它所依赖的前人工作。作者主页、项目页和代码仓库常有报告、演示与后续更新。检索功能见 [Scholar 官方说明](https://scholar.google.com/intl/en/scholar/help.html)，[AMiner](https://docs.aminer.cn/user-guide/platform-overview/) 也提供论文检索与阅读功能。 更多方法见[定向文献检索](irene-workflow.md#search)。
+[Google Scholar](https://scholar.google.com/) 可以查论文的后续引用与相关工作；论文中的参考文献则能找到它所依赖的前人工作。作者主页、项目页和代码仓库常有报告、演示与后续更新。检索功能见 [Scholar 官方说明](https://scholar.google.com/intl/en/scholar/help.html)，[AMiner](https://docs.aminer.cn/user-guide/platform-overview/) 也提供论文检索与阅读功能。更多方法见[定向文献检索](irene-workflow.md#search)。
 
 <a id="reading-depth"></a>
 

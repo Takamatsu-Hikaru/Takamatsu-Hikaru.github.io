@@ -100,4 +100,4 @@ The author collects online cases of AI personas and users reinforcing mistaken b
 
 A public-university teacher in the US records students' use and views of AI, discussing context, employment, changing capabilities, and learning. Students mainly come from the author's nontechnical courses. Compare your habits: which tasks does your everyday tool actually help with?
 
-For practical learning and checks, continue to [working with AI](ai.md).
+For practical learning and checks, continue to [AI tools](ai.md).
