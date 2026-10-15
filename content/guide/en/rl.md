@@ -1,4 +1,4 @@
-# Reinforcement learning: actions have consequences
+# Reinforcement learning
 
 Some choices change what you can see and do next. A small reward now may cost a later opportunity in a game; a robot action affects whether the task can finish. RL studies learning to act from interaction feedback.
 

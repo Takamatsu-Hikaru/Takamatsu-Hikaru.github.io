@@ -1,4 +1,4 @@
-# Agents: getting models to do things
+# Agents
 
 Asking a model to explain an error is different from asking it to open a project, locate files, change code, and run tests. The latter requires observing the environment, choosing the next action, and judging whether the job is done. Many agent research questions live in that process.
 

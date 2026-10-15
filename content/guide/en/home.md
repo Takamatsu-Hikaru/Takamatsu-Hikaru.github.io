@@ -30,13 +30,13 @@ From Dartmouth to language models, generation, robotics, and scientific discover
 
 ## Getting started with AI
 
-**[Your first AI project: where to begin?](start.md)**  
+**[Your first AI project](start.md)**  
 Train a model to recognize handwritten digits, or detect people and cars in your own photos. Start with MNIST or YOLO and work through running, training, and modifying the code. There are also beginner projects for agents and robotics.
 
 **[What do different AI research areas study?](directions.md)**  
 Language models, agents, vision, multimodal learning, generation, RL, world models, embodied AI, and systems. Each starts with a question, then connects papers, explanations, and projects.
 
-**[Which foundations do you need, and how much?](basics.md)**  
+**[Foundations](basics.md)**  
 Python, mathematics, ML/DL, computing, and architectures. Learn the concept blocking you, then return to see how it works in your project.
 
 **[AI terminology and conferences · 中文](../wiki/index.html)**<br>

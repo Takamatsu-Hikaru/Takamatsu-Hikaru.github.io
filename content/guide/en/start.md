@@ -1,4 +1,4 @@
-# Your first AI project: where to begin?
+# Your first AI project
 
 If you have not chosen a field yet, try a project with a result you can see: recognizing handwritten digits or detecting people and cars in your own photos. Data, code, and tutorials are available, so you can start by running an example and learn the concepts as you need them.
 

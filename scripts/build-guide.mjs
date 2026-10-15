@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGuide, validateGuide, buildSearchData, searchDataJs, filename } from './guide-model.mjs';
-import { pageShell, redirectPage } from './guide-shell-uestc.mjs';
+import { pageShell, redirectPage } from './guide-shell-personal.mjs';
 import { assertAssetsResolve } from './guide-verify.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -18,7 +18,7 @@ for(const lang of ['zh','en']){
  const expected=new Set([...all[lang].map(p=>filename(p.id)),...Object.keys(redirects).map(id=>id+'.html')]);
  for(const file of fs.readdirSync(dir))if(file.endsWith('.html')&&!expected.has(file))fs.unlinkSync(path.join(dir,file));
  for(const [index,p] of all[lang].entries())
-  fs.writeFileSync(path.join(dir,filename(p.id)),pageShell({p,pages:all[lang],index,lang,assets:'../',skin:'../guide-uestc.css?v=20261012g'}));
+  fs.writeFileSync(path.join(dir,filename(p.id)),pageShell({p,pages:all[lang],index,lang,assets:'../',skin:'../guide-personal.css?v=20261015'}));
  for(const [id,target] of Object.entries(redirects))fs.writeFileSync(path.join(dir,id+'.html'),`<!doctype html><html lang="${lang}"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${target}"><title>AI Research Guide</title><a href="${target}">${lang==='zh'?'继续阅读':'Continue reading'}</a></html>`);
 }
 fs.writeFileSync(path.join(out,'search-data.js'),searchDataJs(buildSearchData(all)));

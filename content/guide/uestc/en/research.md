@@ -1,4 +1,4 @@
-# Getting started in research: 60 questions
+# Research Q&A
 
 Want to try research but unsure how to begin? You might be exploring a field, opening a paper someone asked you to read, or trying to explain an unexpected experiment result. We have gathered questions that come up at each of these stages.
 

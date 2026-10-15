@@ -1,4 +1,4 @@
-# Multimodal models: connecting images and language
+# Multimodal AI: images, language, and sound
 
 Give a model an image and ask what the person on the left is holding. It must connect visual information to the question. Captioning, image–text retrieval, and video understanding involve related connections.
 

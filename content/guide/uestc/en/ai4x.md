@@ -43,7 +43,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>SMILES</dt><dd>A string representation of molecular structure.</dd></div>
 <div><dt>DFT</dt><dd>Density functional theory: a family of methods for calculating electronic structure, energy, and other properties.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Use a solubility dataset from DeepChem to compare molecular fingerprints with traditional regression against a graph network. Try both random splits and molecular scaffold splits, and examine how the error changes on new scaffolds.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="physics" data-group="Natural sciences and medicine" data-short="Physical simulation and weather">
@@ -72,7 +71,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>PDE</dt><dd>A partial differential equation describes how a quantity changes with variables such as space and time.</dd></div>
 <div><dt>Neural operator</dt><dd>A model that learns a mapping from an input function to an output function, such as an initial field to a future flow field.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Start with a one-dimensional diffusion or Burgers equation. Use numerical solutions as a reference, compare model predictions under different initial conditions, and plot how the error changes over time.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="protein" data-group="Natural sciences and medicine" data-short="Proteins and enzymes">
@@ -110,7 +108,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>MSA</dt><dd>Multiple sequence alignment aligns related protein sequences to reveal evolutionary conservation and variation.</dd></div>
 <div><dt>Inverse folding</dt><dd>Finding an amino acid sequence that can adopt a given protein backbone structure.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Choose a protein dataset with measured properties, and compare simple sequence features with frozen pretrained representations. Split the data by homology to test predictions on new families. For structure tasks, start by examining one AlphaFold prediction and its confidence plots.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="genome" data-group="Natural sciences and medicine" data-short="Genomics and regulation">
@@ -136,7 +133,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Noncoding region</dt><dd>A region of DNA that does not directly encode a protein; some of these regions help regulate genes.</dd></div>
 <div><dt>Splicing</dt><dd>The RNA processing step that joins exons and removes introns. Different splicing patterns can produce different transcripts.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Follow an official example to compare predicted tracks before and after a variant. Record the position, tissue, and output signal, explain which region changes, and look for corresponding experimental measurements.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="cell" data-group="Natural sciences and medicine" data-short="Single cells and virtual cells">
@@ -171,7 +167,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Batch effect</dt><dd>Systematic variation in data caused by differences in experimental timing, equipment, or procedures.</dd></div>
 <div><dt>Perturbation prediction</dt><dd>Predicting a cell response from interventions such as gene editing or drugs, together with the cellular context.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Process a public single-cell dataset with Scanpy: first run quality control, PCA, and clustering, then compare pretrained representations. Color the results by cell type and by experimental batch to see what drives the groups.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="eeg" data-group="Natural sciences and medicine" data-short="EEG and neural decoding">
@@ -203,7 +198,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Participant</dt><dd>A person who takes part in an experiment and provides neural signals.</dd></div>
 <div><dt>Artifact</dt><dd>An unwanted signal introduced by sources such as eye movements, muscle activity, or equipment.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Use MNE to inspect a public EEG recording. Plot the raw waveforms and power spectrum, then try event classification. Separate participants between training and testing, and compare traditional features with pretrained representations.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="image" data-group="Natural sciences and medicine" data-short="Medical imaging">
@@ -235,7 +229,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Voxel</dt><dd>A small volume element in a three-dimensional image, corresponding to a pixel in a two-dimensional image.</dd></div>
 <div><dt>Dice / HD95</dt><dd>The former measures region overlap; the latter describes distances between contours. They capture different kinds of errors.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Start with a segmentation example from MONAI and split the data by patient. Display the original image, annotation, and prediction side by side. Compare region overlap and boundary distance, and identify three typical error types.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="math" data-group="Mathematics, finance, and data" data-short="Mathematics and algorithm discovery">
@@ -265,7 +258,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Formal proof</dt><dd>A proof written with precise definitions and inference rules and checked by a proof assistant.</dd></div>
 <div><dt>Evaluator</dt><dd>A program that executes a candidate and returns its correctness or objective score.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Start by completing a few basic proofs in Lean. See which conditions you need to add between a step that looks correct and a proof the system accepts. Alternatively, write an evaluator for a bin-packing heuristic, let a model propose changes, and compare them on held-out instances.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="finance" data-group="Mathematics, finance, and data" data-short="Finance and quantitative research">
@@ -295,7 +287,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Backtesting</dt><dd>Moving through historical time to simulate the information available and the outcomes of decisions at each point.</dd></div>
 <div><dt>Look-ahead bias</dt><dd>Using information in a prediction or decision that would not yet have been available at that time.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Read a Qlib prediction and backtesting example, identifying the features, labels, training period, and test period. Compare a simple and a complex model using the same time split, and inspect results before and after transaction costs.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="graphs" data-group="Mathematics, finance, and data" data-short="Graph learning and time series">
@@ -322,7 +313,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Message passing</dt><dd>Nodes aggregate information from neighbors and edges, updating their representations layer by layer.</dd></div>
 <div><dt>Rolling forecasting</dt><dd>Repeatedly predicting a subsequent interval using only the data available as time moves forward.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>For a time series, compare the last observed value, a seasonal baseline, and a learned model using rolling forecasts. For a graph task, first sketch what nodes and edges represent, then decide how to split training and test data.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="automl" data-group="Automating the research process" data-short="AutoML">
@@ -350,7 +340,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Hyperparameter</dt><dd>A configuration set before training, such as learning rate, regularization strength, or number of layers.</dd></div>
 <div><dt>Pruning</dt><dd>Using intermediate results to stop less promising training runs and save the budget for other trials.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Give an existing classifier a budget of 20 training runs and compare random search with Optuna. Plot cumulative elapsed time against the best validation score so far. Finally, evaluate the selected configuration only on the held-out test set.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="research" data-group="Automating the research process" data-short="Automated research">
@@ -378,7 +367,6 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Experiment budget</dt><dd>The permitted resources, such as training time, computing power, or number of calls.</dd></div>
 <div><dt>Agentic tree search</dt><dd>Organizing experimental plans and subsequent changes as a tree, then using existing results to guide further exploration.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Start with an existing small experiment. Fix the data, evaluation, and run budget, then let an agent propose and execute three modifications. Keep each change together with its logs and results, and explain which direction to choose next and why.</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="rsi" data-group="Automating the research process" data-short="RSI and self-improvement">
@@ -406,18 +394,10 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 <div><dt>Self-modification</dt><dd>A system changes its own code, tools, or strategies. DGM mainly modifies agent code.</dd></div>
 <div><dt>Recursive improvement</dt><dd>An improvement also changes the ability to improve further, forming subsequent iterations.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Read the DGM version tree and choose a specific code change. Trace how it was proposed, how it was measured, and whether later versions inherited it. Then design a comparison between versions of a simple tool-using agent under a fixed budget.</p></div>
 </section>
 
-## Turn an interdisciplinary question into a small project
+## Domain questions and model design
 
-Once you have a question, connect the data, model and validation in a complete research workflow.
+Molecular rotations and symmetries, relationships in graphs, temporal order, and voxel spacing in medical images all have meaning within their fields. These structures shape data representations, models, and training objectives. New molecular scaffolds, donors, patients, or future time periods raise different questions about generalization. Method choices in interdisciplinary research grow out of these domain questions.
 
-1. **Define the object of study.** Is one sample a sequence, a patient, a cell or a market at a particular time? How is the target measured, and in what units?
-2. **Preserve the structure of the domain.** Molecules have symmetries, graphs have relationships, time series have an order, and medical images have voxel spacing. Which information do the representation, model and loss preserve?
-3. **Decide what new conditions matter.** New molecular scaffolds, protein families, donors, participants, patients and future periods call for different data splits.
-4. **Establish a reference and analyse changes.** Compare simple methods with the new model and locate its errors. Connect candidate designs to further calculations or experiments, recording how each result changes the next step.
-
-For time-series foundations, [Forecasting: Principles and Practice](https://otexts.com/fpp3/) covers trends, forecasting and evaluation with examples in R. For Python projects, see [tsai](https://github.com/timeseriesAI/tsai).
-
-[AI for Science resource index](https://github.com/ai4s-research/awesome-ai-for-science) · [AI4X resource directory](catalog-directions.md#topic-23) · [Research questions](research.md) · [Contact and collaboration](contact.md)
+[AI for Science resource index](https://github.com/ai4s-research/awesome-ai-for-science) · [AI4X resource directory](catalog-directions.md#topic-23) · [Research Q&A](research.md) · [Contact and collaboration](contact.md)

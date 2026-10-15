@@ -1,4 +1,4 @@
-# Research methods and communication
+# Research experience and discussion
 
 When reading a paper, troubleshooting training, or preparing to talk with a researcher, it can help to see how others approach the same task. The articles and discussions below include short descriptions so you can choose the parts relevant to you.
 

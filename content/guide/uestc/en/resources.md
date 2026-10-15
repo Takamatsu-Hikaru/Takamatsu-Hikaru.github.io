@@ -14,7 +14,7 @@ If you have not tried a project yet, choose a [starter project](start.md) and co
 
 - **[Research methods and tools](catalog-research.md)**: find tools and tutorials for searching for papers, troubleshooting training, writing, and preparing a talk.
 - **[Technical blogs and research perspectives](blogs.md)**: read fuller explanations of model mechanisms and accounts of specific training and evaluation questions.
-- **[Research methods and communication](research-conversations.md)**: find examples for a first email and researchers' accounts of reading, discussion, and collaboration.
+- **[Research experience and discussion](research-conversations.md)**: find examples for a first email and researchers' accounts of reading, discussion, and collaboration.
 
 ## Research information and sources
 

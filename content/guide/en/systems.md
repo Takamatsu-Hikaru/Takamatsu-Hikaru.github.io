@@ -1,4 +1,4 @@
-# Efficiency and systems: making models run
+# Efficiency and systems
 
 Why does changing batch size speed up a model? Why can a program struggle before memory is full? Why can throughput improve while users wait longer? These questions appear when models meet software and hardware.
 
