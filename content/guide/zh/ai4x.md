@@ -375,21 +375,19 @@ AI 已经参与到分子筛选、蛋白质设计、天气预测、医学影像�
 <p>递归自我改进（Recursive Self-Improvement）关注一个更进一步的问题：系统修改自己之后，能否变得更擅长做下一轮改进？研究对象可以是 Agent 的代码、工具、搜索策略，也可以涉及学习算法。</p>
 <button type="button" class="see-process" data-scene="rsi">查看过程图 ↗</button>
 <div class="task-list">
-<div><h3>修改对象</h3><p>AutoML 通常搜索预设空间中的配置；自动研究系统推进外部课题；自我改进系统还把自身工作方式作为修改对象。修改可以发生在代码、策略或模型参数等不同层面。</p></div>
-<div><h3>版本生成与选择</h3><p>Darwin Gödel Machine（DGM）让编码 Agent 修改自身代码，保存多个版本，并通过编码任务评估后继续探索。它的核心循环是版本生成、测试、保留与再次修改。</p></div>
-<div><h3>改进能力与计算成本</h3><p>研究关心修改后的系统能否更有效地产生下一轮改进。多轮效果、计算成本与新任务上的表现，共同描述这种能力随迭代发生的变化。</p></div>
+<div><h3>修改对象</h3><p>AutoML 通常搜索预设空间中的配置；自动研究系统推进外部课题；自我改进系统还把自身工作方式作为修改对象。DGM 修改编码 Agent 的代码，Dream-RSI 改进探索策略，AIDE² 则让研究 Agent 修改自身的运行框架。</p></div>
+<div><h3>版本生成与继承</h3><p>系统提出修改、评估候选，再将选中的改动带入后续版本。DGM 保存不断扩展的版本档案，从不同分支继续探索；Dream-RSI 利用已有探索轨迹评估新策略，再将策略用于下一轮探索。</p></div>
+<div><h3>改进能力与计算成本</h3><p>任务成绩提高与改进能力增强，是两个相关但不同的问题。前者反映当前版本的表现，后者关心它能否更有效地产生后续改进。多轮实验、相近的计算预算和未见任务上的表现，有助于区分能力变化与额外搜索带来的收益。</p></div>
 </div>
 <ol class="route">
 <li><span>提出修改</span><strong>自身代码与工具</strong><p>形成新版本</p></li>
 <li><span>执行测试</span><strong>固定任务与预算</strong><p>比较能力变化</p></li>
-<li><span>继续改进</span><strong>版本档案与选择</strong><p>追踪多轮效果</p></li>
+<li><span>继续改进</span><strong>版本档案与选择</strong><p>继承改动，进入下一轮</p></li>
 </ol>
-<div data-ai4x-papers="dgm"></div>
-<h3>论文与项目</h3>
+<div data-ai4x-papers="rsi-survey,dgm,dream-rsi,aide2,ai4ai-bench"></div>
+<h3>相关工作</h3>
 <ul class="resources">
-<li><a href="https://arxiv.org/abs/2505.22954">Darwin Gödel Machine ↗</a><span>2025 · 自我改进编码 Agent</span></li>
-<li><a href="https://sakana.ai/dgm/">DGM 项目介绍 ↗</a><span>方法、实验与代码入口</span></li>
-<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>对照：有评价器的代码搜索</span></li>
+<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>以评价器引导代码搜索与算法发现</span></li>
 </ul>
 <dl class="terms">
 <div><dt>自我修改</dt><dd>系统改变自身的代码、工具或策略。DGM 主要修改 Agent 代码。</dd></div>

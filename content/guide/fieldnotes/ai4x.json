@@ -296,6 +296,102 @@
       }
     },
     {
+      "id": "rsi-survey",
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.11873",
+      "code": "https://theseus-labs-rsi.github.io/",
+      "zh": {
+        "tag": "RSI 综述 · 五级自主性",
+        "question": "怎样判断一次自动优化是否真的进入了递归自我改进？",
+        "idea": "这篇综述按系统自主完成改进循环的程度划分 L1–L5 五个层级，并区分“改进机制的修改是否被保留并用于下一轮改进”的结构性递归与“改进能力是否增强”的有效递归。",
+        "why": "它将修改对象、决策权和版本继承放在同一个框架中，便于比较代码自我修改、策略演化和学习算法改进。",
+        "read": "Figure 1、Figure 2 展示分层框架；第 2.2 节拆解改进循环，第 1.7 节讨论两类递归证据。",
+        "limit": "这是一套用于比较现有工作的分类框架。各系统能否持续增强改进能力，仍取决于具体实验结果。"
+      },
+      "en": {
+        "tag": "RSI survey · Five autonomy levels",
+        "question": "How can we tell whether an automated optimization loop actually reaches recursive self-improvement?",
+        "idea": "The survey proposes five levels, L1–L5, based on how autonomously a system carries out its improvement loop. It distinguishes structural recursion, where a revised improvement mechanism is retained and governs a later improvement round, from effective recursion, where the ability to improve also increases.",
+        "why": "It brings modification targets, decision-making authority, and version inheritance into one framework for comparing code self-modification, policy evolution, and learning-algorithm improvements.",
+        "read": "Figures 1 and 2 present the framework; Section 2.2 breaks down the improvement loop, and Section 1.7 discusses the two forms of recursion evidence.",
+        "limit": "The taxonomy organizes existing work. Whether a system can keep improving its ability to improve remains an experimental question."
+      }
+    },
+    {
+      "id": "dream-rsi",
+      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.14858",
+      "code": "https://github.com/zhengkid/Dream-RSI",
+      "zh": {
+        "tag": "Dream-RSI · 探索策略",
+        "question": "怎样利用已有的发现轨迹，低成本改进下一轮探索策略？",
+        "idea": "把在线探索形成的发现树蒸馏成重放模拟器，在其中“梦境式”评估候选策略，再把改进后的策略部署到下一轮真实探索。",
+        "why": "探索中积累的经验既用于解决任务，也用于修改后续探索的策略。策略的变化和部署构成了论文的主要迭代过程。",
+        "read": "Figure 1 展示三阶段循环；正文进一步介绍模拟器构造、策略目标和九项任务上的分项结果。",
+        "limit": "重放模拟器只覆盖已观察到的轨迹；历史树缺少的分支不会凭空出现，而且收益在不同任务上并不均匀。"
+      },
+      "en": {
+        "tag": "Dream-RSI · Exploration policy",
+        "question": "How can prior discovery traces improve the next exploration policy at lower cost?",
+        "idea": "Distill online discovery trees into replay simulators, evaluate candidate policies through dreaming, and redeploy the improved policy for the next round of real exploration.",
+        "why": "Experience gathered during exploration is used both to solve tasks and to change how later exploration proceeds. Policy updates and deployment form the main iteration cycle.",
+        "read": "Figure 1 shows the three-stage loop. The paper then describes simulator construction, the policy objective, and per-task results across nine tasks.",
+        "limit": "Replay covers only observed trajectories; missing branches in the historical tree stay missing, and the gains are not uniform across tasks."
+      }
+    },
+    {
+      "id": "aide2",
+      "title": "Recursive self-improvement of AI research agents",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.26457",
+      "code": "https://www.weco.ai/blog/first-evidence-of-recursive-self-improvement",
+      "zh": {
+        "tag": "AIDE² · 研究 Agent",
+        "question": "研究 Agent 能否连续改写自己的 harness，并把收益迁移到未见任务？",
+        "idea": "外层循环改写内层研究 Agent 的代码；每个候选在固定预算下执行研究任务，用私有留出分数决定是否成为下一轮继承的版本。",
+        "why": "一次八天运行连续接受七次改进，论文还报告了外部基准迁移与奖励投机检查，展示研究 Agent 多轮修改和继承的实际结果。",
+        "read": "Figure 1 与 Algorithm 1 描述双层搜索，Figures 2–4 展示实验结果；另有将改进版 Agent 放到外层循环的检验。",
+        "limit": "改进版 Agent 作为外层 improver 时尚未显示出可明确区分的优势；双层噪声、成本和代码复杂度仍限制更深递归。"
+      },
+      "en": {
+        "tag": "AIDE² · Research agents",
+        "question": "Can a research agent repeatedly rewrite its own harness and transfer the gains to unseen tasks?",
+        "idea": "An outer loop rewrites the inner research agent. Each candidate works under a fixed budget, and a private held-out grade decides whether it becomes the version inherited by the next round.",
+        "why": "An autonomous eight-day run accepted seven successive improvements. The paper also reports transfer to external benchmarks and reward-hacking checks, documenting repeated modification and inheritance in a research agent.",
+        "read": "Figure 1 and Algorithm 1 describe the two-level search, and Figures 2–4 report results. A separate test places an improved agent in the outer loop.",
+        "limit": "The improved agent was not decisively better as the outer-loop improver; compounded noise, cost, and growing code complexity still constrain deeper recursion."
+      }
+    },
+    {
+      "id": "ai4ai-bench",
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2608.20318",
+      "code": "https://lab.einsia.ai/ai4ai/",
+      "zh": {
+        "tag": "AI4AI-Bench · 算法设计评测",
+        "question": "如何评估 Agent 对学习算法的改进，并区分它与调参、换数据或工程优化？",
+        "idea": "冻结十个研究仓库，让 Agent 在四小时内提交训练算法代码补丁，再从干净环境完整重跑，并由隔离的固定评测器计分。",
+        "why": "评测将学习算法作为修改对象，具体分析提交的代码怎样改变模型的学习过程。",
+        "read": "Figure 1 展示任务协议，正文介绍任务边界与标准化计分，第 4 节分析提交类型。",
+        "limit": "评测覆盖单代算法设计，尚未检验改进后的系统在多轮中继续继承并增强改进能力的效果。"
+      },
+      "en": {
+        "tag": "AI4AI-Bench · Algorithm design",
+        "question": "How can we evaluate agent-designed learning algorithms and distinguish them from tuning, data swaps, or engineering improvements?",
+        "idea": "Freeze ten research repositories, give an agent four hours to submit a training-algorithm patch, replay it from a clean start, and score it with an isolated fixed evaluator.",
+        "why": "The benchmark makes learning algorithms the target of modification and examines how submitted code changes the learning process.",
+        "read": "Figure 1 presents the protocol. The paper describes task boundaries and normalized scoring, and Section 4 analyzes submission types.",
+        "limit": "The benchmark evaluates a single generation of algorithm design; it does not test whether successor systems inherit and strengthen their ability to improve over multiple rounds."
+      }
+    },
+    {
       "id": "dgm",
       "title": "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents",
       "year": 2025,
@@ -305,14 +401,19 @@
         "tag": "DGM · 自我改进",
         "question": "编码 Agent 能否通过修改自身代码改善能力？",
         "idea": "维护多个 Agent 版本，生成自我修改，再用编码任务筛选，形成持续扩展的版本树。",
-        "read": "从一处具体代码改动读起，再看版本选择、评价任务和计算预算。"
+        "read": "从一处具体代码改动读起，再看版本选择、评价任务和计算预算。",
+        "why": "它把 Agent 版本组织成开放式档案，不只保留单一路径，适合观察“自我修改—任务评测—再次修改”的基本结构。",
+        "limit": "外部设定的任务、评测与父代选择规则仍决定搜索方向；版本树扩展并不自动证明改进机制本身已经变强。"
       },
       "en": {
         "tag": "DGM · Self-improvement",
         "question": "Can a coding agent improve its abilities by modifying its own code?",
         "idea": "Maintain multiple agent versions, generate self-modifications, and select candidates using coding tasks, creating an expanding version tree.",
-        "read": "Start with one specific code change, then examine version selection, evaluation tasks, and the computation budget."
-      }
+        "read": "Start with one specific code change, then examine version selection, evaluation tasks, and the computation budget.",
+        "why": "It organizes agent versions as an open-ended archive rather than a single lineage, making the modify–evaluate–modify structure easy to inspect.",
+        "limit": "Externally fixed tasks, evaluation, and parent selection still shape the search; a growing version tree does not by itself show that the improvement mechanism became stronger."
+      },
+      "code": "https://sakana.ai/dgm/"
     },
     {
       "id": "ai-scientist",

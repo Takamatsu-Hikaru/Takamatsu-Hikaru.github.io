@@ -371,24 +371,22 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 
 <section class="ai4x-domain" data-topic="rsi" data-group="Automating the research process" data-short="RSI and self-improvement">
 <h2 id="rsi">RSI: Can a system improve its own ability to improve?</h2>
-<p>Recursive Self-Improvement (RSI) asks a further question: after a system modifies itself, can it become better at making the next improvement? Research can target an agent&#x27;s code, tools, or search strategy, and can also involve learning algorithms.</p>
+<p>Recursive Self-Improvement (RSI) asks a further question: after a system modifies itself, can it become better at making the next improvement? Research can target an agent's code, tools, or search strategy, and can also involve learning algorithms.</p>
 <button type="button" class="see-process" data-scene="rsi">Watch the process ↗</button>
 <div class="task-list">
-<div><h3>What is being modified?</h3><p>AutoML usually searches configurations within a predefined space; automated research systems advance external research questions; self-improving systems also modify how they themselves work. When reading, first identify the code, strategies, or parameters that actually change.</p></div>
-<div><h3>Storing and selecting versions</h3><p>Darwin Gödel Machine (DGM) lets a coding agent modify its own code, saves multiple versions, and uses coding tasks to evaluate them before exploring further. Its central loop creates, tests, retains, and modifies versions again.</p></div>
-<div><h3>Observing sustained improvement</h3><p>Alongside scores on individual tasks, compare improvement curves over multiple rounds, total computation cost, and performance on new tasks. Design controls to distinguish a better next round caused by changes in system capability from one caused by spending more on search.</p></div>
+<div><h3>Targets of modification</h3><p>AutoML usually searches configurations within a predefined space; automated research systems work on external research questions; self-improving systems also modify how they themselves work. DGM modifies a coding agent's code, Dream-RSI improves exploration policies, and AIDE² lets research agents modify their own harness.</p></div>
+<div><h3>Version generation and inheritance</h3><p>A system proposes changes, evaluates candidates, and carries selected changes into later versions. DGM maintains an expanding archive and explores different branches; Dream-RSI uses prior exploration traces to evaluate new policies, then deploys them in the next round.</p></div>
+<div><h3>Improvement capability and compute</h3><p>Higher task scores and a greater ability to improve are related but distinct. The former describes the current version's performance; the latter concerns how effectively it produces further improvements. Experiments over multiple rounds, comparable compute budgets, and performance on unseen tasks help distinguish capability changes from the benefits of additional search.</p></div>
 </div>
 <ol class="route">
 <li><span>Propose changes</span><strong>Own code and tools</strong><p>Create a new version</p></li>
 <li><span>Run tests</span><strong>Fixed tasks and budget</strong><p>Compare changes in capability</p></li>
-<li><span>Continue improving</span><strong>Version archive and selection</strong><p>Track effects over multiple rounds</p></li>
+<li><span>Continue improving</span><strong>Version archive and selection</strong><p>Carry changes into the next round</p></li>
 </ol>
-<div data-ai4x-papers="dgm"></div>
-<h3>Papers and learning resources</h3>
+<div data-ai4x-papers="rsi-survey,dgm,dream-rsi,aide2,ai4ai-bench"></div>
+<h3>Related work</h3>
 <ul class="resources">
-<li><a href="https://arxiv.org/abs/2505.22954">Darwin Gödel Machine ↗</a><span>2025 · A coding agent that improves itself</span></li>
-<li><a href="https://sakana.ai/dgm/">DGM project introduction ↗</a><span>Methods, experiments, and code</span></li>
-<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>Comparison: code search with an evaluator</span></li>
+<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>Evaluator-guided code search and algorithm discovery</span></li>
 </ul>
 <dl class="terms">
 <div><dt>Self-modification</dt><dd>A system changes its own code, tools, or strategies. DGM mainly modifies agent code.</dd></div>
