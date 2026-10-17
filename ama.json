@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "number": 3,
+      "title": "Thanks",
+      "body": "感谢您的工作！",
+      "createdAt": "2026-10-17T23:28:39Z",
+      "updatedAt": "2026-10-17T23:28:39Z",
+      "author": {
+        "login": "inwardflow"
+      },
+      "locked": false,
+      "commentCount": 0,
+      "comments": []
+    },
+    {
       "number": 2,
       "title": "Nice proj！",
       "body": "做的太好了！！！Orz",
