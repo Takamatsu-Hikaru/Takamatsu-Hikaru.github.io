@@ -10,7 +10,7 @@
 
 [Purshow](https://purshow.github.io/) 的 [Purshow Notes](https://github.com/Purshow/Purshow_Notes) 包含 Attention、MoE、On-Policy Distillation、残差连接、稀疏词表嵌入和 YOCO 等主题，多项提供中英文版本。[WAM](https://github.com/Purshow/Purshow_Notes/tree/main/WAM) 与 [Encoder-Free](https://github.com/Purshow/Purshow_Notes/tree/main/Encoder-Free) 有独立专题。
 
-[从 Infra 角度看，为什么去掉 Encoder 更好](https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/从Infra角度看，为什么去掉Encoder更好.md)比较视觉编码器与语言模型的负载、并行配置和调度差异，也讨论变长视觉 token 带来的负载问题。
+[从 Infra 角度看，为什么去掉 Encoder 更好](https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/CN/从Infra角度看，为什么去掉Encoder更好.md)比较视觉编码器与语言模型的负载、并行配置和调度差异，也讨论变长视觉 token 带来的负载问题。
 
 关于多模态路线的两篇短文：[When Vision Is Pushed to the Roadside](https://x.com/purshow04/status/2081395814610653588)、[From Describing the World to Entering the World](https://x.com/purshow04/status/2042451108283761154)。
 

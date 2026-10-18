@@ -14,7 +14,7 @@ Find more articles by field at [BlogrXiv](https://openenvision.github.io/BlogrXi
 
 ### Why remove the encoder? An infrastructure perspective
 
-[Original article](https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/从Infra角度看，为什么去掉Encoder更好.md)
+[Original article](https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/EN/Why%20Removing%20the%20Encoder%20Is%20Better%20-%20An%20Infra%20Perspective.md)
 
 The article explains encoder-free design through differences in workload, parallel configuration, and scheduling between vision encoders and language models. It also notes that removing the encoder does not eliminate workload variation from variable-length visual tokens.
 
