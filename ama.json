@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "number": 4,
+      "title": "thanks！",
+      "body": "虽然我现在已经是研究生，但是也是刚入门的ai科研小白，非常感谢你如此详细的指南！",
+      "createdAt": "2026-10-20T05:03:27Z",
+      "updatedAt": "2026-10-20T05:03:27Z",
+      "author": {
+        "login": "Khalyn"
+      },
+      "locked": false,
+      "commentCount": 0,
+      "comments": []
+    },
+    {
       "number": 3,
       "title": "Thanks",
       "body": "感谢您的工作！",
