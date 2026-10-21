@@ -1,10 +1,17 @@
-# Your first AI project: where to begin?
+# Your first AI project
 
-If you have not chosen a direction, begin with a visible result: recognizing a handwritten digit or drawing boxes around people and cars in your own photo. Data, code, and tutorials already exist. Start there and learn through the questions that arise.
+If you have not chosen a field yet, try a project with a result you can see: recognizing handwritten digits or detecting people and cars in your own photos. Data, code, and tutorials are available, so you can start by running an example and learn the concepts as you need them.
 
-Trying a project lets you see what attracts you in practice: building an application, comparing methods, or asking why a model makes mistakes. With that experience, you can decide what to learn next and whom to talk to.
+MNIST takes you through training and making a submission; YOLO lets you inspect predictions on real photos. Choose one that interests you, or skip to the agent and robotics examples below.
 
-The two vision projects below offer different beginnings. MNIST takes you through training and submission; YOLO lets you see a model on real images first. Choose what interests you. Agent and robotics entries follow.
+| Project | First task | Result to retain |
+| --- | --- | --- |
+| [MNIST](#project-mnist) | Train a digit classifier | Predictions, validation results, and submission |
+| [YOLO](#project-yolo) | Run pretrained detection | Boxes, labels, and failure examples |
+| [Agent](#project-agent) | Complete a tool call | Task, call, and tool response |
+| [Robotics](#project-robotics) | Inspect a demo and dataset | Observations, actions, and data fields |
+
+<a id="project-mnist"></a>
 
 ## MNIST: recognize handwritten digits on Kaggle
 
@@ -36,6 +43,8 @@ Display mistakes: which digits are confused, and which are hard even for you? Co
 
 For functions, loops, lists, and files, revisit [foundations](basics.md). For tensor mismatches, inspect shapes, indexing, and matrix multiplication. For a wider view of AI, try topics in [Crash Course AI](https://thecrashcourse.com/topic/ai/).
 
+<a id="project-yolo"></a>
+
 ## YOLO: detect objects in your own images
 
 For a quick, visible result, start with object detection. Classification asks what an image contains; detection also asks where. One photo may contain people, bicycles, and cars, each with a box and class.
@@ -48,17 +57,21 @@ Inspect boxes, classes, and confidence: are distant objects missed, does occlusi
 
 ### Walk through training and validation
 
-Follow the [training tutorial](https://docs.ultralytics.com/modes/train) with [COCO8](https://docs.ultralytics.com/datasets/detect/coco8) to trace loading, training, and validation. Its eight images make the process easy to inspect. For comparing performance, next choose data with enough training and validation samples.
+Follow the [training tutorial](https://docs.ultralytics.com/modes/train) with [COCO8](https://docs.ultralytics.com/datasets/detect/coco8) to trace loading, training, and validation.
+
+<aside class="guide-note"><strong>What the small dataset checks</strong><p><b>COCO8 is for checking that the pipeline runs.</b> Its eight images are insufficient for a meaningful model comparison; use separate training and validation data with enough examples.</p></aside>
 
 Open an image and annotation to see how classes and boxes are recorded. Inspect how the data configuration names paths and classes. After training, predict again with the saved weights and find the output images and training records.
 
-### Make a demo you want to show
+### Inspect detections in new scenes
 
 Use a video you filmed and inspect pedestrian or vehicle detections. For a specific object, look for suitable annotations or try labeling data yourself. First establish which classes the current model knows before deciding whether to retrain.
 
 Follow one observation: does resolution help small objects? When the confidence threshold falls, how many additional boxes are false positives? Keep output images beside settings and you have something concrete to [discuss with a mentor](contact.md).
 
-Next read [computer vision](vision.md) for classification, detection, and segmentation. For serious comparisons, see [experiments](experiments.md).
+Next read [computer vision](vision.md) for classification, detection, and segmentation. For serious comparisons, see [experiments](research.md#q43).
+
+<a id="project-agent"></a>
 
 ## Already interested in agents?
 
@@ -68,6 +81,8 @@ A first goal is to let a model call one simple tool and understand the whole seq
 
 Save a successful and a failed trace. If the model can answer the same question directly, compare what the tool changes. Then read [ReAct](https://react-lm.github.io/) and choose a question from the [agents page](agent.md).
 
+<a id="project-robotics"></a>
+
 ## Already interested in robots?
 
 Watch the [ACT / ALOHA](https://tonyzhaozh.github.io/aloha/) videos and method diagram. Pick an action: what did the robot see, what did the demonstration record, and what action does the model output?
@@ -76,12 +91,12 @@ Then inspect a demonstration dataset and project structure in [LeRobot](https://
 
 ## After finishing, where next?
 
-Keep three things: a project you can reopen, a change you can explain, and a question to ask next.
+After finishing an example, save the code and results and note **what you changed, what happened, and what you still want to understand**. Which part would you like to explore next?
 
-- For curiosity about inputs and model internals, study [foundations and architectures](basics.md).
-- For a task you especially like, find representative papers under [directions](directions.md).
-- To reproduce a paper seriously, connect [reading](reading.md), [experiments](experiments.md), and [conversation](contact.md).
-- If you did not enjoy it much, try another example. The experience has already taught you something.
+- To understand how data enters the model and what each layer does, explore [foundations and architectures](basics.md).
+- If the task interests you and you want to see what researchers have tried, find papers in the [directions pages](directions.md).
+- To reproduce a paper seriously, connect [reading](reading.md), [experiments](research.md#q43), and [conversation](contact.md).
+- You can also try another project and see how it handles the questions you encountered here.
 
 ## Continue learning
 

@@ -1,0 +1,65 @@
+{
+  "verifiedDate": "2026-10-12",
+  "assets": [
+    {
+      "id": "workbuddy",
+      "name": "WorkBuddy",
+      "file": "workbuddy-logo.svg",
+      "kind": "official product logo",
+      "sourcePage": "https://www.workbuddy.cn/",
+      "imageUrl": "https://assets.workbuddy.cn/web/workbuddy/f4728a12fe9cfe5a34da6b2fa827614041c84386/assets/logo.svg",
+      "link": "https://www.workbuddy.cn/",
+      "evidence": "Official homepage link rel=icon; original vector SVG, viewBox 0 0 40 40."
+    },
+    {
+      "id": "zcode",
+      "name": "ZCode",
+      "file": "zcode-logo.png",
+      "kind": "official product logo",
+      "sourcePage": "https://zcode.z.ai/en",
+      "imageUrl": "https://zcode.z.ai/favicon-192x192.png?v=20260707-transparent",
+      "link": "https://zcode.z.ai/",
+      "evidence": "Official homepage icon asset, 192px, visually inspected."
+    },
+    {
+      "id": "trae",
+      "name": "TRAE",
+      "file": "trae-logo.png",
+      "kind": "official product logo",
+      "sourcePage": "https://github.com/Trae-AI/TRAE",
+      "imageUrl": "https://github.com/Trae-AI.png?size=256",
+      "link": "https://www.trae.cn/",
+      "evidence": "Official GitHub organization avatar; official repo explicitly identifies itself as TRAE official. Visually inspected."
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "file": "claude-logo.png",
+      "kind": "Claude brand logo",
+      "sourcePage": "https://claude.com/product/claude-code",
+      "imageUrl": "https://assets.claude.com/95a868946ac8a31e5ff832e2899f294aa368b836.png",
+      "link": "https://claude.com/product/claude-code",
+      "evidence": "Official Claude Code page icon; Claude orange brand symbol. Not a separate Claude Code product mark. Visually inspected."
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "file": "openai-logo.png",
+      "kind": "OpenAI brand logo",
+      "sourcePage": "https://github.com/openai",
+      "imageUrl": "https://github.com/openai.png?size=128",
+      "link": "https://openai.com/codex/",
+      "evidence": "Reused original guide brand asset public/blog/guide/brands/openai.png; provenance recorded by original brands/sources.json. OpenAI brand mark, not separate Codex product mark."
+    },
+    {
+      "id": "aloha",
+      "name": "ACT / ALOHA",
+      "file": "aloha.jpg",
+      "kind": "official research photograph",
+      "sourcePage": "https://tonyzhaozh.github.io/",
+      "imageUrl": "https://tonyzhaozh.github.io/images/aloha.jpg",
+      "link": "https://tonyzhaozh.github.io/aloha/",
+      "evidence": "Original author research homepage illustration for Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware; 1859x1454, bimanual battery insertion. Visually inspected, no crop or fabrication."
+    }
+  ]
+}

@@ -12,7 +12,6 @@ From understanding research to finding papers, experimenting, writing, and commu
 
 - **[Advice to a Beginning Graduate Student — Manuel Blum](https://www.cs.cmu.edu/~mblum/research/pdf/grad.html)** — English advice on reading, thinking, research, and writing. Begin with top-down reading: skip ahead around a question, then fill knowledge gaps.
 
-- **[A Survival Guide to a PhD — Andrej Karpathy](https://karpathy.github.io/2016/09/07/phd/)** — A 2016 personal blog about research, independence, and sustained effort during a PhD. Start with daily research and ways of working.
 
 - **[The importance of stupidity in scientific research — Martin A. Schwartz](https://web.stanford.edu/~fukamit/schwartz-2008.pdf)** — A one-page English essay from 2008 about moving from questions with known answers into genuine uncertainty. Useful when beginning research.
 
@@ -20,15 +19,12 @@ From understanding research to finding papers, experimenting, writing, and commu
 
 <a id="topic-2"></a>
 
-## Growth, university life, and asking for help
+## Technical questions and issue reports
 
-- **[Shanghai Jiao Tong University Survival Manual](https://github.com/SurviveSJTU/SurviveSJTUManual)** — A Chinese collective account of learning, university environments, and personal choices, grounded in SJTU students' experiences.
 
 - **[How To Ask Questions The Smart Way, Chinese translation](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)** — Technical communication advice. Consult how to explain goals, attempts, environment, and evidence when writing a help request or GitHub issue.
 
-- **[Principles of Effective Research — Michael Nielsen](https://michaelnielsen.org/blog/principles-of-effective-research-part-i/)** — A long English personal essay about how time, habits, and self-development influence long-term research.
 
-- **[Crash Course Philosophy](https://thecrashcourse.com/topic/philosophy/)** — Short English philosophy videos. Choose topics in knowledge, values, and ethics to explore questions beyond your university courses.
 
 <a id="topic-8"></a>
 
@@ -50,7 +46,7 @@ From understanding research to finding papers, experimenting, writing, and commu
 
 - **[Zotero Connector](https://www.zotero.org/download/connectors)**｜Save bibliographic information and available attachments from your browser.
 
-- **[Scholaread 靠岸学术](https://www.scholaread.cn/help)**｜Paper reading, translation, and notes; irene uses it alongside Obsidian.
+- **[Scholaread](https://www.scholaread.cn/help)** — Paper reading, translation, and notes.
 
 - **[切问 / Qiewen](https://qiewenpaper.com/zh/home)**｜Search for papers from a research question, then read and compare related work.
 
@@ -116,6 +112,6 @@ From understanding research to finding papers, experimenting, writing, and commu
 
 - **[Full Stack Deep Learning](https://fullstackdeeplearning.com/)** — Courses, talks, and engineering resources covering data, development, and deployment beyond the model. Choose by your current project stage.
 
-- **[irene · Paper-reading toolkit](https://github.com/tseirene6/paper-tools-marketplace)**｜Paper-reading tools from irene, whose workflow uses Grill Me to question understanding.
+- **[Paper-reading toolkit](https://github.com/tseirene6/paper-tools-marketplace)** — Paper-reading tools, including Grill Me for questions about methods and evidence.
 
-[irene's setup and experience](irene-workflow.md#tools).
+[Reading tools and configuration examples](irene-workflow.md#tools).

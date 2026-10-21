@@ -1,11 +1,11 @@
 [
   {
     "id": "home",
-    "title": "首页",
+    "title": "AI科研入门指南",
     "group": "先从这里开始",
     "kind": "导读",
     "desc": "这份指南怎样用",
-    "updated": "2026-10-05"
+    "updated": "2026-10-11"
   },
   {
     "id": "welcome",
@@ -17,15 +17,15 @@
   },
   {
     "id": "research",
-    "title": "How to 入门科研",
+    "title": "科研入门Q&A",
     "group": "先从这里开始",
     "kind": "科研问答",
-    "desc": "从开始到完成一项工作",
-    "updated": "2026-10-06"
+    "desc": "项目、文献、实验与合作",
+    "updated": "2026-10-11"
   },
   {
     "id": "start",
-    "title": "第一个 AI 项目，从哪里开始？",
+    "title": "第一个 AI 项目",
     "group": "开始学习",
     "kind": "学习路线",
     "desc": "MNIST、YOLO，以及 Agent 和机器人的动手入口",
@@ -33,17 +33,17 @@
   },
   {
     "id": "basics",
-    "title": "基础怎么学，需要学到哪里？",
+    "title": "学习基础知识",
     "group": "开始学习",
     "kind": "学习资料",
     "desc": "计算机、数学、ML 与 DL"
   },
   {
     "id": "papers",
-    "title": "挑一篇论文读",
+    "title": "论文选读",
     "group": "开始学习",
     "kind": "论文导读",
-    "desc": "从问题进入代表工作",
+    "desc": "经典与代表论文、论文讲解和各方向论文清单",
     "updated": "2026-10-05"
   },
   {
@@ -58,7 +58,8 @@
     "title": "大语言模型：理解、生成、推理",
     "group": "研究方向",
     "kind": "方向导读",
-    "desc": "数据、结构、训练与能力"
+    "desc": "数据、结构、训练与能力",
+    "updated": "2026-10-12"
   },
   {
     "id": "agent",
@@ -66,58 +67,63 @@
     "group": "研究方向",
     "kind": "方向导读",
     "desc": "工具、反馈与任务完成",
-    "updated": "2026-10-05"
+    "updated": "2026-10-12"
   },
   {
     "id": "vision",
-    "title": "计算机视觉",
+    "title": "计算机视觉：让模型读懂图像",
     "group": "研究方向",
     "kind": "方向导读",
     "desc": "图像、表示与场景",
-    "updated": "2026-10-05"
+    "updated": "2026-10-12"
   },
   {
     "id": "multimodal",
-    "title": "多模态",
+    "title": "多模态：图像、语言与声音",
     "group": "研究方向",
     "kind": "方向导读",
-    "desc": "连接图像与语言"
+    "desc": "连接图像与语言",
+    "updated": "2026-10-12"
   },
   {
     "id": "generation",
     "title": "生成模型",
     "group": "研究方向",
     "kind": "方向导读",
-    "desc": "从噪声到样本"
+    "desc": "从噪声到样本",
+    "updated": "2026-10-12"
   },
   {
     "id": "rl",
     "title": "强化学习",
     "group": "研究方向",
     "kind": "方向导读",
-    "desc": "行动与反馈"
+    "desc": "行动与反馈",
+    "updated": "2026-10-12"
   },
   {
     "id": "world-model",
-    "title": "World Model",
+    "title": "世界模型",
     "group": "研究方向",
     "kind": "方向导读",
-    "desc": "预测怎样服务行动"
+    "desc": "预测怎样服务行动",
+    "updated": "2026-10-12"
   },
   {
     "id": "embodied",
-    "title": "具身智能",
+    "title": "具身智能：从看见到行动",
     "group": "研究方向",
     "kind": "方向导读",
     "desc": "观察、动作与真实环境",
-    "updated": "2026-10-05"
+    "updated": "2026-10-12"
   },
   {
     "id": "systems",
     "title": "效率与系统",
     "group": "研究方向",
     "kind": "方向导读",
-    "desc": "质量、速度与成本"
+    "desc": "质量、速度与成本",
+    "updated": "2026-10-12"
   },
   {
     "id": "ai4x",
@@ -125,75 +131,59 @@
     "group": "研究方向",
     "kind": "方向导读",
     "desc": "从学科问题出发",
-    "updated": "2026-10-05"
+    "updated": "2026-10-12"
   },
   {
     "id": "reading",
     "title": "找资料和读论文",
-    "group": "做研究时来查",
+    "group": "科研实践",
     "kind": "科研工作",
     "desc": "从原文找到自己的问题",
-    "updated": "2026-10-06"
+    "updated": "2026-10-12"
   },
   {
-    "id": "experiments",
-    "title": "把实验做明白",
-    "group": "做研究时来查",
-    "kind": "科研工作",
-    "desc": "结果怎样支持判断",
-    "updated": "2026-10-06"
+    "id": "irene-workflow",
+    "title": "论文阅读与笔记工作流",
+    "group": "科研实践",
+    "kind": "工作流",
+    "desc": "文献管理、阅读深度、科研简报与 AI 追问",
+    "updated": "2026-10-12"
   },
   {
     "id": "writing",
     "title": "写作、画图和汇报",
-    "group": "做研究时来查",
+    "group": "科研实践",
     "kind": "科研工作",
     "desc": "把问题、做法和证据讲清",
-    "updated": "2026-10-06"
+    "updated": "2026-10-12"
   },
   {
     "id": "contact",
     "title": "联系老师、学长与合作",
-    "group": "做研究时来查",
+    "group": "科研实践",
     "kind": "科研工作",
     "desc": "让交流从具体事情开始",
-    "updated": "2026-10-05"
+    "updated": "2026-10-12"
   },
   {
     "id": "ai",
-    "title": "和 AI 一起做事",
-    "group": "做研究时来查",
+    "title": "AI 工具",
+    "group": "科研实践",
     "kind": "科研工作",
-    "desc": "执行之外留下自己的理解",
-    "updated": "2026-10-06"
-  },
-  {
-    "id": "publishing",
-    "title": "投稿与发表",
-    "group": "做研究时来查",
-    "kind": "科研工作",
-    "desc": "渠道、流程与规则",
-    "updated": "2026-10-05"
+    "desc": "编程、资料分析、图表与研究讨论",
+    "updated": "2026-10-12"
   },
   {
     "id": "experience",
-    "title": "经历与焚诀",
+    "title": "经历、焚诀与走过的弯路",
     "group": "经历与生活",
     "kind": "经验选读",
     "desc": "方法、回忆与走过的弯路",
     "updated": "2026-10-06"
   },
   {
-    "id": "irene-workflow",
-    "title": "搭建自己的科研工作流",
-    "group": "经历与生活",
-    "kind": "irene",
-    "desc": "论文、笔记、科研简报与 AI 追问",
-    "updated": "2026-10-06"
-  },
-  {
     "id": "timeline",
-    "title": "大一年终总结",
+    "title": "大一年终总结：顿觉天地宽",
     "group": "经历与生活",
     "kind": "Hikaru",
     "desc": "顿觉天地宽",
@@ -213,102 +203,102 @@
     "group": "看看外面",
     "kind": "信息与研究社区",
     "desc": "认识工作、研究者与实验室",
-    "updated": "2026-10-06"
-  },
-  {
-    "id": "about",
-    "title": "关于与来源",
-    "group": "看看外面",
-    "kind": "关于本指南",
-    "desc": "作者、社团与引用来源",
-    "updated": "2026-10-06"
+    "updated": "2026-10-11"
   },
   {
     "id": "resources",
     "title": "资料总索引",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "课程、paper list、博客、LessWrong、课题组与问答",
-    "updated": "2026-10-05"
+    "desc": "课程、技术文章、科研方法与研究动态",
+    "updated": "2026-10-12"
   },
   {
     "id": "catalog-foundation",
     "title": "课程、教材与基础学习",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "按主题查课程、文章与原始项目",
-    "updated": "2026-10-05"
+    "desc": "计算机、数学、Python、机器学习与模型架构",
+    "updated": "2026-10-12"
   },
   {
     "id": "catalog-research",
     "title": "科研方法与常用工具",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "按主题查课程、文章与原始项目",
-    "updated": "2026-10-06"
+    "desc": "文献、实验、写作、汇报与工具",
+    "updated": "2026-10-12"
   },
   {
     "id": "catalog-directions",
     "title": "各方向课程、论文与项目",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "按主题查课程、文章与原始项目",
-    "updated": "2026-10-05"
+    "desc": "各方向的课程、论文清单与开源项目",
+    "updated": "2026-10-12"
   },
   {
     "id": "catalog-channels",
     "title": "博客、访谈与信息渠道",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "按主题查课程、文章与原始项目",
-    "updated": "2026-10-05"
+    "desc": "技术博客、研究发布、媒体与访谈",
+    "updated": "2026-10-12"
   },
   {
     "id": "blogs",
-    "title": "作者博客与研究笔记",
+    "title": "技术博客与研究观点",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "牛宇威、Chai、邹嘉轩、丁霄汉、韩晓光、苏剑林",
-    "updated": "2026-10-05"
+    "desc": "模型推导、Scaling、评测与科研写作",
+    "updated": "2026-10-12"
   },
   {
     "id": "lesswrong",
-    "title": "LessWrong：从自己的问题读起",
+    "title": "LessWrong：研究判断与 AI 使用",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "成长、判断、实验和 AI 的 12 篇选读",
-    "updated": "2026-10-05"
+    "desc": "经验、证据、实验测量与 AI 对话",
+    "updated": "2026-10-12"
   },
   {
     "id": "research-conversations",
-    "title": "科研经验、问答与 AMA",
+    "title": "科研经验与交流",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "老师、学长和社区怎样回答入门困惑",
-    "updated": "2026-10-05"
+    "desc": "研究经验、师生合作与社区问答",
+    "updated": "2026-10-12"
   },
   {
     "id": "limu",
-    "title": "李沐：从课程到论文精读",
+    "title": "深度学习课程与论文精读",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "把基础、代码与研究阅读接起来",
-    "updated": "2026-10-05"
+    "desc": "动手学深度学习与论文精读视频",
+    "updated": "2026-10-12"
   },
   {
     "id": "labs",
-    "title": "认识课题组与研究团队",
+    "title": "课题组与研究团队",
     "group": "资料总索引",
     "kind": "资料选读",
-    "desc": "从具体工作找到人、团队与下一篇文章",
-    "updated": "2026-10-05"
+    "desc": "高校名录、实验室与工业研究团队",
+    "updated": "2026-10-12"
   },
   {
     "id": "ama",
-    "title": "AMA：一起把问题聊明白",
+    "title": "AMA 讨论区",
     "group": "交流与提问",
     "kind": "讨论",
     "desc": "提问、追问与 core 回复",
     "updated": "2026-10-05"
+  },
+  {
+    "id": "about",
+    "title": "关于 AI 社与这份指南",
+    "group": "关于",
+    "kind": "关于本指南",
+    "desc": "社团、来源、致谢与修订",
+    "updated": "2026-10-11"
   }
 ]

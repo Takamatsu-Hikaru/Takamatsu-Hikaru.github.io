@@ -1,51 +1,53 @@
-# 和 AI 一起做事
+# AI 工具
 
-你可以让 AI 参与很多环节。值得留意的是，每次做完，哪些判断也留在了你自己这里。
+读论文遇到不懂的公式、复现代码报错，或是想找人讨论一个想法时，都可以试着让 AI 帮忙。除了对话，编程 AI 还可以直接读取项目、修改代码和运行程序；整理笔记、分析实验结果、画图，也可以结合手头的材料来做。
 
-## 把一个任务说具体
+<figure class="guide-figure research-overview"><a href="../../../public/blog/guide/figures/uestc/research/ai.svg" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/research/ai.svg" width="1200" height="620" alt="AI 辅助编程、资料分析、图表与研究讨论" loading="lazy" decoding="async"></a></figure>
 
-例如你正在复现一篇论文，可以先把原文、代码版本、运行条件、想检查的结果放在一起。让 AI 帮你解释入口、拆步骤、查环境、写脚本。
+## 编程与实验
 
-推进时按能检查的小步来：先找到数据如何进入模型，再跑通一小段，最后扩到完整评价。需要长时间运行或花钱的步骤，先弄清成本和停止条件。
+TRAE、WorkBuddy、Claude Code、ZCode 和 Codex 都可以参与项目开发。复现论文时，可以结合原文和代码，让它[梳理实现](reading.md#paper-code)、配置环境、修改脚本和排查报错；有了想尝试的改动，也可以在现有项目上继续实现。
 
-这里说的目标、复查、可复用步骤，分别对应“这次完成什么”“如何知道完成了”“下次怎样再用”。可以先用普通文字和记录做到，再选择具体工具功能。
+<div class="logo-strip">
+<a class="logo-entry" href="https://www.trae.cn/"><img src="../../../public/blog/guide/figures/uestc/intro/trae-logo.png" alt=""><span>TRAE</span></a>
+<a class="logo-entry" href="https://www.workbuddy.cn/"><img src="../../../public/blog/guide/figures/uestc/intro/workbuddy-logo.svg" alt=""><span>WorkBuddy</span></a>
+<a class="logo-entry" href="https://claude.com/product/claude-code"><img src="../../../public/blog/guide/figures/uestc/intro/claude-logo.png" alt=""><span>Claude Code</span></a>
+<a class="logo-entry" href="https://zcode.z.ai/"><img src="../../../public/blog/guide/figures/uestc/intro/zcode-logo.png" alt=""><span>ZCode</span></a>
+<a class="logo-entry" href="https://openai.com/codex/"><img src="../../../public/blog/guide/figures/uestc/intro/openai-logo.png" alt=""><span>Codex</span></a>
+</div>
 
-手头已经有阅读笔记时，可以把材料位置和比较目标一起交给它：
+实验跑起来以后，整理日志、比较不同配置的结果、绘制曲线，也适合交给 AI 协助完成。数据位置、运行环境和可用算力，可以随任务一起说明。
 
-> 阅读 Papers 目录中我指定的三篇论文笔记，比较它们怎样处理同一个问题。每项比较附上对应论文和笔记位置；保留我的批注，把还缺的信息列出来。
+## 资料整理与分析
 
-[irene 的笔记工作流](irene-workflow.md#notes)展示了怎样把 Zotero、Obsidian 和本地 AI 工具接起来。
+阅读论文时，可以结合原文、公式、方法图和代码讨论。已经有了一批材料，还可以把研究问题与笔记目录一起提供，让 AI 比较几项工作的做法，整理相关实验和仍未弄清的问题。[论文笔记工作流](irene-workflow.md#notes)里有 Zotero、Obsidian 与本地 AI 工具的配置。
 
-## 它说做完了，你看什么
+**Markdown 很适合保存分析过程。** 文字、公式、代码片段、表格与图片可以放在同一份文档里，也方便继续修改。比如一次实验分析，可以把比较条件、结果图、异常样本和当前解释写在一起；新结果出来后，继续更新对应部分。[Markdown 基础语法](https://www.markdownguide.org/basic-syntax/)介绍这些格式。
 
-代码改了什么，运行用了什么配置，测试覆盖了什么，输出和日志在哪里。把“实验成功”的总结还原成你能检查的东西。
+## 图表与演示
 
-读论文也是一样。让它讲一段，再问原文哪里支持这个解释。如果它给出参考文献，打开对应文章核对。
+已有分析和材料，可以继续让 AI 整理成图表、网页或幻灯片。数据图可以从 CSV 和实验日志生成，模型结构可以画成示意图，需要展示变化过程时，也可以制作交互页面或动画。
 
-## 做完之后，留一点自己的认识
-
-拿模型部署来说，你是否知道为什么选这个指标，测试负载是否像实际使用，哪个 trick 在这里有效，换条件后可能怎样？
-
-可以把一次前后对比讲给别人听。解释卡住的地方，就是值得再查的地方。你不需要每个细节都手工完成，但在长期想做的事情上，理解会影响你下一次怎样使用工具。
-
-## AI 也可以是讨论对象
-
-拿一个具体想法请它找反例、提出不同解释、列出还缺的证据。得到建议后，再决定用哪一条、怎样验证。
-
-[Lilian Weng 的 Agent 文章](https://lilianweng.github.io/posts/2023-06-23-agent/)和 [Anthropic 的 Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)可以帮助理解系统怎样组织任务。想研究 Agent 本身，去[方向页](agent.md)。
-
-未公开材料和审稿材料的使用，按团队与会议的实际要求处理；具体规则入口在[投稿页](publishing.md)。关于“你是否真的学会了”，也可以读[大一回忆](timeline.md)里的那一节。
+准备组会或交流时，可以让 AI 根据听众、时长和研究材料整理讲稿与幻灯片，再调整讲述顺序、图的配色和布局。相关材料见[写作、画图和汇报](writing.md)。
 
 <a id="grill-me"></a>
 
-## 让 AI 问你
+## 讨论方法与研究想法
 
-读完一个方法，先配着图用自己的话解释，再让 AI 根据你的解释追问。这个模块为什么需要？去掉后会发生什么？哪项实验支持刚才的判断？回答卡住时，回到相关段落、公式或图表。
+刚有一个想法，或者对某个结果有几种解释时，也可以和 AI 聊聊。把相关论文、已经做过的尝试和当前的疑问放在一起，可以讨论方法之间的联系、可能遗漏的因素，以及还有哪些做法值得尝试。
 
-> 我先解释这张方法图。你每次只问一个问题，等我回答后再继续。重点问输入输出、模块的作用、成立条件与证据。指出我哪一步没有讲清楚，以及应该回看哪里。
+**Grill Me** 采用连续追问的方式，相关工具见 [paper-tools-marketplace](https://github.com/tseirene6/paper-tools-marketplace)，用法见[论文阅读与讨论](irene-workflow.md#grill)。常用的提示词、处理步骤与输出格式，也可以保存为 skill。
 
-这是 irene 使用 **Grill Me** 的方式。她把精读、半精读和略读的安排写在[经验文章](irene-workflow.md#grill)里，也分享了[论文阅读工具](https://github.com/tseirene6/paper-tools-marketplace)。反复用得顺手的任务，可以把输入要求、步骤和输出格式保存成提示词或 skill，下次带着新材料继续用。
+<a id="ai-feedback"></a>
 
-## 对照自己的 AI 使用习惯
+## 避免被 AI 带着走
 
-[两篇 AI 观察文章](lesswrong.md#ai)讨论学生怎样看待 AI，以及某些互动怎样反过来影响判断。可以把文中的场景和自己的做事过程放在一起看。
+和 AI 讨论研究时，它可能会顺着你的想法补出动机、方法和一套听起来很合理的解释。聊得越顺，越容易忽略其中的跳跃，甚至把它的肯定当成自己想对了。它提出的理由是否成立，与读过的论文、做过的实验是否一致，还是要自己想清楚；有分歧的地方，也可以和老师、同学继续讨论。
+
+**自己的学习、经验和判断更重要。** 读论文、理解代码、亲手做实验的积累，会影响你能问出什么问题、怎样判断它的建议。和 AI 一起推进工作时，碰到真正妨碍理解的知识，也值得停下来认真补上，逐渐形成自己对问题和方法的认识。
+
+[两篇 AI 观察文章](lesswrong.md#ai)讨论 AI 互动中的信念强化，以及学生怎样使用和理解 AI。
+
+## 相关资料
+
+[Lilian Weng 的 Agent 文章](https://lilianweng.github.io/posts/2023-06-23-agent/)介绍规划、记忆与工具使用；[Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)讨论工作流和 Agent 的系统组织方式。

@@ -1,0 +1,94 @@
+{
+  "covers": [
+    {
+      "title": "动手学深度学习 v2",
+      "by": "李沐 · 课程预告",
+      "file": "limu-d2l.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1if4y147hS/",
+      "official": "https://courses.d2l.ai/zh-v2/",
+      "zhihu": ""
+    },
+    {
+      "title": "Self-Attention 与 Transformer",
+      "by": "李宏毅 · 专题课程",
+      "file": "hongyi-attention.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1r8nMz4EAj/",
+      "official": "https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.php",
+      "zhihu": ""
+    },
+    {
+      "title": "Crash Course Artificial Intelligence",
+      "by": "AI 科普课程",
+      "file": "crash-ai.png",
+      "bilibili": "https://www.bilibili.com/video/BV1tp421m71F/",
+      "official": "https://thecrashcourse.com/topic/ai/",
+      "zhihu": ""
+    },
+    {
+      "title": "线性代数的本质",
+      "by": "3Blue1Brown · 向量篇封面",
+      "file": "3b1b-vectors.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1ys411472E/",
+      "official": "https://www.3blue1brown.com/?topic=linear-algebra",
+      "zhihu": ""
+    },
+    {
+      "title": "微积分的本质",
+      "by": "3Blue1Brown · 系列合集",
+      "file": "3b1b-calculus.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1qW411N7FU/",
+      "official": "https://www.3blue1brown.com/lessons/essence-of-calculus/",
+      "zhihu": ""
+    },
+    {
+      "title": "神经网络",
+      "by": "3Blue1Brown · 第一课",
+      "file": "3b1b-neural.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1bx411M7Zx/",
+      "official": "https://www.3blue1brown.com/lessons/neural-networks/",
+      "zhihu": ""
+    },
+    {
+      "title": "Machine Learning Specialization",
+      "by": "吴恩达 · 机器学习",
+      "file": "andrew-ml.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1Pa411X76s/",
+      "official": "https://www.deeplearning.ai/specializations/machine-learning",
+      "zhihu": ""
+    },
+    {
+      "title": "Transformer 论文精读",
+      "by": "跟李沐学 AI",
+      "file": "limu-transformer.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1pu411o7BE/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1437034536677404672"
+    },
+    {
+      "title": "ViT 论文精读",
+      "by": "跟李沐学 AI",
+      "file": "limu-vit.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV15P4y137jb/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1449195245754380288"
+    },
+    {
+      "title": "CLIP 论文精读",
+      "by": "跟李沐学 AI",
+      "file": "limu-clip.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1SL4y1s7LQ/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1475706654562299904"
+    },
+    {
+      "title": "如何读论文",
+      "by": "跟李沐学 AI · 论文精读系列",
+      "file": "limu-reading.jpg",
+      "bilibili": "https://www.bilibili.com/video/BV1H44y1t75x/",
+      "official": "https://github.com/mli/paper-reading",
+      "zhihu": "https://www.zhihu.com/zvideo/1428973951632969728"
+    }
+  ],
+  "origin": "用户截图裁切；李沐4张原图来自本人paper-reading仓库；Crash Course原图来自CMU；吴恩达从官网课程封面截图裁切",
+  "checkedAt": "2026-10-12"
+}

@@ -1,51 +1,51 @@
-# Working with AI
+# AI tools
 
-AI can participate in many stages of work. Pay attention to which judgments remain with you afterward.
+An unfamiliar equation, an error in reproduction code, or an idea you want to discuss can all be reasons to ask AI for help. Coding assistants can also read a project, edit code, and run programs. With your research material, they can help organize notes, analyze results, and make figures.
 
-## Make a task concrete
+## Coding and experiments
 
-For a paper reproduction, collect the paper, code version, running conditions, and result you want to check. Ask AI to explain entry points, split the work into steps, inspect the environment, and write scripts.
+TRAE, WorkBuddy, Claude Code, ZCode, and Codex can help with project development. When reproducing a paper, you can provide the paper and code and ask for help [understanding the implementation](reading.md#paper-code), setting up the environment, editing scripts, or diagnosing errors. A change you want to try can then be implemented in the existing project.
 
-Proceed in inspectable steps: find how data enters the model, run a small part, then expand to complete evaluation. Understand costs and stopping conditions before long or paid runs.
+<div class="logo-strip">
+<a class="logo-entry" href="https://www.trae.cn/"><img src="../../../public/blog/guide/figures/uestc/intro/trae-logo.png" alt=""><span>TRAE</span></a>
+<a class="logo-entry" href="https://www.workbuddy.cn/"><img src="../../../public/blog/guide/figures/uestc/intro/workbuddy-logo.svg" alt=""><span>WorkBuddy</span></a>
+<a class="logo-entry" href="https://claude.com/product/claude-code"><img src="../../../public/blog/guide/figures/uestc/intro/claude-logo.png" alt=""><span>Claude Code</span></a>
+<a class="logo-entry" href="https://zcode.z.ai/"><img src="../../../public/blog/guide/figures/uestc/intro/zcode-logo.png" alt=""><span>ZCode</span></a>
+<a class="logo-entry" href="https://openai.com/codex/"><img src="../../../public/blog/guide/figures/uestc/intro/openai-logo.png" alt=""><span>Codex</span></a>
+</div>
 
-Goals, checks, and reusable steps mean “what to finish this time,” “how to know it is done,” and “how to use it again.” Plain text and records can do this before you choose particular tool features.
+Once experiments are running, AI can help organize logs, compare results across configurations, and plot curves. Include the data locations, environment, and available compute when describing the task.
 
-When you already have reading notes, provide their location and the comparison you need:
+## Research material and analysis
 
-> Read the three paper notes I specify in Papers and compare how they address the same question. Attach the paper and note location to each comparison, preserve my annotations, and list missing information.
+A discussion of a paper can draw on its text, equations, method diagrams, and code. With a collection of material, you can provide your research question and notes and ask AI to compare approaches, organize relevant experiments, and identify questions that remain unclear. The [paper note workflow](irene-workflow.md#notes) covers Zotero, Obsidian, and local AI tools.
 
-[irene's note workflow](irene-workflow.md#notes) connects Zotero, Obsidian, and a local AI tool.
+**Markdown works well for keeping an analysis in one document.** Text, equations, code, tables, and images can sit together and remain easy to edit. An experiment analysis might include comparison conditions, plots, unusual examples, and your current explanation, with the relevant parts updated as new results arrive. [Markdown's basic syntax](https://www.markdownguide.org/basic-syntax/) covers these formats.
 
-## When it says it is finished, what do you inspect?
+## Figures and presentations
 
-What changed in the code? Which configuration ran? What did tests cover? Where are outputs and logs? Turn “the experiment succeeded” into something you can examine.
+AI can help turn existing analyses and material into figures, webpages, or slides. Plots can come from CSV files and experiment logs; model architectures can become diagrams. Interactive pages or animations can show how something changes over time.
 
-The same applies to reading. Ask for an explanation, then ask which passage supports it. Open and check any references it supplies.
-
-## Keep an understanding of your own
-
-For model deployment, do you know why a metric was chosen, whether the test workload resembles real use, which trick helped, and what might change under different conditions?
-
-Explain a before-and-after comparison to someone. The point where your explanation breaks is worth investigating. You need not do everything manually, but understanding affects how you use tools in work you intend to pursue long term.
-
-## AI can be a discussion partner
-
-Ask it for counterexamples, alternative explanations, and missing evidence for a concrete idea. Then decide what to use and how to test it.
-
-[Lilian Weng's agent article](https://lilianweng.github.io/posts/2023-06-23-agent/) and [Anthropic's Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) explain how systems organize tasks. To research agents themselves, see the [direction page](agent.md).
-
-Handle unpublished and review material according to the actual team and venue requirements; find rule entry points under [publication](publishing.md). My [freshman-year review](timeline.md) also discusses whether you have really learned something.
+For a group meeting or talk, you can provide the audience, available time, and research material to develop speaker notes and slides, then refine the order, colors, and layout. Related resources are in [writing, figures, and talks](writing.md).
 
 <a id="grill-me"></a>
 
-## Let AI ask you questions
+## Discussing methods and ideas
 
-Explain a method in your own words alongside its diagram, then ask AI to follow up on that explanation. Why is a module needed? What happens if it is removed? Which experiment supports your judgment? Return to the relevant passage, equation, or figure when you get stuck.
+AI can also be useful when you have an early idea or several possible explanations for a result. Relevant papers, previous attempts, and current questions give the discussion something concrete to work with: connections between methods, factors you may have missed, and other approaches worth trying.
 
-> I will explain this method diagram. Ask one question at a time and wait for my answer. Focus on inputs and outputs, module roles, conditions, and evidence. Identify the step I have not explained clearly and where to look again.
+**Grill Me** uses follow-up questions to explore your understanding. Tools are available in [paper-tools-marketplace](https://github.com/tseirene6/paper-tools-marketplace), with an example in [paper reading and discussion](irene-workflow.md#grill). Prompts, procedures, and output formats you use often can be saved as a skill.
 
-This is how irene uses **Grill Me**. Her [experience article](irene-workflow.md#grill) describes close reading, selective reading, and skimming; she also shares a [paper-reading toolkit](https://github.com/tseirene6/paper-tools-marketplace). When a task works well repeatedly, keep its input requirements, steps, and output format as a prompt or skill to use with new material.
+<a id="ai-feedback"></a>
 
-## Compare your own AI habits
+## Keeping your own judgment
 
-[Two essays about AI](lesswrong.md#ai) discuss students' attitudes and how certain interactions can shape judgment. Compare their situations with your own process.
+In a research discussion, AI may follow your idea and supply a motivation, method, and plausible explanation. A smooth conversation can make gaps in the reasoning less noticeable, or make its agreement feel like confirmation that you are right. You still need to consider whether its reasoning holds and fits the papers you have read and experiments you have done. Disagreements can also be discussed with teachers and other students.
+
+**Your own learning, experience, and judgment matter.** Reading papers, understanding code, and doing experiments shape the questions you can ask and how you assess a suggestion. When a gap in your knowledge gets in the way of understanding the work, it is worth spending time on it. That is part of developing your own view of a problem and its possible solutions.
+
+[Two observations about AI](lesswrong.md#ai) discuss belief reinforcement in AI interactions and how students use and understand AI.
+
+## Further reading
+
+[Lilian Weng's agent article](https://lilianweng.github.io/posts/2023-06-23-agent/) covers planning, memory, and tool use; [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) discusses how workflows and agents are organized.

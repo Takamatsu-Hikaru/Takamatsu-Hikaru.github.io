@@ -1,0 +1,94 @@
+# Lookout: what are researchers and labs working on?
+
+Curious about what researchers and labs are working on beyond your courses? Start with a demo, article, or interview that interests you, then follow it to the paper and code. The sources below can help you find work to explore next.
+
+## Meet people through their work
+
+When a demo makes you curious, find the original project. Read the problem and method, then inspect the authors' other work and the groups behind related papers. A community gradually becomes familiar.
+
+For example, follow demonstration and action modeling from [ACT / ALOHA](https://tonyzhaozh.github.io/aloha/) toward robot data and policy learning. Follow tools and feedback from [ReAct](https://react-lm.github.io/) toward long tasks, recovery, and evaluation.
+
+Write down questions worth asking, then [contact an author or senior student](contact.md).
+
+## Places to look
+
+**[OpenAI News](https://openai.com/news/)**  
+Model, research, and engineering releases. Follow relevant items to technical material and evaluation conditions.
+
+**[Anthropic Research](https://www.anthropic.com/research)**  
+Mechanisms, alignment, real-world use, and societal impact. Look at each article's starting question and method.
+
+**[Google DeepMind publications](https://deepmind.google/research/publications/)** and **[Google Research](https://research.google/pubs/)**  
+Search your area, then follow authors and related papers.
+
+**[Berkeley AI Research Blog](https://bair.berkeley.edu/blog/archive/)**  
+See how lab members introduce and develop a research question.
+
+**[Hugging Face Daily Papers](https://huggingface.co/papers)**  
+Discover papers and discussions, then return to the original, code, and author pages.
+
+## Combining media and personal blogs
+
+Jiqizhixin, QbitAI, Xinzhiyuan, Xiaohongshu, Zhihu, Bilibili, X, and YouTube can introduce new things. Follow interesting news to the original paper or release.
+
+**[Z Potentials](https://zpotentials.substack.com/)**  
+Interviews with AI teams, founders, and technical practitioners. See what different teams are working on, why they chose a problem, and how their technology becomes a product.
+
+**[葬AI / Funeral AI](https://funeralai.substack.com/)**  
+AI product experiences and industry commentary with a direct, personal voice. Explore how new products work and what people are debating.
+
+Personal blogs show process as well as outcomes. [Jianlin Su](https://kexue.fm/content.html) is useful for mathematics and model questions, [Simon Willison](https://simonwillison.net/) records tool experiments, and [Karpathy](https://karpathy.ai/) shares courses, projects, and essays. See [technical blogs and research perspectives](blogs.md).
+
+## Hear researchers explain their work
+
+**[张小珺 Jùn — Business Interviews](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**  
+Long conversations with researchers and founders about technology, their careers, and important choices.
+
+Start with the [Saining Xie episode](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837), covering his education and research career, representation learning, research taste, world models, and starting a company. Use the representation-learning and world-model sections to locate technical discussions.
+
+**[WhyNotTV](https://space.bilibili.com/14145636/)**  
+Researcher interviews and personal accounts of university and research life, covering both the work and the choices along the way.
+
+- [My first two years of a robotics PhD — 任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/): Tairan He looks back on his first two years at CMU, connecting research on legged locomotion, humanoid teleoperation, and control with the collaborators behind the projects.
+- [Jiayi Weng interview](https://www.bilibili.com/video/BV1darmBcE4A/): Undergraduate encounters with reinforcement learning, open-source projects, university applications, and work on post-training and infrastructure at OpenAI.
+
+<a id="research-brief"></a>
+
+## Prepare a research brief
+
+Once you have found relevant sources, a recurring brief can select work related to your questions. [The research brief workflow](irene-workflow.md#brief) is to read one issue, adjust the selection, and then choose a schedule.
+
+> I am investigating [specific question]. Select about five items from the past week's papers, code releases, technical blogs, and lab announcements. Include dates and original links. For each, explain the work, its relation to my question, and a figure to read, project to try, or question to pursue.
+>
+> Use the last seven days of briefs and my reading log to remove duplicates. If an older project has new results, explain what changed.
+
+Keep titles, links, issue dates, and reading status in a list, and provide it for the next brief. See the [full workflow](irene-workflow.md#brief) for interest weights, prompts, and scheduling. Then use your [reading purpose](reading.md#reading-depth) to decide how deeply to read each paper.
+
+## What questions should you note after reading new work?
+
+Write a few sentences: what problem does this work address, how does it differ from what you knew, and what would you like to explore? Share an article with your question when it seems worth discussing.
+
+Use the [directions pages](directions.md) to locate representative papers and related work for the question being investigated.
+
+## Research communities and knowledge sharing
+
+### OpenEnvision
+
+[OpenEnvision (OE)](https://openenvision.github.io/) is an open AI research community connecting academia and industry, with interests in world models, multimodal intelligence, vision, and embodied AI. It also shares research knowledge through curated writing, interviews, and courses.
+
+- **[BlogrXiv: AI research blogs and technical writing](https://openenvision.github.io/BlogrXiv/site/index.html)** brings together research blogs, lab essays, and technical notes. Browse by field for explanations, engineering experience, and research methods, then follow links to the original articles.
+- **[ScholarTube: AI interviews, podcasts, and courses](https://openenvision.github.io/ScholarTube/)** collects long-form researcher interviews, video podcasts, complete courses, and research talks across agents, world models, vision, robotics, and research practice, with links to the original videos.
+
+You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
+
+### Lumina
+
+[Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
+
+### AgentHub
+
+[AgentHub](https://hqhq1025.github.io/agent_hub/) collects discussions from the Agent community into daily and weekly digests, covering agent research, tools, engineering practice and industry developments. Browse by date, discussion group or external news to see what people are working through, how they compare technical approaches and where their views differ.
+
+## Follow material to people and teams
+
+To find teams working in a field, follow projects in [research groups](labs.md). To read how authors explain their methods and experiments, try [technical blogs](blogs.md). If you prefer interviews or videos, the [information-channel catalog](catalog-channels.md) has more options.

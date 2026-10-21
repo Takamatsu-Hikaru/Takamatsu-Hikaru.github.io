@@ -1,93 +1,59 @@
 # Finding and reading papers
 
-<h2 id="reading-overview">Start with how the field developed</h2>
+Getting started in research may be closer than you think. While reading, building a project, or talking with others, **you come across a question that interests you or a possible improvement**. Following it through related work, trying things out, making sense of the results, and writing up what you find is how a research project begins to take shape.
 
-When entering a field, start with a good survey, a talk, or a course to see what people study and the main approaches they take. With that overview, reading classic papers and related blogs makes it easier to understand why a paper appeared and where it belongs in the field.
+<h2 id="reading-overview">Understanding a field</h2>
 
-As you read, connect the papers. What did an earlier work leave unresolved? Why did later researchers try a different approach? Did they discover a new phenomenon, gain access to better data, or run into a limitation of the previous method? Some papers develop an existing line of work, others offer a different explanation, and some connect previously separate areas. Following these changes helps you understand both the field’s development and its subfields.
+Research also brings you into contact with the wider field. Surveys, talks, and courses offer an overview; foundational papers and researchers' blogs help connect its development: **What prompted each piece of work? Why did the authors take that approach? What did it solve, and what did it change about our understanding?** These connections reveal different lines of research and the smaller areas within a broad field.
 
-Follow authors and research groups, too. When you enjoy a paper, look at the authors’ earlier and later work, homepages, blogs, and talks. Why do they keep returning to this problem? How do their papers connect, and which judgements have changed? Following a researcher’s line of work can reveal a thought process that is harder to see in a single paper.
+Some questions will catch your interest. Other work may offer a method, a dataset, or a useful explanation for your current project. As you keep reading, discussing, and experimenting, you develop your own judgment about **what is worth investigating, what remains unclear, and what to try next**. Research taste and ideas grow through this experience.
 
-As you learn more, you will find threads you want to follow: a subfield that interests you, a paper with a method you need, or something you have not yet understood about the conclusions of several studies. Keep a record of these connections and questions. They give your next literature search a more specific direction.
+When a paper interests you, the authors' earlier and later work, homepage, blog, and talks are worth a look too. Following **the same question** across several papers can reveal reasoning that is hard to see in one article alone.
 
-With these threads in mind, decide how deeply to read the paper in front of you. Are you exploring a field, solving a problem in your project, or preparing to reproduce a result? Different purposes call for attention to different details.
-
-## How do you find related work from one paper?
-
-With a title, find the original, project page, and code. Use [Google Scholar](https://scholar.google.com/) for references and later citations, then compare author pages. Consult [Scholar help](https://scholar.google.com/intl/en/scholar/help.html) or try [AMiner's search and reading tools](https://docs.aminer.cn/user-guide/platform-overview/).
-
-Use [Zotero](https://www.zotero.org/support/quick_start_guide) to save titles, authors, links, versions, and attachments. Keep your questions nearby so you can resume later.
-
-<a id="reading-depth"></a>
-
-## How deeply should you read this paper?
-
-Write down the question you are currently trying to understand. Does the paper answer it directly, connect two previously separate ideas, supply a usable method, or merely share keywords?
-
-| Purpose | Focus | What to keep |
-| --- | --- | --- |
-| Get a quick picture | Problem, main mechanism, key result | A one-sentence account and a reason to return |
-| Understand a field | Background, relationships between methods, evidence, conditions | Comparisons and unresolved questions |
-| Reproduce or extend | Architecture, equations, data, settings, ablations, implementation | A method diagram you can explain, questions, and experiments to try |
-
-A gap in the evidence may itself justify close reading if the question matters or the gap offers a research opportunity. Conversely, a rigorous paper with little connection to your current question may need only a skim.
-
-This judgment comes from [irene's reading experience](irene-workflow.md#depth). She also considers prerequisites and time, listing the essential sections and figures alongside the questions she wants to answer.
-
-## What should you focus on in a first reading?
-
-Start with the abstract, introduction, key figures, and conclusion, then check experiments. Write a few sentences:
-
-Under which conditions does the paper address which problem? What is its main method? What results support it? What do I still not understand?
-
-[Keshav's How to Read a Paper](https://cs.uwaterloo.ca/~brecht/courses/854-Experimental-Performance-Evaluation-2018/readings/common/how-to-read/keshav-paper-reading.pdf) and [Mu Li's paper readings](https://github.com/mli/paper-reading) show two approaches. Apply one to an actual paper instead of only collecting reading advice.
-
-<a id="claims-evidence"></a>
-
-For each main conclusion, locate the supporting figure or experiment and the conditions under which it was run. Keep four columns: **claim, evidence, conditions, and your questions**. If a module is credited with an improvement, check whether the ablation isolates it. For a generalization claim, examine how test settings relate to the training data.
-
-Explain this record alongside the method diagram, then try [having AI question your explanation](ai.md#grill-me).
-
-## Go deeper for reproduction
-
-Where did data come from? Do splits overlap? How are metrics computed and baselines set? Where is the core implementation? How much variation is there? Read paper and code together; critical conditions may be in appendices, configurations, or issues.
-
-AI can explain a passage or help list questions. Return to the original or an actual run when you need evidence for a judgment.
-
-<a id="paper-notes"></a>
-
-## What should you keep in a note?
-
-[irene's setup](irene-workflow.md#notes) uses Zotero for papers and attachments, Obsidian for literature notes and her own thinking, and AI to help compare, organize, and question those notes.
-
-Start with:
-
-- **Source:** title, authors, year, and original link.
-- **Question and method:** the problem and the central approach.
-- **Evidence:** figures, experimental settings, and conclusions.
-- **My questions:** unclear points and explanations to test.
-- **Related work:** connections to papers you have read or projects you are doing.
-
-Separate your annotations from excerpts and keep page references for key figures. When comparing papers or writing, these lead back to the evidence. Import setup, folders, and example requests are in the [full workflow](irene-workflow.md#notes).
-
-## Connect papers
-
-Choose a shared question and record what each paper changes, depends on, and leaves unresolved. Pay particular attention to matching tasks and resources.
-
-Finish with “After reading these, I want to investigate…” It may lead to another paper, a conversation, or an experiment.
-
-[Choose a paper](papers.md) · [Experiment](experiments.md) · [Discuss your question](contact.md)
+## Finding papers and related work
 
 <a id="research-map"></a>
 
-## Search from the questions that remain
+When you are new to a topic, you can ask AI to find surveys and representative papers, then follow their related work—and the related work of those papers—to trace the main research directions: **what problems people are addressing, how the methods relate, and what later work improved**. When a particular line interests you, read the original papers and ask AI to find more work along it.
 
-Keep a page for your current questions, the work you have read, experiments you have tried, unresolved points, and directions you want to connect. irene calls this a [research map](irene-workflow.md#depth).
+[Google Scholar](https://scholar.google.com/) can help find later citations and related papers; a paper's references lead to the work it builds on. Author pages, project sites, and code repositories often include talks, demos, and updates. [Scholar help](https://scholar.google.com/intl/en/scholar/help.html) explains its search features, and [AMiner](https://docs.aminer.cn/user-guide/platform-overview/) also offers paper search and reading tools. See [targeted literature search](irene-workflow.md#search) for more approaches.
 
-For example, if you care about agents failing on long tasks, organize papers around planning, tool use, memory, and environmental feedback. Which failure does each explain? What do the experiments cover? Which observations remain unexplained?
+<a id="reading-depth"></a>
 
-Specify the research object, mechanism, task, and phenomenon when searching. Follow references and citations to foundational work, direct predecessors, and contemporary studies. Author pages, repositories, and project pages can lead to later versions. See [irene's targeted search process](irene-workflow.md#search).
+## Reading depth
 
-## Other entries
+**How closely you read depends on what you want to understand.** For an introduction to a piece of work, focus on the problem, main method, and key results. To understand a field, compare the connections between papers. To reproduce or extend a method, look more closely at the architecture, equations, data, and experimental setup.
 
-Compare your reading with [Mu Li](limu.md). The [research catalog](catalog-research.md) includes search, storage, publication, and reading resources. [Research conversations](research-conversations.md) preserves questions other students have asked.
+You can return to the same paper several times. Questions from a first reading may become clearer after seeing later work, the code, or an experiment. [Keshav's How to Read a Paper](https://cs.uwaterloo.ca/~brecht/courses/854-Experimental-Performance-Evaluation-2018/readings/common/how-to-read/keshav-paper-reading.pdf) describes a three-pass approach; [Mu Li's How to Read Papers](https://www.bilibili.com/video/BV1H44y1t75x/) also discusses reading order and depth.
+
+<figure class="resource-figure medium"><a href="https://www.bilibili.com/video/BV1H44y1t75x/"><img src="../../../public/blog/guide/figures/uestc/reading/limu-reading.jpg" alt="Mu Li: How to Read Papers (in Chinese)" loading="lazy" width="800" height="450"></a><figcaption><a href="https://www.bilibili.com/video/BV1H44y1t75x/">How to Read Papers</a><span class="caption-dot">·</span>Mu Li · Chinese<span class="caption-dot">·</span><a href="https://www.zhihu.com/zvideo/1428973951632969728">Zhihu</a></figcaption></figure>
+
+## Problems, methods, and experiments
+
+The abstract, introduction, key figures, and conclusion give a first view of **what the authors did, why, and how**. The experiments show how the results support their claims. You can return to method details and unclear passages as you read further.
+
+<a id="claims-evidence"></a>
+
+If the authors attribute an improvement to a module, look at whether the ablation isolates that change. If they claim generalization to new settings, examine how the test settings relate to the training data. When comparing papers, differences in **tasks, data, and compute** matter alongside differences in methods. Questions that arise while reading can lead to a discussion, or you can [ask AI to question your explanation](ai.md#grill-me).
+
+<a id="paper-code"></a>
+
+## Papers and code
+
+A paper's repository can contain many files, and individual implementations may be hard to follow at first. Use the architecture and design in the paper as a guide: **trace how data moves through the program, then how training and inference work**. The overall structure becomes easier to understand. AI can work with the paper and repository to help you find the relevant implementation and explain how the parts connect and why they are written that way.
+
+When reproducing a result, data processing, training configuration, and evaluation often become clearer through the code. Some details that affect the results are absent from the main text; **appendices, configuration files, and repository issues** often fill in the gaps.
+
+<a id="paper-notes"></a>
+
+## Notes and reference management
+
+[Zotero](https://www.zotero.org/support/quick_start_guide) stores paper metadata, PDFs, and annotations. Obsidian, Feishu, or Notion can hold your understanding, questions, and related material. Alongside what a paper says, it is useful to keep **why it caught your attention and what you have not yet figured out**, with relevant figures and locations in the original. The [paper and note workflow](irene-workflow.md#notes) includes Zotero and Obsidian setup and examples.
+
+When several papers address the same question, bringing them together helps you compare their methods, experimental conditions, and unresolved problems. Those connections can change as your reading and experiments progress. [Research questions and related work](irene-workflow.md#depth) describes one way to organize them.
+
+## Paper discussions and further reading
+
+[Mu Li's paper readings](https://github.com/mli/paper-reading) discuss background, methods, experiments, and writing, often paragraph by paragraph. Videos on Transformer, ViT, and CLIP appear in [selected papers](papers.md#sec-1); more courses and paper discussions are collected under [deep learning courses and paper readings](limu.md).
+
+[Research methods and tools](catalog-research.md) · [Research experiences and conversations](research-conversations.md) · [Contact and collaboration](contact.md)

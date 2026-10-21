@@ -37,45 +37,18 @@ Run `npm run build:blog` to regenerate both article pages. The normal build comm
 also run this step. Its cover is `public/blog/more-papers-cover.webp`; the article
 reuses the existing blog design through `public/blog/more-papers.css`.
 
-## Getting-started guide
+## AI Research Guide
 
-Section 06, Getting Started Guidance, links to the personal guide in Chinese and English. Edit articles in
-`content/guide/zh/` and `content/guide/en/`; `content/guide/manifest.json` controls their order and grouping.
+[![AI Research Guide overview](public/blog/guide/figures/uestc/home/guide-overview.webp)](https://takamatsu-hikaru.github.io/blog/guide/zh/)
 
-Run `npm run build:guide` to regenerate `public/blog/guide/`. Both site build commands
-also run this step automatically. Open `public/blog/guide/zh/index.html` or
-`public/blog/guide/en/index.html` directly to preview the guide. The homepage and its
-Guide entry are included in the full site build.
+The Guide entry links to the Chinese and English editions at `public/blog/guide/`. The guide shares its articles, paper cards, and images with [AI-Research-Guide](https://github.com/Takamatsu-Hikaru/AI-Research-Guide). The personal edition retains the university letter, personal essays, and LessWrong selections on growth and work–life balance.
 
-Shared guide styles and interactions live in `public/blog/guide/guide.css` and
-`public/blog/guide/guide.js`; page templates live in `scripts/build-guide.mjs`.
-The original AI club knowledgebase remains a separate project.
+Run `node scripts/sync-personal-site.mjs <this-repository-path>` **in the AI-Research-Guide repository** to copy the current guide here. Then run `npm run build:guide` or `npm run build:pages`. The older `sync-club-guide.mjs` targets the retired standalone club project and is not part of this workflow.
 
-### Field guides and illustrated paper cards
+The article sources are in `content/guide/zh` and `content/guide/en`. The shared renderer uses `scripts/guide-model.mjs` and `scripts/guide-shell-personal.mjs`; styles are in `public/blog/guide/guide-personal.css` and `guide-intro.css`.
 
-The guide includes bilingual introductions, idea roadmaps, terms, checklists,
-and 37 illustrated paper cards across ten directions, including pi0 and pi0.5.
-Edit `content/guide/fieldnotes/*.json`; figure sources and dimensions are stored in
-`content/guide/paper-figures.json`. Each article introduces the field, follows its
-learning routes, then presents papers and exercises. `papers.html` collects searchable cards.
+The guide includes 60 questions and 49 illustrated paper cards across ten research directions. The shared AMA page uses the GitHub Discussions board and the public `ama-data` feed.
 
-`ama.html` displays the shared GitHub Discussions board. Posts and replies use GitHub
-accounts, with posting and editing on GitHub. The discussion-event workflow updates
-the public `ama-data` feed; setup details are in `notes/ama-options.md`.
+Contributions are welcome on [GitHub](https://github.com/Takamatsu-Hikaru/AI-Research-Guide): open an issue or submit a PR with corrections and resources. If you find the guide useful, give it a star or share it with others.
 
-Build with `npm run build:guide` or `npm run build:pages`. Start a review at
-`public/blog/guide/zh/agent.html`, `generation.html`, `papers.html`, or `ama.html`.
-The English counterparts are in `en/`.
-
-Browser checks: `node scripts/check-fieldnotes.cjs` (requires Playwright and Edge;
-set `PLAYWRIGHT_MODULE_PATH` if Playwright is supplied by a separate local runtime).
-When this worktree shares `node_modules` through a junction, use
-`npm run build:pages -- --webpack`; Turbopack rejects dependency links outside its root.
-
-### Sync the AI club edition
-
-Run `node scripts/sync-club-guide.mjs <club-guide-directory>`, then run
-`node build.mjs` and `node check-preview.cjs` in that directory. The sync preserves
-the club homepage, community introduction, and green design while copying the
-shared field data, paper illustrations, and interactions. A snapshot before the
-first sync is saved locally under `work/club-before-fieldnotes-sync`.
+The personal guide uses the homepage’s typography, paper and blue palette, and saved light/dark preference. The guide entry in section 06 switches its heading, description, and destination together between English and Chinese.

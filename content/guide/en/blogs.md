@@ -1,12 +1,10 @@
-# Author blogs and research notes
+# Technical blogs and research perspectives
 
-Blogs often restore the process papers omit: why a method was tried, what disappointed, and how the next step was chosen.
+Sometimes a paper leaves you wanting to know how an author explains the idea or what happened during the experiments. We have selected technical blogs and research notes, with original links and suggestions for where to begin.
 
-For experience, start with Zou's Cognitive Compound Interest or Chai's FAQ. For experiments, read LoopDiT and AutomationBench. For mechanisms, consult Su and Purshow.
+For model mechanisms, start with Jianlin Su or Purshow; for training and evaluation, try Wenhao Chai. You will also find writing on Scaling Ladder, world models, and paper writing below.
 
-For more authors and topics, explore OpenEnvision's [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html), which organizes research blogs, lab essays, and technical notes by field.
-
-[Back to the resource index](resources.md)
+Find more articles by field at [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html). [Back to the resource index](resources.md).
 
 <a id="purshow"></a>
 
@@ -16,7 +14,7 @@ For more authors and topics, explore OpenEnvision's [BlogrXiv](https://openenvis
 
 ### Why remove the encoder? An infrastructure perspective
 
-[Original article](https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/从Infra角度看，为什么去掉Encoder更好.md)
+[Original article](https://github.com/Purshow/Purshow_Notes/blob/main/Encoder-Free/EN/Why%20Removing%20the%20Encoder%20Is%20Better%20-%20An%20Infra%20Perspective.md)
 
 The article explains encoder-free design through differences in workload, parallel configuration, and scheduling between vision encoders and language models. It also notes that removing the encoder does not eliminate workload variation from variable-length visual tokens.
 
@@ -36,12 +34,6 @@ Topics include attention, MoE, on-policy distillation, world-action models, resi
 ## Wenhao Chai
 
 [Homepage](https://wenhaochai.com/) · [Blog index](https://wenhaochai.com/blogs.html)
-
-### FAQ for Juniors
-
-[Original article](https://wenhaochai.com/pages/junior_faq.html)
-
-Updated February 25, 2026. Covers PhD choices, entering from outside CS, lacking a suitable local lab, contacting researchers, selecting directions, and the value of benchmark work.
 
 ### LoopDiT: Loop Transformers for Diffusion Models
 
@@ -67,12 +59,6 @@ Chinese and English, September 27, 2026. Uses task-dependency graphs and simulat
 
 [Blog index](https://jiaxuanzou0714.github.io/blog/)
 
-### Cognitive Compound Interest: reflections on two undergraduate years
-
-[Original article](https://jiaxuanzou0714.github.io/blog/2026/cognitive-compound-interest/)
-
-Chinese, July 4, 2026. Connects seminars, public technical writing, collaboration, and internship opportunities through undergraduate experience, including changing plans as new information arrived.
-
 ### Pretraining and scaling as methodology and scientific perspective
 
 [Original article](https://jiaxuanzou0714.github.io/blog/2026/pretrain-scaling-methodology-scientific-perspective/)
@@ -97,10 +83,9 @@ Chinese, September 20, 2026. Organizes a workflow around small experiments, cons
 
 By Zhewei Huang and Xiaohan Ding, 2024. Covers extracting contributions, overall structure, introductions and related work, logic, defensibility, reader effort, and information density. Includes common negative reviews and a pre-submission check.
 
-### Rebuttals and doctoral experience
+### Rebuttal writing
 
 - [Article on rebuttals](https://zhuanlan.zhihu.com/p/602024489)
-- [An Anxious Beginning, a Calmer Later Stage: the First Two PhD Years at Tsinghua](https://hub.baai.ac.cn/view/20773), reprinted by BAAI
 
 <a id="han"></a>
 
@@ -158,8 +143,25 @@ Starts with a gradual destruction-and-rebuilding analogy, then connects noising 
 
 Explains the team's choice of Muon through optimizer practice and discusses spectral norms, learning rates, weight decay, and related theory and experiments. Start with the question, motivation, and experimental adjustments before the equations.
 
-### The thousandth article
 
-[Original](https://spaces.ac.cn/archives/7782), 2020.
+<a id="knightnemo"></a>
 
-A reflection on long-term blogging and the site as a place for personal notes. Useful when beginning to record and share your own learning.
+## knightnemo / Nemo
+
+[Nemo's Blog](https://knightnemo.github.io/blog/) · [Archive](https://knightnemo.github.io/blog/archives/)
+
+Technical topics include world models, reinforcement learning, and generative models. Look up “Loops Inside the Denoiser” for looped denoiser notes, “A Hitchhiker's Guide To Diffusion RL” for diffusion / flow post-training comparisons, and “Titans: Learning to Memorize at Test Time” for memory mechanisms.
+
+<a id="industry-perspectives"></a>
+
+## Industry and research perspectives
+
+Public perspectives on technical directions and industry developments. Read alongside publication dates, supporting evidence, and subsequent technical work.
+
+- **[Elon Musk: Master Plan, Part Deux](https://www.tesla.com/master-plan-part-deux)**: a 2016 product plan on Tesla's website, including autonomy and vehicle applications.
+- **[Sam Altman: blog](https://blog.samaltman.com/)**: perspectives on AI capabilities, products, and industry developments.
+- **[Dario Amodei: The Urgency of Interpretability](https://darioamodei.com/post/the-urgency-of-interpretability)**: April 2025; discusses the motivation and progress of research into models' internal mechanisms.
+
+### Member repository
+
+[Takamatsu-Hikaru / AI-Research-Guide](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) — Source repository for this guide.

@@ -1,4 +1,4 @@
-# Mu Li: from courses to close paper reading
+# Deep learning courses and paper discussions
 
 Mu Li's material fits two stages. While learning training, use Dive into Deep Learning to connect concepts and code. When reading research, watch how he examines abstracts, figures, methods, and experiments.
 

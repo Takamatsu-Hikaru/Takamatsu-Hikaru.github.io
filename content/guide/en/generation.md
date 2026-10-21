@@ -1,4 +1,4 @@
-# Generative models: how an image is made
+# Generative models
 
 Generating an image from text or progressively turning noise into a sample requires learning patterns in data and a practical sampling process. Research can concern objectives, generation paths, conditioning, or speed.
 

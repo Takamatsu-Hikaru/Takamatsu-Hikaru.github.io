@@ -1,4 +1,4 @@
-# Getting to know research groups
+# Research groups and teams
 
 Lab pages help you see who works on a question and how the work develops over time. Pick a project and move between its paper, code, and author pages instead of memorizing lab names.
 

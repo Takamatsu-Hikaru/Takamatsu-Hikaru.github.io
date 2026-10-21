@@ -1,0 +1,81 @@
+{
+  "note": "University emblems are third-party institution marks, used beside links to those institutions. SVG copies from China-Universities-2026; lab marks and selected university emblems from their websites. No logo artwork altered.",
+  "assets": [
+    {
+      "file": "uestc.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%20UESTC.svg"
+    },
+    {
+      "file": "tsinghua.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%20THU.svg"
+    },
+    {
+      "file": "fudan.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6%20FDU.svg"
+    },
+    {
+      "file": "sjtu.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%20SJTU.svg"
+    },
+    {
+      "file": "zju.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6%20ZJU.svg"
+    },
+    {
+      "file": "nju.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%20NJU.svg"
+    },
+    {
+      "file": "ustc.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%20USTC.svg"
+    },
+    {
+      "file": "hit.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E5%93%88%E5%B0%94%E6%BB%A8%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%20HIT.svg"
+    },
+    {
+      "file": "xjtu.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%20XJTU.svg"
+    },
+    {
+      "file": "ruc.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos-new/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6%20RUC.svg"
+    },
+    {
+      "file": "cuhk.svg",
+      "source": "https://raw.githubusercontent.com/Magicdover/China-Universities-2026/main/assets/logos/%E9%A6%99%E6%B8%AF%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%A6%20CUHK.svg"
+    },
+    {
+      "file": "pku.png",
+      "source": "https://www.pku.edu.cn/pku_logo_red.png"
+    },
+    {
+      "file": "hku.png",
+      "source": "https://www.cds.hku.hk/wp-content/uploads/2024/08/hkucs-flavicon.png"
+    },
+    {
+      "file": "svl.png",
+      "source": "https://svl.stanford.edu/assets/images/logosvg.01ab8194.png"
+    },
+    {
+      "file": "nlp.gif",
+      "source": "https://nlp.stanford.edu/static/img/logos/nlp-logo.gif"
+    },
+    {
+      "file": "han.png",
+      "source": "https://cdn.prod.website-files.com/64f4d663be17b6544a586bac/65137c787ca95e90b345d4f6_han-logo-256.png"
+    },
+    {
+      "file": "thudm.png",
+      "source": "https://avatars.githubusercontent.com/u/48590610?s=200&v=4"
+    },
+    {
+      "file": "bair.png",
+      "source": "https://rail.eecs.berkeley.edu/images/bair.png"
+    },
+    {
+      "render": "RAIL text wordmark",
+      "source": "https://rail.eecs.berkeley.edu/css/style.css"
+    }
+  ]
+}

@@ -1,22 +1,29 @@
-# 我的入门指南
+# AI科研入门指南
 
-刚进大学，你可能还不知道这几年想做什么。听说要争取保研，也听说大家在打比赛、进实验室，但这些事情和自己的未来有什么关系，为什么要做科研，可能还没有想清楚。
+各位同学，欢迎来到 UESTC AI 社的入门指南。如果你对 **AI 和科研感兴趣**，却还不知道从哪里开始入门；或者已经开始参与项目或规划找课题组，却不知道怎么联系老师，对接工作；或者已经加入了自己的课题组，但是仍然对**想 idea、推进工作**感到迷茫。我们希望这份指南能够帮助到你。
 
-也可能你已经想开始了。我们当时也会问：大家怎么已经进组了，我连 C 都没学过；看了不少课，接下来到底能做什么；想联系一位老师，又不知道发出去之后会发生什么。
+<figure class="resource-figure guide-overview"><a href="../../../public/blog/guide/figures/uestc/home/guide-overview.png?v=2" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/home/guide-overview.webp?v=2" width="1600" height="904" alt="指南全览：开始学习、研究方向、科研实践、看看外面与资料索引；从初次接触、动手学习，到进入课题、形成判断和表达交流。" decoding="async" fetchpriority="high"></a></figure>
 
-这份指南面向刚进入大学、想了解 AI 和科研的同学。这里有我们对大学选择与科研入门的回答，也整理了入门项目、各方向的代表论文、课程和工具。联系老师、第一次进组、实验失败，以及和同龄人比较时的焦虑，也在其中。
+**[写给刚进大学的你](welcome.md)** · 大学里的选择、科研与生活，也写了刚入学时的迷茫。
 
-## 写在前面
+## 从哪里开始
 
-**[写给刚进大学的你](welcome.md)**  
-大学里有哪些选择，自己想往哪里走？我从刚入学时的迷茫讲起，聊成绩、科研，也聊认识的人和科研之外的生活。
-
-**[How to 入门科研](research.md)**  
-科研具体在做什么，为什么值得尝试？从找方向、联系老师，到读论文、做实验和投稿，也聊基础不够、进度落后和实验失败时怎么办。
+| 如果你想…… | 可以看看↓↓ |
+|---|---|
+| 找一个 AI 入门项目，先动手试试 | [第一个 AI 项目](start.md) |
+| 了解 AI 有哪些研究方向、分别在做什么 | [研究方向总览](directions.md) |
+| 补一补编程、数学、机器学习等基础 | [学习基础知识](basics.md) |
+| 了解科研到底在做什么，怎么开始 | [科研入门Q&A](research.md) |
+| 学着找论文、读论文 | [找资料和读论文](reading.md) |
+| 写论文、画图、准备汇报 | [写作、画图和汇报](writing.md) |
+| 找老师、联系课题组、参与合作 | [联系老师、学长与合作](contact.md) |
+| 用 AI 辅助学习、编程和科研 | [AI 工具](ai.md) |
+| 了解会议、投稿和审稿流程 | [投稿与会议](writing.md#submission) |
+| 查找不熟悉的 AI 术语或学术会议 | [术语与会议速查](../wiki/index.html) |
 
 ## AI 编年史
 
-从达特茅斯会议到语言模型、生成、机器人与科学发现，看关键论文如何改变研究，又如何走到一起。
+如果你想宏观地了解 AI 的历史，可以看这段有关AI发展的介绍视频。从达特茅斯会议，到语言模型、生成、机器人与科学发现，再到未来的 AGI，我们都身在其中。
 
 <video class="chronicle-video" controls preload="none" playsinline poster="../chronicle/poster.jpg" aria-label="AI 编年史">
 <source src="../chronicle/ai-chronicle.mp4" type="video/mp4">
@@ -24,62 +31,29 @@
 <track kind="subtitles" src="../chronicle/en.vtt" srclang="en" label="English" >
 </video>
 
-[继续看：AI 的研究方向 →](directions.md)
 
-## 开始学习 AI
+## 跟进研究动态
 
-**[第一个 AI 项目，从哪里开始？](start.md)**  
-训练一个识别手写数字的模型，或者让模型在自己拍的照片里框出人和车。从 MNIST、YOLO 开始，走一遍运行、训练和修改代码的过程；也有 Agent 和机器人的入门项目。
+[研究者与实验室动态](lookout.md) · [技术博客与研究观点](blogs.md) · [论文选读](papers.md)
 
-**[AI 的不同方向，都在研究什么？](directions.md)**  
-语言模型、智能体、视觉、多模态、生成、强化学习、世界模型、具身和系统。每个方向先讲一个具体问题，再接论文、讲解和可以尝试的项目。
-
-**[基础怎么学，需要学到哪里？](basics.md)**  
-Python、数学、ML/DL、计算机和模型架构。把卡住的概念补上，再回到你的项目里看看它是怎么用的。
-
-**[术语与会议速查](../wiki/index.html)**<br>
-在这里查询你没听懂或者感兴趣的术语吧。
-
-## 做研究时会遇到的问题
-
-[找资料和读论文](reading.md) · [把实验做明白](experiments.md) · [写作、画图和汇报](writing.md)
-
-[联系老师与合作](contact.md) · [和 AI 一起做事](ai.md) · [投稿与发表](publishing.md)
-
-第一篇论文怎么读，实验结果怎么看，第一次联系老师写些什么？这里按研究过程整理方法和工具，遇到具体问题时可以回来查。
-
-## 经历、生活与眼界
-
-**[经历、焚诀与走过的弯路](experience.md)**  
-从大一回忆到第一次拒稿，也读读其他人的经历和判断。
-
-**[怎么好好生活](life.md)**  
-成绩、科研、朋友、爱好都在大学里。这里从我们自己的经历聊起。
-
-**[Lookout：研究者和实验室最近在做什么？](lookout.md)**  
-从一项让你好奇的工作出发，认识做它的人和实验室，顺着文章、代码、讨论继续看。
-
-[挑一篇论文读](papers.md) · [关于这份指南](about.md)
+[关于 AI 社与这份指南](about.md)
 
 ## 研究社区与知识分享
 
 ### OpenEnvision
 
-[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注世界模型、多模态、视觉与具身智能，也通过整理博客、访谈和课程，为社区分享研究知识。
+[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注**世界模型、多模态、视觉与具身智能**，也通过整理博客、访谈和课程，为社区分享研究知识。
 
-- **[BlogrXiv：AI 研究博客与技术文章](https://openenvision.github.io/BlogrXiv/site/index.html)**：汇集研究博客、实验室文章和技术笔记，可以按方向找机制解释、工程经验与科研方法，再进入作者原文。
-- **[ScholarTube：AI 访谈、播客与课程](https://openenvision.github.io/ScholarTube/)**：收集研究者长访谈、视频播客、完整课程与学术报告，覆盖 Agent、世界模型、视觉、机器人及科研方法，链接到原始视频。
-
-也欢迎向 [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) 和 [ScholarTube](https://github.com/OpenEnvision/ScholarTube) 推荐值得分享的文章与视频。
-
+- [BlogrXiv：AI 研究博客与技术文章](https://openenvision.github.io/BlogrXiv/site/index.html)：汇集研究博客、实验室文章和技术笔记，涉及模型原理、工程经验与科研方法。
+- [ScholarTube：AI 访谈、播客与课程](https://openenvision.github.io/ScholarTube/)：收集研究者长访谈、视频播客、完整课程与学术报告，覆盖 Agent、世界模型、视觉、机器人及科研方法。
 ### Lumina
 
-[Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
+[Lumina](https://lumina-embodied.ai/)关注**具身智能的研究、开源项目与社区交流**，提供了[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)，也定期举办 Lumina Talks、具身观察和社区活动。
 
 ### AgentHub
 
-[AgentHub（群谈）](https://hqhq1025.github.io/agent_hub/)把 Agent 社区里的讨论整理成日报和周报，涉及智能体研究、工具使用、工程实践与行业动态。可以按日期翻阅，也可以看不同群组的讨论与外部资讯，了解大家最近遇到什么问题、怎样比较技术方案，以及同一个问题有哪些不同判断。
+[AgentHub](https://hqhq1025.github.io/agent_hub/)把 Agent 社区里的讨论整理成日报和周报，涉及智能体研究、工具使用、工程实践与行业动态。分享大家最近遇到的问题，以及对技术方案的比较和判断。
 
-## 资料索引
+## 更多学习资料
 
-[资料总索引](resources.md)收齐课程、paper list、作者博客、LessWrong、研究团队与问答。已经有具体问题时，可以直接搜索李沐、RoPE、Scaling Ladder、联系老师等关键词。
+我们整理了一份[资料总索引](resources.md)，包括课程、论文、教程、博客和其他学习资源，可以按主题浏览，也可以直接搜索。

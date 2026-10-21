@@ -1,10 +1,10 @@
-# LessWrong: begin with your own question
+# LessWrong: research judgment and AI use
 
-For applying other people's experience to your life, begin with the first three essays. If you are reading papers and experimenting, try essays five through eight.
+When you discuss an idea with AI, is it helping you examine it or simply agreeing? When advice sounds convincing, how can you tell whether it fits your task? The essays discuss research judgment, personal experience, work, and AI.
 
-[Back to the resource index](resources.md)
+For AI use and feedback, start with [the two observations below](#ai). For experiments, try [conclusions and evidence](#bottom-line) or [what a metric actually measures](#measurement).
 
-## Why does someone else's method fail for me?
+## Does someone else's method fit this task?
 
 **[Beware of Other-Optimizing](https://www.lesswrong.com/posts/6NvbSwuSAooQxxf7f/beware-of-other-optimizing)** — Eliezer Yudkowsky, 2009.
 
@@ -12,23 +12,23 @@ After finally finding advice that works, people may mistake it for the method ev
 
 Ask: what time, money, foundations, and environment does this advice assume?
 
-## How do I grow without getting stuck in self-blame and slogans?
-
+## Growth and improvement
 **[Tsuyoku Naritai! (I Want To Become Stronger)](https://www.lesswrong.com/posts/DoLQN5ryZ9XkZjq5h/tsuyoku-naritai-i-want-to-become-stronger)** — Eliezer Yudkowsky, 2007.
 
 Acknowledging bias does not itself constitute improvement. Direct attention toward reducing mistakes and taking another step.
 
-Ask: rather than repeating that my foundations are weak, which specific question can I understand this time?
-
-## Must I exhaust myself to make university count?
-
+## Work and life
 **[Working yourself ragged is not a virtue](https://www.lesswrong.com/posts/grfDjRpWr2xjtLBvi/working-yourself-ragged-is-not-a-virtue)** — So8res, 2015.
 
 Challenges treating exhaustion today as the measure of effort, considering working rhythms and costs over the long term.
 
-Ask: how long could I sustain this schedule, and what goal does it serve?
+## Experience and generalization
 
-## Which ideas have I thought through, and which have I merely heard often?
+**[Generalizing From One Example](https://www.lesswrong.com/posts/baTWMegR42PAsH9qJ/generalizing-from-one-example)** — Scott Alexander, 2009.
+
+How our feelings, learning habits, and social circles shape our assumptions about other people.
+
+## What supports a familiar claim?
 
 **[Cached Thoughts](https://www.lesswrong.com/posts/2MD3NMLBPCqPfnfre/cached-thoughts)** — Eliezer Yudkowsky, 2007.
 
@@ -36,7 +36,7 @@ We retrieve remembered conclusions, and familiarity can obscure their source and
 
 Ask: who and what conditions does this claim refer to? Can I find evidence for and against it?
 
-## Why do I explain away something that feels wrong?
+## What should you investigate when results surprise you?
 
 **[Your Strength as a Rationalist](https://www.lesswrong.com/posts/5JDkW4MYXit2CquLs/your-strength-as-a-rationalist)** — Eliezer Yudkowsky, 2007.
 
@@ -46,7 +46,7 @@ Ask: if this explanation were true, what should I have expected to observe?
 
 <a id="bottom-line"></a>
 
-## Am I investigating or defending a predetermined conclusion?
+## Investigating or defending a predetermined conclusion?
 
 **[The Bottom Line](https://www.lesswrong.com/posts/34XxbRFe54FycoCDw/the-bottom-line)** — Eliezer Yudkowsky, 2007.
 
@@ -56,7 +56,7 @@ Ask: what result would make me acknowledge that my explanation fails?
 
 <a id="measurement"></a>
 
-## The score improved. Did the experiment establish what I intended?
+## The score improved. What did the experiment establish?
 
 **[You Are Not Measuring What You Think You Are Measuring](https://www.lesswrong.com/posts/9kNxhKWvixtKW5anS/you-are-not-measuring-what-you-think-you-are-measuring)** — johnswentworth, 2022.
 
@@ -64,7 +64,7 @@ Experimental examples show that measured factors can diverge from intention. The
 
 Ask: which records besides the overall score can distinguish my explanation from alternatives?
 
-## What information would actually change whether I continue?
+## What should you find out before the next experiment?
 
 **[Finding Cruxes: Help Reality Punch You In the Face](https://www.lesswrong.com/posts/wkDdQrBxoGLqPWh2P/finding-cruxes-help-reality-punch-you-in-the-face)** — Raemon, 2026.
 
@@ -72,7 +72,7 @@ Start from a real decision, identify uncertainties that could change action, lis
 
 Ask: before spending another week, what one thing could I find out?
 
-## Am I learning to understand reality or to appear knowledgeable?
+## Which feedback tests understanding?
 
 **[Reality-Revealing and Reality-Masking Puzzles](https://www.lesswrong.com/posts/byewoxJiAfwE6zpep/reality-revealing-and-reality-masking-puzzles)** — Anna Salamon, 2020.
 
@@ -80,30 +80,24 @@ Distinguishes feedback that brings people closer to reality from feedback that h
 
 Ask: what feedback from my effort can actually test my understanding?
 
-## Does disagreeing with everyone show better research taste?
+## Is a novel view also well supported?
 
 **[Intellectual Hipsters and Meta-Contrarianism](https://www.lesswrong.com/posts/9kcTNWopvXFncXgPy/intellectual-hipsters-and-meta-contrarianism)** — Scott Alexander, 2010.
 
 Contrarian and anti-contrarian positions can also signal identity. A position's place in a group does not determine whether it is true.
 
-Ask: if nobody knew I held this view, would I judge the same way?
-
-## Before generalizing your own experience
-
-[Generalizing From One Example](https://www.lesswrong.com/posts/baTWMegR42PAsH9qJ/generalizing-from-one-example) — Scott Alexander, 2009.
-
-Start with the first half: how feelings, learning styles, and social circles affect judgments of others. The latter half moves into gender and dating with weaker argumentation; Beware of Other-Optimizing offers another route into the topic.
+When discussing a research claim, distinguish how many people support it from the evidence supporting it.
 
 <a id="ai"></a>
 
-## Living with AI: two observations
+## How can AI responses shape judgment?
 
 **[The Rise of Parasitic AI](https://www.lesswrong.com/posts/6ZnznCaTcbGYsCmqu/the-rise-of-parasitic-ai)** — Adele Lopez, 2025.
 
-Collects cases where AI personas and users reinforce mistaken beliefs and absorb attention, using “parasitic” to describe the interaction. Ask: beyond AI's approval, what do I use to check my ideas?
+The author collects online cases of AI personas and users reinforcing mistaken beliefs, describing some relationships as “parasitic.” Look for whether the AI adds checkable evidence or merely makes the original claim sound more convincing. These cases offer an angle for observation, not a description of all AI users.
 
 **[How My Students Think About AI](https://www.lesswrong.com/posts/ySXuvJcqRindQwAk7/how-my-students-think-about-ai)** — dvd, 2026.
 
 A public-university teacher in the US records students' use and views of AI, discussing context, employment, changing capabilities, and learning. Students mainly come from the author's nontechnical courses. Compare your habits: which tasks does your everyday tool actually help with?
 
-For practical learning and checks, continue to [working with AI](ai.md).
+For practical learning and checks, continue to [AI tools](ai.md).

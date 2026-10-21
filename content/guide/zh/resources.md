@@ -1,23 +1,29 @@
 # 资料总索引
 
-想直接开始，走[学习路线](start.md)；想找某一种资料，就从这里进。这里按用途整理课程、文章与项目，方便换一种解释、继续深入，或找一个人的原文。
+指南里用到的课程、教材、论文清单和工具集中整理在这里，也收了一些技术博客、研究者访谈和科研经验。课程之外，许多具体问题在作者的文章、代码和讨论中讲得更细。
 
-## 课程与论文：学什么，接下来读什么
+## 课程与教材
 
-- **[课程、教材与基础学习](catalog-foundation.md)**：计算机全貌、Python、数学、ML/DL 和模型架构。Crash Course、3b1b、Stanford、MIT 等入口集中在这里。
-- **[李沐：从课程到论文精读](limu.md)**：把 D2L 的基础学习和论文精读接到实际学习过程里。
-- **[各方向课程、论文与项目](catalog-directions.md)**：视觉、LLM、多模态、生成、RL、World Model、具身、Agent、系统与 AI4X，也保留图学习与时序。Lumina、各种 awesome 和 paper list 都能按方向找到。
+- **[课程、教材与基础学习](catalog-foundation.md)**：Python、计算机、数学、机器学习与深度学习，包括 Crash Course、3Blue1Brown、MIT 和 Stanford 的课程。
+- **[深度学习课程与论文精读](limu.md)**：《动手学深度学习》的教材与视频，以及李沐对 Transformer、ViT、CLIP 等论文的逐段讲解。
+- **[第一个 AI 项目](start.md)**：MNIST、YOLO、Agent 与机器人项目。
 
-## 做研究：查方法，也看过程
+## 研究方向与技术文章
 
-- **[科研方法与常用工具](catalog-research.md)**：认识研究、提问、读论文、实验、写作、汇报、AI 工具和资料管理。
-- **[作者博客与研究笔记](blogs.md)**：牛宇威、Wenhao Chai、邹嘉轩、丁霄汉、韩晓光、苏剑林，具体到文章和它在讨论的问题。
-- **[科研经验、问答与 AMA](research-conversations.md)**：韩晓光《什么是好的科研工作》原帖、联系老师的经验、科研判断、Reddit 提问与 AMA。
+- **[各方向课程、论文与项目](catalog-directions.md)**：视觉、语言模型、多模态、生成模型、强化学习、具身智能、Agent、系统与 AI4X 等方向的专题资料。
+- **[技术博客与研究观点](blogs.md)**：模型结构、数学推导、Scaling、评测与科研写作，也包括作者对技术路线的讨论。
+- **[BlogrXiv · OpenEnvision](https://openenvision.github.io/BlogrXiv/site/index.html)**：按研究方向整理的 AI 博客、实验室文章和技术笔记。
 
-## 成长与眼界：人怎样想，外面在做什么
+## 科研方法与工具
 
-- **[LessWrong 选读](lesswrong.md)**：经验适用条件、成长、实验判断、选择与 AI 使用。可以从自己的困惑选一篇。
-- **[认识课题组与研究团队](labs.md)**：看什么、沿哪条线找论文与作者，以及联系前了解哪些信息。
-- **[博客、访谈与信息渠道](catalog-channels.md)**：个人作者、媒体、原始发布和此前找到的观点文章。怎样跟进研究动态，见 [Lookout](lookout.md)。
-- **[BlogrXiv · OpenEnvision](https://openenvision.github.io/BlogrXiv/site/index.html)**：按研究方向整理 AI 博客、实验室文章和技术笔记，保留作者原文入口。
-- **[ScholarTube · OpenEnvision](https://openenvision.github.io/ScholarTube/)**：研究者访谈、视频播客、完整课程与学术报告，可以按方向查找并前往原始视频。
+选题、阅读、实验和写作都有不少值得参考的经验，也有相应的工具与教程。
+
+- **[科研方法与常用工具](catalog-research.md)**：文献检索与管理、训练排查、评测、写作、绘图和汇报。
+- **[科研经验与交流](research-conversations.md)**：研究判断、师生合作、联系邮件，以及研究者的分享与问答。
+- **[LessWrong：研究判断与 AI 使用](lesswrong.md)**：建议与经验、证据与结论、实验测量，以及 AI 对话中的反馈。
+
+## 团队、访谈与研究动态
+
+- **[课题组与研究团队](labs.md)**：高校教师名录、实验室主页与工业研究团队。
+- **[博客、访谈与信息渠道](catalog-channels.md)**：技术作者、研究发布、中文媒体和长篇访谈。更多研究动态与社区见 [Lookout](lookout.md)。
+- **[ScholarTube · OpenEnvision](https://openenvision.github.io/ScholarTube/)**：研究者访谈、视频播客、完整课程与学术报告。

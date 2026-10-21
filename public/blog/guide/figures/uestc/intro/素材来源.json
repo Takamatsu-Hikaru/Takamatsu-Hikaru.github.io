@@ -1,0 +1,149 @@
+[
+  {
+    "file": "cs50p.png",
+    "url": "https://prod-discovery.edx-cdn.org/media/course/image/2cc794d0-316d-42f7-bbfd-25c34e4cd5df-033e46d516c0.small.png",
+    "source": "https://cs50.harvard.edu/python/",
+    "bytes": 57044
+  },
+  {
+    "file": "micrograd.jpg",
+    "url": "https://i.ytimg.com/vi/VMj-3S1tku0/maxresdefault.jpg",
+    "source": "https://karpathy.ai/zero-to-hero.html",
+    "bytes": 169006
+  },
+  {
+    "file": "mit-1806.jpg",
+    "url": "https://i.ytimg.com/vi/J7DzL2_Na80/hqdefault.jpg",
+    "source": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/",
+    "bytes": 14802
+  },
+  {
+    "file": "hf-agents.jpg",
+    "url": "https://huggingface.co/datasets/agents-course/course-images/resolve/main/en/unit0/thumbnail.jpg",
+    "source": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+    "bytes": 895294
+  },
+  {
+    "file": "mnist.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/MNIST_dataset_example.png",
+    "source": "https://en.wikipedia.org/wiki/MNIST_database",
+    "bytes": 81766
+  },
+  {
+    "file": "hongyi-2025.jpg",
+    "source": "用户提供的B站搜索截图：54e2e5fc1fc4c8a89f96563e96f6a80d.jpg",
+    "crop": [
+      1175,
+      346,
+      1542,
+      551
+    ],
+    "course": "https://speech.ee.ntu.edu.tw/~hylee/ml/2025-spring.php"
+  },
+  {
+    "file": "yolo-detection.png",
+    "source": "https://docs.ultralytics.com/tasks/detect/",
+    "original": "outputs/audit-evidence/yolo-official.avif",
+    "operation": "格式转换，完整画面"
+  },
+  {
+    "file": "crash-ai.png",
+    "source": "https://www.cs.cmu.edu/news/2019/new-cmu-faculty-member-offers-crash-course-ai",
+    "imageUrl": "https://cs.cmu.edu/files/images/CrashCourse.png"
+  },
+  {
+    "file": "3b1b-neural.jpg",
+    "source": "https://www.3blue1brown.com/lessons/neural-networks/",
+    "original": "outputs/audit-evidence/3b1b-thumbnail.jpg"
+  },
+  {
+    "file": "limu-d2l.jpg",
+    "original": "C:\\Users\\user\\Documents\\xwechat_files\\wxid_td8eenqj23b632_2c64\\temp\\RWTemp\\2026-10\\b79b518847c80f4c0b861f2f5849abcb\\f27f64ad01a435f8bc26d572869dbe1b.jpg",
+    "box": [
+      1175,
+      475,
+      1542,
+      679
+    ]
+  },
+  {
+    "file": "3b1b-vectors.jpg",
+    "original": "C:\\Users\\user\\Documents\\xwechat_files\\wxid_td8eenqj23b632_2c64\\temp\\RWTemp\\2026-10\\b79b518847c80f4c0b861f2f5849abcb\\cd3fd0a21639c89a5b75800a7388f7c4.jpg",
+    "box": [
+      1175,
+      277,
+      1542,
+      483
+    ]
+  },
+  {
+    "file": "3b1b-calculus.jpg",
+    "original": "C:\\Users\\user\\Documents\\xwechat_files\\wxid_td8eenqj23b632_2c64\\temp\\RWTemp\\2026-10\\b79b518847c80f4c0b861f2f5849abcb\\cd3fd0a21639c89a5b75800a7388f7c4.jpg",
+    "box": [
+      28,
+      610,
+      395,
+      815
+    ]
+  },
+  {
+    "id": "workbuddy",
+    "name": "WorkBuddy",
+    "file": "workbuddy-logo.svg",
+    "kind": "official product logo",
+    "sourcePage": "https://www.workbuddy.cn/",
+    "imageUrl": "https://assets.workbuddy.cn/web/workbuddy/f4728a12fe9cfe5a34da6b2fa827614041c84386/assets/logo.svg",
+    "link": "https://www.workbuddy.cn/",
+    "evidence": "Official homepage link rel=icon; original vector SVG, viewBox 0 0 40 40."
+  },
+  {
+    "id": "zcode",
+    "name": "ZCode",
+    "file": "zcode-logo.png",
+    "kind": "official product logo",
+    "sourcePage": "https://zcode.z.ai/en",
+    "imageUrl": "https://zcode.z.ai/favicon-192x192.png?v=20260707-transparent",
+    "link": "https://zcode.z.ai/",
+    "evidence": "Official homepage icon asset, 192px, visually inspected."
+  },
+  {
+    "id": "trae",
+    "name": "TRAE",
+    "file": "trae-logo.png",
+    "kind": "official product logo",
+    "sourcePage": "https://github.com/Trae-AI/TRAE",
+    "imageUrl": "https://github.com/Trae-AI.png?size=256",
+    "link": "https://www.trae.cn/",
+    "evidence": "Official GitHub organization avatar; official repo explicitly identifies itself as TRAE official. Visually inspected."
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "file": "claude-logo.png",
+    "kind": "Claude brand logo",
+    "sourcePage": "https://claude.com/product/claude-code",
+    "imageUrl": "https://assets.claude.com/95a868946ac8a31e5ff832e2899f294aa368b836.png",
+    "link": "https://claude.com/product/claude-code",
+    "evidence": "Official Claude Code page icon; Claude orange brand symbol. Not a separate Claude Code product mark. Visually inspected."
+  },
+  {
+    "id": "codex",
+    "name": "Codex",
+    "file": "openai-logo.png",
+    "kind": "OpenAI brand logo",
+    "sourcePage": "https://github.com/openai",
+    "imageUrl": "https://github.com/openai.png?size=128",
+    "link": "https://openai.com/codex/",
+    "evidence": "Reused original guide brand asset public/blog/guide/brands/openai.png; provenance recorded by original brands/sources.json. OpenAI brand mark, not separate Codex product mark."
+  },
+  {
+    "id": "aloha",
+    "name": "ACT / ALOHA",
+    "file": "aloha.jpg",
+    "kind": "official research photograph",
+    "sourcePage": "https://tonyzhaozh.github.io/",
+    "imageUrl": "https://tonyzhaozh.github.io/images/aloha.jpg",
+    "link": "https://tonyzhaozh.github.io/aloha/",
+    "evidence": "Original author research homepage illustration for Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware; 1859x1454, bimanual battery insertion. Visually inspected, no crop or fabrication."
+  }
+]

@@ -29,7 +29,7 @@ A 2016 account of doctoral life. Start with everyday research, changing directio
 
 ## Ask what a practical recipe solves
 
-[Writing AI Conference Papers](https://github.com/hzwer/WritingAIPaper) helps with paper structure and expression. [Karpathy's training recipe](https://karpathy.github.io/2019/04/25/recipe/) helps diagnose experiments. They are also linked from the [workflow pages](experiments.md).
+[Writing AI Conference Papers](https://github.com/hzwer/WritingAIPaper) helps with paper structure and expression. [Karpathy's training recipe](https://karpathy.github.io/2019/04/25/recipe/) helps diagnose experiments. They are also linked from the [workflow pages](reading.md).
 
 [Beware of Other-Optimizing](https://www.lesswrong.com/posts/6NvbSwuSAooQxxf7f/beware-of-other-optimizing) asks why advice that helps one person may fail another. Read the circumstances together with the method to identify what you can use.
 

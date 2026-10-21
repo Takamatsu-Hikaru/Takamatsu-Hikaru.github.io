@@ -46,7 +46,6 @@ document.addEventListener('click',async event=>{const t=event.target.closest('bu
  if(t.id==='clear'){$('query').value='';go({q:'',id:''},{replace:true});$('query').focus()}
  if(t.id==='all-terms'){limit=24;go({all:true,id:''})}if(t.id==='more'){limit+=24;render()}
  if(t.id==='search-everywhere'){go({cat:'',kind:'',group:''})}
- if(t.id==='theme'){const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('wiki-theme',theme)}catch{}}
  if(t.id==='menu'){const open=!document.body.classList.contains('nav-open');document.body.classList.toggle('nav-open',open);$('menu').setAttribute('aria-expanded',open);$('shade').hidden=!open}
  if(t.id==='shade')closeMenu();if(t.id==='close-peek')$('term-peek').close();
 });

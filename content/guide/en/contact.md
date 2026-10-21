@@ -1,6 +1,8 @@
 # Contacting researchers and collaborating
 
-Often the hardest part is not knowing what happens after you send a message. A contact can be a single concrete question or the beginning of exploring a project together.
+For many people, the difficult part is not knowing what happens after sending the message. You can begin by asking a specific question, learning about a project, or exploring a possible collaboration.
+
+If you are drafting your first email, use the example below and replace the topic, prior attempts, and request with your own.
 
 ## Find a reason to talk
 
@@ -16,7 +18,7 @@ Adapt the details in this example to your own situation:
 >  
 > May I ask whether you have a task suitable for an undergraduate, or time for a short conversation about this question? I can currently commit [time] each week. My notes and CV are attached. Thank you.
 
-With a senior student, a more informal tone is fine. A specific question is often easier to begin with than “Can you mentor my research?” If there is no reply, follow up once after a reasonable interval and continue looking elsewhere.
+State a specific request, such as checking an experimental setting or suggesting related work, so the recipient can assess the topic and time involved. If there is no reply, follow up once after a reasonable interval and continue checking other relevant contacts.
 
 ## What to clarify in the first conversation
 
@@ -30,14 +32,12 @@ Expand “the program will not run” into what you wanted to execute, the envir
 
 The information-organization sections of [How To Ask Questions The Smart Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way) are useful. [How to work with a professor](https://www.cs.jhu.edu/~jason/advice/how-to-work-with-a-professor.html) also discusses records, updates, and collaboration.
 
-## Ending a collaboration that does not fit
+## Adjustments and handoff
 
-First consider adjustments. Some informal collaborations also end gradually as contact and tasks decline, with both sides understanding what is happening. You can explore other opportunities and discuss next steps with your direct mentor at a suitable time.
+If scope, time, or resources differ from the agreement, list the differences and discuss adjustments with the project contact. When ending the collaboration, confirm the end date, finished and unfinished tasks, code and data locations, handoff recipient, and use of outputs.
 
-If others await your work, explain progress, code, and handover needs clearly. Switching projects need not damage the relationship; you may collaborate again. See [research question 25](research.md#q25).
-
-More related questions are in [questions 16–25](research.md#q16). For how others began meeting people, see [experience](experience.md).
+See [Q25](research.md#q25) for handoff checks and [questions 16–25](research.md#q16) for contact details.
 
 ## Other accounts of contacting and collaborating
 
-[Research conversations](research-conversations.md) includes Chai's FAQ, Jason Eisner's advice, and Stanford's email guide. If you do not yet know which groups exist, follow projects through the [lab directory](labs.md).
+[Research conversations](research-conversations.md) includes Jason Eisner's advice, and Stanford's email guide. If you do not yet know which groups exist, follow projects through the [lab directory](labs.md).

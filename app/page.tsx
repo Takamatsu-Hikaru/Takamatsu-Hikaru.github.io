@@ -141,7 +141,7 @@ export default function Home() {
   const [blogOpen, setBlogOpen] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
   const [blogLanguage, setBlogLanguage] = useState<"zh" | "en">("zh");
-  const [guideLanguage, setGuideLanguage] = useState<"zh" | "en">("zh");
+  const [guideLanguage, setGuideLanguage] = useState<"zh" | "en">("en");
   useEffect(() => {
     const stored = window.localStorage.getItem("theme");
     const next = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -151,6 +151,7 @@ export default function Home() {
       setBlogLanguage("en");
       setGuideLanguage("en");
     }
+    if (new URLSearchParams(window.location.search).get("lang") === "zh") setGuideLanguage("zh");
     const openLinkedBlog = () => {
       if (window.location.hash === "#blog") setBlogOpen(true);
       if (window.location.hash === "#guide") setGuideOpen(true);
@@ -291,24 +292,24 @@ export default function Home() {
           <button className="blog-trigger" type="button" aria-expanded={guideOpen} aria-controls="guide-drawer" onClick={() => setGuideOpen((open) => !open)}>
             <span className="blog-index">06 / GUIDE</span>
             <span className="blog-trigger-copy">
-              <span className="eyebrow">我的入门指南</span>
-              <strong>Getting Started Guidance</strong>
+              <span className="eyebrow">{guideLanguage === "zh" ? "项目、论文与科研" : "Projects, papers & research"}</span>
+              <strong>{guideLanguage === "zh" ? "AI 科研入门指南" : "AI Research Guide"}</strong>
             </span>
             <span className="blog-count">ZH / EN</span>
             <span className="blog-toggle" aria-hidden="true">+</span>
           </button>
           <div className="blog-drawer" id="guide-drawer" inert={!guideOpen}>
             <div className="blog-drawer-inner">
-              <div className="blog-language" role="group" aria-label="Guide language">
-                <span>LANGUAGE</span>
+              <div className="blog-language" role="group" aria-label={guideLanguage === "zh" ? "指南语言" : "Guide language"}>
+                <span>{guideLanguage === "zh" ? "语言" : "LANGUAGE"}</span>
                 <button className={guideLanguage === "zh" ? "is-active" : ""} type="button" onClick={() => setGuideLanguage("zh")}>中文</button>
                 <button className={guideLanguage === "en" ? "is-active" : ""} type="button" onClick={() => setGuideLanguage("en")}>EN</button>
               </div>
               <a className="guide-entry" href={`/blog/guide/${guideLanguage}/index.html`}>
-                <span className="guide-entry-label">FIELD GUIDE <span>ZH / EN</span></span>
+                <span className="guide-entry-label">{guideLanguage === "zh" ? "个人主页版" : "PERSONAL EDITION"} <span>ZH / EN</span></span>
                 <span className="guide-entry-copy">
-                  <strong>{guideLanguage === "zh" ? "我的入门指南" : "My getting-started guide"}</strong>
-                  <span>{guideLanguage === "zh" ? "写给刚进大学、开始接触 AI 和科研的你。这里有我的经历与想法，也有学习路线、动手项目和一路上用到的资料。从联系老师、读论文、做实验，聊到科研之外的生活。" : "For students starting university and finding their way into AI and research. My experiences and thoughts, learning paths, hands-on projects, and resources—from contacting researchers and reading papers to experiments and life beyond research."}</span>
+                  <strong>{guideLanguage === "zh" ? "AI 科研入门指南" : "AI Research Guide"}</strong>
+                  <span>{guideLanguage === "zh" ? "AI 入门项目、基础课程、研究方向与科研实践，也写了大学里的选择和科研之外的生活。" : "AI projects, foundational courses, research directions, and research practice, alongside university choices and life beyond research."}</span>
                 </span>
                 <span className="guide-entry-action">{guideLanguage === "zh" ? "进入指南" : "OPEN GUIDE"} ↗</span>
               </a>

@@ -1,20 +1,23 @@
-# About this guide
+# About the UESTC AI Club guide
 
-I am Bofan Zhu, also known as Hikaru. This guide collects resources I have used since arriving at university, paths I have taken, and things I only understood afterward. I hope it gives students beginning to explore a concrete place to start.
+We are the UESTC AI Club, a group of students learning about AI and working on projects together. This guide grew out of our learning and discussions, and we hope it is useful to students at other universities who want to explore AI and research too.
 
-## What is here
+## Scope
 
-A letter to new students, research questions and answers, small projects, research directions, useful tools, and personal reflections. Courses, papers, blogs, and teams are collected in the [resource index](resources.md).
+- Starter projects, foundations, and representative papers across AI fields.
+- Literature search, reading notes, experiments, writing, and presentations.
+- References for contacting research teams, collaboration, and publication.
 
-## Content and sources
+## Sources and contributions
 
-The opening essay, research Q&A, and freshman-year review retain my personal experiences and judgments. Courses, papers, and blogs link to their original authors.
+This guide continues the [UESTC AI Club Guide](https://my.feishu.cn/docx/HQYodz7thohS1Nxo6KAcoeNtnbb) and its predecessor AI4UESTC_Beginners. Thanks to their contributors and to the authors of the courses, papers, open projects, and technical articles linked here.
 
-The resource collection builds on the earlier [UESTC AI Society Guide](https://my.feishu.cn/docx/HQYodz7thohS1Nxo6KAcoeNtnbb) and its predecessor, AI4UESTC_Beginners. Thank you to the original contributors and to everyone sharing courses, open-source projects, blogs, and experience.
+The [Lumina Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) informed the selection of embodied AI resources.
 
-[Lumina's Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) informed the organization and resource selection for embodied AI.
+[Paper reading and note workflows](irene-workflow.md) adapts irene's “一些小分享”; attribution and original materials are included in the article.
 
-[Start from the guide home](home.md) · [A letter to new students](welcome.md)
+References retain author names and original links. Use “Edit this page” in the footer to propose corrections or update a link.
 
+[Guide home](home.md) · [Resource index](resources.md)
 
-[irene](https://github.com/tseirene6) contributed the experience behind [Building your research workflow](irene-workflow.md): paper and note management, research briefs, reading depth, and questions from AI. Related methods throughout the guide are adapted from this account.
+Contributions are welcome on [GitHub](https://github.com/Takamatsu-Hikaru/AI-Research-Guide): open an issue or submit a PR with corrections and resources. If you find the guide useful, give it a star or share it with others.

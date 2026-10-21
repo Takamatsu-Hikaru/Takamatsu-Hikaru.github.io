@@ -1,94 +1,104 @@
 # Lookout：研究者和实验室最近在做什么？
 
-有时你不知道自己可以做什么，只是因为还没见过。看看别的实验室、公司和研究者正在解决什么问题，会给你新的参照，也会改变你对一个方向的认识。
+公司的研究发布、实验室博客和开源项目记录了 AI 的新进展；访谈与社区讨论里，还有研究者的工作经历、技术判断和想法。
 
-## 从一项工作认识做它的人
+## 论文与研究入口
 
-看到一个让你好奇的演示，先找到原项目。读问题和方法，再看看作者还做过什么，相关工作来自哪些组。沿这条线，你会逐渐认识一个社区。
+<div class="lookout-grid">
+<section class="lookout-resource"><h4><a href="https://research.google/pubs/"><img src="../../../public/blog/guide/figures/uestc/lookout/google-research.png" alt="" width="40" height="40" loading="lazy"><span>Google Research</span></a></h4><p>机器学习、计算机系统与科学计算等领域的论文与研究成果。</p></section>
+<section class="lookout-resource"><h4><a href="https://bair.berkeley.edu/blog/archive/"><img class="wide-mark" src="../../../public/blog/guide/figures/uestc/lookout/bair.webp" alt="" width="40" height="40" loading="lazy"><span>BAIR Blog</span></a></h4><p>Berkeley AI Research 的研究博客，介绍新工作的方法、实验与背景。</p></section>
+<section class="lookout-resource"><h4><a href="https://huggingface.co/papers"><img src="../../../public/blog/guide/figures/uestc/resources/huggingface.svg" alt="" width="40" height="40" loading="lazy"><span>Hugging Face Papers</span></a></h4><p>每日论文与社区讨论，关联作者、模型和开源项目。</p></section>
+</div>
 
-例如从 [ACT / ALOHA](https://tonyzhaozh.github.io/aloha/) 看示范与动作，再追机器人数据和策略学习；从 [ReAct](https://react-lm.github.io/) 看工具和反馈，再追长任务、恢复与评测。
+### 学术会议
 
-遇到值得问的问题，可以写下来，回头[联系作者或学长](contact.md)。
+<div class="lookout-grid conferences">
+<section class="lookout-resource"><h4><a href="https://neurips.cc/"><img src="../../../public/blog/guide/figures/uestc/lookout/neurips.svg" alt="" width="40" height="40" loading="lazy"><span>NeurIPS</span></a></h4><p>机器学习与计算神经科学，含论文、报告与专题研讨。</p></section>
+<section class="lookout-resource"><h4><a href="https://icml.cc/"><img src="../../../public/blog/guide/figures/uestc/lookout/icml.svg" alt="" width="40" height="40" loading="lazy"><span>ICML</span></a></h4><p>机器学习理论、方法与应用，含论文、Tutorial 与 Workshop。</p></section>
+<section class="lookout-resource"><h4><a href="https://iclr.cc/"><img src="../../../public/blog/guide/figures/uestc/lookout/iclr.svg" alt="" width="40" height="40" loading="lazy"><span>ICLR</span></a></h4><p>深度学习与表示学习，含论文、公开评审与会议报告。</p></section>
+</div>
 
-## 可以从哪些地方看
+## 媒体与技术博客
 
-**[OpenAI 发布入口](https://openai.com/news/)**  
-看模型、研究和工程发布，遇到相关工作再读技术材料和评价条件。
+### 中文科技媒体
 
-**[Anthropic Research](https://www.anthropic.com/research)**  
-看模型内部机制、对齐、实际使用与社会影响等研究；具体文章的出发点和方法也值得读。
+<div class="lookout-grid">
+<section class="lookout-resource"><h4><a href="https://www.jiqizhixin.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/jiqizhixin-official.webp" alt="" width="40" height="40" loading="lazy"><span>机器之心</span></a></h4><p>AI 论文解读、开源项目与产业报道。</p></section>
+<section class="lookout-resource"><h4><a href="https://www.qbitai.com/"><img class="wide-mark" src="../../../public/blog/guide/figures/uestc/lookout/qbitai-mark.png" alt="" width="40" height="40" loading="lazy"><span>量子位</span></a></h4><p>AI 前沿研究、产品发布与科技行业动态。</p></section>
+<section class="lookout-resource"><h4><a href="https://aiera.com.cn/"><img class="wide-mark" src="../../../public/blog/guide/figures/uestc/lookout/aiera.webp" alt="" width="40" height="40" loading="lazy"><span>新智元</span></a></h4><p>AI 研究进展、技术发布与行业访谈。</p></section>
+</div>
 
-**[Google DeepMind 论文入口](https://deepmind.google/research/publications/)**与 **[Google Research](https://research.google/pubs/)**  
-用关键词找自己的方向，再沿作者与相关论文继续看。
+### 社区与视频平台
 
-**[Berkeley AI Research Blog](https://bair.berkeley.edu/blog/archive/)**  
-从实验室成员解释一项工作的方式，了解研究问题如何被介绍和展开。
+<div class="lookout-grid">
+<section class="lookout-resource"><h4><a href="https://www.zhihu.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/zhihu.ico" alt="" width="40" height="40" loading="lazy"><span>知乎</span></a></h4><p>论文解读、学术讨论与科研经验。</p></section>
+<section class="lookout-resource"><h4><a href="https://www.bilibili.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/bilibili.ico" alt="" width="40" height="40" loading="lazy"><span>B 站</span></a></h4><p>课程、论文讲解、技术演示与研究者访谈。</p></section>
+<section class="lookout-resource"><h4><a href="https://www.xiaohongshu.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/xiaohongshu.png" alt="" width="40" height="40" loading="lazy"><span>小红书</span></a></h4><p>研究者的日常、求学经历与经验分享。</p></section>
+</div>
 
-**[Hugging Face Daily Papers](https://huggingface.co/papers)**  
-发现论文和讨论，再回原文、代码和作者页面。
+<div class="lookout-grid two">
+<section class="lookout-resource"><h4><a href="https://x.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/x.svg" alt="" width="40" height="40" loading="lazy"><span>X</span></a></h4><p>研究者与团队的新工作、项目进展和技术讨论。</p></section>
+<section class="lookout-resource"><h4><a href="https://www.youtube.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/youtube.png" alt="" width="40" height="40" loading="lazy"><span>YouTube</span></a></h4><p>技术讲解、工具使用细节、项目演示与长访谈。</p></section>
+</div>
 
-## 媒体和个人博客怎样一起看
+### 技术博客
 
-机器之心、量子位、新智元、小红书、知乎、B 站、X 和 YouTube 都能让你碰到新东西。对一条消息产生兴趣后，顺着出处读原论文或发布页。
+<div class="lookout-grid">
+<section class="lookout-resource"><h4><a href="https://kexue.fm/content.html"><img src="../../../public/blog/guide/figures/uestc/lookout/kexue.webp" alt="" width="40" height="40" loading="lazy"><span>科学空间</span></a></h4><p>数学推导、概率建模与神经网络方法分析。</p></section>
+<section class="lookout-resource"><h4><a href="https://simonwillison.net/"><img src="../../../public/blog/guide/figures/uestc/lookout/simon.webp" alt="" width="40" height="40" loading="lazy"><span>Simon Willison</span></a></h4><p>AI 工具试用、开发细节与实践记录。</p></section>
+<section class="lookout-resource"><h4><a href="https://karpathy.ai/"><img src="../../../public/blog/guide/figures/uestc/lookout/karpathy.webp" alt="" width="40" height="40" loading="lazy"><span>Karpathy</span></a></h4><p>神经网络课程、开源项目与技术文章。</p></section>
+</div>
 
-**[Z Potentials](https://zpotentials.substack.com/)**  
-AI 团队、创业者和技术访谈。看看不同团队在做什么，为什么选择这个问题，技术怎样变成产品。
+### 访谈与行业评论
 
-**[葬AI](https://funeralai.substack.com/)**  
-AI 产品体验和行业评论，表达直接、个人观点鲜明。可以从这里看看新产品怎么用，以及大家在争论什么。
+<div class="lookout-grid two">
+<section class="lookout-resource"><h4><a href="https://zpotentials.substack.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/zpotentials.png" alt="" width="40" height="40" loading="lazy"><span>Z Potentials</span></a></h4><p>AI 团队、研究者与创业者访谈，聊研究、团队与产品。</p></section>
+<section class="lookout-resource"><h4><a href="https://funeralai.substack.com/"><img src="../../../public/blog/guide/figures/uestc/lookout/funeralai.webp" alt="" width="40" height="40" loading="lazy"><span>葬AI</span></a></h4><p>AI 产品体验、工具使用与行业评论。</p></section>
+</div>
 
-个人博客里还会有结果之外的过程。[苏剑林](https://kexue.fm/content.html)适合按数学与模型问题查，[Simon Willison](https://simonwillison.net/)有工具实践记录，[Karpathy](https://karpathy.ai/)有课程、项目和个人文章。具体经验另见[经验栏目](experience.md)。
+## 研究者访谈
 
-## 听研究者讲自己的工作
+### <img class="outlet-mark" src="../../../public/blog/guide/figures/uestc/lookout/xiaojun-logo-small.webp" alt="" width="36" height="36"> 张小珺 Jùn｜商业访谈录
 
-**[张小珺 Jùn｜商业访谈录](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**  
-与研究者、创业者长时间对谈，聊技术、工作经历和重要选择。
+与研究者、创业者的长篇对谈，聊技术、工作经历和重要选择。[节目主页](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962) · [B 站](https://space.bilibili.com/280780745/)
 
-推荐[谢赛宁这一期](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837)：从求学、研究经历聊到表征学习、research taste、世界模型和创业。可以先听经历与研究选择，再挑感兴趣的技术部分。
+[谢赛宁这一期](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837)从求学与研究经历聊到表征学习、research taste、世界模型和创业。
 
-**[WhyNotTV](https://space.bilibili.com/14145636/)**  
-研究者访谈与求学经历分享，聊具体做过的工作，也聊一路上的选择。
+<figure class="lookout-cover"><a href="https://www.bilibili.com/video/BV1tew5zVEDf/"><img src="../../../public/blog/guide/figures/uestc/lookout/xiaojun-xiesaining.jpg" alt="张小珺对话谢赛宁" width="1920" height="1080" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV1tew5zVEDf/">B 站</a></figcaption></figure>
 
-- [机器人博士前两年总结——任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/)：何泰然回顾在 CMU 读机器人博士的前两年，串起足式运动、人形机器人遥操作与控制等研究，以及一起完成这些工作的合作者。
-- [翁家翌访谈](https://www.bilibili.com/video/BV1darmBcE4A/)：聊本科接触强化学习、开源项目、申请经历，以及在 OpenAI 做后训练和基础设施的工作。
+### <img class="outlet-mark" src="../../../public/blog/guide/figures/uestc/lookout/whynot-logo-small.webp" alt="" width="36" height="36"> WhyNotTV
+
+研究者访谈与求学经历分享。[官网](https://tairanhe.com/podcast_cn) · [B 站](https://space.bilibili.com/14145636/)
+
+[机器人博士前两年总结——任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/)：何泰然回顾在 CMU 读机器人博士的前两年，聊足式运动、人形机器人遥操作与控制，以及一起完成这些工作的合作者。
+
+<figure class="lookout-cover"><a href="https://www.bilibili.com/video/BV1neM1zKEmE/"><img src="../../../public/blog/guide/figures/uestc/lookout/whynot-robotics-phd.jpg" alt="何泰然：机器人博士前两年总结——任尔东西南北风" width="1920" height="1080" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV1neM1zKEmE/">B 站</a></figcaption></figure>
+
+[翁家翌访谈](https://www.bilibili.com/video/BV1darmBcE4A/)：从本科接触强化学习、参与开源项目，聊到申请经历，以及在 OpenAI 做后训练和基础设施的工作。
+
+<figure class="lookout-cover"><a href="https://www.bilibili.com/video/BV1darmBcE4A/"><img src="../../../public/blog/guide/figures/uestc/lookout/whynot-wengjiayi.jpg" alt="WhyNotTV 翁家翌访谈" width="1920" height="1080" loading="lazy"></a><figcaption><a href="https://www.bilibili.com/video/BV1darmBcE4A/">B 站</a></figcaption></figure>
 
 <a id="research-brief"></a>
 
-## 给自己做一份科研简报
+## 科研简报
 
-在这些来源里找到了关注的方向，可以让工具定期挑选与你的问题相关的新工作。[irene 的经验](irene-workflow.md#brief)是先试读一期，再调整选题，最后安排推送时间。
-
-> 我正在关注［具体问题］。请从最近一周的论文、代码、技术博客和实验室公告里选约五项工作，附日期和原始链接。每项说明做了什么、与我的问题有什么关系，以及接下来值得看哪张图、试哪个项目或追问什么。
->
-> 参考我提供的最近七天简报和已读清单，去掉重复内容。旧项目出现新结果时，说明新在哪里。
-
-把标题、链接、推送日期和阅读状态留在一份清单中，下一期也交给工具。兴趣权重、完整提示词和定时安排见[科研简报工作流](irene-workflow.md#brief)；收到论文后，再按[阅读目的](reading.md#reading-depth)决定读多深。
-
-## 看完一项新工作，记下哪些问题？
-
-可以只写几句：这项工作在解决什么，和我原来知道的有什么差别，我想进一步看哪里。遇到值得讨论的，把文章和自己的问题一起发给同学。
-
-如果一段时间总在同一个主题上停下来，也许它就是值得去[方向页](directions.md)继续探索的线索。
+[科研简报工作流](irene-workflow.md#brief)介绍按研究主题订阅新论文、代码和技术文章的方法，包括选题、去重与定时推送的配置。
 
 ## 研究社区与知识分享
 
 ### OpenEnvision
 
-[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注世界模型、多模态、视觉与具身智能，也通过整理博客、访谈和课程，为社区分享研究知识。
+[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注世界模型、多模态、视觉与具身智能。
 
-- **[BlogrXiv：AI 研究博客与技术文章](https://openenvision.github.io/BlogrXiv/site/index.html)**：汇集研究博客、实验室文章和技术笔记，可以按方向找机制解释、工程经验与科研方法，再进入作者原文。
-- **[ScholarTube：AI 访谈、播客与课程](https://openenvision.github.io/ScholarTube/)**：收集研究者长访谈、视频播客、完整课程与学术报告，覆盖 Agent、世界模型、视觉、机器人及科研方法，链接到原始视频。
+- **[BlogrXiv：AI 研究博客与技术文章](https://openenvision.github.io/BlogrXiv/site/index.html)**：汇集研究博客、实验室文章和技术笔记，涵盖方法讲解、工程经验与科研方法。
+- **[ScholarTube：AI 访谈、播客与课程](https://openenvision.github.io/ScholarTube/)**：收集研究者访谈、视频播客、课程与学术报告，覆盖 Agent、世界模型、视觉、机器人及科研方法。
 
-也欢迎向 [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) 和 [ScholarTube](https://github.com/OpenEnvision/ScholarTube) 推荐值得分享的文章与视频。
+[BlogrXiv 仓库](https://github.com/OpenEnvision/BlogrXiv) · [ScholarTube 仓库](https://github.com/OpenEnvision/ScholarTube)
 
 ### Lumina
 
-[Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
+[Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流，发布 Talks、具身观察和社区活动，也维护[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)。
 
 ### AgentHub
 
-[AgentHub（群谈）](https://hqhq1025.github.io/agent_hub/)把 Agent 社区里的讨论整理成日报和周报，涉及智能体研究、工具使用、工程实践与行业动态。可以按日期翻阅，也可以看不同群组的讨论与外部资讯，了解大家最近遇到什么问题、怎样比较技术方案，以及同一个问题有哪些不同判断。
-
-## 顺着材料找到人和团队
-
-[课题组与研究团队](labs.md)提供按研究问题找团队的入口；[作者博客](blogs.md)补上工作过程与个人判断；[信息渠道目录](catalog-channels.md)保留前几轮找到的其他来源。
+[AgentHub（群谈）](https://hqhq1025.github.io/agent_hub/)整理 Agent 社区的日报与周报，涵盖智能体研究、工具使用、工程实践与行业动态，也记录不同群组对技术方案和实际问题的讨论。

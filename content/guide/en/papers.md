@@ -1,4 +1,4 @@
-# Choose a paper to read
+# Selected papers
 
 Here are papers selected by question, each with an angle to begin from. For the reading process, see [finding and reading papers](reading.md).
 

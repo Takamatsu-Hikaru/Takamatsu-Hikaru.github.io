@@ -1,6 +1,6 @@
 # AI 交叉学科：从其他学科的问题出发
 
-AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可以用于天气预测、数学证明和金融建模。研究者还在尝试让 AI 自己选择训练方案、运行实验和改进代码。
+AI 已经参与到分子筛选、蛋白质设计、天气预测、医学影像与数学证明等研究中。不同学科提出的问题不同：有的要预测性质，有的要寻找新的设计，有的需要近似求解复杂方程。数据怎样表示，哪些规律需要进入模型，以及结果怎样得到验证，都与具体学科有关。
 
 <nav class="topic-map" aria-label="方向概览">
 <div><h3>自然科学与医学</h3><a href="#molecule">分子、反应与材料</a><a href="#physics">物理模拟与气象</a><a href="#protein">蛋白质与酶</a><a href="#genome">基因组与调控</a><a href="#cell">单细胞与虚拟细胞</a><a href="#eeg">脑电与神经解码</a><a href="#image">医学影像</a></div>
@@ -21,7 +21,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <p>一个分子是否易溶于水，一种晶体是否稳定，一组反应物会生成什么？AI 可以从结构和实验记录中预测性质、筛选候选，也可以学习能量与力，降低分子动力学的计算成本。</p>
 <button type="button" class="see-process" data-scene="molecule">查看过程图 ↗</button>
 <div class="task-list">
-<div><h3>性质预测</h3><p>把分子表示成原子与键组成的图，或带三维坐标的结构，预测溶解度、能量等目标量。MPNN 是图学习进入量子化学的经典入口。</p></div>
+<div><h3>性质预测</h3><p>把分子表示成原子与键组成的图，或带三维坐标的结构，预测溶解度、能量等目标量。MPNN 通过原子与键之间的消息传递学习分子表示。</p></div>
 <div><h3>反应与合成</h3><p>正向预测从反应物推断产物；逆合成从目标分子寻找前体和合成路线。Molecular Transformer 把反应物与产物的 SMILES 字符串当作序列来建模。</p></div>
 <div><h3>材料发现与模拟</h3><p>GNoME 用图网络和第一性原理计算筛选稳定晶体；Deep Potential 学习势能，提供分子动力学所需的能量与力。主动学习会根据已有结果选择下一批计算或实验。</p></div>
 </div>
@@ -31,7 +31,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>2023</span><strong>GNoME</strong><p>模型筛选 + DFT 验证</p></li>
 </ol>
 <div data-ai4x-papers="ai4x-mpnn,ai4x-deep-potential"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://arxiv.org/abs/1811.02633">Molecular Transformer ↗</a><span>2019 · 反应预测</span></li>
 <li><a href="https://www.nature.com/articles/s41586-023-06735-9">GNoME ↗</a><span>2023 · 晶体稳定性与材料发现</span></li>
@@ -43,7 +43,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>SMILES</dt><dd>用字符串记录分子结构的表示方式。</dd></div>
 <div><dt>DFT</dt><dd>密度泛函理论，一类计算电子结构、能量等性质的方法。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>用 DeepChem 的一个溶解度数据集，比较分子指纹加传统回归与图网络。分别使用随机划分和分子骨架划分，看看换到新骨架后误差怎样变化。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="physics" data-group="自然科学与医学" data-short="物理模拟与气象">
@@ -61,7 +60,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>2023</span><strong>GraphCast</strong><p>全球气象场预测</p></li>
 </ol>
 <div data-ai4x-papers="fno"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://maziarraissi.github.io/PINNs/">PINNs ↗</a><span>作者介绍与例子</span></li>
 <li><a href="https://arxiv.org/abs/2010.08895">Fourier Neural Operator ↗</a><span>2021 · ICLR</span></li>
@@ -72,7 +71,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>PDE</dt><dd>偏微分方程，描述一个量如何随空间、时间等变量变化。</dd></div>
 <div><dt>神经算子</dt><dd>学习输入函数到输出函数映射的模型，例如初始场到未来流场。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>从一维扩散或 Burgers 方程开始，用数值解作为参照，比较模型在不同初始条件下的预测；画出误差随时间的变化。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="protein" data-group="自然科学与医学" data-short="蛋白质与酶">
@@ -89,13 +87,13 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>2022–2023</span><strong>ProteinMPNN / RFdiffusion</strong><p>序列与骨架设计</p></li>
 <li><span>2025–2026</span><strong>AMix-1 / AMix-2</strong><p>条件生成与蛋白质—文本建模</p></li>
 </ol>
-<details class="deeper"><summary>继续读</summary>
+<details class="deeper"><summary>酶工程与蛋白质模型</summary>
 <h3>酶工程怎样形成实验循环</h3><p>零样本打分可以先对突变排序；少量实测数据可用于拟合指定性质；主动学习则根据已有结果与不确定性挑选下一批实验。每轮把新测得的活性或稳定性写回数据，再更新候选排序。</p>
-<h3>从头设计看哪些约束</h3><p>可以围绕催化核心寻找承载它的骨架，也可以在已有骨架中组织局部相互作用。催化几何、可折叠性、稳定性以及反应条件，都决定了后续需要做什么实验。</p>
-<h3>基础模型的新路线</h3><p>AMix-1 用贝叶斯流网络建模蛋白质，并探索多序列比对条件与推理时搜索；AMix-2 把蛋白质和文本纳入统一建模，采用块间因果生成、块内扩散。阅读时可以分别追踪条件输入、候选生成和验证器的作用。</p>
+<h3>从头设计的约束</h3><p>可以围绕催化核心寻找承载它的骨架，也可以在已有骨架中组织局部相互作用。催化几何、可折叠性、稳定性以及反应条件，都决定了后续需要做什么实验。</p>
+<h3>基础模型的新路线</h3><p>AMix-1 用贝叶斯流网络建模蛋白质，并探索多序列比对条件与推理时搜索；AMix-2 把蛋白质和文本纳入统一建模，采用块间因果生成、块内扩散。</p>
 </details>
 <div data-ai4x-papers="ai4x-alphafold2,amix"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://www.nature.com/articles/s41586-024-07487-w">AlphaFold3 ↗</a><span>复合物结构预测</span></li>
 <li><a href="https://github.com/dauparas/ProteinMPNN">ProteinMPNN ↗</a><span>给定骨架设计序列</span></li>
@@ -110,7 +108,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>MSA</dt><dd>多序列比对，把相关蛋白质序列对齐，用来观察进化中的保守与变化。</dd></div>
 <div><dt>逆折叠</dt><dd>给定蛋白质骨架，寻找能够形成该结构的氨基酸序列。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>选一个带实测性质的蛋白质数据集，比较简单序列特征与冻结的预训练表征。按同源关系划分数据，检查新家族上的预测；结构任务可以先读 AlphaFold 的一个预测结果和置信度图。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="genome" data-group="自然科学与医学" data-short="基因组与调控">
@@ -127,7 +124,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>多任务预测</span><strong>AlphaGenome</strong><p>同时预测多种分子信号</p></li>
 <li><span>变异分析</span><strong>对照与干预</strong><p>比较预测与实验变化</p></li>
 </ol>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://deepmind.google/blog/alphagenome-ai-for-better-understanding-the-genome/">AlphaGenome 研究介绍 ↗</a><span>问题、输入输出与示例</span></li>
 <li><a href="https://github.com/google-deepmind/alphagenome">AlphaGenome ↗</a><span>官方工具与示例</span></li>
@@ -136,7 +133,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>非编码区域</dt><dd>不直接编码蛋白质的 DNA 区域，其中一部分参与基因调控。</dd></div>
 <div><dt>剪接</dt><dd>RNA 加工中连接外显子、去除内含子的过程，不同方式可产生不同转录本。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>沿官方示例比较一个变异前后的预测轨迹，记录位置、组织和输出信号，说明变化发生在哪个区段，并寻找相应实验测量。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="cell" data-group="自然科学与医学" data-short="单细胞与虚拟细胞">
@@ -146,19 +142,19 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div class="task-list">
 <div><h3>细胞表征</h3><p>Geneformer、scGPT、UCE 从大量单细胞数据学习基因或细胞表示，用于注释、整合等任务。数据处理需要保留生物差异，同时处理测序深度、噪声和批次影响。</p></div>
 <div><h3>扰动与虚拟细胞</h3><p>给定细胞背景、基因或药物扰动，预测表达变化。虚拟细胞希望进一步连接模态、尺度与动态过程；扰动响应是其中一个明确的研究任务。</p></div>
-<div><h3>空间关系与生物制造</h3><p>FLAG 从病理图像预测空间基因表达，关注基因之间和组织位置之间的关系。生物制造还研究代谢网络、表达负担与资源分配，辅助提出菌株改造方案。</p></div>
+<div><h3>空间关系</h3><p>FLAG 从病理图像预测空间基因表达，关注基因之间和组织位置之间的关系。空间信息将细胞状态与组织结构联系起来，也为研究细胞之间的相互作用提供了位置背景。</p></div>
 </div>
 <ol class="route">
 <li><span>表征</span><strong>Geneformer / scGPT / UCE</strong><p>学习细胞与基因表示</p></li>
 <li><span>关系</span><strong>scPRINT / FLAG</strong><p>基因网络与空间结构</p></li>
 <li><span>响应</span><strong>虚拟细胞</strong><p>预测干预后的状态</p></li>
 </ol>
-<details class="deeper"><summary>继续读</summary>
-<h3>状态、动力学与数据建设</h3><p>不少单细胞数据是不同细胞的测量快照。研究时间演化时，需要结合采样时间、谱系或扰动实验。数据应记录组织、供体、批次和测量模态；扰动数据还要记录对象、剂量、时间与对照。</p>
-<h3>基因网络与空间结构怎样评价</h3><p>基因关联网络可与已知调控和干预数据对照；空间表达预测则同时比较逐点误差、基因之间的关系和空间分布。针对未来用途，可以留出新供体、新组织或未见扰动。</p>
+<details class="deeper"><summary>数据与评价</summary>
+<h3>状态、动力学与数据建设</h3><p>不少单细胞数据是不同细胞的测量快照。研究时间演化时，需要结合采样时间、谱系或扰动实验。组织、供体、批次与测量模态构成数据的背景；扰动对象、剂量和时间则决定了响应所对应的干预条件。</p>
+<h3>基因网络与空间结构怎样评价</h3><p>基因关联网络可与已知调控和干预数据对照；空间表达预测则同时比较逐点误差、基因之间的关系和空间分布。新供体、新组织与未见扰动的表现，分别涉及不同的泛化问题。</p>
 </details>
 <div data-ai4x-papers="flag"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://www.nature.com/articles/s41586-023-06139-9">Geneformer ↗</a><span>2023 · 单细胞预训练</span></li>
 <li><a href="https://www.nature.com/articles/s41592-024-02201-0">scGPT ↗</a><span>2024 · 单细胞基础模型</span></li>
@@ -171,7 +167,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>批次效应</dt><dd>由实验时间、设备或流程差异带来的系统性数据变化。</dd></div>
 <div><dt>扰动预测</dt><dd>根据基因编辑、药物等干预及细胞背景，预测细胞响应。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>用 Scanpy 处理一个公开单细胞数据集，先做质量控制、PCA 和聚类，再比较预训练表示。分别按细胞类型与实验批次着色，观察分组究竟来自哪里。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="eeg" data-group="自然科学与医学" data-short="脑电与神经解码">
@@ -181,18 +176,18 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div class="task-list">
 <div><h3>时序与空间表征</h3><p>电极位置、采样率、滤波和伪迹处理共同决定输入。模型会利用频段、时间变化及通道之间的关系。</p></div>
 <div><h3>基础模型与迁移</h3><p>预训练后可以冻结编码器做线性探测，也可以微调；同一被试内和新被试上的测试回答不同问题。EEG-FM-Compass 整理了这类评估。</p></div>
-<div><h3>视觉解码与生成</h3><p>DreamDiffusion 把脑电表征连接到预训练图像生成模型，并利用 CLIP 视觉监督。EEG-CLIP 是另一条对齐路线，可对照它们怎样建立信号与图像的联系。</p></div>
+<div><h3>视觉解码与生成</h3><p>DreamDiffusion 把脑电表征连接到预训练图像生成模型，并利用 CLIP 视觉监督。EEG-CLIP 通过脑电与视觉表征的对齐建立两种信息之间的联系。</p></div>
 </div>
 <ol class="route">
 <li><span>信号处理</span><strong>时频特征</strong><p>从通道与时间认识数据</p></li>
 <li><span>2023</span><strong>DreamDiffusion</strong><p>信号对齐与条件生成</p></li>
 <li><span>2026</span><strong>EEG-FM-Compass</strong><p>基础模型与迁移评估</p></li>
 </ol>
-<details class="deeper"><summary>继续读</summary>
-<h3>怎样检查解码用了什么信息</h3><p>先固定刺激和被试划分，再比较正确配对、打乱配对和移除脑电条件的结果。这样能观察生成结果有多少依赖输入信号，以及新被试、会话或设备会带来什么变化。</p>
+<details class="deeper"><summary>信号依赖与跨被试泛化</summary>
+<h3>信号依赖与跨被试泛化</h3><p>生成模型已有的视觉知识与脑电输入会共同影响结果。配对打乱、移除输入条件等对照用于分析信号的作用；跨被试、会话与设备的测试，则研究表示在新条件下的适用性。</p>
 </details>
 <div data-ai4x-papers="dreamdiffusion"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://arxiv.org/abs/2601.17883">EEG-FM-Compass ↗</a><span>2026 · 综述与评估</span></li>
 <li><a href="https://arxiv.org/abs/2306.16934">DreamDiffusion ↗</a><span>脑电引导图像生成</span></li>
@@ -203,7 +198,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>被试</dt><dd>参与实验、提供神经信号的人。</dd></div>
 <div><dt>伪迹</dt><dd>眼动、肌电或设备等引入的非目标信号。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>用 MNE 查看一段公开脑电，画出原始波形与功率谱，再做一个事件分类。把训练与测试按被试分开，比较传统特征和预训练表示。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="image" data-group="自然科学与医学" data-short="医学影像">
@@ -211,9 +205,9 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <p>在 CT、MRI 或病理图像中，模型可以标出器官与病灶、对齐不同图像，再从轮廓和运动中计算体积等指标。影像方法由计算机视觉发展而来，研究问题则来自具体的检查与测量需求。</p>
 <button type="button" class="see-process" data-scene="image">查看过程图 ↗</button>
 <div class="task-list">
-<div><h3>三维分割</h3><p>3D U-Net、V-Net 处理体数据；UNet++ 调整多尺度特征融合；Swin UNETR 引入 Transformer 上下文建模。可以对照它们怎样保留细节、利用空间关系。</p></div>
+<div><h3>三维分割</h3><p>3D U-Net、V-Net 处理体数据；UNet++ 调整多尺度特征融合；Swin UNETR 引入 Transformer 上下文建模。这些结构分别处理体数据、多尺度细节与较大范围的空间关系。</p></div>
 <div><h3>配准与功能测量</h3><p>配准估计图像或不同时间帧之间的对应。CMRINet 联合分析心脏电影 MRI 的配准与分割，把结构识别连接到心脏功能量化。</p></div>
-<div><h3>纵向变化</h3><p>随访图像帮助研究病程与变化。需要记录采样时间、治疗、缺失随访等条件；外部中心与设备的数据可用于检验方法的适用性。</p></div>
+<div><h3>纵向变化</h3><p>随访图像用于研究器官、病灶与功能随时间的变化。采样间隔、治疗与缺失随访影响这些变化的解释；外部中心与设备的数据涉及模型的跨来源泛化。</p></div>
 </div>
 <ol class="route">
 <li><span>2016</span><strong>3D U-Net / V-Net</strong><p>体数据分割</p></li>
@@ -221,7 +215,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>2025</span><strong>CMRINet</strong><p>时序结构与功能分析</p></li>
 </ol>
 <div data-ai4x-papers="cmrinet"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://arxiv.org/abs/1606.06650">3D U-Net ↗</a><span>三维分割</span></li>
 <li><a href="https://arxiv.org/abs/1606.04797">V-Net ↗</a><span>体数据与 Dice 目标</span></li>
@@ -235,7 +229,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>体素</dt><dd>三维图像中的一个小体积单元，对应二维图像的像素。</dd></div>
 <div><dt>Dice / HD95</dt><dd>前者衡量区域重叠，后者描述轮廓距离，两者关注不同错误。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>从 MONAI 的一个分割例子开始，按患者划分数据。并排显示原图、标注和预测，比较区域重叠与边界距离，挑出三种典型错误。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="math" data-group="数学、金融与数据" data-short="数学与算法发现">
@@ -253,7 +246,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>2025</span><strong>AlphaEvolve</strong><p>算法的迭代优化</p></li>
 </ol>
 <div data-ai4x-papers="alphageometry"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://www.nature.com/articles/s41586-023-06924-6">FunSearch ↗</a><span>2023 · 数学构造与程序搜索</span></li>
 <li><a href="https://deepmind.google/blog/alphageometry-an-olympiad-level-ai-system-for-geometry/">AlphaGeometry ↗</a><span>2024 · 辅助构造与符号推理</span></li>
@@ -265,7 +258,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>形式化证明</dt><dd>用精确定义和推理规则写出、由证明助手检查的证明。</dd></div>
 <div><dt>评价器</dt><dd>执行候选并给出正确性或目标分数的程序。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>可以先用 Lean 完成几道基础证明，看看“步骤看起来对”和“系统接受证明”之间需要补哪些条件；也可以给一个装箱启发式写评价器，让模型提出修改并在留出的实例上比较。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="finance" data-group="数学、金融与数据" data-short="金融与量化研究">
@@ -273,8 +265,8 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <p>金融 AI 涉及财报与新闻理解、风险识别、时间序列预测、组合构建和交易执行。模型的输入既有价格、成交量等结构化数据，也有公告和报告中的文字。</p>
 <button type="button" class="see-process" data-scene="finance">查看过程图 ↗</button>
 <div class="task-list">
-<div><h3>金融文本</h3><p>FinGPT 提供金融语言模型及数据、微调等研究入口，可以从情绪、事件和信息抽取任务理解领域语言建模。</p></div>
-<div><h3>量化预测与回测</h3><p>Qlib 把数据处理、特征、模型、组合与回测连接起来。因子是用于描述或预测市场行为的特征，研究需要追踪它在什么时间能够被获得。</p></div>
+<div><h3>金融文本</h3><p>FinGPT 提供金融语言模型、数据与微调工具，涉及情绪、事件和信息抽取等任务。</p></div>
+<div><h3>量化预测与回测</h3><p>Qlib 把数据处理、特征、模型、组合与回测连接起来。因子是用于描述或预测市场行为的特征，特征对应的可获得时间，决定了它能参与哪个时点的预测。</p></div>
 <div><h3>决策与自动研发</h3><p>FinRL 研究序列决策；RD-Agent-Quant 让 Agent 迭代因子和模型。评价中会同时看收益、风险、换手率、交易成本和不同市场时期的表现。</p></div>
 </div>
 <ol class="route">
@@ -283,7 +275,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>2025</span><strong>RD-Agent-Quant</strong><p>因子与模型联合优化</p></li>
 </ol>
 <div data-ai4x-papers="qlib"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://github.com/microsoft/qlib">Qlib ↗</a><span>框架、论文与研究示例</span></li>
 <li><a href="https://github.com/AI4Finance-Foundation/FinGPT">FinGPT ↗</a><span>金融文本与大模型</span></li>
@@ -295,12 +287,11 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>回测</dt><dd>按历史时间推进，模拟当时可获得的信息与决策结果。</dd></div>
 <div><dt>前视偏差</dt><dd>在预测或决策时使用了当时尚不可获得的信息。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>阅读 Qlib 的一个预测与回测例子，标出特征、标签、训练期和测试期。用同一时间划分比较一个简单模型与复杂模型，并查看计入交易成本前后的结果。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="graphs" data-group="数学、金融与数据" data-short="图学习与时间序列">
 <h2 id="graphs">图学习与时间序列：研究关系和变化</h2>
-<p>交通、社交、交易和电网都包含关系，也随时间变化。图学习处理“谁与谁相连”，时间序列处理“过去怎样影响未来”，两者还可以组合成时空预测。</p>
+<p>交通、社交、交易和电网都包含关系，也随时间变化。图学习处理对象之间的联系，时间序列研究数据随时间的变化；这两类通用建模方法还可以组合成时空预测。</p>
 <button type="button" class="see-process" data-scene="graphs">查看过程图 ↗</button>
 <div class="task-list">
 <div><h3>节点、边和整体结构</h3><p>图任务可以预测节点类别、是否存在一条关系，或整张图的性质。分子图与社交网络共享消息传递等方法，但标签和评价不同。</p></div>
@@ -312,7 +303,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>变化</span><strong>趋势与周期</strong><p>时间顺序中的预测</p></li>
 <li><span>组合</span><strong>时空图</strong><p>交通等动态系统</p></li>
 </ol>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://web.stanford.edu/class/cs224w/">Stanford CS224W ↗</a><span>图机器学习课程</span></li>
 <li><a href="https://otexts.com/fpp3/">Forecasting: Principles and Practice ↗</a><span>统计预测教材 · R</span></li>
@@ -322,17 +313,17 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>消息传递</dt><dd>节点聚合邻居与边的信息，逐层更新自己的表示。</dd></div>
 <div><dt>滚动预测</dt><dd>随着时间前移，反复使用当时已有的数据预测后续区间。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>在一个时间序列上比较“最后一个值”、季节性参照与学习模型，做滚动预测；图任务则先画出节点和边各代表什么，再决定训练与测试怎样划分。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="automl" data-group="让研究过程自动化" data-short="AutoML">
-<h2 id="automl">AutoML：自动选择模型和训练配置</h2>
+<h2 id="automl">AutoML：模型与训练配置的自动选择</h2>
+<p>学科研究中的模型训练与候选筛选，反复涉及配置选择和实验比较。AutoML 将这些选择写成搜索问题，自动研究进一步把代码、实验与反馈连接起来。</p>
 <p>学习率、树的深度、特征处理和网络结构都会影响结果。AutoML 研究怎样在给定任务和计算预算内，自动找到较好的模型与训练方案。</p>
 <button type="button" class="see-process" data-scene="automl">查看过程图 ↗</button>
 <div class="task-list">
 <div><h3>超参数优化</h3><p>网格搜索、随机搜索、贝叶斯优化等方法决定下一组配置。Optuna 支持动态搜索空间和剪枝，提前停止表现不佳的试验。</p></div>
-<div><h3>模型与流程选择</h3><p>自动选择数据预处理、特征处理、模型和集成方案。比较时需固定数据划分和预算，记录搜索本身的开销。</p></div>
-<div><h3>结构搜索与元学习</h3><p>神经架构搜索（NAS）寻找网络结构；元学习利用过去任务的经验帮助新任务。可以研究怎样减少搜索成本、怎样跨任务迁移。</p></div>
+<div><h3>模型与流程选择</h3><p>将数据预处理、特征处理、模型和集成方案纳入搜索。搜索空间与计算预算共同影响最终方案和试验开销。</p></div>
+<div><h3>结构搜索与元学习</h3><p>神经架构搜索（NAS）寻找网络结构；元学习利用过去任务的经验帮助新任务。跨任务经验用于选择新的搜索起点与方案，以减少搜索开销。</p></div>
 </div>
 <ol class="route">
 <li><span>配置</span><strong>HPO</strong><p>学习率等超参数</p></li>
@@ -340,7 +331,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>结构与经验</span><strong>NAS / Meta-learning</strong><p>结构搜索与跨任务知识</p></li>
 </ol>
 <div data-ai4x-papers="optuna"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://www.automl.org/book/">AutoML 教材 ↗</a><span>方法、系统与开放问题</span></li>
 <li><a href="https://optuna.org/">Optuna ↗</a><span>搜索、剪枝与可视化</span></li>
@@ -350,17 +341,16 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>超参数</dt><dd>训练前设定的配置，如学习率、正则强度或层数。</dd></div>
 <div><dt>剪枝</dt><dd>根据中途结果停止希望较小的训练，把预算留给其他试验。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>给一个已有分类器限定 20 次训练预算，比较随机搜索与 Optuna。画出“累计耗时—当前最佳验证分数”，最后只用保留的测试集评价选出的配置。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="research" data-group="让研究过程自动化" data-short="自动研究">
-<h2 id="research">自动研究：让想法进入实验，再用结果继续推进</h2>
+<h2 id="research">自动研究</h2>
 <p>科研中有不少可执行环节：查资料、提出候选、改代码、运行实验、分析结果和写报告。自动研究系统尝试把这些环节连接起来，让上一次结果影响下一步实验。</p>
 <button type="button" class="see-process" data-scene="research">查看过程图 ↗</button>
 <div class="task-list">
 <div><h3>实验循环</h3><p>autoresearch 围绕单 GPU 的语言模型训练实验，让 Agent 修改训练代码并比较结果。系统根据评价指标选择是否保留改动，实验受固定的训练预算约束。</p></div>
 <div><h3>从想法到论文</h3><p>AI Scientist 将实验设计、代码执行、结果分析和论文撰写组织在同一流程中；v2 进一步探索 Agent 驱动的树搜索。</p></div>
-<div><h3>研究证据与记录</h3><p>每个候选对应配置、代码版本、运行日志和结果。读这类系统时，可以从一个结论反查它由哪些实验支持，以及失败的候选如何影响后续选择。</p></div>
+<div><h3>候选选择与实验历史</h3><p>不同候选对应不同配置、代码版本与实验结果。系统利用这些历史选择继续探索的分支，保留有效改动，并将已有结果用于后续方案的生成。</p></div>
 </div>
 <ol class="route">
 <li><span>2024</span><strong>AI Scientist</strong><p>实验、分析与写作</p></li>
@@ -368,7 +358,7 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <li><span>训练实验</span><strong>autoresearch</strong><p>受预算约束的迭代</p></li>
 </ol>
 <div data-ai4x-papers="ai-scientist"></div>
-<h3>论文与学习入口</h3>
+<h3>论文与项目</h3>
 <ul class="resources">
 <li><a href="https://github.com/SakanaAI/AI-Scientist">AI Scientist ↗</a><span>初代系统与实验模板</span></li>
 <li><a href="https://arxiv.org/abs/2504.08066">AI Scientist-v2 ↗</a><span>2025 · 树搜索研究流程</span></li>
@@ -378,7 +368,6 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <div><dt>实验预算</dt><dd>允许消耗的训练时间、算力、调用次数等资源。</dd></div>
 <div><dt>Agentic tree search</dt><dd>把不同实验方案及后续改动组织成树，根据已有结果继续探索。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>从已有的小实验开始，固定数据、评价与运行预算，让 Agent 提出三种修改并实际执行。把每个修改、日志和结果放在一起，写出下一轮选择哪条路线及原因。</p></div>
 </section>
 
 <section class="ai4x-domain" data-topic="rsi" data-group="让研究过程自动化" data-short="RSI 与自我改进">
@@ -386,38 +375,28 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 <p>递归自我改进（Recursive Self-Improvement）关注一个更进一步的问题：系统修改自己之后，能否变得更擅长做下一轮改进？研究对象可以是 Agent 的代码、工具、搜索策略，也可以涉及学习算法。</p>
 <button type="button" class="see-process" data-scene="rsi">查看过程图 ↗</button>
 <div class="task-list">
-<div><h3>谁在被修改</h3><p>AutoML 通常搜索预设空间中的配置；自动研究系统推进外部课题；自我改进系统还把自身工作方式作为修改对象。阅读时先找到实际变化的代码、策略或参数。</p></div>
-<div><h3>怎样保存和选择版本</h3><p>Darwin Gödel Machine（DGM）让编码 Agent 修改自身代码，保存多个版本，并通过编码任务评估后继续探索。它的核心循环是版本生成、测试、保留与再次修改。</p></div>
-<div><h3>怎样观察持续改进</h3><p>除了单次任务分数，还要比较多轮改进曲线、总计算成本和新任务上的效果。下一轮究竟因为系统能力改变而更好，还是因为投入了更多搜索，需要设计对照。</p></div>
+<div><h3>修改对象</h3><p>AutoML 通常搜索预设空间中的配置；自动研究系统推进外部课题；自我改进系统还把自身工作方式作为修改对象。DGM 修改编码 Agent 的代码，Dream-RSI 改进探索策略，AIDE² 则让研究 Agent 修改自身的运行框架。</p></div>
+<div><h3>版本生成与继承</h3><p>系统提出修改、评估候选，再将选中的改动带入后续版本。DGM 保存不断扩展的版本档案，从不同分支继续探索；Dream-RSI 利用已有探索轨迹评估新策略，再将策略用于下一轮探索。</p></div>
+<div><h3>改进能力与计算成本</h3><p>任务成绩提高与改进能力增强，是两个相关但不同的问题。前者反映当前版本的表现，后者关心它能否更有效地产生后续改进。多轮实验、相近的计算预算和未见任务上的表现，有助于区分能力变化与额外搜索带来的收益。</p></div>
 </div>
 <ol class="route">
 <li><span>提出修改</span><strong>自身代码与工具</strong><p>形成新版本</p></li>
 <li><span>执行测试</span><strong>固定任务与预算</strong><p>比较能力变化</p></li>
-<li><span>继续改进</span><strong>版本档案与选择</strong><p>追踪多轮效果</p></li>
+<li><span>继续改进</span><strong>版本档案与选择</strong><p>继承改动，进入下一轮</p></li>
 </ol>
-<div data-ai4x-papers="dgm"></div>
-<h3>论文与学习入口</h3>
+<div data-ai4x-papers="rsi-survey,dgm,dream-rsi,aide2,ai4ai-bench"></div>
+<h3>相关工作</h3>
 <ul class="resources">
-<li><a href="https://arxiv.org/abs/2505.22954">Darwin Gödel Machine ↗</a><span>2025 · 自我改进编码 Agent</span></li>
-<li><a href="https://sakana.ai/dgm/">DGM 项目介绍 ↗</a><span>方法、实验与代码入口</span></li>
-<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>对照：有评价器的代码搜索</span></li>
+<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>以评价器引导代码搜索与算法发现</span></li>
 </ul>
 <dl class="terms">
 <div><dt>自我修改</dt><dd>系统改变自身的代码、工具或策略。DGM 主要修改 Agent 代码。</dd></div>
 <div><dt>递归改进</dt><dd>一次改进还改变了继续改进的能力，从而形成后续迭代。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>先读 DGM 的版本树，挑一个具体代码改动，追踪它怎样被提出、怎样被测量、后续版本是否继承它。再为一个简单工具 Agent 设计固定预算的版本对照。</p></div>
 </section>
 
-## 把一个交叉问题做成小项目
+## 学科问题与模型设计
 
-选定一个问题后，把数据、模型和验证接成一条完整的研究流程。
+分子的旋转与对称性、图中的关系、时间序列的先后、医学图像的体素间距，都带着具体的学科含义。这些结构影响数据表示、模型与训练目标；新分子骨架、新供体、新患者或未来时间段，又对应不同的泛化问题。交叉研究中的方法选择，与这些问题本身密切相连。
 
-1. **说清研究对象。** 一个样本是一条序列、一名患者、一个细胞，还是某个时刻的市场？目标量怎样测得，有什么单位？
-2. **保留学科结构。** 分子有旋转与对称性，图有关系，时序有先后，医学图像有体素间距。表示、模型和损失各自保留了哪些信息？
-3. **确定要面对的新条件。** 新分子骨架、新蛋白质家族、新供体、新被试、新患者或未来时间段，对应不同的数据划分。
-4. **建立参照，再分析变化。** 比较简单方法与新模型，检查错误集中在哪些条件；候选设计接入后续计算或实验，记录这轮结果怎样影响下一步。
-
-学习时间序列还可以看 [Forecasting: Principles and Practice](https://otexts.com/fpp3/) 的趋势、预测与评价方法，教材示例使用 R；Python 项目可看 [tsai](https://github.com/timeseriesAI/tsai)。
-
-[AI for Science 资料索引](https://github.com/ai4s-research/awesome-ai-for-science) · [AI4X 资料目录](catalog-directions.md#topic-23) · [科研问答](research.md) · [联系与合作](contact.md) · [实验与记录](experiments.md)
+[AI for Science 资料索引](https://github.com/ai4s-research/awesome-ai-for-science) · [AI4X 资料目录](catalog-directions.md#topic-23) · [科研入门Q&A](research.md) · [联系老师、学长与合作](contact.md)

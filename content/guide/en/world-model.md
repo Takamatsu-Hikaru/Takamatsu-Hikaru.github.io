@@ -1,4 +1,4 @@
-# World models: predict, then act
+# World models
 
 If a system can predict what happens after an action, it can compare choices before acting. World-model research asks how to represent environmental change and use predictions for learning and decisions.
 
