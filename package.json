@@ -14,7 +14,7 @@
     "db:generate": "drizzle-kit generate",
     "build:pages": "next build",
     "build:guide": "node scripts/build-guide.mjs",
-    "build:blog": "node scripts/build-research-essay.mjs",
+    "build:blog": "node scripts/build-research-essay.mjs && node scripts/build-leadership-essay.mjs",
     "prebuild": "npm run build:guide && npm run build:blog",
     "prebuild:pages": "npm run build:guide && npm run build:blog"
   },

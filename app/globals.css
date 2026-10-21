@@ -219,6 +219,7 @@ h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp
 .blog-cover { position: relative; min-height: 290px; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); }
 .blog-cover img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .65s cubic-bezier(.2,.75,.25,1); }
 .blog-cover img[src="/blog/more-papers-cover.webp"] { object-position: 65% 75%; }
+.blog-cover img[src="/blog/leadership-learning-impact-cover.webp"] { object-position: center 52%; }
 .blog-card:hover .blog-cover img { transform: scale(1.035); }
 .blog-cover-stamp { position: absolute; top: 15px; left: 15px; padding: 8px 10px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font: 900 12px/1 ui-monospace, monospace; letter-spacing: .05em; }
 .blog-card-copy { display: flex; flex-direction: column; padding: 9px 10px 5px 0; }

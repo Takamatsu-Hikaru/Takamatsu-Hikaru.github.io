@@ -30,6 +30,27 @@ const journey = [
 
 const blogPosts = [
   {
+    slug: "leadership-learning-impact",
+    stamp: "ESSAY 05",
+    date: "2026.10.21",
+    cover: "/blog/leadership-learning-impact-cover.webp",
+    alt: "蓝天与云层下的街巷、建筑和结伴而行的人们 / People walking together beneath a blue sky",
+    zh: {
+      href: "/blog/leadership-learning-impact.html",
+      title: "从 Leadership 到 Learning，",
+      subtitle: "再到 Impact",
+      summary: "办 AI 社比赛、建设 Wiki 和入门指南的经历，以及我对 Leadership、Learning 和 Impact 的思考。",
+      action: "阅读文章",
+    },
+    en: {
+      href: "/blog/leadership-learning-impact-en.html",
+      title: "From Leadership to Learning,",
+      subtitle: "and on to Impact",
+      summary: "Running an AI club competition, building a Wiki and a getting-started guide, and thinking through leadership, learning, and impact.",
+      action: "READ ARTICLE",
+    },
+  },
+  {
     slug: "more-papers-now-what",
     stamp: "ESSAY 04",
     date: "2026.10.05",
