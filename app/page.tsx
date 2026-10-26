@@ -140,6 +140,7 @@ export default function Home() {
   const [dark, setDark] = useState(false);
   const [blogOpen, setBlogOpen] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
+  const [paperNotesOpen, setPaperNotesOpen] = useState(false);
   const [blogLanguage, setBlogLanguage] = useState<"zh" | "en">("zh");
   const [guideLanguage, setGuideLanguage] = useState<"zh" | "en">("en");
   useEffect(() => {
@@ -155,6 +156,7 @@ export default function Home() {
     const openLinkedBlog = () => {
       if (window.location.hash === "#blog") setBlogOpen(true);
       if (window.location.hash === "#guide") setGuideOpen(true);
+      if (window.location.hash === "#paper-notes") setPaperNotesOpen(true);
     };
     openLinkedBlog();
     window.addEventListener("hashchange", openLinkedBlog);
@@ -313,6 +315,25 @@ export default function Home() {
                 </span>
                 <span className="guide-entry-action">{guideLanguage === "zh" ? "进入指南" : "OPEN GUIDE"} ↗</span>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={`blog-section guidance-section paper-notes-section section-block ${paperNotesOpen ? "is-open" : ""}`} id="paper-notes">
+        <div className="section-shell">
+          <button className="blog-trigger" type="button" aria-expanded={paperNotesOpen} aria-controls="paper-notes-drawer" onClick={() => setPaperNotesOpen((open) => !open)}>
+            <span className="blog-index">07 / READING</span>
+            <span className="blog-trigger-copy">
+              <span className="eyebrow">Paper reading notes</span>
+              <strong>Hikaru 的论文精读笔记</strong>
+            </span>
+            <span className="blog-count">00 NOTES</span>
+            <span className="blog-toggle" aria-hidden="true">+</span>
+          </button>
+          <div className="blog-drawer" id="paper-notes-drawer" inert={!paperNotesOpen}>
+            <div className="blog-drawer-inner">
+              <div className="paper-notes-empty"><p>精读笔记即将更新。</p></div>
             </div>
           </div>
         </div>

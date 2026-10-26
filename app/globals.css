@@ -155,6 +155,9 @@ h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp
 .guidance-section { background: var(--paper); }
 .guidance-section .blog-trigger { border-top: 0; }
 .guidance-section .guide-entry { margin-bottom: 54px; }
+.paper-notes-section .blog-trigger-copy strong { line-height: 1.15; }
+.paper-notes-empty { margin: 0 7px 54px 0; padding: 30px; border: 1px solid var(--ink); border-top: 4px solid var(--blue); background: var(--card); box-shadow: 6px 6px 0 var(--ink); }
+.paper-notes-empty p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .blog-trigger {
   width: 100%;
   min-height: 196px;
