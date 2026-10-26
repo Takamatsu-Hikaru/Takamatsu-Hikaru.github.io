@@ -162,6 +162,13 @@ export default function Home() {
     window.addEventListener("hashchange", openLinkedBlog);
     return () => window.removeEventListener("hashchange", openLinkedBlog);
   }, []);
+  useEffect(() => {
+    if (!paperNotesOpen || window.location.hash !== "#paper-notes") return;
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById("paper-notes")?.scrollIntoView({ behavior: "instant", block: "start" });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [paperNotesOpen]);
   const toggleTheme = () => {
     const next = !dark;
     setDark(next);
@@ -328,12 +335,28 @@ export default function Home() {
               <span className="eyebrow">Paper reading notes</span>
               <strong>Hikaru’s Paper Notes</strong>
             </span>
-            <span className="blog-count">00 NOTES</span>
+            <span className="blog-count">01 NOTE · ZH / EN</span>
             <span className="blog-toggle" aria-hidden="true">+</span>
           </button>
           <div className="blog-drawer" id="paper-notes-drawer" inert={!paperNotesOpen}>
             <div className="blog-drawer-inner">
-              <div className="paper-notes-empty"><p>Reading notes coming soon.</p></div>
+              <article className="paper-note-card">
+                <a className="paper-note-cover" href="/paper-notes/supermimic/en.html" aria-label="Read SuperMimic notes in English">
+                  <img src="/paper-notes/supermimic/images/paper_teaser.png" alt="SuperMimic: humanoid world-model rollouts and training compute" width={935} height={311} />
+                </a>
+                <div className="paper-note-copy">
+                  <span className="paper-note-meta">READING NOTE 01 · 2026.10.26</span>
+                  <h3>SuperMimic</h3>
+                  <p>Humanoid Control, Policy Gradients, and World Models</p>
+                  <span className="paper-note-topics">PPO / BPTT / DIFFERENTIABLE MBRL</span>
+                  <div className="paper-note-links" aria-label="SuperMimic reading editions">
+                    <a href="/paper-notes/supermimic/">中文 ↗</a>
+                    <a href="/paper-notes/supermimic/en.html">English ↗</a>
+                    <a href="/paper-notes/supermimic/supermimic-notes-zh.pdf">PDF · 中文 ↓</a>
+                    <a href="/paper-notes/supermimic/supermimic-notes-en.pdf">PDF · EN ↓</a>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>

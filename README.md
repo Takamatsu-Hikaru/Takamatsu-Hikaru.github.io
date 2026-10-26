@@ -52,3 +52,13 @@ The guide includes 60 questions and 49 illustrated paper cards across ten resear
 Contributions are welcome on [GitHub](https://github.com/Takamatsu-Hikaru/AI-Research-Guide): open an issue or submit a PR with corrections and resources. If you find the guide useful, give it a star or share it with others.
 
 The personal guide uses the homepage’s typography, paper and blue palette, and saved light/dark preference. The guide entry in section 06 switches its heading, description, and destination together between English and Chinese.
+
+## Hikaru’s Paper Notes
+
+SuperMimic’s bilingual sources are in `content/paper-notes/`. The reading pages,
+figures, and both PDF editions are published from `public/paper-notes/supermimic/`.
+The Chinese PDF is the supplied original; the English PDF is translated from the
+same notes. Run `node scripts/build-paper-notes.mjs` after editing the Markdown
+(requires Pandoc). Run `node scripts/build-supermimic-pdf.mjs` to regenerate the
+English PDF (requires Pandoc, XeLaTeX, Times New Roman, and Arial). Generated pages
+and PDFs are committed, so the normal site build needs no LaTeX installation.

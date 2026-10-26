@@ -1,0 +1,58 @@
+@import url('../blog/more-papers.css');
+.notes-hero { padding: 56px 0 52px; border-bottom: 1px solid var(--ink); }
+.notes-eyebrow { margin: 0 0 26px; color: var(--orange); font: 800 13px/1.5 ui-monospace, monospace; letter-spacing: .08em; }
+.notes-hero h1 { margin-bottom: 24px; font-size: clamp(52px, 7.5vw, 96px); line-height: 1.06; }
+.notes-hero h1 span { margin-top: .12em; color: var(--blue); font-size: .67em; letter-spacing: -.04em; }
+.notes-subtitle { max-width: 850px; font-size: clamp(20px, 2.8vw, 30px); line-height: 1.5; font-weight: 650; }
+.notes-meta { display: flex; flex-wrap: wrap; gap: 12px 34px; margin: 24px 0 34px; color: var(--muted); font: 700 12px/1.6 ui-monospace, monospace; }
+.notes-cover { margin: 0 7px 32px 0; padding: 20px; border: 1px solid var(--ink); background: #fff; box-shadow: 7px 7px 0 var(--ink); }
+.notes-cover img { display: block; width: 100%; height: auto; }
+.notes-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px 30px; font-size: 15px; font-weight: 750; }
+.notes-actions > a:not(.notes-button) { border-bottom: 1px solid var(--blue); padding: 7px 0; }
+.notes-button { display: inline-block; padding: 12px 19px; border: 1px solid var(--ink); background: var(--blue); color: #fff; }
+.notes-layout { display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: 54px; padding: 66px 0 100px; }
+.notes-toc { position: sticky; top: 104px; align-self: start; max-height: calc(100vh - 135px); overflow-y: auto; padding: 15px 12px 10px 0; border-top: 4px solid var(--blue); }
+.notes-toc > span { color: var(--muted); font: 800 12px/1.6 ui-monospace, monospace; }
+.notes-toc nav { display: grid; gap: 14px; margin-top: 22px; font: 650 14px/1.65 Arial, 'Microsoft YaHei', sans-serif; text-transform: none; letter-spacing: 0; }
+.notes-toc nav a::after { display: none; }
+.notes-toc a:hover { color: var(--blue); }
+.toc-back { display: block; margin-top: 25px; color: var(--blue); font-size: 13px; font-weight: 750; }
+.notes-reading { min-width: 0; }
+.notes-article { font-size: 18px; line-height: 1.95; }
+.notes-article h2 { margin-top: 3.1em; font-size: clamp(27px, 3vw, 35px); }
+.notes-article h3 { margin: 2.1em 0 1em; font-size: 23px; }
+.notes-article h2, .notes-article h3, .notes-article [id] { scroll-margin-top: 104px; }
+.notes-article a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.notes-article strong { color: var(--ink); font-weight: 800; }
+.notes-article .math { font-family: 'Cambria Math', 'STIX Two Math', serif; font-size: 1.05em; }
+.notes-article .math.display { display: block; max-width: 100%; overflow-x: auto; padding: 24px 10px; margin: 1.7em 0; background: var(--card); border-block: 1px solid color-mix(in srgb, var(--ink) 17%, transparent); }
+.notes-article math[display='block'] { margin: 0; min-width: min-content; }
+.notes-article figure { margin: 2.4em 0; }
+.notes-article img { display: block; width: auto; max-width: 100%; height: auto; margin: 28px auto 14px; background: #fff; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+.notes-article figure img { width: 100%; }
+.notes-article figcaption, .notes-article .table-caption { color: var(--muted); font-size: 15px; line-height: 1.85; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 28px 0 12px; }
+.notes-article table { width: 100%; border-collapse: collapse; min-width: 510px; font-size: 15px; line-height: 1.75; }
+.notes-article th, .notes-article td { padding: 13px 15px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent); text-align: left; vertical-align: top; }
+.notes-article th { background: var(--paper-2); font-weight: 800; }
+.notes-article td:first-child { min-width: 140px; }
+.mobile-toc { display: none; }
+@media (max-width: 1050px) { .notes-layout { grid-template-columns: 170px minmax(0, 1fr); gap: 32px; } }
+@media (max-width: 800px) {
+  .notes-layout { grid-template-columns: minmax(0, 1fr); padding-top: 34px; }
+  .notes-toc { display: none; }
+  .mobile-toc { display: block; margin-bottom: 38px; padding: 15px 18px; background: var(--card); border: 1px solid var(--ink); }
+  .mobile-toc summary { font-size: 16px; font-weight: 750; cursor: pointer; }
+  .mobile-toc nav { display: grid; gap: 11px; margin-top: 20px; font: 600 14px/1.8 Arial, 'Microsoft YaHei', sans-serif; letter-spacing: 0; text-transform: none; }
+}
+@media (max-width: 640px) {
+  .notes-hero { padding-block: 32px 38px; }
+  .notes-hero h1 { font-size: 53px; }
+  .notes-subtitle { font-size: 20px; }
+  .notes-cover { padding: 9px; box-shadow: 5px 5px 0 var(--ink); }
+  .notes-meta { font-size: 11px; }
+  .notes-article { font-size: 17px; }
+  .notes-article h2 { font-size: 27px; }
+  .notes-article h3 { font-size: 21px; }
+  .notes-article .math.display { padding-inline: 6px; }
+}
