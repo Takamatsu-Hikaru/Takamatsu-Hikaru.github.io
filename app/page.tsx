@@ -326,14 +326,14 @@ export default function Home() {
             <span className="blog-index">07 / READING</span>
             <span className="blog-trigger-copy">
               <span className="eyebrow">Paper reading notes</span>
-              <strong>Hikaru 的论文精读笔记</strong>
+              <strong>Hikaru’s Paper Notes</strong>
             </span>
             <span className="blog-count">00 NOTES</span>
             <span className="blog-toggle" aria-hidden="true">+</span>
           </button>
           <div className="blog-drawer" id="paper-notes-drawer" inert={!paperNotesOpen}>
             <div className="blog-drawer-inner">
-              <div className="paper-notes-empty"><p>精读笔记即将更新。</p></div>
+              <div className="paper-notes-empty"><p>Reading notes coming soon.</p></div>
             </div>
           </div>
         </div>
